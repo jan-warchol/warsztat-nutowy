@@ -9,6 +9,13 @@
   %system-count = #19
   %page-count = #5
   %ragged-last-bottom = ##f
+  top-markup-spacing #'basic-distance = #3
+  markup-system-spacing #'basic-distance = #40
+  top-system-spacing #'basic-distance = #6
+  last-bottom-spacing #'basic-distance = #6
+  top-margin = 6 \mm
+  bottom-margin = 6 \mm
+  left-margin = 11 \mm
 
   oddHeaderMarkup = \markup \fill-line {
     " "
