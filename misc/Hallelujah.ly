@@ -91,7 +91,7 @@ sopranomelody =	\relative c'' {
   cis8  a8  r8 cis16  cis16  d8 d16  d16  e8  e8  |
   a,4 r8 d16  cis16  b8  b8  r8 e8 |
   % 27
-  d8 cis8 d8 e16 d16 cis8 cis16  cis16  e8  cis8  |
+  d8 [ cis8 ] d8 [ e16 d16 ] cis8 cis16  cis16  e8  cis8  |
   r8 a16  a16  d8  a8  r8 cis16  cis16  e8  cis8  |
   r8 a16  a16  fis'8  d8  r8 cis16  cis16  d8  a8  |
   r8 b16  b16  e8  e8  r8 cis16  cis16  d8 d16  d16  |
@@ -124,8 +124,8 @@ sopranomelody =	\relative c'' {
   e2 fis4-> fis4-> | fis1-> ~ | fis1 ~ |
   fis4. fis8-> g4-> g4-> | g1-> ~ |
   % 68
-  g4. g8 fis8(  e8)  fis8(  g8)  |
-  e2 r8 cis8\mf d8 e8 |
+  g4. g8 fis8 [(  e8 ])  fis8 [(  g8 ])  |
+  e2 r8 cis8\mf d8 [ e8 ] |
   a,4 r4 r2 |
   % 71
   r2 r4 a4-- |
@@ -167,7 +167,7 @@ altomelody = \relative f' {
   a4.\f  a8 g8  fis8  r4 |
   a4. a8 g8  fis8  r8 a16  a16  |
   b8  a8  r8 a16  a16  b8  a8  r8 a8 |
-  g8(  fis8 e8 ) e8 fis4 r4 |
+  g8 [(  fis8 ] e8 ) e8 fis4 r4 |
   % 8
   a4. a8 a8  a8  r4 |
   a4. a8 a8  a8  r8 a16  a16  |
@@ -196,7 +196,7 @@ altomelody = \relative f' {
   d2 \f e4 fis4 |
   g8  g,8  g'4. g8 fis4 |
   e2 d8 a'16  a16  fis8  d8  |
-  r8 b'8 b8 b8 a2 |
+  r8 b'8 b8 [ b8 ] a2 |
   % 33
   r2 r4 fis4 \p |
   e4 d4 d4 cis4 | d1 |
@@ -210,8 +210,8 @@ altomelody = \relative f' {
   % 46
   r4 a4-- <d, d'>4-- fis4-- |
   b4-- d,4-- g4-- fis8  e8  |
-  fis4 ( e8.  d16 )  d8 a'8 fis8 d8 |
-  r8 e8 a8 e8 r4 r8 cis8 |
+  fis4 ( e8.  d16 )  d8 [ a'8 ] fis8 [ d8 ] |
+  r8 e8 a8 [ e8 ] r4 r8 cis8 |
   d8 (  b'8 )  a2 gis4 |
   % 51
   a4 e4 a4^> a4^> | a1 ~ | a1 |
@@ -233,10 +233,10 @@ altomelody = \relative f' {
   a4. a8 a4 a4 |
   a2 r2 |
   % 70
-  r2 r8 fis8 \mf gis8 a8 |
-d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
+  r2 r8 fis8 \mf gis8 [ a8 ] |
+  d,8 ( [ cis8 ] d8 [ e16 d16 ] cis8 )[ e8 ] a8  g8  |
   fis4. ( e8 d4. ) d8 |
-  d8 ( cis8 ) d8 d8 d4 ( cis4 ) |
+  d8 ( [ cis8 ) ] d8 [ d8 ] d4 ( cis4 ) |
   % 74
   d2 d4 ^> -\tweak #'X-offset #-3 \f d4^> |
   d4^> r8 a'8 b8  a8  r8 a8 |
@@ -278,7 +278,7 @@ tenormelody = \relative c' {
   cis4. e8 d8  cis8  r4 |
   cis4. e8 d8  cis8  r8 e16  e16  |
   d8  cis8  r8 e16  e16  d8  cis8  r8 e8 |
-  d8 ( e8 fis8 ) d8 e4 r4 |
+  d8 ( [ e8 ] fis8 ) d8 e4 r4 |
   % 12
   a,2 b4 cis4 |
   d8  d,8  d'4. d8 cis4 |
@@ -321,11 +321,11 @@ tenormelody = \relative c' {
   a'4-- cis,4-- fis4-- a,4-- |
   d4-- cis8  b8  cis4 ( b8.  a16 )  |
   % 46
-  a4 r4 r8 a8 d8 d8 |
-  d4 r8 b8 e8 cis8 d8 d8 |
+  a4 r4 r8 a8 d8 [ d8 ] |
+  d4 r8 b8 e8 [ cis8 ] d8 [ d8 ] |
   d4 ( cis4 ) d4 r4 |
   % 49
-  r2 r8 d8 cis8 a8 |
+  r2 r8 d8 cis8 [ a8 ] |
   fis'8 ( e4 ) fis8 e8  e8  r8 e8 |
   e4 cis4 r2 |
   % 52
@@ -350,12 +350,12 @@ tenormelody = \relative c' {
   d4 d4 r2 |
   % 67
   r2 d4 d4 |
-  e4. e8 d8 ( cis8 ) d8 ( e8 ) |
+  e4. e8 d8 ( [ cis8 ) ] d8 ( [ e8 ) ] |
   cis2 r2 |
   % 70
-  r8 a8\mf b8 cis8 fis,8  a8  a4 ~ |
+  r8 a8-\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \mf b8 [ cis8 ] fis,8  a8  a4 ~ |
   a4 gis4 a4 r4 |
-  r8 a8 d8 cis8 b4. a8 |
+  r8 a8 d8 [ cis8 ] b4. a8 |
   g4 a8  b8  a2 |
   % 74
   a2 d4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | d1-> ~ |
@@ -392,7 +392,7 @@ bassmelody = \relative f {
   d4. \f fis8 g8  d8  r4 | % 5
   d4. fis8 g8  d8  r8 fis16  fis16  | % 6
   g8  d8  r8 fis16  fis16  g8  d8  r8 fis8 | % 7
-  e8 ( d8 a'8 ) a8 d,4 r4 |
+  e8 ( [ d8 ] a'8 ) a8 d,4 r4 |
   % 8
   a'4. cis8 d8  a8  r4 | % 9
   a4. cis8 d8  a8  r8 cis16  cis16  |
@@ -437,13 +437,13 @@ bassmelody = \relative f {
   e2-\trill d4 r4 |
   % 44
   r4 r8 a'8 d8  d,8  r8 fis8 | % 45
-  b8 (  gis8 )  a4 r8 e8 d8 e8 | % 46
-  cis8 a'8 g8 a8 fis4 r8 fis8 | % 47
+  b8 (  gis8 )  a4 r8 e8 d8 [ e8 ] | % 46
+  cis8 [ a'8 ] g8 [ a8 ] fis4 r8 fis8 | % 47
   g8  d8  r4 r4 r8 g8 |
   % 48
   a8  a,8  r8 a'8 fis8  d8  r8 d'8 | % 49
   cis8  a8  r8 cis8 d8  d,8  r8 fis8 |
-  b8 gis8 a8 d,8 e8  e8  r8 e8 | % 51
+  b8 [ gis8 ] a8 [ d,8 ] e8  e8  r8 e8 | % 51
   cis4 a4 r2 |
   % 52
   r4 r8 cis'8 d8  a8  r8 cis8 | % 53
@@ -472,7 +472,7 @@ bassmelody = \relative f {
   fis4-- a,4-- d4-- cis8  cis8  | % 71
   b2 a4 r4 |
   % 72
-  r2 r8 d8 g8 fis8 | % 73
+  r2 r8 d8 g8 [ fis8 ] | % 73
   e4 fis8 (  g8 )  a4 g8  a8  | % 74
   fis4 d4 d'4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | % 75
   d4-> r8 fis,8 g8  d8  r8 fis8 | % 76
