@@ -1,135 +1,100 @@
-\version "2.13.39"
-\pointAndClickOff
+\version "2.17.3"
+#(set-global-staff-size 18)
+
 \header	{
   title = "W swoim wielkim miłosierdziu"
   composer = "muzyka: Dawid Kusz OP"
 }
-commonprops = {
-  \autoBeamOff
-  \tempo 4=90
-  \set Score.tempoHideNote = ##t
-  \key d \minor
-  \time 4/4
-}
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
+  \key d \minor
+  \time 4/4
   \repeat volta 2 {
-    f,8[ g8] a4 g g | g8[^\< a] bes[ c]\! a4 a
-    d8[^\f c] bes[ a] f[ g] a4 | a4 g8[ f] g4 g
+    f,8[ g8] a4 g g | g8[\< a] bes[ c]\! a4 a
+    d8[\f c] bes[ a] f[ g] a4 | a4 g8[ f] g4 g
   }
-  g4 a bes a | f2^\p f \bar "|."
+  g4 a bes a | f2\p f
 }
 altomelody = \relative f' {
+  \key d \minor
+  \time 4/4
   \repeat volta 2 {
-    f4. f8 f[ d] e4 | d^\< g\! g8[ e] f4
-    f^\f f c d | d d f8[ d] e4
+    f4. f8 f[ d] e4 | d\< g\! g8[ e] f4
+    f\f f c d | d d f8[ d] e4
   }
-  d4 f8[ e] d4 d | f(^\p e) d2 \bar "|."
+  d4 f8[ e] d4 d | f(\p e) d2
 }
 tenormelody = \relative c' {
+  \key d \minor
+  \time 4/4
   \repeat volta 2 {
-    a4 a c8[ d] c4 | bes^\< c\! d d8[ c]
-    bes4^\f d a f | f g g c
+    a4 a c8[ d] c4 | bes\< c\! d d8[ c]
+    bes4\f d a f | f g g c
   }
-  bes8[ a] g[ a] f4 f8[ g] | a4.(^\p g8) a2 \bar "|."
+  bes8[ a] g[ a] f4 f8[ g] | a4.(\p g8) a2
 }
 bassmelody = \relative f {
+  \key d \minor
+  \time 4/4
   \repeat volta 2 {
-    f4 f c c | g4.^\< bes16[ c]\! d4 d
-    bes^\f bes f'8[ e] d[ c] | bes4 b c c
+    f4 f c c | g4.\< bes16[ c]\! d4 d
+    bes\f bes f'8[ e] d[ c] | bes4 b c c
   }
-  g4 g bes bes | d2^\p d \bar "|."
+  g4 g bes bes | d2\p d
 }
 akordy = \chordmode {
-  
+  f2 c
+  g2 d:m
+  bes2 f4 d:m
+  bes4 g c2
+  g bes
+  d1:m
 }
 %--------------------------------LYRICS--------------------------------
-text =  \lyricmode { \set stanza = "1. "
-                     W_swo -- im wiel -- kim mi -- ło -- sier -- dziu 
-                     Bóg nas zro -- dził do na -- dzie -- i,
-                     do wiel -- kiej na -- dzie -- i.	
-}
-stanzas = \markup {
+text = \lyricmode {
+  W_swo -- im wiel -- kim mi -- ło -- sier -- dziu
+  Bóg nas zro -- dził do na -- dzie -- i,
+  do wiel -- kiej na -- dzie -- i.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
-fourstaveschoir = {
+\score {
   \new ChoirStaff <<
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble
-      \set Staff.instrumentName = "S " 
-      \set Staff.shortInstrumentName = "S "
       \new Voice = soprano {
-        \commonprops
-        \set Voice.midiInstrument = "clarinet"
-        \sopranomelody 
+        \sopranomelody
       }
     }
     \new Lyrics = sopranolyrics \lyricsto soprano \text
-    
+
     \new Staff = alto {
       \clef treble
-      \set Staff.instrumentName = "A " 
-      \set Staff.shortInstrumentName = "A "
       \new Voice = alto {
-        \commonprops
-        \set Voice.midiInstrument = "english horn"
-        \altomelody 
+        \altomelody
       }
     }
     \new Lyrics = altolyrics \lyricsto alto \text
-    
+
     \new Staff = tenor {
       \clef "treble_8"
-      \set Staff.instrumentName = "T " 
-      \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
-        \commonprops
-        \set Voice.midiInstrument = "english horn"
         \tenormelody
       }
     }
     \new Lyrics = tenorlyrics \lyricsto tenor \text
-    
+
     \new Staff = bass {
       \clef bass
-      \set Staff.instrumentName = "B " 
-      \set Staff.shortInstrumentName = "B "
       \new Voice = bass {
-        \commonprops
-        \set Voice.midiInstrument = "clarinet"
-        \bassmelody 
+        \bassmelody
       }
     }
     \new Lyrics = basslyrics \lyricsto bass \text
   >>
-}
-
-%---------------------------------MIDI---------------------------------
-\score {
-  \unfoldRepeats \fourstaveschoir
-  \midi {
-    \context {
-      \Staff \remove "Staff_performer"
-    }
-    \context {
-      \Voice 
-      \consists "Staff_performer"
-      \remove "Dynamic_performer"
-    }
+  \layout {
+    \autoBeamOff
+    \tempo 4=90
   }
 }
-
-%--------------------------------LAYOUT--------------------------------
-\score {
-  \fourstaveschoir
-  \layout { 
-    indent = 0\cm 
-    \context {
-      \Staff \consists "Ambitus_engraver"
-    }
-  }
-}
-
-\stanzas
