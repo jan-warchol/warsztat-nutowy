@@ -1,4 +1,5 @@
 \version "2.17.3"
+#(set-global-staff-size 16.5)
 
 \header	{
   title = "Agnus Dei"
@@ -7,7 +8,9 @@
 }
 
 \paper {
-  line-width = 147 \mm
+  paper-width = 165 \mm
+  paper-height = 240 \mm
+  line-width = 145 \mm
 }
 %--------------------------------MELODY--------------------------------
 ml = \melisma
@@ -53,7 +56,7 @@ altomelody = \relative f' {
   \repeat volta 3 {
     d2 d4
     e4 e d
-    d4 ~ d4 d4
+    d2 d8 d
     d4( c) c
     d2( e4)
     d2.
@@ -112,7 +115,7 @@ bassmelody = \relative f {
   \repeat volta 3 {
     d2 d4
     c4 c c
-    bes4 bes bes
+    bes2 bes8 bes
     c2 a4
     d2.
     g,2.
