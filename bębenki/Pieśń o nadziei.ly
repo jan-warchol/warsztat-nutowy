@@ -163,27 +163,31 @@ text = \lyricmode {
     \bar "||"
     <<
       {
+        \voiceOne
         c4 c8 c c4 c8 c
-        d8\melisma c\melismaEnd d4 r2
-        r8 d8 f d c4 d8 a
-        f\melisma a\melismaEnd g4 r4. c8
+        d8\melisma c\melismaEnd d4 \oneVoice r2
+        r8 \voiceOne d8 f d c4 d8 a
+        f\melisma a\melismaEnd g4 \oneVoice r4. \voiceOne c8
         c4 c8 c c4 c
         bes4 bes a a
-        r8 d8 d d c4 d8 a
+        \oneVoice r8 \voiceOne d8 d d c4 d8 a
         g16\melisma f\melismaEnd g4.
       }
       \new Voice {
+        \voiceTwo
         f4 g8 a g4 g8 g
-        bes4 bes r2
-        r8 bes8 bes bes a4 a8 f8
-        f4 d r4. e8
+        bes4 bes s2
+        s8 bes8 bes bes a4 a8 f8
+        f4 d s4. e8
         f4 g8 a g4 g
         d g g8\melisma e\melismaEnd f4
-        r8 f f f a4 f8 f
+        s8 f f f a4 f8 f
         d8 d4.
       }
     >>
+    \oneVoice
     r2
+    \bar "|."
   }
   \addlyrics {
     \set stanza = "1."
