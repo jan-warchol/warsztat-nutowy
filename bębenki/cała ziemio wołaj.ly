@@ -146,10 +146,20 @@ text = \lyricmode {
     { ra -- duj się, we -- sel się. }
     { al -- le -- lu -- ja, al -- le -- lu -- ja. }
   }
-  "Śpiewajcie Pa" -- \markup \bold \underline nu pieśń no -- wą,
-  "albowiem u" -- \markup \bold \underline czy -- nił cu -- da.
-  "Zwycięstwo mu zgotowała Je" -- go pra -- wi -- ca
-  "i święte" ra -- mię Je -- go.
+  \tweak #'X-offset #-1.5 "Śpiewajcie Pa"
+  --
+  \markup \bold \underline nu pieśń no -- wą,
+  \tweak #'X-offset #-0.5 "albowiem u"
+  --
+  \markup \bold \underline czy -- nił cu -- da.
+}
+secondverse = \lyricmode {
+  \repeat unfold 27 \skip4
+  \tweak #'X-offset #-1.5 "Zwycięstwo mu zgotowała Je"
+  --
+  \markup \bold \underline go pra -- wi -- ca
+  \tweak #'X-offset #-0.5 "i święte"
+  \markup \bold \underline ra -- mię Je -- go.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
@@ -166,7 +176,8 @@ text = \lyricmode {
         \altomelody
       }
     >>
-    \new Lyrics = sopranolyrics \lyricsto soprano \text
+    \new Lyrics \lyricsto soprano \text
+    \new Lyrics \lyricsto soprano \secondverse
 
     \new Staff = men <<
       \clef bass
