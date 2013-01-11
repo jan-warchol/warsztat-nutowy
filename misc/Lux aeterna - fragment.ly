@@ -3,6 +3,11 @@
 #(set-global-staff-size 15)
 
 \paper {
+  indent = 0
+  top-margin = 13 \mm
+  bottom-margin = 11 \mm
+  line-width = 177 \mm
+  tagline = ##f
 }
 
 \score {
@@ -91,7 +96,7 @@
     >>
 
     \new GrandStaff <<
-      \new Staff = "up" <<
+      \new Staff = "up" \with { \consists "Mark_engraver" } <<
         \new Voice \relative f'' {
           \key d \minor
           \voiceOne
@@ -151,6 +156,18 @@
       >>
     >>
   >>
+
   \layout {
+    \set Score.currentBarNumber = #106
+    \context {
+      \Staff \remove Time_signature_engraver
+    }
+
+    \accidentalStyle #'Score "modern"
+    \set Score.markFormatter = #format-mark-box-alphabet
+
+    \set GrandStaff.fontSize = #1.5
+    \override GrandStaff.StaffSymbol #'staff-space = #(magstep 1.5)
+    \override GrandStaff.StaffSymbol #'thickness = #(magstep 1.25)
   }
 }
