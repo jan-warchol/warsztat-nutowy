@@ -8,6 +8,9 @@
   bottom-margin = 11 \mm
   line-width = 177 \mm
   tagline = ##f
+  page-count = #1
+  ragged-last-bottom = ##f
+  system-system-spacing #'minimum-distance = #17.5
 }
 
 \score {
@@ -158,7 +161,7 @@
   >>
 
   \layout {
-    \set Score.currentBarNumber = #106
+    \set Score.currentBarNumber = #106 \bar ""
     \context {
       \Staff \remove Time_signature_engraver
     }
