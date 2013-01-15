@@ -1,0 +1,3 @@
+﻿jak przesunąć akordy na dół? wtedy można by zmieścić wszystko na jednej stronie.
+Jak zrobić podział strony między nutami a dodatkowym tekstem?
+czy to w ogólle jest harmonizowalne i jak?

@@ -1,0 +1,1 @@
+﻿\bookOutputName "He trusted in God"

@@ -1,0 +1,3 @@
+pliki ly oraz ily można otwierać zwykłym edytorem tekstu (takim jak notepad++ albo windowsowy notatnik - uwaga: Microsoft Word jest innego rodzaju programem i nie nadaje się do tego zadania).
+Najlepszym narzędziem do pracy z plikami lilypondowymi jest program Frescobaldi, który można pobrać stąd: http://frescobaldi.org/download
+(żeby móc przygotować pdfa z plików *ly, trzeba również zainstalować LilyPonda: http://lilypond.org/windows.html - ale do oglądania kodu nie jest on potzebny)

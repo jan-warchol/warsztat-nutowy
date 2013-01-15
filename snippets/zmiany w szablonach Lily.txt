@@ -1,0 +1,13 @@
+﻿dodać głos na properties (kreski taktowe, zmiay metrum, tempo
+przenieść rzeczy z bloku \paper do \layout
+
+osobne zmienne na głosy i z tych zmiennych score
+
+zewnętrzny << >> zawierający ChoirStaff (żeby łatwo dodawać dodatki)
+
+przenieść definicję zmiennych z głosem do pliku ily. Będzie on wtedy stanowił kompletną treść muzyczną (bo będize miał odpowiedni relative na przykład)
+podobnie z lyricsami. patrz dwujęzyczne canticorum.
+
+dodać odpowiedni accidentalstyle
+
+przenieść individualbreaks na poziom score?

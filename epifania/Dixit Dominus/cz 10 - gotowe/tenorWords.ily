@@ -1,0 +1,46 @@
+﻿\lyricmode {
+  Glo -- ri -- a, 
+  Glo -- ri -- a Pa -- tri, Pa -- tri et Fi -- li -- o,
+  et Spi -- ri -- tu -- i Sanc -- to,
+  et Spi -- ri -- tu -- i Sanc -- to, 
+  et Spi -- ri -- tu -- i Sanc -- to, 
+  et Spi -- ri -- tu -- i Sanc -- to, 
+  et Spi -- ri -- tu -- i Sanc -- to, 
+glo -- ri -- a Pa -- tri, et Fi -- li -- o,
+  et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+ glo -- ria,
+ si -- cut e -- rat,
+ et Spi -- ri -- tu -- i Sanc -- to, 
+ et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+et Spi -- ri -- tu -- i Sanc -- to, 
+si -- cut e -- rat in prin -- ci -- pi -- o,
+et nunc, et sem -- per.
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men, a -- men, 
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men, a -- men,
+a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men, a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men, a -- men, a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum 
+a -- men, a -- men, a -- men, a -- "(men," 
+a -- men, a -- men, "a)" -- men, a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+et in sæ -- cu -- la sæ -- cu -- lo -- rum 
+a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum, 
+a -- men, a -- men,
+et in sæ -- cu -- la sæ -- cu -- lo -- rum
+a -- men, a -- men, a -- men.
+}
