@@ -50,6 +50,7 @@ sopranomelody = \relative f' {
       f2.
     }
   }
+  \bar "|."
 }
 altomelody = \relative f' {
   \common
@@ -80,6 +81,7 @@ altomelody = \relative f' {
       c2.
     }
   }
+  \bar "|."
 }
 tenormelody = \relative f {
   \common
@@ -109,6 +111,7 @@ tenormelody = \relative f {
       a2.
     }
   }
+  \bar "|."
 }
 bassmelody = \relative f {
   \common
@@ -177,5 +180,7 @@ text = \lyricmode {
       }
     >>
   >>
-  \layout { }
+  \layout {
+    indent = 0\cm
+  }
 }
