@@ -9,6 +9,26 @@
   %system-count = #19
   %page-count = #5
   %ragged-last-bottom = ##f
+  top-markup-spacing #'basic-distance = #3
+  markup-system-spacing #'basic-distance = #40
+  top-system-spacing #'basic-distance = #6
+  last-bottom-spacing #'basic-distance = #6
+  top-margin = 6 \mm
+  bottom-margin = 6 \mm
+  left-margin = 11 \mm
+
+  oddHeaderMarkup = \markup \fill-line {
+    " "
+    \on-the-fly #not-first-page \fromproperty #'header:title
+    \on-the-fly #print-page-number-check-first
+    \fromproperty #'page:page-number-string
+  }
+  evenHeaderMarkup = \markup \fill-line {
+    \on-the-fly #print-page-number-check-first
+    \fromproperty #'page:page-number-string
+    \on-the-fly #not-first-page \fromproperty #'header:title
+    " "
+  }
 }
 
 \header	{
@@ -46,9 +66,11 @@ translation = \markup {
 }
 
 sopranomelody =	\relative c'' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   d4.\f a8 b  a  r4 |
   d4. a8 b  a  r d16  d  |
@@ -76,7 +98,7 @@ sopranomelody =	\relative c'' {
   cis8  a8  r8 cis16  cis16  d8 d16  d16  e8  e8  |
   a,4 r8 d16  cis16  b8  b8  r8 e8 |
   % 27
-  d8 cis8 d8 e16 d16 cis8 cis16  cis16  e8  cis8  |
+  d8 [ cis8 ] d8 [ e16 d16 ] cis8 cis16  cis16  e8  cis8  |
   r8 a16  a16  d8  a8  r8 cis16  cis16  e8  cis8  |
   r8 a16  a16  fis'8  d8  r8 cis16  cis16  d8  a8  |
   r8 b16  b16  e8  e8  r8 cis16  cis16  d8 d16  d16  |
@@ -84,10 +106,10 @@ sopranomelody =	\relative c'' {
   d4 cis4 d4 d4 |
   d4 d4 d2 | % \break
   % 33 
-  r2 r4 a4\p |
+  r2 r4 a4 \p |
   a4 g4 fis4 e8.  d16  | d1 |
   r2 fis4 e8.  d16  |
-  d2. fis'4\f |
+  d2. fis'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   e4 d4 d4 cis4 |
   d4. cis8 d4 d4 | % \break
@@ -100,8 +122,8 @@ sopranomelody =	\relative c'' {
   a'4-- cis,4-- fis4-- a,4-- |
   d4-- cis8  b8  cis4 ( b8.  a16 )  |
   % 51
-  a2 a4-> a4-> | a1 ~ | a1 |
-  r4 a4-> a4-> a4-> | a1 ~ | a1 |
+  a2 a4^> a4^> | a1 ~ | a1 |
+  r4 a4^> a4^> a4^> | a1 ~ | a1 |
   % 57
   r2 d4-> d4-> | d1-> ~ | d1 ~ |
   d4 d4-> e4-> e4-> | e1 ~ | e1 ~ |
@@ -109,8 +131,8 @@ sopranomelody =	\relative c'' {
   e2 fis4-> fis4-> | fis1-> ~ | fis1 ~ |
   fis4. fis8-> g4-> g4-> | g1-> ~ |
   % 68
-  g4. g8 fis8(  e8)  fis8(  g8)  |
-  e2 r8 cis8\mf d8 e8 |
+  g4. g8 fis8 [(  e8 ])  fis8 [(  g8 ])  |
+  e2 r8 cis8\mf d8 [ e8 ] |
   a,4 r4 r2 |
   % 71
   r2 r4 a4-- |
@@ -140,16 +162,19 @@ sopranomelody =	\relative c'' {
   d8  d8  r8 d16  d16  d8  d8  r8 d16  d16  |
   d8  d8  r4 r4 \tempo Adagio 4=60 d4 |
   d2. d4 | d1
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   a4.\f  a8 g8  fis8  r4 |
   a4. a8 g8  fis8  r8 a16  a16  |
   b8  a8  r8 a16  a16  b8  a8  r8 a8 |
-  g8(  fis8 e8 ) e8 fis4 r4 |
+  g8 [(  fis8 ] e8 ) e8 fis4 r4 |
   % 8
   a4. a8 a8  a8  r4 |
   a4. a8 a8  a8  r8 a16  a16  |
@@ -168,7 +193,7 @@ altomelody = \relative f' {
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r8 a16  a16  b8  a8  r4 |
   % 22
-  R1 | r2 r4 r8 a16\mf a16  |
+  R1 | r2 r4 r8 a16-\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \mf a16  |
   g8 e16  e16  a8  a8  a8 a16  a16  fis8  d8  |
   r8 e16  e16  cis8  a8  r8 g'16  fis16  e8 a16  g16  |
   fis4 r8 b16  a16  gis8 e16  e16  a4 ~ |
@@ -178,12 +203,12 @@ altomelody = \relative f' {
   d2 \f e4 fis4 |
   g8  g,8  g'4. g8 fis4 |
   e2 d8 a'16  a16  fis8  d8  |
-  r8 b'8 b8 b8 a2 |
+  r8 b'8 b8 [ b8 ] a2 |
   % 33
   r2 r4 fis4 \p |
   e4 d4 d4 cis4 | d1 |
   r4 d2 cis4 |
-  d2. a'4\f |
+  d2. a'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   a4 d,4 fis4 e8.  d16  |
   d4. e8 fis4 gis4 |
@@ -192,12 +217,12 @@ altomelody = \relative f' {
   % 46
   r4 a4-- <d, d'>4-- fis4-- |
   b4-- d,4-- g4-- fis8  e8  |
-  fis4 ( e8.  d16 )  d8 a'8 fis8 d8 |
-  r8 e8 a8 e8 r4 r8 cis8 |
+  fis4 ( e8.  d16 )  d8 [ a'8 ] fis8 [ d8 ] |
+  r8 e8 a8 [ e8 ] r4 r8 cis8 |
   d8 (  b'8 )  a2 gis4 |
   % 51
-  a4 e4 a4-> a4-> | a1 ~ | a1 |
-  r4 a4-> a4-> a4-> | a1 ~ | a1 ~ | a2 r2 |
+  a4 e4 a4^> a4^> | a1 ~ | a1 |
+  r4 a4^> a4^> a4^> | a1 ~ | a1 ~ | a2 r2 |
   % 58
   r4 r8 a8 b8  a8  r8 a8 |
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
@@ -215,15 +240,15 @@ altomelody = \relative f' {
   a4. a8 a4 a4 |
   a2 r2 |
   % 70
-  r2 r8 fis8 \mf gis8 a8 |
-d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
+  r2 r8 fis8 \mf gis8 [ a8 ] |
+  d,8 ( [ cis8 ] d8 [ e16 d16 ] cis8 )[ e8 ] a8  g8  |
   fis4. ( e8 d4. ) d8 |
-  d8 ( cis8 ) d8 d8 d4 ( cis4 ) |
+  d8 ( [ cis8 ) ] d8 [ d8 ] d4 ( cis4 ) |
   % 74
-  d2 d4 -> \f d4-> |
-  d4-> r8 a'8 b8  a8  r8 a8 |
-  b8  a8  r8 d,8-> d4-> d4-> |
-  d4-> r8 a'16  a16  b8  a8  r8 a16  a16  |
+  d2 d4 ^> -\tweak #'X-offset #-3 \f d4^> |
+  d4^> r8 a'8 b8  a8  r8 a8 |
+  b8  a8  r8 d,8^> d4^> d4^> |
+  d4^> r8 a'16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r4 r4 a4 |
   % 79
   d4 fis,4 b4 d,4 |
@@ -243,11 +268,14 @@ d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r4 r4 fis4 |
   g2. g4 | fis1
+  \bar "|."
 }
 tenormelody = \relative c' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   fis4.\f d8 d8  d8  r4 |
   fis4. d8 d8  d8  r8 d16  d16  |
@@ -257,7 +285,7 @@ tenormelody = \relative c' {
   cis4. e8 d8  cis8  r4 |
   cis4. e8 d8  cis8  r8 e16  e16  |
   d8  cis8  r8 e16  e16  d8  cis8  r8 e8 |
-  d8 ( e8 fis8 ) d8 e4 r4 |
+  d8 ( [ e8 ] fis8 ) d8 e4 r4 |
   % 12
   a,2 b4 cis4 |
   d8  d,8  d'4. d8 cis4 |
@@ -275,7 +303,7 @@ tenormelody = \relative c' {
   b8  b8  r8 e16  e16  cis8 a16  a16  d4 ~ |
   d4 cis4 d8 fis16  fis16  a8  fis8  |
   % 25
-  a,2\f b4 cis4 |
+  a,2-\tweak #'X-offset #-1.6 -\tweak #'Y-offset #-2 \f b4 cis4 |
   d8  d,8  d'4. d8 cis4 |
   b2 a8  e'16 \mf e16  cis8  a8  |
   r8 d16  d16  fis8  d8  r8 e16  e16  cis8  a8  |
@@ -289,7 +317,7 @@ tenormelody = \relative c' {
   a4 d,4 a'4. a8 |
   a1 | % 36
   r2 a4 g8.  fis16  |
-  fis2. d'4 \f |
+  fis2. d'4 -\tweak #'X-offset #-2.5 \f |
   % 38
   e4 g4 a,4. a8 |
   a4. g8 a4 d4 |
@@ -300,11 +328,11 @@ tenormelody = \relative c' {
   a'4-- cis,4-- fis4-- a,4-- |
   d4-- cis8  b8  cis4 ( b8.  a16 )  |
   % 46
-  a4 r4 r8 a8 d8 d8 |
-  d4 r8 b8 e8 cis8 d8 d8 |
+  a4 r4 r8 a8 d8 [ d8 ] |
+  d4 r8 b8 e8 [ cis8 ] d8 [ d8 ] |
   d4 ( cis4 ) d4 r4 |
   % 49
-  r2 r8 d8 cis8 a8 |
+  r2 r8 d8 cis8 [ a8 ] |
   fis'8 ( e4 ) fis8 e8  e8  r8 e8 |
   e4 cis4 r2 |
   % 52
@@ -329,15 +357,15 @@ tenormelody = \relative c' {
   d4 d4 r2 |
   % 67
   r2 d4 d4 |
-  e4. e8 d8 ( cis8 ) d8 ( e8 ) |
+  e4. e8 d8 ( [ cis8 ) ] d8 ( [ e8 ) ] |
   cis2 r2 |
   % 70
-  r8 a8\mf b8 cis8 fis,8  a8  a4 ~ |
+  r8 a8-\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \mf b8 [ cis8 ] fis,8  a8  a4 ~ |
   a4 gis4 a4 r4 |
-  r8 a8 d8 cis8 b4. a8 |
+  r8 a8 d8 [ cis8 ] b4. a8 |
   g4 a8  b8  a2 |
   % 74
-  a2 d4-> \f d4-> | d1-> ~ |
+  a2 d4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | d1-> ~ |
   d4. d8-> d4-> d4-> | d1-> ~ |
   % 78
   d4 r8 fis8 fis4-- d4-- |
@@ -359,16 +387,19 @@ tenormelody = \relative c' {
   g8  fis8  r8 d16  d16  g8  fis8  r8 d16  d16  |
   g8  fis8  r4 r4 a,4 |
   b2. b4 | a1
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   d4. \f fis8 g8  d8  r4 | % 5
   d4. fis8 g8  d8  r8 fis16  fis16  | % 6
   g8  d8  r8 fis16  fis16  g8  d8  r8 fis8 | % 7
-  e8 ( d8 a'8 ) a8 d,4 r4 |
+  e8 ( [ d8 ] a'8 ) a8 d,4 r4 |
   % 8
   a'4. cis8 d8  a8  r4 | % 9
   a4. cis8 d8  a8  r8 cis16  cis16  |
@@ -387,10 +418,10 @@ bassmelody = \relative f {
   g8  d8  r8 fis16  fis16  g8  d8  r8 fis16  fis16  | % 21
   g8  d8  r8 fis16  fis16  g8  d8  r4 | R1 | R1 |
   % 24
-  r4 r8 a'16 \mf a16  fis8  d8  r4 | % 25
-  a'2\f b4 cis4 | % 26
+  r4 r8 a'16-\tweak #'X-offset #-3.4 -\tweak #'Y-offset #-2 \mf a16  fis8  d8  r4 | % 25
+  a'2-\tweak #'X-offset #-1.6 -\tweak #'Y-offset #-2 \f b4 cis4 | % 26
   d8  d,8  d'4. d8 cis4 | % 27
-  b2 a4 r8 a16\mf  a16  | % 28
+  b2 a4 r8 a16-\tweak #'X-offset #-3.4 -\tweak #'Y-offset #-2 \mf  a16  | % 28
   fis8  d8  r8 d'16  d16  cis8  a8  r4 |
   % 29
   r4 r8 d16  d16  cis8  a8  r8 d16  d16  |
@@ -402,7 +433,7 @@ bassmelody = \relative f {
   cis4 b4 a4 g'8.  fis16  | % 35
   fis1 | % 36
   r2 a,4. a8 | % 37
-  d2. d'4 \f |
+  d2. d'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   cis4 b4 a4 g8.  fis16  | % 39
   fis4. e8 d4 b'4 |
@@ -413,13 +444,13 @@ bassmelody = \relative f {
   e2-\trill d4 r4 |
   % 44
   r4 r8 a'8 d8  d,8  r8 fis8 | % 45
-  b8 (  gis8 )  a4 r8 e8 d8 e8 | % 46
-  cis8 a'8 g8 a8 fis4 r8 fis8 | % 47
+  b8 (  gis8 )  a4 r8 e8 d8 [ e8 ] | % 46
+  cis8 [ a'8 ] g8 [ a8 ] fis4 r8 fis8 | % 47
   g8  d8  r4 r4 r8 g8 |
   % 48
   a8  a,8  r8 a'8 fis8  d8  r8 d'8 | % 49
   cis8  a8  r8 cis8 d8  d,8  r8 fis8 |
-  b8 gis8 a8 d,8 e8  e8  r8 e8 | % 51
+  b8 [ gis8 ] a8 [ d,8 ] e8  e8  r8 e8 | % 51
   cis4 a4 r2 |
   % 52
   r4 r8 cis'8 d8  a8  r8 cis8 | % 53
@@ -448,9 +479,9 @@ bassmelody = \relative f {
   fis4-- a,4-- d4-- cis8  cis8  | % 71
   b2 a4 r4 |
   % 72
-  r2 r8 d8 g8 fis8 | % 73
+  r2 r8 d8 g8 [ fis8 ] | % 73
   e4 fis8 (  g8 )  a4 g8  a8  | % 74
-  fis4 d4 d'4-> \f d4-> | % 75
+  fis4 d4 d'4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | % 75
   d4-> r8 fis,8 g8  d8  r8 fis8 | % 76
   g8  d8  r8 d'8-> d4-> d4-> | % 77
   d4-> r8 fis,16  fis16  g8  d8  r8 fis16  fis16  |
@@ -474,6 +505,7 @@ bassmelody = \relative f {
   g8  d8  r4 r4 d4 | % 93
   g2. g4 | % 94
   d1
+  \bar "|."
 }
 %--------------------------------LYRICS--------------------------------
 sopranotext =  \lyricmode {
@@ -513,7 +545,7 @@ altotext =  \lyricmode {
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
   For the Lord God om -- ni -- po -- tent reign -- eth,
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
-  For the Lord God om -- ni -- po -- tent reign -- eth,
+  For the Lord God \once \override LyricText #'Y-offset = #-1.5 om -- ni -- po -- tent reign -- eth,
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
   Hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah,
   hal -- _ le -- lu -- _ jah, hal -- le -- lu -- jah,
@@ -621,7 +653,10 @@ basstext =  \lyricmode {
   \new ChoirStaff <<
     \new Staff = soprano {
       \clef treble
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
       \new Voice = soprano {
+        \set Voice.midiInstrument = "clarinet"
         \sopranomelody
       }
     }
@@ -629,7 +664,10 @@ basstext =  \lyricmode {
 
     \new Staff = alto {
       \clef treble
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
       \new Voice = alto {
+        \set Voice.midiInstrument = "english horn"
         \altomelody
       }
     }
@@ -637,7 +675,10 @@ basstext =  \lyricmode {
 
     \new Staff = tenor {
       \clef "treble_8"
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
+        \set Voice.midiInstrument = "english horn"
         \tenormelody
       }
     }
@@ -645,12 +686,41 @@ basstext =  \lyricmode {
 
     \new Staff = bass {
       \clef bass
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
       \new Voice = bass {
+        \set Voice.midiInstrument = "clarinet"
         \bassmelody
       }
     }
     \new Lyrics = basslyrics \lyricsto bass \basstext
   >>
   
-  \layout { }
+  \layout {
+    indent = 0\cm
+    \compressFullBarRests
+    \context {
+      \Staff \consists "Ambitus_engraver"
+    }
+    \context {
+      \Score
+      \override BarNumber #'break-visibility = #'#(#f #t #t)
+      \override BarNumber #'self-alignment-X =
+      #(lambda (grob)
+         (let ((break-dir (ly:item-break-dir grob)))
+           (set! (ly:grob-property grob 'self-alignment-X)
+                 (if (= break-dir RIGHT)
+                     1
+                     0))))
+
+      \override BarNumber #'stencil =
+      #(lambda (grob)
+         (let ((break-dir (ly:item-break-dir grob)))
+           (set! (ly:grob-property grob 'font-size)
+                 (if (= break-dir RIGHT)
+                     -1
+                     -3))
+           (ly:text-interface::print grob)))
+    }
+  }
 }
