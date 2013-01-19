@@ -99,10 +99,10 @@ sopranomelody =	\relative c'' {
   d4 cis4 d4 d4 |
   d4 d4 d2 | % \break
   % 33 
-  r2 r4 a4\p |
+  r2 r4 a4 \p |
   a4 g4 fis4 e8.  d16  | d1 |
   r2 fis4 e8.  d16  |
-  d2. fis'4\f |
+  d2. fis'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   e4 d4 d4 cis4 |
   d4. cis8 d4 d4 | % \break
@@ -186,7 +186,7 @@ altomelody = \relative f' {
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r8 a16  a16  b8  a8  r4 |
   % 22
-  R1 | r2 r4 r8 a16\mf a16  |
+  R1 | r2 r4 r8 a16-\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \mf a16  |
   g8 e16  e16  a8  a8  a8 a16  a16  fis8  d8  |
   r8 e16  e16  cis8  a8  r8 g'16  fis16  e8 a16  g16  |
   fis4 r8 b16  a16  gis8 e16  e16  a4 ~ |
@@ -201,7 +201,7 @@ altomelody = \relative f' {
   r2 r4 fis4 \p |
   e4 d4 d4 cis4 | d1 |
   r4 d2 cis4 |
-  d2. a'4\f |
+  d2. a'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   a4 d,4 fis4 e8.  d16  |
   d4. e8 fis4 gis4 |
@@ -238,7 +238,7 @@ d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
   fis4. ( e8 d4. ) d8 |
   d8 ( cis8 ) d8 d8 d4 ( cis4 ) |
   % 74
-  d2 d4 -> \f d4-> |
+  d2 d4 -> -\tweak #'X-offset #-3 \f d4-> |
   d4-> r8 a'8 b8  a8  r8 a8 |
   b8  a8  r8 d,8-> d4-> d4-> |
   d4-> r8 a'16  a16  b8  a8  r8 a16  a16  |
@@ -296,7 +296,7 @@ tenormelody = \relative c' {
   b8  b8  r8 e16  e16  cis8 a16  a16  d4 ~ |
   d4 cis4 d8 fis16  fis16  a8  fis8  |
   % 25
-  a,2\f b4 cis4 |
+  a,2-\tweak #'X-offset #-1.6 -\tweak #'Y-offset #-2 \f b4 cis4 |
   d8  d,8  d'4. d8 cis4 |
   b2 a8  e'16 \mf e16  cis8  a8  |
   r8 d16  d16  fis8  d8  r8 e16  e16  cis8  a8  |
@@ -310,7 +310,7 @@ tenormelody = \relative c' {
   a4 d,4 a'4. a8 |
   a1 | % 36
   r2 a4 g8.  fis16  |
-  fis2. d'4 \f |
+  fis2. d'4 -\tweak #'X-offset #-2.5 \f |
   % 38
   e4 g4 a,4. a8 |
   a4. g8 a4 d4 |
@@ -358,7 +358,7 @@ tenormelody = \relative c' {
   r8 a8 d8 cis8 b4. a8 |
   g4 a8  b8  a2 |
   % 74
-  a2 d4-> \f d4-> | d1-> ~ |
+  a2 d4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | d1-> ~ |
   d4. d8-> d4-> d4-> | d1-> ~ |
   % 78
   d4 r8 fis8 fis4-- d4-- |
@@ -411,10 +411,10 @@ bassmelody = \relative f {
   g8  d8  r8 fis16  fis16  g8  d8  r8 fis16  fis16  | % 21
   g8  d8  r8 fis16  fis16  g8  d8  r4 | R1 | R1 |
   % 24
-  r4 r8 a'16 \mf a16  fis8  d8  r4 | % 25
-  a'2\f b4 cis4 | % 26
+  r4 r8 a'16-\tweak #'X-offset #-3.4 -\tweak #'Y-offset #-2 \mf a16  fis8  d8  r4 | % 25
+  a'2-\tweak #'X-offset #-1.6 -\tweak #'Y-offset #-2 \f b4 cis4 | % 26
   d8  d,8  d'4. d8 cis4 | % 27
-  b2 a4 r8 a16\mf  a16  | % 28
+  b2 a4 r8 a16-\tweak #'X-offset #-3.4 -\tweak #'Y-offset #-2 \mf  a16  | % 28
   fis8  d8  r8 d'16  d16  cis8  a8  r4 |
   % 29
   r4 r8 d16  d16  cis8  a8  r8 d16  d16  |
@@ -426,7 +426,7 @@ bassmelody = \relative f {
   cis4 b4 a4 g'8.  fis16  | % 35
   fis1 | % 36
   r2 a,4. a8 | % 37
-  d2. d'4 \f |
+  d2. d'4-\tweak #'X-offset #-2.5 -\tweak #'Y-offset #-2 \f |
   % 38
   cis4 b4 a4 g8.  fis16  | % 39
   fis4. e8 d4 b'4 |
@@ -474,7 +474,7 @@ bassmelody = \relative f {
   % 72
   r2 r8 d8 g8 fis8 | % 73
   e4 fis8 (  g8 )  a4 g8  a8  | % 74
-  fis4 d4 d'4-> \f d4-> | % 75
+  fis4 d4 d'4-> -\tweak #'X-offset #-3 -\tweak #'Y-offset #-2 \f d4-> | % 75
   d4-> r8 fis,8 g8  d8  r8 fis8 | % 76
   g8  d8  r8 d'8-> d4-> d4-> | % 77
   d4-> r8 fis,16  fis16  g8  d8  r8 fis16  fis16  |
@@ -538,7 +538,7 @@ altotext =  \lyricmode {
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
   For the Lord God om -- ni -- po -- tent reign -- eth,
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
-  For the Lord God om -- ni -- po -- tent reign -- eth,
+  For the Lord God \once \override LyricText #'Y-offset = #-1.5 om -- ni -- po -- tent reign -- eth,
   hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
   Hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah,
   hal -- _ le -- lu -- _ jah, hal -- le -- lu -- jah,
