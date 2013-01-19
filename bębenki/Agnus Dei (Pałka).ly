@@ -25,6 +25,7 @@ common = {
   \key f \major
   \time 3/4
   \tempo 4=50
+  \set Timing.beamExceptions = #'()
 }
 
 sopranomelody = \relative f' {
@@ -196,5 +197,6 @@ text = \lyricmode {
   >>
   \layout {
     indent = 0\cm
+    \set Timing.beamHalfMeasure = ##f
   }
 }
