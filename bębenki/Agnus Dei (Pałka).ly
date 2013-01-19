@@ -16,6 +16,8 @@ m = #(define-music-function (parser location off) (number?)
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 10 \mm
+  system-system-spacing #'basic-distance = #15
 }
 %--------------------------------MELODY--------------------------------
 ml = \melisma
