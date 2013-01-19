@@ -115,8 +115,8 @@ sopranomelody =	\relative c'' {
   a'4-- cis,4-- fis4-- a,4-- |
   d4-- cis8  b8  cis4 ( b8.  a16 )  |
   % 51
-  a2 a4-> a4-> | a1 ~ | a1 |
-  r4 a4-> a4-> a4-> | a1 ~ | a1 |
+  a2 a4^> a4^> | a1 ~ | a1 |
+  r4 a4^> a4^> a4^> | a1 ~ | a1 |
   % 57
   r2 d4-> d4-> | d1-> ~ | d1 ~ |
   d4 d4-> e4-> e4-> | e1 ~ | e1 ~ |
@@ -214,8 +214,8 @@ altomelody = \relative f' {
   r8 e8 a8 e8 r4 r8 cis8 |
   d8 (  b'8 )  a2 gis4 |
   % 51
-  a4 e4 a4-> a4-> | a1 ~ | a1 |
-  r4 a4-> a4-> a4-> | a1 ~ | a1 ~ | a2 r2 |
+  a4 e4 a4^> a4^> | a1 ~ | a1 |
+  r4 a4^> a4^> a4^> | a1 ~ | a1 ~ | a2 r2 |
   % 58
   r4 r8 a8 b8  a8  r8 a8 |
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
@@ -238,10 +238,10 @@ d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
   fis4. ( e8 d4. ) d8 |
   d8 ( cis8 ) d8 d8 d4 ( cis4 ) |
   % 74
-  d2 d4 -> -\tweak #'X-offset #-3 \f d4-> |
-  d4-> r8 a'8 b8  a8  r8 a8 |
-  b8  a8  r8 d,8-> d4-> d4-> |
-  d4-> r8 a'16  a16  b8  a8  r8 a16  a16  |
+  d2 d4 ^> -\tweak #'X-offset #-3 \f d4^> |
+  d4^> r8 a'8 b8  a8  r8 a8 |
+  b8  a8  r8 d,8^> d4^> d4^> |
+  d4^> r8 a'16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r4 r4 a4 |
   % 79
   d4 fis,4 b4 d,4 |
