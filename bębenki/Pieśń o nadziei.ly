@@ -1,6 +1,20 @@
 \version "2.17.3"
 #(set-global-staff-size 17.5)
 
+right = { \once \override LyricText #'self-alignment-X = #-0.8 }
+righty = { \once \override LyricText #'self-alignment-X = #-0.6 }
+rightyy = { \once \override LyricText #'self-alignment-X = #-0.4 }
+rightyyy = { \once \override LyricText #'self-alignment-X = #-0.2 }
+left = { \once \override LyricText #'self-alignment-X = #0.8 }
+lefty = { \once \override LyricText #'self-alignment-X = #0.6 }
+leftyy = { \once \override LyricText #'self-alignment-X = #0.4 }
+leftyyy = { \once \override LyricText #'self-alignment-X = #0.2 }
+
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
+
 \header	{
   title = "Pieśń o nadziei"
   poet = "słowa: Ps 25"
@@ -11,18 +25,23 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 10 \mm
+  markup-system-spacing #'basic-distance = #15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
-    f,8[ g8] a4 g g | g8[\cresc a]\! bes[ c] a4 a
-    d8[ \f c] bes[ a] f[ g] a4 | a4 g8[ f] g4 g
+    f,8[ g8] a4 g g | g8[-\tweak #'Y-offset #2 \cresc a]\! bes[ c] a4 a
+    d8[ -\tweak #'X-offset #-1.3 \f c] bes-\tweak #'positions #'(2.80 . 2.50) [ a] f[ g] a4 | a4 g8[ f] g4 g
   }
   g4 a bes a | f2\p f 
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -30,8 +49,10 @@ altomelody = \relative f' {
     f f c d | d d f8[ d] e4
   }
   d4 f8[ e] d4 d | f( e) d2
+  \bar "|."
 }
 tenormelody = \relative c' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -39,8 +60,10 @@ tenormelody = \relative c' {
     bes4 d a f | f g g c
   }
   bes8[ a] g[ a] f4 f8[ g] | a4.( g8) a2
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -48,8 +71,10 @@ bassmelody = \relative f {
     bes bes f'8[ e] d[ c] | bes4 b c c
   }
   g4 g bes bes | d2 d
+  \bar "|."
 }
 akordy = \chordmode {
+  \set chordNameLowercaseMinor = ##t
   f2 c
   g2 d:m
   bes2 f4 d:m
@@ -59,10 +84,10 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
-  W_swo -- im wiel -- kim
-  mi -- ło -- sier -- dziu
-  Bóg nas zro -- dził do na -- dzie -- i,
-  do wiel -- kiej na -- dzie -- i.
+  \m #-3.2 W_swo -- \m #0 im \m #0 wiel -- \m #-1 kim
+  mi -- ło -- \righty sier -- \rightyy dziu
+  Bóg nas zro -- \rightyy dził do na -- \rightyy dzie -- i,
+  \rightyy do \m #0 wiel -- kiej \rightyy na -- \m #0 dzie -- i.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
@@ -79,7 +104,11 @@ text = \lyricmode {
         \altomelody
       }
     >>
-    \new Lyrics = sopranolyrics \lyricsto soprano \text
+    \new Lyrics = sopranolyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \text
 
     \new Staff = men <<
       \clef bass
@@ -95,6 +124,7 @@ text = \lyricmode {
   >>
   \layout {
     \autoBeamOff
+    indent = 0\cm
   }
 }
 
@@ -133,27 +163,31 @@ text = \lyricmode {
     \bar "||"
     <<
       {
+        \voiceOne
         c4 c8 c c4 c8 c
-        d8\melisma c\melismaEnd d4 r2
-        r8 d8 f d c4 d8 a
-        f\melisma a\melismaEnd g4 r4. c8
+        d8\melisma c\melismaEnd d4 \oneVoice r2
+        r8 \voiceOne d8 f d c4 d8 a
+        f\melisma a\melismaEnd g4 \oneVoice r4. \voiceOne c8
         c4 c8 c c4 c
         bes4 bes a a
-        r8 d8 d d c4 d8 a
+        \oneVoice r8 \voiceOne d8 d d c4 d8 a
         g16\melisma f\melismaEnd g4.
       }
       \new Voice {
+        \voiceTwo
         f4 g8 a g4 g8 g
-        bes4 bes r2
-        r8 bes8 bes bes a4 a8 f8
-        f4 d r4. e8
+        bes4 bes s2
+        s8 bes8 bes bes a4 a8 f8
+        f4 d s4. e8
         f4 g8 a g4 g
         d g g8\melisma e\melismaEnd f4
-        r8 f f f a4 f8 f
+        s8 f f f a4 f8 f
         d8 d4.
       }
     >>
+    \oneVoice
     r2
+    \bar "|."
   }
   \addlyrics {
     \set stanza = "1."
