@@ -9,6 +9,19 @@
   %system-count = #19
   %page-count = #5
   %ragged-last-bottom = ##f
+
+  oddHeaderMarkup = \markup \fill-line {
+    " "
+    \on-the-fly #not-first-page \fromproperty #'header:title
+    \on-the-fly #print-page-number-check-first
+    \fromproperty #'page:page-number-string
+  }
+  evenHeaderMarkup = \markup \fill-line {
+    \on-the-fly #print-page-number-check-first
+    \fromproperty #'page:page-number-string
+    \on-the-fly #not-first-page \fromproperty #'header:title
+    " "
+  }
 }
 
 \header	{
@@ -46,9 +59,11 @@ translation = \markup {
 }
 
 sopranomelody =	\relative c'' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   d4.\f a8 b  a  r4 |
   d4. a8 b  a  r d16  d  |
@@ -140,11 +155,14 @@ sopranomelody =	\relative c'' {
   d8  d8  r8 d16  d16  d8  d8  r8 d16  d16  |
   d8  d8  r4 r4 \tempo Adagio 4=60 d4 |
   d2. d4 | d1
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   a4.\f  a8 g8  fis8  r4 |
   a4. a8 g8  fis8  r8 a16  a16  |
@@ -243,11 +261,14 @@ d,8 ( cis8 d8 e16 d16 cis8 ) e8 a8  g8  |
   b8  a8  r8 a16  a16  b8  a8  r8 a16  a16  |
   b8  a8  r4 r4 fis4 |
   g2. g4 | fis1
+  \bar "|."
 }
 tenormelody = \relative c' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   fis4.\f d8 d8  d8  r4 |
   fis4. d8 d8  d8  r8 d16  d16  |
@@ -359,11 +380,14 @@ tenormelody = \relative c' {
   g8  fis8  r8 d16  d16  g8  fis8  r8 d16  d16  |
   g8  fis8  r4 r4 a,4 |
   b2. b4 | a1
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key d \major
   \time 4/4
   \tempo "Allegro maestoso" 4=110
+  \set Score.tempoHideNote = ##t
   R1*3
   d4. \f fis8 g8  d8  r4 | % 5
   d4. fis8 g8  d8  r8 fis16  fis16  | % 6
@@ -474,6 +498,7 @@ bassmelody = \relative f {
   g8  d8  r4 r4 d4 | % 93
   g2. g4 | % 94
   d1
+  \bar "|."
 }
 %--------------------------------LYRICS--------------------------------
 sopranotext =  \lyricmode {
@@ -621,7 +646,10 @@ basstext =  \lyricmode {
   \new ChoirStaff <<
     \new Staff = soprano {
       \clef treble
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
       \new Voice = soprano {
+        \set Voice.midiInstrument = "clarinet"
         \sopranomelody
       }
     }
@@ -629,7 +657,10 @@ basstext =  \lyricmode {
 
     \new Staff = alto {
       \clef treble
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
       \new Voice = alto {
+        \set Voice.midiInstrument = "english horn"
         \altomelody
       }
     }
@@ -637,7 +668,10 @@ basstext =  \lyricmode {
 
     \new Staff = tenor {
       \clef "treble_8"
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
+        \set Voice.midiInstrument = "english horn"
         \tenormelody
       }
     }
@@ -645,12 +679,41 @@ basstext =  \lyricmode {
 
     \new Staff = bass {
       \clef bass
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
       \new Voice = bass {
+        \set Voice.midiInstrument = "clarinet"
         \bassmelody
       }
     }
     \new Lyrics = basslyrics \lyricsto bass \basstext
   >>
   
-  \layout { }
+  \layout {
+    indent = 0\cm
+    \compressFullBarRests
+    \context {
+      \Staff \consists "Ambitus_engraver"
+    }
+    \context {
+      \Score
+      \override BarNumber #'break-visibility = #'#(#f #t #t)
+      \override BarNumber #'self-alignment-X =
+      #(lambda (grob)
+         (let ((break-dir (ly:item-break-dir grob)))
+           (set! (ly:grob-property grob 'self-alignment-X)
+                 (if (= break-dir RIGHT)
+                     1
+                     0))))
+
+      \override BarNumber #'stencil =
+      #(lambda (grob)
+         (let ((break-dir (ly:item-break-dir grob)))
+           (set! (ly:grob-property grob 'font-size)
+                 (if (= break-dir RIGHT)
+                     -1
+                     -3))
+           (ly:text-interface::print grob)))
+    }
+  }
 }
