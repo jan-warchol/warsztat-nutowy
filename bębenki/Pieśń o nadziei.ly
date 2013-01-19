@@ -1,6 +1,20 @@
 \version "2.17.3"
 #(set-global-staff-size 17.5)
 
+right = { \once \override LyricText #'self-alignment-X = #-0.8 }
+righty = { \once \override LyricText #'self-alignment-X = #-0.6 }
+rightyy = { \once \override LyricText #'self-alignment-X = #-0.4 }
+rightyyy = { \once \override LyricText #'self-alignment-X = #-0.2 }
+left = { \once \override LyricText #'self-alignment-X = #0.8 }
+lefty = { \once \override LyricText #'self-alignment-X = #0.6 }
+leftyy = { \once \override LyricText #'self-alignment-X = #0.4 }
+leftyyy = { \once \override LyricText #'self-alignment-X = #0.2 }
+
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
+
 \header	{
   title = "Pieśń o nadziei"
   poet = "słowa: Ps 25"
@@ -11,6 +25,8 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 10 \mm
+  markup-system-spacing #'basic-distance = #15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
@@ -18,8 +34,8 @@ sopranomelody = \relative c'' {
   \key d \minor
   \time 4/4
   \repeat volta 2 {
-    f,8[ g8] a4 g g | g8[\cresc a]\! bes[ c] a4 a
-    d8[ \f c] bes[ a] f[ g] a4 | a4 g8[ f] g4 g
+    f,8[ g8] a4 g g | g8[-\tweak #'Y-offset #2 \cresc a]\! bes[ c] a4 a
+    d8[ -\tweak #'X-offset #-1.3 \f c] bes-\tweak #'positions #'(2.80 . 2.50) [ a] f[ g] a4 | a4 g8[ f] g4 g
   }
   g4 a bes a | f2\p f 
   \bar "|."
@@ -68,10 +84,10 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
-  W_swo -- im wiel -- kim
-  mi -- ło -- sier -- dziu
-  Bóg nas zro -- dził do na -- dzie -- i,
-  do wiel -- kiej na -- dzie -- i.
+  \m #-3.2 W_swo -- \m #0 im \m #0 wiel -- \m #-1 kim
+  mi -- ło -- \righty sier -- \rightyy dziu
+  Bóg nas zro -- \rightyy dził do na -- \rightyy dzie -- i,
+  \rightyy do \m #0 wiel -- kiej \rightyy na -- \m #0 dzie -- i.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
@@ -88,7 +104,11 @@ text = \lyricmode {
         \altomelody
       }
     >>
-    \new Lyrics = sopranolyrics \lyricsto soprano \text
+    \new Lyrics = sopranolyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \text
 
     \new Staff = men <<
       \clef bass
