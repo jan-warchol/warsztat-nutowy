@@ -14,6 +14,7 @@
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -21,8 +22,10 @@ sopranomelody = \relative c'' {
     d8[ \f c] bes[ a] f[ g] a4 | a4 g8[ f] g4 g
   }
   g4 a bes a | f2\p f 
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -30,8 +33,10 @@ altomelody = \relative f' {
     f f c d | d d f8[ d] e4
   }
   d4 f8[ e] d4 d | f( e) d2
+  \bar "|."
 }
 tenormelody = \relative c' {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -39,8 +44,10 @@ tenormelody = \relative c' {
     bes4 d a f | f g g c
   }
   bes8[ a] g[ a] f4 f8[ g] | a4.( g8) a2
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key d \minor
   \time 4/4
   \repeat volta 2 {
@@ -48,8 +55,10 @@ bassmelody = \relative f {
     bes bes f'8[ e] d[ c] | bes4 b c c
   }
   g4 g bes bes | d2 d
+  \bar "|."
 }
 akordy = \chordmode {
+  \set chordNameLowercaseMinor = ##t
   f2 c
   g2 d:m
   bes2 f4 d:m
@@ -95,6 +104,7 @@ text = \lyricmode {
   >>
   \layout {
     \autoBeamOff
+    indent = 0\cm
   }
 }
 
