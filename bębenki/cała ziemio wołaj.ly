@@ -139,25 +139,28 @@ akordy = \chordmode {
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
   \repeat volta 2 {
-    Ca -- ła zie -- mio wo -- łaj
-    z_ra -- do -- ści na cześć Pa -- na,
+    Ca -- ła zie -- \tweak #'X-offset #-1 mio wo -- \tweak #'X-offset #-1.2 łaj
+    z_ra -- do -- ści \tweak #'X-offset #-1 na \tweak #'X-offset #-1 \markup \scale #'(0.9 . 1) cześć \tweak #'X-offset #-0.2 Pa -- na,
   }
   \alternative {
     { ra -- duj się, we -- sel się. }
     { al -- le -- lu -- ja, al -- le -- lu -- ja. }
   }
-  \tweak #'X-offset #-1.5 "Śpiewajcie Pa"
-  --
-  \markup \bold \underline nu pieśń no -- wą,
-  \tweak #'X-offset #-0.5 "albowiem u"
-  --
+  \tweak #'X-offset #-1.5 "Śpiewajcie Pa" --
+  \tweak #'X-offset #-1.5 \markup \bold \underline nu
+  \markup \scale #'(0.9 . 1) pieśń
+  \tweak #'X-offset #0 no -- wą,
+  \once \override LyricHyphen #'minimum-distance = #1
+  \tweak #'X-offset #-0.5 "albowiem u" --
   \markup \bold \underline czy -- nił cu -- da.
 }
 secondverse = \lyricmode {
   \repeat unfold 27 \skip4
-  \tweak #'X-offset #-1.5 "Zwycięstwo mu zgotowała Je"
-  --
-  \markup \bold \underline go pra -- wi -- ca
+  \once \override LyricHyphen #'minimum-distance = #1
+  \tweak #'X-offset #-1.5 \markup \scale #'(0.9 . 1)
+  "Zwycięstwo mu zgotowała Je" --
+  \tweak #'X-offset #-1.2 \markup \bold \underline go
+  pra -- \tweak #'X-offset #0 wi -- ca
   \tweak #'X-offset #-0.5 "i święte"
   \markup \bold \underline ra -- mię Je -- go.
 }
