@@ -185,8 +185,16 @@ secondverse = \lyricmode {
         \altomelody
       }
     >>
-    \new Lyrics \lyricsto soprano \text
-    \new Lyrics \lyricsto soprano \secondverse
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \text
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \secondverse
 
     \new Staff = men <<
       \clef bass
