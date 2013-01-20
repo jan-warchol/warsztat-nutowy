@@ -12,6 +12,8 @@
   paper-height = 240 \mm
   line-width = 145 \mm
   top-margin = 10 \mm
+  system-system-spacing #'basic-distance = #15
+  markup-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -39,6 +41,8 @@ sopranomelody = \relative f' {
       e2
     }
   }
+  \overrideProperty #"Score.NonMusicalPaperColumn"
+  #'line-break-system-details #`((Y-offset . 70))
   \repeat volta 2 {
     \cadenzaOn
     a\breve g8 fis e4 e2
