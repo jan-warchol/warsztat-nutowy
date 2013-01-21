@@ -23,10 +23,12 @@ sopranomelody = \relative f' {
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     c4\mp | c c f
     \time 4/4
+    \set Timing.beamExceptions = #'()
     g2. \breathe g8 as
     bes4 f f f8 g
     e1 \breathe
@@ -53,10 +55,12 @@ altomelody = \relative f' {
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     c4\mp | c c c
     \time 4/4
+    \set Timing.beamExceptions = #'()
     \shape Slur #'((0 . 0.25)(0 . 0.5)(0 . 0.5)(0 . 0.25))
     c8([ des c bes] c4) \breathe c8 c
     des4 f8\melisma es\melismaEnd des\melisma c\melismaEnd bes des
@@ -84,10 +88,12 @@ tenormelody = \relative f {
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     f4\mp | f8\melisma g\melismaEnd as\melisma bes\melismaEnd as\melisma f\melismaEnd
     \time 4/4
+    \set Timing.beamExceptions = #'()
     \shape Slur #'((0 . 0)(0 . 0.3)(0 . 0.3)(0 . 0))
     g4( c g) \breathe g8 g
     bes4 as bes8\melisma as\melismaEnd g c16\melisma bes\melismaEnd
@@ -114,10 +120,12 @@ bassmelody = \relative f {
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     f4\mp | f f f
     \time 4/4
+    \set Timing.beamExceptions = #'()
     e2. \breathe c8 c
     bes4 des8\melisma c\melismaEnd bes4 g8 f
     c'1 \breathe
