@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \header	{
   title = "Miłujcie się wzajemnie"
@@ -11,11 +11,15 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 10 \mm
+  system-system-spacing #'basic-distance = #14
+  markup-system-spacing #'basic-distance = #12
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative c'' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 e,8 |
     f4 f g8 a | f4 f
@@ -23,7 +27,8 @@ sopranomelody =	\relative c'' {
     e4 e8 e f e |
     d4 d4.
   }
-  r8
+  \noBreak
+  \oneVoice r8 \voiceOne
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -36,16 +41,27 @@ sopranomelody =	\relative c'' {
 altomelody = \relative f' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 c8
     d[ e] d4 c8 c | d8 c c4
     d8 d |
     % m. 3
-    d4 c8 c8 e16 d c8
+    d4 c8
+    \newSpacingSection
+    \override Score.SpacingSpanner #'spacing-increment = #1.5
+    c8
+    \newSpacingSection
+    \override Score.SpacingSpanner #'spacing-increment = #0
+    e16 d
+    \revert Score.SpacingSpanner #'spacing-increment
+    \newSpacingSection
+    c8
     % m. 4
     c4 bes4.
   }
-  r8
+  \noBreak
+  s8
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -58,13 +74,15 @@ altomelody = \relative f' {
 tenormelody = \relative c' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 g8
     f4 f8 g16 f e8 f16 g | a4 a
     bes8 a | g a g g g g
     f8. e16 f4.
   }
-  r8
+  \noBreak
+  \oneVoice r8 \voiceOne
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -77,13 +95,15 @@ tenormelody = \relative c' {
 bassmelody = \relative f {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 c8
     bes4 bes a8 a | d e f a
     g d | c4 c8 c c c
     bes4 bes4.
   }
-  r8
+  \noBreak
+  s8
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -100,17 +120,36 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
-  Mi -- łuj -- cie się wza -- je -- mnie,
-  tak jak Ja was u -- mi -- ło -- wa -- łem.
+  Mi -- \tweak #'X-offset #-0.4 łuj --
+  \tweak #'X-offset #-0.4 cie się
+  \tweak #'X-offset #-0.6 wza -- je --
+  \tweak #'X-offset #-1.2 \markup \scale #'(0.9 . 1) mnie,
+  tak \tweak #'X-offset #-0.4 jak
+  \tweak #'X-offset #0 Ja
+  \tweak #'X-offset #-0.75 \markup \scale #'(0.95 . 1) was u --
+  \tweak #'X-offset #-0.2 mi -- ło --
+  \tweak #'X-offset #-0.2 wa --
+  \tweak #'X-offset #-0.5 łem.
   \set stanza = "1."
-  "Gdybym mówił językami ludzi i"
+  \once \override LyricSpace #'minimum-distance = #1
+  \tweak #'X-offset #-1.5
+  \markup \scale #'(0.95 . 1) "Gdybym mówił językami ludzi i"
   \markup \bold \underline a -- nio -- łów,
-  "a miłoś" --
-  \markup \bold \underline ci bym nie miał,
-  "stałbym się jak miedź"
-  \markup \bold \underline brzę -- czą -- ca
-  albo
-  \markup \bold \underline cym -- bał brzmią -- cy.
+  \tweak #'X-offset #-0.5 "a miłoś" --
+  \markup \bold \underline ci bym
+  \tweak #'X-offset #-0.5 nie
+  \tweak #'X-offset #-2 miał,
+}
+
+secondverse = \lyricmode {
+  \repeat unfold 16 \skip4
+  \tweak #'X-offset #-1.5 "stałbym się jak miedź"
+  \tweak #'X-offset #-3 \markup \bold \underline brzę -- czą -- ca
+  \tweak #'X-offset #-0.5 albo
+  \tweak #'X-offset #-3 \markup \bold \underline cym --
+  \tweak #'X-offset #-1.5 bał
+  \tweak #'X-offset #-1.5 \markup \scale #'(0.9 . 1) brzmią --
+  \tweak #'X-offset #-0.2 cy.
 }
 
 stanzas = \markup {
@@ -130,7 +169,16 @@ stanzas = \markup {
         \altomelody
       }
     >>
-    \new Lyrics \lyricsto soprano \text
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \text
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \secondverse
 
     \new Staff = men <<
       \clef bass
