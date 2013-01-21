@@ -23,7 +23,8 @@ sopranomelody =	\relative c'' {
     e4 e8 e f e |
     d4 d4.
   }
-  r8
+  \noBreak
+  \oneVoice r8 \voiceOne
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -45,7 +46,8 @@ altomelody = \relative f' {
     % m. 4
     c4 bes4.
   }
-  r8
+  \noBreak
+  s8
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -64,7 +66,8 @@ tenormelody = \relative c' {
     bes8 a | g a g g g g
     f8. e16 f4.
   }
-  r8
+  \noBreak
+  \oneVoice r8 \voiceOne
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
@@ -83,7 +86,8 @@ bassmelody = \relative f {
     g d | c4 c8 c c c
     bes4 bes4.
   }
-  r8
+  \noBreak
+  s8
   %inset appropriate bar here (finish/repeat)
   \cadenzaOn
   \repeat volta 2 {
