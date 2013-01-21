@@ -13,6 +13,7 @@
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
@@ -37,8 +38,10 @@ sopranomelody = \relative f' {
     }
   }
   \mark Fine
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
@@ -65,8 +68,10 @@ altomelody = \relative f' {
     }
   }
   \mark Fine
+  \bar "|."
 }
 tenormelody = \relative f {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
@@ -93,8 +98,10 @@ tenormelody = \relative f {
     }
   }
   \mark Fine
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
@@ -119,6 +126,7 @@ bassmelody = \relative f {
     }
   }
   \mark Fine
+  \bar "|."
 }
 akordy = \chordmode {
 }
