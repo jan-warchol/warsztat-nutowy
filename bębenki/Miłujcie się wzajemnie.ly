@@ -16,6 +16,7 @@
 sopranomelody =	\relative c'' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 e,8 |
     f4 f g8 a | f4 f
@@ -37,6 +38,7 @@ sopranomelody =	\relative c'' {
 altomelody = \relative f' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 c8
     d[ e] d4 c8 c | d8 c c4
@@ -60,6 +62,7 @@ altomelody = \relative f' {
 tenormelody = \relative c' {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 g8
     f4 f8 g16 f e8 f16 g | a4 a
@@ -80,6 +83,7 @@ tenormelody = \relative c' {
 bassmelody = \relative f {
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 8 c8
     bes4 bes a8 a | d e f a
