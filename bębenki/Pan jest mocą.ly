@@ -10,8 +10,6 @@ commonprops = {
   \key f \major
   \time 3/4
   \partial 4
-}
-scoretempomarker = {
   \tempo 4=69
 }
 \paper {
@@ -114,7 +112,6 @@ stanzas = \markup {
 
 fourstaveschoir = {
   \new ChoirStaff <<
-    \scoretempomarker
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble

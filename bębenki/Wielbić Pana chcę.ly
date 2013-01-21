@@ -9,8 +9,6 @@ commonprops = {
   \autoBeamOff
   \key d \minor
   \time 4/4
-}
-scoretempomarker = {
   \tempo 4=76
 }
 %--------------------------------MELODY--------------------------------
@@ -66,7 +64,6 @@ stanzas = \markup {
 
 fourstaveschoir = {
   \new ChoirStaff <<
-    \scoretempomarker
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble
