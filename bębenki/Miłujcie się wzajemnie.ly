@@ -104,17 +104,36 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
-  Mi -- łuj -- cie się wza -- je -- mnie,
-  tak jak Ja was u -- mi -- ło -- wa -- łem.
+  Mi -- \tweak #'X-offset #-0.4 łuj --
+  \tweak #'X-offset #-0.4 cie się
+  \tweak #'X-offset #-0.6 wza -- je --
+  \tweak #'X-offset #-1.2 \markup \scale #'(0.9 . 1) mnie,
+  tak \tweak #'X-offset #-0.4 jak
+  \tweak #'X-offset #0 Ja
+  \tweak #'X-offset #-0.75 \markup \scale #'(0.95 . 1) was u --
+  \tweak #'X-offset #-0.2 mi -- ło --
+  \tweak #'X-offset #-0.2 wa --
+  \tweak #'X-offset #-0.5 łem.
   \set stanza = "1."
-  "Gdybym mówił językami ludzi i"
+  \once \override LyricSpace #'minimum-distance = #1
+  \tweak #'X-offset #-1.5
+  \markup \scale #'(0.95 . 1) "Gdybym mówił językami ludzi i"
   \markup \bold \underline a -- nio -- łów,
-  "a miłoś" --
-  \markup \bold \underline ci bym nie miał,
-  "stałbym się jak miedź"
-  \markup \bold \underline brzę -- czą -- ca
-  albo
-  \markup \bold \underline cym -- bał brzmią -- cy.
+  \tweak #'X-offset #-0.5 "a miłoś" --
+  \markup \bold \underline ci bym
+  \tweak #'X-offset #-0.5 nie
+  \tweak #'X-offset #-2 miał,
+}
+
+secondverse = \lyricmode {
+  \repeat unfold 16 \skip4
+  \tweak #'X-offset #-1.5 "stałbym się jak miedź"
+  \tweak #'X-offset #-3 \markup \bold \underline brzę -- czą -- ca
+  \tweak #'X-offset #-0.5 albo
+  \tweak #'X-offset #-3 \markup \bold \underline cym --
+  \tweak #'X-offset #-1.5 bał
+  \tweak #'X-offset #-1.5 \markup \scale #'(0.9 . 1) brzmią --
+  \tweak #'X-offset #-0.2 cy.
 }
 
 stanzas = \markup {
@@ -134,7 +153,16 @@ stanzas = \markup {
         \altomelody
       }
     >>
-    \new Lyrics \lyricsto soprano \text
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \text
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto soprano \secondverse
 
     \new Staff = men <<
       \clef bass
