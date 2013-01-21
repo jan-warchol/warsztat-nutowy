@@ -10,6 +10,12 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 8 \mm
+  ragged-last-bottom = ##f
+  page-count = 1
+  markup-system-spacing #'padding = -2
+  last-bottom-spacing #'basic-distance = 6
+  tagline = ##f
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -192,5 +198,7 @@ tenortext = \lyricmode {
   >>
   \layout {
     indent = 0
+    \override Lyrics.VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.35
+    \override Lyrics.VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #0.75
   }
 }
