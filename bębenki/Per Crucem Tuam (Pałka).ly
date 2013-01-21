@@ -10,48 +10,65 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 8 \mm
+  ragged-last-bottom = ##f
+  page-count = 1
+  markup-system-spacing #'padding = -2
+  last-bottom-spacing #'basic-distance = 6
+  tagline = ##f
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     c4\mp | c c f
     \time 4/4
+    \set Timing.beamExceptions = #'()
     g2. \breathe g8 as
     bes4 f f f8 g
     e1 \breathe
   }
   \repeat volta 2 {
-    as4( \mf es) as as8\melisma c\melismaEnd
+    as4( -\tweak #'X-offset #-2.7 \mf es) as as8-\tweak #'positions #'(2.5 . 3) ^[\melisma c]\melismaEnd
     bes2. \breathe bes8 c
   }
   \alternative {
     {
-      des4 as as as8 c | bes1 \breathe
+      des4 as as as8-\tweak #'positions #'(2.5 . 3) ^[ c] | bes1 \breathe
     }
     {
-      des4\> as4 as g8 f | g1\!
+      \once \override Hairpin #'bound-padding = #2
+      des4-\tweak #'X-offset #1 \> as4 as g8 f | g1\!
     }
   }
-  \mark Fine
+  \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \mark \markup \bold Fine
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     c4\mp | c c c
     \time 4/4
-    c8( des c bes c4) \breathe c8 c
+    \set Timing.beamExceptions = #'()
+    \shape Slur #'((0 . 0.25)(0 . 0.5)(0 . 0.5)(0 . 0.25))
+    c8([ des c bes] c4) \breathe c8 c
     des4 f8\melisma es\melismaEnd des\melisma c\melismaEnd bes des
+    \shape Slur #'((0 . 0.2)(0 . 0.5)(0 . 0.3)(0 . 0.2))
     des4( c8 bes c2) \breathe
   }
   \repeat volta 2 {
-    es2\mf f4 f
+    es2-\tweak #'X-offset #-2.7 \mf f4 f
     as4( g8 f g4) \breathe es8 es
   }
   \alternative {
@@ -64,22 +81,26 @@ altomelody = \relative f' {
       f4(\! e8 d e2)
     }
   }
-  \mark Fine
+  \bar "|."
 }
 tenormelody = \relative f {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     f4\mp | f8\melisma g\melismaEnd as\melisma bes\melismaEnd as\melisma f\melismaEnd
     \time 4/4
+    \set Timing.beamExceptions = #'()
+    \shape Slur #'((0 . 0)(0 . 0.3)(0 . 0.3)(0 . 0))
     g4( c g) \breathe g8 g
     bes4 as bes8\melisma as\melismaEnd g c16\melisma bes\melismaEnd
     g1 \breathe
   }
   \repeat volta 2 {
-    as2\mf as4 c
+    as2-\tweak #'X-offset #-2.7 \mf as4 c
     bes2. \breathe bes8 bes
   }
   \alternative {
@@ -92,22 +113,25 @@ tenormelody = \relative f {
       g1\!
     }
   }
-  \mark Fine
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key f \minor
   \time 3/4
   \tempo 4=40
+  \set Timing.beamExceptions = #'()
   \repeat volta 2 {
     \partial 4
     f4\mp | f f f
     \time 4/4
+    \set Timing.beamExceptions = #'()
     e2. \breathe c8 c
     bes4 des8\melisma c\melismaEnd bes4 g8 f
     c'1 \breathe
   }
   \repeat volta 2 {
-    c2\mf des4 des
+    c2-\tweak #'X-offset #-2.7 \mf des4 des
     es2. \breathe es8 es
   }
   \alternative {
@@ -118,7 +142,7 @@ bassmelody = \relative f {
       f4\> f es bes8 bes | c1\!
     }
   }
-  \mark Fine
+  \bar "|."
 }
 akordy = \chordmode {
 }
@@ -130,6 +154,17 @@ text = \lyricmode {
   Cru -- cem Tu -- am
   a -- do -- ra -- mus Te,
   Do -- mi -- ne.
+  ra -- mus Te,
+  Do -- mi -- ne.
+}
+
+tenortext = \lyricmode {
+  Per Cru -- cem Tu -- am
+  a -- do -- ra -- mus Te,
+  Do -- mi -- ne.
+  Cru -- cem Tu -- am
+  a -- do -- ra -- mus Te,
+  Do -- mi -- ne. __
   ra -- mus Te,
   Do -- mi -- ne.
 }
@@ -159,7 +194,7 @@ text = \lyricmode {
         \tenormelody
       }
     }
-    \new Lyrics = tenorlyrics \lyricsto tenor \text
+    \new Lyrics = tenorlyrics \lyricsto tenor \tenortext
 
     \new Staff = bass {
       \clef bass
@@ -171,5 +206,7 @@ text = \lyricmode {
   >>
   \layout {
     indent = 0
+    \override Lyrics.VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.35
+    \override Lyrics.VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #0.75
   }
 }
