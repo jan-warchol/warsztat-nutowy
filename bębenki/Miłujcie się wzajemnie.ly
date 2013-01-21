@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \header	{
   title = "Miłujcie się wzajemnie"
@@ -11,6 +11,9 @@
   paper-width = 165 \mm
   paper-height = 240 \mm
   line-width = 145 \mm
+  top-margin = 10 \mm
+  system-system-spacing #'basic-distance = #14
+  markup-system-spacing #'basic-distance = #12
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative c'' {
@@ -44,7 +47,16 @@ altomelody = \relative f' {
     d[ e] d4 c8 c | d8 c c4
     d8 d |
     % m. 3
-    d4 c8 c8 e16 d c8
+    d4 c8
+    \newSpacingSection
+    \override Score.SpacingSpanner #'spacing-increment = #1.5
+    c8
+    \newSpacingSection
+    \override Score.SpacingSpanner #'spacing-increment = #0
+    e16 d
+    \revert Score.SpacingSpanner #'spacing-increment
+    \newSpacingSection
+    c8
     % m. 4
     c4 bes4.
   }
