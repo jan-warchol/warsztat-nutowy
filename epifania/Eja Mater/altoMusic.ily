@@ -21,8 +21,18 @@
   as8. ( [ g16 ) ] g4 r2 | % 23
   R1 | % 24
   r2 r4 g8. \p as16 | % 25
-  <g bes>4 \< <g a>2 \> <f b>8. q16 | % 26
-  <es g>4 \p q4 r2 | % 27
+  <<
+    {
+      \voiceOne
+      bes4 \< a2 \> b8. b16 | % 26
+      g4 \p g4
+    }
+    \new Voice {
+      \voiceTwo
+      g g2 f8. f16 | % 26
+      es4 es4
+    }
+  >> \oneVoice r2 | % 27
   R1 | % 28
   r4 c'8. \p g16 c4 c4 | % 29
   r4 bes4. -\tweak #'X-offset #-0.4 \< ( as8 \! ) g8 \> ( [ f8 ) ] |
@@ -73,12 +83,22 @@
   es4 r4 r2 | % 78
   R1 | % 79
   r2 r4 es8. \p \< f16 |
-  g8. ( [ bes16 ) ] bes4~ \> bes8 as8 ( [ g8 ) ] f8 \! | % 81
+  g8. ( [ bes16 ) ] bes4. \> as8 ( [ g8 ) ] f8 \! | % 81
   f8. ( [ g16 ) ] g4 r2 | % 82
   R1 | % 83
   r2 r4 g8. \p as16 | % 84
-  <g bes>2 \< q4 \> <f a>8. \! <es f>16 | % 85
-  <d f>4 q4 r2 | % 86
+  <<
+    {
+      \voiceOne
+      bes2 \< bes4 \> a8. \! f16 | % 85
+      f4 f4
+    }
+    \new Voice {
+      \voiceTwo
+      g2 g4 f8. es16 | % 85
+      d4 d4
+    }
+  >> \oneVoice r2 | % 86
   R1*2 | % 88
   g2 \f r2 | % 89
   g2 r2 |

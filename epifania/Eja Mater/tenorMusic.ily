@@ -74,7 +74,16 @@
   g8. ( [ bes16 ) ] bes4 r2 | % 84
   R1*2 | % 86
   r4 bes8. \pp f16 bes4 bes4 | % 87
-  r4 <bes d>8. <f c'>16 <bes d>4 q4 | % 88
+  r4 <<
+    {
+      \voiceOne
+      d8. c16 d4 d4
+    }
+    \new Voice {
+      \voiceTwo
+      bes8. f16 bes4 bes4
+    }
+  >> \oneVoice | % 88
   g'2 \f r2 | % 89
   g2 r2 |
   g2. g4 | % 91

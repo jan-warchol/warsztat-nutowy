@@ -6,7 +6,7 @@
   r2 r4 c8. \p d16 | % 8
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 9
   es8. ( [ g16 ) ] g4 r4 c,8. d16 |
-  es8. ( [ bes'16 \< ) ] bes4~ ( bes8\! [ as16 g16 \> ) ] f8 es8 \! | % 11
+  es8. ( [ bes'16 \< ) ] << bes4. ( { s4 s8\! } >> as16 [ g16 \> ) ] f8 es8 \! | % 11
   d4 d4 r4 d8. \p es16 | % 12
   f8. ( [ as16 ) ] as4 r4 d,8. es16 | % 13
   f8. ( [ as16 ) ] as4 r4 d,8. \cresc es16
@@ -56,7 +56,7 @@
   r2 r4 c,8. -\tweak #'X-offset #-2.4 \pp d16 | % 67
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 68
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 69
-  es8. \< ( [ as16 ) ] as4~ as8 g8 \! \> ( [ f8 ) ] es8 \! |
+  es8. \< ( [ as16 ) ] as4. g8 \! \> ( [ f8 ) ] es8 \! |
   d4 d4 r4 d8. \p es16 | % 71
   f8. ( [ as16 ) ] as4 r4 d,8. es16 | % 72
   f8. ( [ as16 ) ] as4 \cresc r4 d,8. es16
