@@ -2,6 +2,10 @@
 #(set-global-staff-size 15.5)
 
 \paper {
+  top-margin = 8 \mm
+  left-margin = 16 \mm
+  right-margin = 15 \mm
+  last-bottom-spacing #'basic-distance = 10
 }
 
 \header {
