@@ -53,5 +53,9 @@
 
   \layout {
     indent = 0
+    \context {
+      \Score
+      \override BarNumber #'break-visibility = #'#(#f #t #t)
+    }
   }
 }
