@@ -2,6 +2,8 @@
 #(set-global-staff-size 15.5)
 
 \paper {
+  systems-per-page = 4
+
   top-margin = 8 \mm
   left-margin = 16 \mm
   right-margin = 15 \mm
