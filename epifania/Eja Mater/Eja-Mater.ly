@@ -79,6 +79,8 @@ ml = #(define-music-function (parser location off) (number?)
     \context {
       \Lyrics
       \override LyricText #'font-size = #0.5
+      \override VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.35
     }
     \context {
       \Score
