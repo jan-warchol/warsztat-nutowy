@@ -29,7 +29,7 @@
     }
     \new Voice {
       \voiceTwo
-      g g2 f8. f16 | % 26
+      g g2 f8. \noBeam f16 | % 26
       es4 es4
     }
   >> \oneVoice r2 | % 27
@@ -57,8 +57,8 @@
   c4 r4 es4. ( d8 ) | % 49
   c4 r4 es4. \dim ( d8 ) |
   c4 r4 es4. \pp es8 | % 51
-  c4 -\markup{ \italic {rit.} } r4 es4. es8 | % 52
-  c4 -\markup{ \italic {in tempo} } r4 r2 | % 53
+  c4 ^\markup{ \italic {rit.} } r4 es4. es8 | % 52
+  c4 ^\markup{ \italic {in tempo} } r4 r2 | % 53
   R1*3 | % 56
   R1*2 | % 58
   c'4. \mf \< c8 c4 c4 \! | % 59
@@ -95,7 +95,7 @@
     }
     \new Voice {
       \voiceTwo
-      g2 g4 f8. es16 | % 85
+      g2 g4 f8. \noBeam es16 | % 85
       d4 d4
     }
   >> \oneVoice r2 | % 86
@@ -116,12 +116,12 @@
   c2 \f ( bes4 ) as4 | % 102
   as4 \> as4 g4. f8 \! | % 103
   g4. \p g8 es4. d8 | % 104
-  c4 -\markup{ \italic {dim. sempre} } r4 es4. ( d8 ) | % 105
+  c4 ^\markup{ \italic {dim. sempre} } r4 es4. ( d8 ) | % 105
   c4 r4 es4. ( d8 ) | % 106
   c4 r4 es4.\pp d8 | % 107
   c4 r4 r2 | % 108
   r2 es4. \pp es8 | % 109
-  c4 -\markup{ \italic {ritard.} } r4 es4. es8 |
+  c4 ^\markup{ \italic {ritard.} } r4 es4. es8 |
   c2 r2
   R1\fermataMarkup
   \bar "|."

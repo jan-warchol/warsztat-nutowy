@@ -81,7 +81,7 @@
     }
     \new Voice {
       \voiceTwo
-      bes8. f16 bes4 bes4
+      bes8. \noBeam f16 bes4 bes4
     }
   >> \oneVoice | % 88
   g'2 \f r2 | % 89
@@ -100,7 +100,7 @@
   c2. \f ( as'4 | % 102
   g4 \> ) f4 es4. c8 \! | % 103
   c8 \p ( [ b8 ) ] c8 ( [ as8 ) ] g4. f8 | % 104
-  es4 -\markup{ \italic {dim. sempre} } r4 g4 ( b4 ) | % 105
+  es4 ^\markup{ \italic {dim. sempre} } r4 g4 ( b4 ) | % 105
   c4 r4 g4. ( f8 ) | % 106
   es4 r4 b'4.\pp b8 | % 107
   g4 r4 <<
