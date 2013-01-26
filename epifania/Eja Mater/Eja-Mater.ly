@@ -29,29 +29,37 @@
 \score {
   \new ChoirStaff
   <<
-    \new Staff = soprany {
+    \new Staff = soprany \with { \consists "Ambitus_engraver" } {
       \clef treble
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
       \autoBeamOff
       \include "sopranoMusic.ily"
     }
     \addlyrics \include "sopranoWords.ily"
 
-    \new Staff = alty {
+    \new Staff = alty \with { \consists "Ambitus_engraver" } {
       \clef treble
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
       \autoBeamOff
       \include "altoMusic.ily"
     }
     \addlyrics \include "altoWords.ily"
 
-    \new Staff = tenory {
+    \new Staff = tenory \with { \consists "Ambitus_engraver" } {
       \clef "treble_8"
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
       \autoBeamOff
       \include "tenorMusic.ily"
     }
     \addlyrics \include "tenorWords.ily"
 
-    \new Staff = basy {
+    \new Staff = basy \with { \consists "Ambitus_engraver" } {
       \clef bass
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
       \autoBeamOff
       \include "bassMusic.ily"
     }
@@ -60,7 +68,10 @@
 
   \layout {
     indent = 0
+    \dynamicUp
     \compressFullBarRests
+    \override DynamicTextSpanner #'style = #'none
+    \override TextScript #'direction = #UP
     \context {
       \Score
       \override BarNumber #'break-visibility = #'#(#f #t #t)

@@ -91,5 +91,6 @@
   r2 g4. \pp g8 | % 109
   es4 -\markup{ \italic {ritard.} } r4 g4. g8 |
   es2 r2
-  R1\fermata
+  R1\fermataMarkup
+  \bar "|."
 }
