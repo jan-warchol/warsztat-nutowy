@@ -103,7 +103,7 @@
       es4
     }
   >> \oneVoice r4 b'4. b8 | % 109
-  g4 -\markup{ \italic {ritard.} } r4 b4. b8 |
+  g4 ^\markup{ \italic {ritard.} } r4 b4. b8 |
   g2 r2
   R1\fermataMarkup
   \bar "|."
