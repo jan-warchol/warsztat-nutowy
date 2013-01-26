@@ -19,6 +19,7 @@
   R1*5 | % 24
   R1*6 |
   r2 r4 es8. \p \< f16 | % 31
+  \break
   g8. ( [ bes16 ) ] bes4 r4 es,8. f16 | % 32
   g8. ( [ bes16 ) ] bes4 r4 es,8. f16 | % 33
   d8. ( [ b'16 ) ] b4 \! r4 d,8. \ff es16 | % 34
@@ -42,6 +43,7 @@
   c4 -\markup{ \italic {rit.} } r4 g4. g8 | % 52
   c4 -\markup{ \italic {in tempo} } r4 r2 | % 53
   R1*3 | % 56
+  \break
   c4. \p c8 \< c4 c4 | % 57
   c4. c8 c2 \! | % 58
   R1*2 |

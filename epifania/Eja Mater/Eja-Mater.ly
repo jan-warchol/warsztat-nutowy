@@ -3,6 +3,7 @@
 
 \paper {
   systems-per-page = 4
+  page-count = 4
 
   top-margin = 8 \mm
   left-margin = 16 \mm
