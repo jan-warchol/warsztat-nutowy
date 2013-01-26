@@ -25,11 +25,11 @@
   <es g>4 \p q4 r2 | % 27
   R1 | % 28
   r4 c'8. \p g16 c4 c4 | % 29
-  r4 bes4. \< ( as8 \! ) g8 \> ( [ f8 ) ] |
+  r4 bes4. -\tweak #'X-offset #-0.4 \< ( as8 \! ) g8 \> ( [ f8 ) ] |
   f8 \! ( [ g8 \> ) ] g4 \! r2 | % 31
-  r2 es'2 \mf -^ | % 32
+  r2 es'2 -\tweak #'X-offset #-4 \mf -^ | % 32
   r2 es2 \cresc -^ | % 33
-  r2 g,2 \ff ~ ^^ | % 34
+  r2 g,2 -\tweak #'X-offset #-4 \ff ~ ^^ | % 34
   g2. r8 g8 \p | % 35
   g4. g8 g4. g8 | % 36
   g4 r4 r2 | % 37
@@ -53,7 +53,7 @@
   R1*2 | % 58
   c'4. \mf \< c8 c4 c4 \! | % 59
   d4. d8 d2 |
-  g,2 \f ^^ r2 | % 61
+  g,2 -\tweak #'X-offset #-2 \f ^^ r2 | % 61
   g2 ^^ r2 | % 62
   g2. ~ g8 g8 \dim | % 63
   g4 g4 g4. g8 | % 64

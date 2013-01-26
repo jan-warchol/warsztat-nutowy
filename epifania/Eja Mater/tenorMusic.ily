@@ -23,9 +23,9 @@
   r4 c8. \p g16 c4 c4 | % 29
   r4 bes2 \< bes4 \! |
   es4 \> es,4 \! r2 | % 31
-  r2 es'2 \mf -^ | % 32
+  r2 es'2 -\tweak #'X-offset #-4 \mf -^ | % 32
   r2 es2 \cresc -^ | % 33
-  r2 g2 \ff ~ -^ | % 34
+  r2 g2 -\tweak #'X-offset #-4 \ff ~ -^ | % 34
   g2. r8 g,8 \p | % 35
   g4. g8 g4. g8 | % 36
   g4 r4 r2 | % 37
@@ -50,7 +50,7 @@
   c4. \p \< c8 c4 c4 \! | % 58
   f2. ~ f8 f8 | % 59
   f2 \< r2 \! |
-  g2 \f -^ r2 | % 61
+  g2 -\tweak #'X-offset #-2 \f -^ r2 | % 61
   g2 -^ r2 | % 62
   g2. ~ g8 g,8 \dim | % 63
   g4 g4 g4. g8 | % 64
@@ -95,7 +95,7 @@
   es4 r4 b'4.\pp b8 | % 107
   g4 r4 <<
     {
-      \voiceOne g4\pp ( b8 ) b8 | % 108
+      \voiceOne g4 -\tweak #'X-offset #-3 \pp ( b8 ) b8 | % 108
       c4
     }
     \new Voice {

@@ -11,7 +11,7 @@
   f8. ( [ as16 ) ] as4 r4 d,8. es16 | % 13
   f8. ( [ as16 ) ] as4 r4 d,8. \cresc es16
   | % 14
-  f8. \f ( [ c'16 ) ] c4 ( ~ c8 \< [ b8 ) ] f'8. \! d16 | % 15
+  f8. \f ( [ c'16 ) ] c4 ( ~ c8 -\tweak #'X-offset #-1.9 \< [ b8 ) ] f'8. \! d16 | % 15
   c4 b4 ( g4 \dim ) es4 | % 16
   f2 d2 | % 17
   g2 \p ~ g4. g8 | % 18
@@ -47,13 +47,13 @@
   c4. \p c8 \< c4 c4 | % 57
   c4. c8 c2 \! | % 58
   R1*2 |
-  g'2 \f -^ r2 | % 61
+  g'2 -\tweak #'X-offset #-2 \f -^ r2 | % 61
   g2 -^ r2 | % 62
   g2. ~ g8 g8 \dim | % 63
   g4 g4 g4. g8 | % 64
   g2 \pp r2 | % 65
   R1 | % 66
-  r2 r4 c,8. \pp d16 | % 67
+  r2 r4 c,8. -\tweak #'X-offset #-2.4 \pp d16 | % 67
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 68
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 69
   es8. \< ( [ as16 ) ] as4~ as8 g8 \! \> ( [ f8 ) ] es8 \! |
@@ -62,7 +62,7 @@
   f8. ( [ as16 ) ] as4 \cresc r4 d,8. es16
   | % 73
   f8. ( [ c'16 ) ] c4 ( ~ c8 [ b8 ) ] f'8. d16 | % 74
-  c4 \f b4 ( g4 ) es4 \dim | % 75
+  c4 -\tweak #'X-offset #-1.7 \f b4 ( g4 ) es4 \dim | % 75
   f2 d2 | % 76
   g2 \p ~ g4. g8 | % 77
   c,4 r4 r2 | % 78
@@ -87,7 +87,7 @@
   c4 -\markup{ \italic {dim. sempre} } r4 g4. g8 | % 105
   c8 ( [ d8 ) ] es8 ( [ g8 ) ] g,4. g8 | % 106
   c4 r4 g4.\pp g8 | % 107
-  c4 r4 <g es'>4.\pp <g d'>8 | % 108
+  c4 r4 <g es'>4. -\tweak #'X-offset #-3 \pp <g d'>8 | % 108
   c4 r4 g4. g8 | % 109
   c4 -\markup{ \italic {ritard.} } r4 g'4. g8 |
   c,2 r2
