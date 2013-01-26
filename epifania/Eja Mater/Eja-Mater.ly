@@ -60,6 +60,7 @@
 
   \layout {
     indent = 0
+    \compressFullBarRests
     \context {
       \Score
       \override BarNumber #'break-visibility = #'#(#f #t #t)
