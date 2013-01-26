@@ -1,6 +1,9 @@
 \version "2.17.3"
 #(set-global-staff-size 15.5)
 
+ml = #(define-music-function (parser location off) (number?)
+       #{ \once \override Lyrics.LyricText #'X-offset = #off #})
+
 \paper {
   systems-per-page = 4
   page-count = 4
@@ -72,6 +75,11 @@
     \compressFullBarRests
     \override DynamicTextSpanner #'style = #'none
     \override TextScript #'direction = #UP
+
+    \context {
+      \Lyrics
+      \override LyricText #'font-size = #0.5
+    }
     \context {
       \Score
       \override BarNumber #'break-visibility = #'#(#f #t #t)
