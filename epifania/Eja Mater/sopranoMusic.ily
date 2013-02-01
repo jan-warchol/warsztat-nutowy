@@ -15,26 +15,27 @@
   R1*7 | % 24
   r2 r4 g8. \p as16 | % 25
   bes8. \< ( [ es16 ) ] es2 \> d8. b16 | % 26
-  d8. \p ( [ c16 ) ] c4 r2 | % 27
+  d8. -\tweak #'X-offset #-0.2 \p ( [ c16 ) ] c4 r2 | % 27
   R1*4 | % 31
-  r2 es2 \mf -^ | % 32
+  r2 es2 -\tweak #'X-offset #-4 \mf -^ | % 32
   r2 es2 \cresc -^ | % 33
-  r2 g2 \ff ~ -^ | % 34
+  r2 g2 -\tweak #'X-offset #-4 \ff ~ -^ | % 34
   g2. r8 g,8 \p | % 35
   g4. g8 g4. g8 | % 36
   g4 r4 r2 | % 37
-  es'2 \pp ( d4 ) c8 ( [ b8 ) ] | % 38
+  \break
+  es'2\pp ( d4 ) c8 ( [ b8 ) ] | % 38
   g2 g4 r4 | % 39
   es'2 \< ( g8 [ f8 es8 \! ) ] d8 |
   c2 \> b4 \! r4 | % 41
-  c2 \p ( es4 ) d8 ( [ c8 ) ] | % 42
+  c2 -\tweak #'X-offset #-0.2 \p ( es4 ) d8 ( [ c8 ) ] | % 42
   c4. ( d8 ) c4 r4 | % 43
   c4 ( f4 \cresc es4 ) d4 | % 44
   c4. ( d8 ) c4 r4 | % 45
   c4 \f ( as'4 g4 ) f4 | % 46
   es4 d4 \dim c8 ( [ b8 ) ] c8 ( [ as8 ) ]
   | % 47
-  es4. \p f8 g4. b8 | % 48
+  es4. -\tweak #'X-offset #-0.2 \p f8 g4. b8 | % 48
   c4 r4 g4. ( f8 ) | % 49
   es4 r4 g4 \dim ( b4 ) |
   c4 r4 g4. \pp g8 | % 51
@@ -42,7 +43,7 @@
   es4 -\markup{ \italic {in tempo} } r4 r2 | % 53
   R1*3 | % 56
   R1*3 | % 59
-  f'4. \f \< f8 f4 f4 \! |
+  f'4. -\tweak #'X-offset #-0.2 \f \< f8 f4 f4 \! |
   g2 -^ r2 | % 61
   g2 -^ r2 | % 62
   g2. ~ g8 g,8 \dim | % 63
@@ -64,12 +65,14 @@
   r2 r4 g8. \p as16 | % 84
   bes8. \< ( [ es16 ) ] es2 \> d8.\! c16 | % 85
   c8 ( [ bes8 ) ] bes4 r2 | % 86
+  \break
   R1*2 | % 88
   g'2 \f r2 | % 89
   g2 r2 |
   g2. g4 | % 91
   g4 \> g4 g4. g,8 | % 92
   g4 \! \p r4 r2 | % 93
+  \break
   es'2 \p ( d4 ) c8 ( [ b8 ) ] | % 94
   g2 g4 r4 | % 95
   es'2 \< ( g8 [ f8 es8 \! ) ] d8 | % 96
@@ -79,8 +82,8 @@
   c4 ( f4 \cresc es4 ) d4 |
   c4. ( d8 ) c4 r4 | % 101
   c4 \f ( as'4 g4 ) f4 | % 102
-  es4 \> d4 c8 ( [ b8 \! ) ] c8 ( [ as8 ) ] | % 103
-  es4. \p f8 g4. b8 | % 104
+  es4 -\tweak #'X-offset #0.5 \> d4 c8 ( [ b8 \! ) ] c8 ( [ as8 ) ] | % 103
+  es4. -\tweak #'X-offset #0.5 \p f8 g4. b8 | % 104
   c4 -\markup{ \italic {dim. sempre} } r4 g4. ( f8 ) | % 105
   es4 r4 g4 ( b4 ) | % 106
   c4 r4 g4. \pp f8 | % 107
@@ -88,5 +91,6 @@
   r2 g4. \pp g8 | % 109
   es4 -\markup{ \italic {ritard.} } r4 g4. g8 |
   es2 r2
-  R1\fermata
+  R1\fermataMarkup
+  \bar "|."
 }
