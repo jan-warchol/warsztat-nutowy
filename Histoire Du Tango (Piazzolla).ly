@@ -82,5 +82,23 @@
   dis,-- e c'-> dis,-- e c'-> dis,-- e
   r16 b'-> cisis,-> dis b'-> cisis,-- dis b'->
   cisis,-- dis b'-> cisis,-- dis b'-> cisis,-- dis
-  r16 b''--
+  r16 b''-- cis,-. d-. b'-> cis,-. d-. b'->
+  cis,-. d-. b'-> cis,-. d-. b'-> cis,-. d-.
+  a'8-> e16-. c-. g'->( d-.) b-. f'->(
+  c-.) a-. e'->( b-.) g-. d'->( a-.) f-.
+  r e'8.-> e-> e16-> _\markup \italic "poco a poco cresc." ~
+  e8 e-> ~ e16 e-.->( a-.) e-.
+  r16 dis8.-> dis-> dis16-> ~
+  dis8 dis-> ~ dis16 dis->( b'->) dis,-.
+  r16 b'-- cis,-. d-. b'-> cis,-. d-. b'->
+  cis,-. d-. b'-> cis,-. d-. b'-> cis,-. d-.
+  r16 a'-> e-. c-. g'->( d-.) b-. f'->(
+  c-. a-. e'->( b-.) g-. d'-> c32->( b a g)
+  a16->( c8) b16->( d8) c16->( e)
+  d16->( f8) e16->( a8) e16->( c')
+  b8. b,16~ b\cresc b'->( fis-.) b,-.
+  a'->( c,-.) b-. g'-> ~ g8 r
+  gis,16 b8 a16( c8 b16->( d)
+  c16 e8 d16( f8) e32->( d c b)
+  e16->( \f a) e'-. e->( ~ e a,) e8-.
 }
