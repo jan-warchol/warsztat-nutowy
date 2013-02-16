@@ -24,6 +24,12 @@ commonprops = {
 }
 \paper {
   page-count = #1
+  left-margin = 14 \mm
+  right-margin = 12 \mm
+  top-markup-spacing #'basic-distance = 6
+  markup-system-spacing #'basic-distance = 20
+  system-system-spacing #'basic-distance = 17
+  score-markup-spacing #'basic-distance = 17
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
