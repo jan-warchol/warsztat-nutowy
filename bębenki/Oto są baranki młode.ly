@@ -3,10 +3,10 @@
   Jak elegancko ukryć pięciolinie panów (tudzież "połączyć" je z paniami)
   żeby jednoczeście ambitus uwzględnił ukryty fragment?
 
-  akordy:
-  w taktach 10 i 12
-
-  czy zwrotka jest harmonizowalna?
+  Akordy wziąłem z Otwórzcie Serca, ale nie jestem pewien w niektórych
+  miejscach, np. w przedostatnim takcie zwrotki
+  (i w ogóle cała zwrotka sprawia wrażenie że harmonizator
+  nie brał pod uwagę drugiego głosu)
 %}
 
 \version "2.17.3"
@@ -93,17 +93,21 @@ bassmelody = \relative f {
      f4 f8 g d4 | d e8 e4. | a2.
      \bar "|." %}
 }
-akordy = {
-  \chordmode {
-    f4. g c g f g a2.:m
-    f4. g c2. a4.:m d:7 g:sus4 g:7
-    c4. f
-  } < g, b, d c' > \chordmode { b:dim c f } < g, b, d c' > \chordmode {
-    b:dim
-    c4. g f c g2.:7 c
-    a2.:m e4:m f a:m a2.:m e4:m f a:m
-    e2.:m d:m f4. g b:m e:m a2.:m
-  }
+
+parch = #(define-music-function (parser location msik) (ly:music?)
+           #{
+             \once \override ChordName #'font-size = #-1 \parenthesize #msik
+           #})
+
+akordy = \chordmode {
+  f4. g c g8 \parch g:7 \parch g f4. g a2.:m
+  f4. g c2. a4.:m d4 \parch d8:7 g4. \parch g:7
+  c4. f
+  g \parch g:7 c f
+  g \parch g:7
+  c4. g8 \parch a:m \parch e:m f4. c4 \parch c8:7 g2. c
+  a4:m g8 f4. g4. a:m a4:m g8 f4. g4. a:m
+  a4.:m g d:m a:m f4. g g4 e8:m a4.:m f2.
 }
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
@@ -231,6 +235,7 @@ stanzas = \markup {
   \layout {
     indent = 0\cm
     \set chordNameLowercaseMinor = ##t
+    \override ChordNames.ParenthesesItem #'font-size = 0
   }
 }
 
