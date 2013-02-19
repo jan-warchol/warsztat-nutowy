@@ -65,14 +65,10 @@ individualBreaks = {
 \score {
   \new ChoirStaff = choir
   <<
-    \sopranoStaffVar
-    \sopranoLyricsVar
-    \altoStaffVar
-    \altoLyricsVar
-    \tenorStaffVar
-    \tenorLyricsVar
-    \bassStaffVar
-    \bassLyricsVar
+    \include "sopran.ily"
+    \include "alt.ily"
+    \include "tenor.ily"
+    \include "bas.ily"
   >>
 
   \layout {
