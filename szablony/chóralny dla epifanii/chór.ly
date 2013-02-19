@@ -9,7 +9,7 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "EpifaniaHeaders.ily"
+  \include "epifania-nagłówki.ily"
 }
 
 \header {
