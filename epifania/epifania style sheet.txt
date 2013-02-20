@@ -1,0 +1,12 @@
+tytuł, podtytuł i podpodtytuł (data powstania) w jednej linii.
+werset Pisma św. z prawej, nad kompozytorem (kursywą)
+pod tym (po odstępie) kompozytor z datami w nowej linii.
+A na samym dole autor słów.
+Music by LilyPond niżej i mniejsze.
+
+przesunąć numery taktów z cue Staff do pięciolinii sopranów
+spróbować wyrównać numery taktów na środku kresek taktowych
+nagłówek dalszych stron mniejszymi literami, dodać autora w nawiasie, numer strony na środku
+
+zmniejszyć odstęp między oryginałem a tłumaczeniem (w linijkach i między linijkami)
+zmienić podwójne spacje w tłumaczeniach napojedyncze, wyrównywać słowa do lewej.
