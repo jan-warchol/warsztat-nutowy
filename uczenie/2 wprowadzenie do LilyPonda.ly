@@ -28,23 +28,25 @@
 
 \markup \justify {
   Wejdź na stronę
-  \with-url #"http://lilypond.org/windows.html" { \typewriter lilypond.org/windows.html },
-  ściągnij plik instalacyjny \italic "Windows: LilyPond 2.14.2-1"
-  (około 25 MB, jest "w ramce" \bold Packages ) i zainstaluj.
+  \with-url #"http://lilypond.org/windows.html"
+  { \typewriter lilypond.org/windows.html },
+  ściągnij plik instalacyjny \italic "Windows: LilyPond (…)"
+  (około 25 MB) i zainstaluj.
 }
 
 \markup \justify {
   Wejdź na stronę
-  \with-url #"http://frescobaldi.org/download" { \typewriter frescobaldi.org/download },
-  przejdź do linku \bold "full installer" (sekcja \italic { Windows "full installer"}).
-  Ściągnij najnowszą wersję instalatora (\italic { Frescobaldi Setup (…) .exe}, około 15 MB), zainstaluj.
+  \with-url #"https://github.com/wbsoft/frescobaldi/downloads" 
+  { \typewriter github.com/wbsoft/frescobaldi/downloads }.
+  Ściągnij najnowszą wersję instalatora
+  (\italic { Frescobaldi Setup (…).exe}, około 15 MB) i zainstaluj.
 }
 
 \markup \vspace #0.1
 \markup \large \bold "2. Jak to działa"
 \markup \justify {
   Zapisujesz muzykę słowami (wyobraź sobie, że wysyłasz SMSa z melodią piosenki),
-  a potem każesz programowi zrobić z wpisanego przez Ciebie tekstu nuty.
+  a potem każesz programowi zrobić "na podstawie" "tego zapisu" nuty.
 }
 \markup \justify {
   W tej instrukcji najpierw omawiam zagadnienie, potem \typewriter "czczionką maszynową"
@@ -63,7 +65,7 @@
   "  wlazł ko -- tek"
   "}"
 }
-\markup \italic {  Uwaga! po literze f jest apostrof (to nie jest znak z klawisza obok cyfry 1). }
+\markup \italic {  Uwaga! po literze f jest apostrof (to \bold "nie jest" znak z klawisza obok cyfry 1). }
 \markup \justify {
   Wybierz z menu \italic " LilyPond " polecenie \italic " Podgląd partytury". Po jakimś czasie po prawej powinno pojawić się:
 }
@@ -157,7 +159,7 @@
 
 \markup \justify {
   Wartości rytmiczne zapisuje się jako liczby po nazwach dźwięków.
-  Żeby dostać szesnastkę trzeba wpisać \typewriter 16, ósemkę \typewriter 8 "i tak dalej:"
+  Żeby dostać szesnastkę trzeba wpisać \typewriter 16 , ósemkę \typewriter 8 "i tak dalej:"
 }
 
 \markup \typewriter "\relative f' { g1 g2 g4 g8 g16 g }"
@@ -183,7 +185,7 @@
 \markup \justify {
   Żeby połączyć kilka nut o tej samej wysokości w jeden dźwięk łukami przedłużającymi,
   napisz tyldę \huge ~ "po każdej nucie" która ma być przedłużona.
-  Żeby pod Windowsem wpisać tyldę, trzeba wcisnąć jednocześnie Shift i klawisz z tyldą (obok cyfry 1), a potem spację.
+  Żeby pod Windowsem wpisać tyldę, trzeba wcisnąć jednocześnie Shift i klawisz z tyldą (obok cyfry 1) a potem spację.
 }
 \markup \typewriter "\relative f' { a1~ a2~ a8 }"
 \relative f' { a1~ a2~ a8 }
@@ -287,10 +289,10 @@
   w odpowiednim miejscu kodu.
 }
 \markup \justify {
-  Jeśli nuty w oknie podglądu są za małe, możesz zmienić rozmiar okna podglądu, zmienić powiększenie (przyciski na pasku narzędzi) albo używać lupy (klikając na podglądzie lewym przyciskiem myszy "z wciśniętym" klawiszem control).
+  Każdy takt zapisuj w osobnej linijce, tak jak to było pokazane w przykładzie na samym początku. Co jakiś czas dodawaj komentarz opisujący w którym miejscu partytury jesteś.
 }
 \markup \justify {
-  Każdy takt zapisuj w osobnej linijce, tak jak to było pokazane w przykładzie na samym początku. Co jakiś czas dodawaj komentarz opisujący w którym miejscu partytury jesteś.
+  Jeśli nuty w oknie podglądu są za małe, możesz zmienić rozmiar okna podglądu, zmienić powiększenie (przyciski na pasku narzędzi) albo używać lupy (klikając na podglądzie lewym przyciskiem myszy "z wciśniętym" klawiszem control).
 }
 \markup \justify {
   Co jakiś czas (na początku najlepiej po każdym takcie) kompiluj nuty (CTRL+M)
@@ -298,13 +300,14 @@
   lub przecinek - wtedy fragment melodii jest w złej oktawie.
   Czasem błąd w wartościach rytmicznych sprawi, że kreski taktowe będą się znajdować
   w dziwnych miejscach (albo belkowania będą zupełnie inne niż w oryginale)
-  - trzeba wtedy zacząć od pierwszej nuty, która jest źle.
+  - trzeba wtedy zacząć sprawdzanie od pierwszej nuty, która wygląda podejrzanie.
 }
 
 %{ TODO (DODAĆ):
 
    tryb absolutny i przerobić sekcję o relative bazując na absolutnym
    przypominające znaki chromatyczne
+   łuki a melizmaty
    podstawowe markupy
    dynamikę
    końcową kreskę taktową

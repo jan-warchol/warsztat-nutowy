@@ -24,7 +24,7 @@
 
 \markup \justify {
   Podstawową cechą dźwięku jest jego długość trwania, którą przedstawia
-  się za pomocą kształtu.
+  się za pomocą kształtu nuty.
 }
 \markup \justify { Cała nuta: \note #"1" #1 }
 \markup \justify { Dwa razy krótsza od niej jest półnuta: \note #"2" #1 }
@@ -69,16 +69,16 @@
 }
 
 \markup \justify {
-  Nie każda nuta jest osobnym dźwiękiem - czasami jeden dźwięk zapisuje
+  Nie każda nuta na pięciolinii jest osobnym dźwiękiem - czasami jeden dźwięk zapisuje
   się jako kilka nut połączonych łukami przedłużającymi.
   Tutaj jest jeden dźwięk trwający dwa takty:
 }
-{ g'1~ g' }
+{ d'1~ d' }
 \markup \justify { A tu są dwa dźwięki, oba trwające po jednym takcie:}
-{ g'1 g' }
+{ d'1 d' }
 
 \markup \justify {
-  Kropka z \underline "prawej strony" nuty oznacza wydłużenie jej o "połowę:  "
+  Kropka \underline "z prawej strony" nuty oznacza wydłużenie jej o "połowę:  "
   \note-by-number #1 #1 #1 "  =  "
   \note-by-number #1 #0 #1 + \note-by-number #2 #0 #1 "  =  "
   \note-by-number #2 #0 #1 + \note-by-number #2 #0 #1 + \note-by-number #2 #0 #1
@@ -133,8 +133,8 @@
   Żeby cofnąć działanie krzyżyka lub bemola używa się kasownika \natural (który też działa do końca taktu):
 }
 
-{ \key g \major fis' fis' f' f' bes' bes' b' b' }
-\addlyrics { fis fis f f bes bes b b }
+{ \key g \major fis' fis' f' f' b'8 b' bes'4 bes' b'8 b' }
+\addlyrics { fis fis f f b b bes bes b b }
 
 \markup \justify {
   Pamiętaj, że nuta przy której nie ma znaku chromatycznego nie musi
