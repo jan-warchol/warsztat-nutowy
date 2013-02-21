@@ -9,10 +9,14 @@
   \key d \minor
   \time 4/4
   \tempo Moderato
-  
+  d2 d
+  \times 2/3 { g8( f e) } \times 2/3 { f4 g8 } \times 2/3 { e4( cis8) } d4
+  r2 \times 2/3 { c8 d e } f4
   
   \bar "|."
 }
 \addlyrics {
-  
+  A -- ve,
+  gra -- ti -- a ple -- na,
+  Do -- mi -- nus te -- cum,
 }
