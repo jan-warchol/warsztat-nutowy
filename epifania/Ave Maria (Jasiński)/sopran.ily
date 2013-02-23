@@ -93,20 +93,20 @@
 \addlyrics {
   A -- ve Ma -- ri -- a,
   gra -- ti -- a ple -- na,
-  Do -- mi -- nus te -- cum
+  Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu
   in mu -- li -- e -- ri -- bus
   et be -- ne -- di -- ctus fru -- ctus ven -- tris
-  tu -- i Je -- sus
-  A -- ve
-  A -- ve
+  tu -- i, Je -- sus.
+  A -- ve,
+  A -- ve,
   be -- ne -- di -- cta tu in mu -- li -- e -- ri -- bus
   et be -- ne -- di -- ctus fru -- ctus ven -- tris
-  tu -- i Je -- sus
+  tu -- i, Je -- sus.
   San -- cta Ma -- ri -- a
   Ma -- ter De -- i
   o -- ra pro no -- bis
   et ho -- ra
   no -- stræ
-  A -- men
+  A -- men.
 }
