@@ -59,8 +59,8 @@
     {
       \voiceOne
       % górny sopran
-      e'4 f4
-      ( fis2)
+      e'4 f4 ~
+      f2
       e4  f4
     }
     \new Voice {
