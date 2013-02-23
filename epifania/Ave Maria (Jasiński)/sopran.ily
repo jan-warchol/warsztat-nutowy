@@ -24,22 +24,21 @@
   \time 4/4 
  a,2\mp bes2
  bes2 a2
- r1
- r1
-  \times 2/3 {f8 (e8) f8}  \times 2/3 {g4 e8} e4  \times 2/3 {g8 f8 g8}
-  % tu nie ma tego cresc. e accel
+ R1
+ R1
+  \times 2/3 {f8 (e8) f8}  \times 2/3 {g4 e8} e4 \tempo "accel." \times 2/3 {g8\cresc f8\! g8}
  \time 3/4
 \times 2/3 {a4 f8} f4 \times 2/3 {a8 g8 a8} 
 \times 2/3 {bes4 g8} \times 2/3 {bes8 (a8) bes8} \times 2/3 {c4 a8}
 \times 2/3 {c8 (bes8) c8} d4 e4\fermata
+\bar "||"
  \key d \major
- %jakiś kasownik mi tu wyskoczył
  fis,4\p a4. g8
  fis4 fis2 \fermata
  fis4 (a4.) g8
  fis4 fis2 \fermata
  d'4\f e4. d8
- f4 f2 (fis2.)
+ f4 f2 ~ f2.
  \time 2/4
  r4 
  <<
@@ -55,8 +54,7 @@
   }
 >>
 \oneVoice
- r1
- %osierocony takt
+ R2
  <<
   {
     \voiceOne
@@ -68,14 +66,13 @@
   \new Voice {
     \voiceTwo
     % dolny sopran
-    gis,4 gis4
-    (g2)
+    gis,4 gis4 ~
+    gis2
     gis4  gis4 
   }
 >>
 \oneVoice
-r1
-% tu mi wskoczył jakiś pusty takt nie wiem skąd
+R2
 <<
   {
     \voiceOne
@@ -91,9 +88,6 @@ r1
   }
 >>
 \oneVoice
-  % metrum zmienia się z \time 3/4 na \time 4/4 i z powrotem.
-  % na czwartej stronie jest zmiana tonacji na \key d \major
-  
   \bar "|."
 }
 \addlyrics {
@@ -101,18 +95,18 @@ r1
   gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum
   be -- ne -- di -- cta tu 
-  in mu --li -- e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus ve -- ntris
+  in mu -- li -- e -- ri -- bus
+  et be -- ne -- di -- ctus fru -- ctus ven -- tris
   tu -- i Je -- sus
   A -- ve
   A -- ve
   be -- ne -- di -- cta tu in mu -- li -- e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus ve -- ntris
+  et be -- ne -- di -- ctus fru -- ctus ven -- tris
   tu -- i Je -- sus
-  Sa -- ncta Ma -- ri -- a
+  San -- cta Ma -- ri -- a
   Ma -- ter De -- i 
-  o -- ra pro -- no -- bis
-  et ho-- ra
-  no -- strae
+  o -- ra pro no -- bis
+  et ho -- ra
+  no -- stræ
   A -- men
 }
