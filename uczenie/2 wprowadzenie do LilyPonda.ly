@@ -24,26 +24,7 @@
 }
 
 
-\markup \large \bold "1. Instalacja"
-
-\markup \justify {
-  Wejdź na stronę
-  \with-url #"http://lilypond.org/windows.html"
-  { \typewriter lilypond.org/windows.html },
-  ściągnij plik instalacyjny \italic "Windows: LilyPond (…)"
-  (około 25 MB) i zainstaluj.
-}
-
-\markup \justify {
-  Wejdź na stronę
-  \with-url #"https://github.com/wbsoft/frescobaldi/downloads" 
-  { \typewriter github.com/wbsoft/frescobaldi/downloads }.
-  Ściągnij najnowszą wersję instalatora
-  (\italic { Frescobaldi Setup (…).exe}, około 15 MB) i zainstaluj.
-}
-
-\markup \vspace #0.1
-\markup \large \bold "2. Jak to działa"
+\markup \large \bold "1. Jak to działa"
 \markup \justify {
   Zapisujesz muzykę słowami (wyobraź sobie, że wysyłasz SMSa z melodią piosenki),
   a potem każesz programowi zrobić "na podstawie" "tego zapisu" nuty.
@@ -54,7 +35,7 @@
 }
 
 \markup \vspace #0.1
-\markup \large \bold "3. Pierwsze uruchomienie"
+\markup \large \bold "2. Pierwsze uruchomienie"
 
 \markup \justify { Włącz Frescobaldi i wpisz: }
 \markup \column \override #'(font-name . "Lucida Console") {
@@ -79,7 +60,7 @@
 
 
 \markup \vspace #0.1
-\markup \large \bold "4. Wysokości dźwięków"
+\markup \large \bold "3. Wysokości dźwięków"
 \markup \wordwrap {
   Dźwięki wpisuje się podając ich nazwy.  Cała melodia musi być
   wewnątrz nawiasów klamrowych: \typewriter "{ c d e f g a b c }"
@@ -155,7 +136,7 @@
 
 
 \markup \vspace #0.1
-\markup \large \bold "5. Wartości rytmiczne"
+\markup \large \bold "4. Wartości rytmiczne"
 
 \markup \justify {
   Wartości rytmiczne zapisuje się jako liczby po nazwach dźwięków.
@@ -217,7 +198,7 @@
 
 
 \markup \vspace #0.1
-\markup \large \bold "6. Słowa"
+\markup \large \bold "5. Słowa"
 
 \markup \justify {
   Tekst, który ma być podpisany pod nutami, należy wpisać podzielony na sylaby -
@@ -257,7 +238,7 @@
 \addlyrics { la __ }
 
 \markup \vspace #0.1
-\markup \large \bold "7. Różne"
+\markup \large \bold "6. Różne"
 
 \markup \justify {
   Klucze wybiera się za pomocą polecenia \typewriter "\\clef":
