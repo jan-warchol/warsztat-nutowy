@@ -1,4 +1,3 @@
-sopran: Marlena
-alt:
-tenor:
-bas:
+Janek: przygotowanie szablonu - zrobione
+Janek: pierwsze kilka taktów każdego głosu - zrobione
+Marlena: sopran - zrobione
