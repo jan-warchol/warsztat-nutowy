@@ -111,8 +111,8 @@
 \markup \justify {
   Znaki chromatyczne obowiązują do końca taktu:
 }
-{ fis'2 fis' f' f' }
-\addlyrics { fis fis f f }
+{ f'2 f' fis' fis' f' f' }
+\addlyrics { f f fis fis f f }
 
 \markup \justify {
   Żeby było wygodniej, można zapisać znaki chromatyczne przy kluczu

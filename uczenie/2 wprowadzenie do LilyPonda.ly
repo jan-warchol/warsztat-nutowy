@@ -27,7 +27,7 @@
 \markup \large \bold "1. Jak to działa"
 \markup \justify {
   Zapisujesz muzykę słowami (wyobraź sobie, że wysyłasz SMSa z melodią piosenki),
-  a potem każesz programowi zrobić "na podstawie" "tego zapisu" nuty.
+  "i każesz" programowi zrobić "na podstawie" "tego zapisu" nuty.
 }
 \markup \justify {
   W tej instrukcji najpierw omawiam zagadnienie, potem \typewriter "czczionką maszynową"
@@ -295,6 +295,22 @@
    zmiany tempa
    triole
    UTF8
+   akordy i polifonię:
+   żeby wstawić dwa oddzielne głosy, jeden z pałeczkami w górę, a drugi w dół, trzeba użyć czegoś takiego:
+   <<
+   {
+   \voiceOne
+   % górny sopran
+   }
+   \new Voice {
+   \voiceTwo
+   % dolny sopran
+   }
+   >>
+   \oneVoice
+   Ale tutaj można zrobić prościej: oba soprany cały czas mają równy rytm, więc wystarczy zapisać je jako akordy.  Akordy wpisuje się w nawiasach ostrych:
+   <gis d'>4 R2 <gis e'>4 <gis f'>~
+   (\relative w akordach działa tak, że pierwsza nuta akordu jest "obliczana" względem pierwszej nuty poprzedniego akordu - oprócz tego tak jak zwykle)
 
 %}
 
