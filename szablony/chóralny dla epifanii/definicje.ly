@@ -20,11 +20,11 @@
     \defaultchild "Voice"
 
     \consists "Ambitus_engraver"
-    \set Staff.midiInstrument = "acoustic grand"
+    midiInstrument = "acoustic grand"
 
     \clef treble
-    \set Staff.instrumentName = "S "
-    \set Staff.shortInstrumentName = "S "
+    instrumentName = "S "
+    shortInstrumentName = "S "
   }
 
   \context {
@@ -38,11 +38,11 @@
     \defaultchild "Voice"
 
     \consists "Ambitus_engraver"
-    \set Staff.midiInstrument = "acoustic grand"
+    midiInstrument = "acoustic grand"
 
     \clef treble
-    \set Staff.instrumentName = "A "
-    \set Staff.shortInstrumentName = "A "
+    instrumentName = "A "
+    shortInstrumentName = "A "
   }
 
   \context {
@@ -56,11 +56,11 @@
     \defaultchild "Voice"
 
     \consists "Ambitus_engraver"
-    \set Staff.midiInstrument = "acoustic grand"
+    midiInstrument = "acoustic grand"
 
     \clef "G_8"
-    \set Staff.instrumentName = "T "
-    \set Staff.shortInstrumentName = "T "
+    instrumentName = "T "
+    shortInstrumentName = "T "
   }
 
   \context {
@@ -74,10 +74,10 @@
     \defaultchild "Voice"
 
     \consists "Ambitus_engraver"
-    \set Staff.midiInstrument = "acoustic grand"
+    midiInstrument = "acoustic grand"
 
     \clef bass
-    \set Staff.instrumentName = "B "
-    \set Staff.shortInstrumentName = "B "
+    instrumentName = "B "
+    shortInstrumentName = "B "
   }
 }
