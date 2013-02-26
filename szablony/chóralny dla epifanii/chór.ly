@@ -1,5 +1,6 @@
 \version "2.16.1"
 #(set-global-staff-size 16)
+\include "predefiniowane-pięciolinie.ily"
 
 \paper {
   indent = 0 \mm
@@ -17,10 +18,10 @@
 
 \score {
   \new ChoirStaff <<
-    \include "sopran.ily"
-    \include "alt.ily"
-    \include "tenor.ily"
-    \include "bas.ily"
+    \include "sopran - treść.ily"
+    \include "alt - treść.ily"
+    \include "tenor - treść.ily"
+    \include "bas - treść.ily"
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu
