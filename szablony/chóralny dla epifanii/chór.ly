@@ -13,8 +13,6 @@
 }
 
 \header {
-  title =
-  composer =
 }
 
 \score {
