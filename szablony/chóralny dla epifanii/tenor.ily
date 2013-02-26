@@ -6,12 +6,13 @@
   \dynamicUp
   \tupletUp
   \clef "treble_8"
-  \key
-  \time
-  \tempo
+  % podaj tonację, na przykład \key g \minor
+  
+  % podaj metrum, na przykład \time 4/4
+  
+  % wpisz nuty:
   
   
-  \bar "|."
 }
 \addlyrics {
   
