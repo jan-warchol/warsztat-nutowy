@@ -19,14 +19,14 @@ tenI = \relative f {
   f4. f8\! f2
   d2\mf ( c4) c
   b4.( a8 g4) g4\dim
-  a2 \voiceOne c2\p
+  a2  c2\p
   c c
   r d4\mf d
   e4. g8 g2
-  g4\f(f2 e4~
+  \voiceOne g4\f(f2 e4~
   e d2 c4~
   c b2 a4~
-  a4 g2) f4
+  a4 g2) \oneVoice f4
   f4\dim ( e8 d e4) e
   g2 r
   R1
@@ -67,23 +67,28 @@ tenII = \relative f {
   \time 2/2
   % wpisz nuty:
   \tempo "Nicht schnell"
-  \bum
-  r2 c'\p
-  c c
-  r c4\< c
-  f4. f8\! f2
-  d2\mf ( c4) c
-  b4.( a8 g4) g4\dim
-  a2 \undo \bum \voiceTwo a2\p
+
+  \new Voice {
+    \bum
+    r2 c'\p
+    c c
+    r c4\< c
+    f4. f8\! f2
+    d2\mf ( c4) c
+    b4.( a8 g4) g4\dim
+    a2
+  } \undo \bum  a2\p
   a a
   r a4\mf a
   c4. e8 e2
   <<
-    {
+    \new Voice {
+      \voiceTwo
       a,4\f(f' g, e'
       a, d g, c~
       c b2 a4~
       a4 g2)
+      \bum
       f4
       f4\dim ( e8 d e4) e
       g2 r
@@ -98,7 +103,7 @@ tenII = \relative f {
 \new Staff = "ook" \with { \consists "Ambitus_engraver" } {
   <<
     \tenI
-    \new Voice \tenII
+    \tenII
   >>
 }
 \addlyrics {
