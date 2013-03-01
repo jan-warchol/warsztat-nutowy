@@ -1,0 +1,58 @@
+Some background:
+https://codereview.appspot.com/5701049
+
+Using custom-defined contexts generally seems to be doing what i want (i.e. to be able to override settings for specific staff using only layout block), but i have some problems with that approach.
+
+First, here's my main problem with storing special context definitions (like SopranoStaff) in a separate included .ily file. Let's say i have a file "soprano.ly" like this:
+
+\new Staff { c' d' e' f' }
+\addlyrics { la la la la }
+
+as well as similar "alto.ly", "tenor.ly" and "bass.ly". I can compile these files separately to produce parts, and i can write a "choir.ly" file that goes like this:
+
+\new ChoirStaff <<
+  \include "soprano.ly"
+  \include "alto.ly"
+  \include "tenor.ly"
+  \include "bass.ly"
+>>
+
+and it just works - produces a full choral score. Very simple and quite elegant, suitable for newbies and crowd-engraving (remember that i need workflows that enable several lily beginners to simultaneously typeset a piece under my supervision).
+
+Now i want to use custom contexts in my part files, so they become this:
+
+\include "mySpecialContexts.ily"
+\new SopranoStaff { c' d' e' f' }
+\addlyrics { la la la la }
+
+And here comes the problem: while i can still compile these files on their own, my "choir.ly" will break, because context definitions included in "mySpecialContexts.ily" will appear at an unepected place - inside \ChoirStaff.
+
+Of course it's possible to work around this, but the solution will be much less simple.
+
+Now, including these custom context definitions in LilyPond herself (in engraver-init.ly or some other file) would solve this problem, but only partially. Having these definitions built-in would mean that i don't need to include them in part files, so they won't pop-up at unexpected places. But that requires to have all custom contexts built in LilyPond, and that's impossible.
+
+Now, one can argue that i should just write music variables in my part files, like this:
+
+sopranomusic = { c' d' e' f' }
+sopranolyrics = \lyricmode { la la la la }
+
+and then have the main file contain staff definitions:
+
+\include "mySpecialContexts.ily"
+\include "soprano.ly"
+\include "alto.ly"
+\include "tenor.ly"
+\include "bass.ly"
+
+\new ChoirStaff <<
+  \new SopranoStaff \sopranomusic
+  \addlyrics \sopranolyrics
+  \new AltoStaff \altomusic
+  \addlyrics \altolyrics
+  % etc...
+>>
+
+But this solution has the following drawbacks:
+ - first, to be able to create parts i need to create separate ly files, which are *really* boilerplate. I consider this to be very ugly.
+
+There are more notes in the commit messages.
