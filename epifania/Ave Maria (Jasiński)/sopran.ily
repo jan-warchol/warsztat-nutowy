@@ -31,6 +31,7 @@
   \times 2/3 {bes4 g8}  \times 2/3 {bes8 (a8) bes8}  \times 2/3 {c4 a8}
   \times 2/3 {c8 (bes8) c8} d4 e4\fermata
   % w tuis też nie ma łuczka
+  \bar "||"
   \time 4/4
   a,2\mp bes2
   bes2 a2
