@@ -58,17 +58,6 @@
 { r1 r2 r4 r8 r16 r }
 
 \markup \justify {
-  \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.  Są umieszczane na
-  środku taktu i zawsze wyglądają jak pauzy całonutowe. Pauza całotaktowa
-  w metrum 4/4 trwa tyle, co pauza całonutowa, ale w "metrum 1/4" "tyle co ćwierćnutowa"
-  - mimo to obie wyglądają tak samo:
-}
-\score {
-  { R1  \time 1/4  R4 }
-  \layout { line-width = 6\cm ragged-right = ##f }
-}
-
-\markup \justify {
   Nie każda nuta na pięciolinii jest osobnym dźwiękiem - czasami jeden dźwięk zapisuje
   się jako kilka nut połączonych łukami przedłużającymi.
   Tutaj jest jeden dźwięk trwający dwa takty:
@@ -115,8 +104,8 @@
 \addlyrics { f f fis fis f f }
 
 \markup \justify {
-  Żeby było wygodniej, można zapisać znaki chromatyczne przy kluczu
-  (mówimy wtedy o tonacji), wtedy działają one we wszystkich oktawach "i taktach:"
+  Żeby było wygodniej, można zapisać znaki chromatyczne przy kluczu,
+  wtedy działają one we wszystkich oktawach "i taktach:"
 }
 \markup {
   \score { { c'4 e' c'' f'' c' e' c'' f'' } \addlyrics { c e c f c e c f } \layout {} }
@@ -146,51 +135,3 @@
 \relative f' { \key f \major f fis f f bes b b bes es cis bes f }
 \addlyrics { f fis f f bes b b bes es cis bes f }
 
-
-\markup \justify {
-  \bold Melizmat to jedna sylaba śpiewana na wielu dźwiękach:
-}
-\score {
-  \relative f {
-    \clef F
-    \key d \minor
-    r8 e e e f16 \melisma g f e f g e f
-    g a g f g a f g a8 bes16 a g f e d
-    cis8 e a g f16 e d c b4
-    c4 \melismaEnd d e
-  }
-  \addlyrics {
-    \once \override LyricText #'self-alignment-X = #0.7
-    Chri -- ste e -- le -- i -- son
-  }
-  \layout {
-    system-count = #1
-  }
-}
-
-\markup \justify {
-  Jeśli ostatnia sylaba w słowie jest śpiewana na wielu nutach, to rysuje się za nią
-  linię przedłużającą, żeby wskazać jak długo ta sylaba trwa:
-}
-
-\score {
-  <<
-    \new Voice = mix \relative f'' {
-      \key bes \minor
-      \time 4/2
-      \partial 1 des \melisma es f es \melismaEnd
-      c1 \melisma des2 es \melismaEnd
-      f1 ges~
-      ges1 bes,~
-      bes4 a bes c a bes c
-    }
-    \new Lyrics \with { \consists "Balloon_engraver" }
-    \lyricsto mix \lyricmode {
-      do -- na __ no -- bis __ A -- _
-      \override BalloonTextItem #'annotation-balloon = ##f
-      \balloonGrobText #'LyricText #'(-2 . -1.5) \markup \smaller \italic "ta sylaba jest śpiewana na dwóch nutach, ale nie wstawiamy linii przedłużającej bo nie ma gdzie"
-      gnus _ De -- _ i
-    }
-  >>
-  \layout { ragged-right = ##f }
-}
