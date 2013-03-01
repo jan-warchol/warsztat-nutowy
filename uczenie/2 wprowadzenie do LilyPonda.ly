@@ -69,7 +69,7 @@
 \markup \justify {
   Jest wiele dźwięków nazywających się, na przykład, c (po jednym w każdej oktawie):
 }
-\score { { c' c'' } \addlyrics { c c } \layout { } }
+\score { { c' c'' c''' } \addlyrics { c c c } \layout { } }
 
 \markup \justify {
   Dlatego używamy polecenia \typewriter "\relative"
@@ -215,7 +215,10 @@
 
 
 \markup \justify {
-  Melizmat (jedną sylabę na wielu dźwiękach) zapisuje się tak: \bold "po pierwszej" nucie melizmatu
+  Melizmat (jedną sylabę na wielu dźwiękach)
+  można zapisać na dwa sposoby: jeśli melizmat jest połączony łukiem,
+  to wystarczy wpisać łuk i już. Jeśli nie jest,
+  zapisuje się tak: \bold "po pierwszej" nucie melizmatu
   należy napisać \typewriter "\melisma", zaś po ostatniej \typewriter "\melismaEnd":
 }
 \noPageBreak
@@ -284,17 +287,30 @@
   - trzeba wtedy zacząć sprawdzanie od pierwszej nuty, która wygląda podejrzanie.
 }
 
+\markup \justify {
+  Jeśli masz problemy z polskimi literami albo innymi specjalnymi znakami,
+  upewnij się że plik jest zapisany za pomocą kodowania UTF-8.
+  Frescobaldi używa tego kodowania domyślnie, więc nie powinno być
+  żadnych problemów w przypadku plików utworzonych za jego pomocą.
+}
+
+\markup \justify {
+  Specjalne kreski taktowe wpisuje się za pomocą polecenia \typewriter "\bar"
+}
+\markup \typewriter "{ R1 \bar \"||\" R1 \bar \"|.\" R1 }"
+{ R1 \bar "||" R1 \bar "|." R1 }
+
+\markup \justify {
+  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
+}
+                      
 %{ TODO (DODAĆ):
 
    tryb absolutny i przerobić sekcję o relative bazując na absolutnym
    przypominające znaki chromatyczne
    łuki a melizmaty
    podstawowe markupy
-   dynamikę
-   końcową kreskę taktową
    zmiany tempa
-   triole
-   UTF8
    akordy i polifonię:
    żeby wstawić dwa oddzielne głosy, jeden z pałeczkami w górę, a drugi w dół, trzeba użyć czegoś takiego:
    <<
@@ -314,13 +330,33 @@
 
 %}
 
+\markup \justify {
+  Triole, kwintole itp. wstawia się za pomocą polecenia \typewriter "\\times":
+}
+\markup \typewriter "\\times 2/3 { e4 f g }"
+   \relative f' { \times 2/3 { e4 f g } }
+
+   \markup "przedtakt"
+   \markup \typewriter "\partial 4 g8 a b  a1"
+   { \partial 8 g'8 a'1 }
+   
+\markup { dynamika i artykulacja }
+   \markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
+   { a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
+   
+   
+   { e'4 fis' g' as' }
+
+   { \key a \major e'4 fis' g' as' }
+
+   { \key es \major e'4 fis' g' as' }
+
+   
 %{ NIEWYKORZYSTANE:
 
    \markup \typewriter "\\time 6/8"
    { \time 6/8 f'8. g'16 a'8 g' g' g' }
 
-   \markup \typewriter "\partial 8  g8 a1"
-   { \partial 8 g'8 a'1 }
 
    \markup \typewriter "e4~ e16 r8. c8( d f g)"
    \relative f' { e4~ e16 r8. c8( d f g) }
@@ -329,13 +365,5 @@
    \markup \typewriter "g8[ f16 g] b4 c8[ b a g]"
    \relative f' { g8[ f16 g] b4 c8[ b a g] }
 
-   \markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
-   { a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
-
-   { e'4 fis' g' as' }
-
-   { \key a \major e'4 fis' g' as' }
-
-   { \key es \major e'4 fis' g' as' }
 
 %}
