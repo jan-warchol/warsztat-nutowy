@@ -172,5 +172,6 @@
     \set GrandStaff.fontSize = #1.5
     \override GrandStaff.StaffSymbol #'staff-space = #(magstep 1.5)
     \override GrandStaff.StaffSymbol #'thickness = #(magstep 1.25)
+    \override Staff.BarLine #'hair-thickness = #(magstep 4)
   }
 }
