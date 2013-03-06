@@ -19,7 +19,7 @@
   \key d \minor
   \time 4/4
   \tempo Moderato
-  d2 d
+  d2\mp d
   \times 2/3 { g8( f e) } \times 2/3 { f4 g8 } \times 2/3 { e4 (cis8) } d4
   r4 r \times 2/3 { c8 d e } f4
   f4 \times 2/3 {e8 f g} \times 2/3 {cis,4 (a8)} d4
