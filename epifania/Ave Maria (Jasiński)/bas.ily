@@ -34,16 +34,16 @@
   \times 2/3 {e8( f g)} \times 2/3 {f4 e8} \times 2/3 {e4( f8)} d4
   \times 2/3 {f8 e d} g4( c,) f
   \times 2/3 {d8 c bes} e4( a,) d
-  d4( \times 2/3 {d4) e8} \times 2/3 {e4 d8} \tempo "accel." e4
+  d4~ \times 2/3 {d4 e8} \times 2/3 {e4 d8} \tempo "accel." e4 \cresc
   \time 3/4
-  d4( \times 2/3 {f4 ) e8} f4
+  d4(\! \times 2/3 {f4 ) e8} f4
   e4 \times 2/3 {g8 ( f ) g} \times 2/3 {a4 f8}
   \times 2/3 {a8 ( g ) a} bes4 g\fermata
   \bar "||"
   \key d \major
   \tempo "Tempo I"
-  d4\p d2 (
-  d4 ) <<
+  d4\p d2~
+  d4 <<
     {
       \voiceOne
       d4 d \fermata
@@ -56,8 +56,8 @@
     }
   >>
   \oneVoice
-  d4 d2 (
-  d4 ) <<
+  d4 d2~
+  d4 <<
     {
       \voiceOne
       d4 d \fermata
@@ -71,14 +71,14 @@
   >>
   \oneVoice
   d4\f d4. d8
-  d4 d2 (
-  d2. )
+  d4 d2~
+  d2.
   \time 2/4
   f4. b8
-  b4 b (
-  b2 )
-  b4 b (
-  b2 )
+  b4 b~
+  b2
+  b4 b~
+  b2
   \compressFullBarRests
   R2
   d,2
