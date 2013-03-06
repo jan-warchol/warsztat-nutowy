@@ -22,8 +22,8 @@
   c'2\mp bes
   bes2 g4( f)
   r4 \times 2/3 { g8 a bes } c4 c
-  r4 r4 \times 2/3 {a8 \melisma b cis} \melismaEnd d4
-  \times 2/3 { a8 \melisma g \melismaEnd a}
+  r4 r4 \times 2/3 {a8 ( b cis) } d4
+  \times 2/3 { a8 ( g ) a}
   \times 2/3 { bes4 g8}
   g4 \tempo "accel."
   \times 2/3 {a8 \cresc bes a}
@@ -35,9 +35,9 @@
   \time 4/4
   d2\mp d
   d2 cis4(d)
-  r4 bes4~(\melisma\times 2/3 {bes4 c8)} \melismaEnd a4~
+  r4 bes4~(\times 2/3 {bes4 c8)} a4~
   a4 g4~(\times 2/3 {g4 a8)} f4
-  \times 2/3 {a8 \melisma g \melismaEnd a} \times 2/3 {bes4 g8} g4 \tempo "accel." \times 2/3 {a8 \cresc bes \! a}
+  \times 2/3 {a8 ( g ) a} \times 2/3 {bes4 g8} g4 \tempo "accel." \times 2/3 {a8 \cresc bes \! a}
   \time 3/4
   \times 2/3 {c4 a8} a4 \times 2/3 {c8 bes c}
   \times 2/3 {c4 bes8} c2
@@ -47,16 +47,16 @@
   \tempo "Tempo I"
   g4\p c4. bes8
   a4 a2 \fermata
-  a4 \melisma c4. \melismaEnd bes8
+  a4 ( c4. ) bes8
   a4 a2 \fermata
   a4 \f  bes4. a8
-  b4 b \times 2/3 {gis8 \melisma ais \melismaEnd gis}
+  b4 b \times 2/3 {gis8 ( ais ) gis}
   \times 2/3 {b4 b8} d2
   \time 2/4
   d4. d8 e4 d~
   d2
-  e4 d4 \melisma
-  d2 \melismaEnd
+  e4 d4 (
+  d2 )
   R2
   d2
   d2 \fermata
