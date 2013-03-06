@@ -25,7 +25,7 @@
   \times 2/3 { e8 ( f g) } \times 2/3 { f4 e8 } \times 2/3 { e4( f8) } d4
   \times 2/3 { f8 e d  } bes'4~( \times 2/3 { bes4 c8) } a4~
   a4 r4 r2
-  \times 2/3 { f8 (e8) f8 } \times 2/3 { g4 e8 } e4 \times 2/3 { g8 f8 g8 }
+  \times 2/3 { f8 (e8) f8 } \times 2/3 { g4 e8 } e4 \tempo "accel." \times 2/3 { g8\cresc f8\! g8 }
   \time 3/4
   \times 2/3 {a4 f8 } f4 \times 2/3 {a8 g8 a8}
   \times 2/3 {bes4 g8}  \times 2/3 {bes8 (a8) bes8}  \times 2/3 {c4 a8}
@@ -116,8 +116,8 @@
   tu -- i, Je -- sus.
   San -- cta Ma -- ri -- a
   Ma -- ter De -- i
-  o -- ra pro no -- bis
-  et ho -- ra
+  o -- ra pro no -- bis __
+  et ho -- ra __
   no -- stræ
   A -- men.
 }
