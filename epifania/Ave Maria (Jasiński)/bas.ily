@@ -91,18 +91,18 @@
   gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum,
   Do -- mi -- nus te -- cum,
-  be -- ne -- di -- cta -- tu,
+  be -- ne -- di -- cta tu,
   be -- ne -- di -- cta
-  fru -- ctus ve -- ntris tu -- i, Je -- sus
+  fru -- ctus ven -- tris tu -- i, Je -- sus
   A -- ve Ma -- ri -- a,
   gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum,
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu,
   be -- ne -- di -- cta
-  fru -- ctus ve -- ntris tu -- i, Je -- sus.
-  Sa -- ncta, Sa -- ncta Ma -- ter De -- i,
+  fru -- ctus ven -- tris tu -- i, Je -- sus.
+  San -- cta, San -- cta Ma -- ter De -- i,
   o -- ra pro -- no -- bis __
-  nunc in ho -- ra __ mo -- rtis __
-  A -- men
+  nunc in ho -- ra __ mor -- tis __
+  A -- men.
 }
