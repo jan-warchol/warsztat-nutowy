@@ -23,9 +23,12 @@
   bes2 g4( f)
   r4 \times 2/3 { g8 a bes } c4 c
   r4 r4 \times 2/3 {a8 \melisma b cis} \melismaEnd d4
-  \times 2/3 { a8 \melisma g \melismaEnd a} \times 2/3 { bes4 g8} g4 \tempo "accel." \times 2/3 {a8 \cresc bes \! a}
+  \times 2/3 { a8 \melisma g \melismaEnd a}
+  \times 2/3 { bes4 g8}
+  g4 \tempo "accel."
+  \times 2/3 {a8 \cresc bes a}
   \time 3/4
-  \times 2/3 {c4 a8} a4 \times 2/3 { c8 bes c}
+  \times 2/3 {c4\! a8} a4 \times 2/3 { c8 bes c}
   \times 2/3 {d4 bes8} c2
   d4 d bes \fermata
   \bar "||"

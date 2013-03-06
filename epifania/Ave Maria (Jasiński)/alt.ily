@@ -23,9 +23,9 @@
   cis2 a
   \times 2/3 { f'8 e d } d4 e2
   \times 2/3 { bes8 c d } g4~( \times 2/3 { g4 a8) } f4
-  \times 2/3 {d8( cis) d} \times 2/3 {e4 cis8} cis4 \tempo "accel." \times 2/3 {e8\cresc d\! e}
+  \times 2/3 {d8( cis) d} \times 2/3 {e4 cis8} cis4 \tempo "accel." \times 2/3 {e8\cresc d e}
   \time 3/4
-  \times 2/3 {f4 d8} d4 \times 2/3 {f8 e f}
+  \times 2/3 {f4\! d8} d4 \times 2/3 {f8 e f}
   \times 2/3 {g4 e8} e2
   f4 f g\fermata
   \bar "||"
