@@ -19,7 +19,7 @@
   \key d \minor
   \time 4/4
   \tempo Moderato
-  c'2 bes
+  c'2\mp bes
   bes2 g4( f)
   r4 \times 2/3 { g8 a bes } c4 c
   r4 r4 \times 2/3 {a8 \melisma b cis} \melismaEnd d4
@@ -41,6 +41,7 @@
   d4 d bes \fermata
   \bar "||"
   \key d \major
+  \tempo "Tempo I"
   g4\p c4. bes8
   a4 a2 \fermata
   a4 \melisma c4. \melismaEnd bes8
@@ -56,7 +57,7 @@
   R2
   d2
   d2 \fermata
-  
+
   \bar "|."
 }
 \addlyrics {
