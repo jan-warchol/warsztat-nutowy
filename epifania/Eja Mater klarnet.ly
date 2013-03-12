@@ -7,6 +7,11 @@
   instrument = \markup { \concat { "Clarinetti in B" \flat } }
 }
 
+\paper {
+  left-margin = 12\mm
+  right-margin = 12\mm
+}
+
 \score {
   \transpose bes c' {
     \relative c'{
