@@ -8,7 +8,8 @@
   %top-markup-spacing #'basic-distance = 5
   %markup-system-spacing #'basic-distance = 40
   %page-count =
-  %system-count =
+  system-count = 6
+  systems-per-page = 3
   %\include "EpifaniaHeaders.ily"
 }
 
@@ -16,6 +17,8 @@
   title = "Ave Maria"
   composer = "Marek Jasiński"
 }
+
+%compress = { \markup \scale #'(0.8 . 1) }
 
 \score {
   \new ChoirStaff <<
@@ -30,10 +33,11 @@
     \compressFullBarRests
     %\set Score.tempoHideNote = ##t
 
-    \override Lyrics.VerticalAxisGroup
-    #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+    %\override Lyrics.VerticalAxisGroup
+    %#'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+    \override DynamicTextSpanner #'style = #'none
 
-    \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
+    %\override Score.BarNumber #'break-visibility = #'#(#f #t #t)
 
     \override Score.BarNumber #'self-alignment-X =
     #(lambda (grob)
