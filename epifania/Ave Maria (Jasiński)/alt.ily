@@ -47,7 +47,7 @@
   d4( fis4.) e8
   d4 d2 \fermata
   fis4\f g4. fis8
-  f4 f2~
+  f4 f2-\tweak #'extra-offset #'(0 . -0.3) ~
   f2.
   \time 2/4
   r4 f

@@ -22,7 +22,7 @@
   c'2\mp bes
   bes2 g4( f)
   r4 \times 2/3 { g8 a bes } c4 c
-  r4 r4 \times 2/3 {a8 ( b cis) } d4
+  r4 r4 \times 2/3 { a8^[ ( b cis)] } d4
   \times 2/3 { a8 ( g ) a}
   \times 2/3 { bes4 g8}
   g4 \tempo \markup \large "accel."
@@ -35,7 +35,7 @@
   \time 4/4
   d2\mp d
   d2 cis4(d)
-  r4 bes4~(\times 2/3 {bes4 c8)} a4~
+  r4 bes4~-\tweak #'positions #'(1 . 1)(\times 2/3 {bes4 c8)} a4~
   a4 g4~(\times 2/3 {g4 a8)} f4
   \times 2/3 {a8 ( g ) a} \times 2/3 {bes4 g8} g4 \tempo \markup \large "accel." \times 2/3 {a8 \cresc bes \! a}
   \time 3/4
