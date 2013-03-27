@@ -18,14 +18,14 @@
   \clef "treble_8"
   \key d \minor
   \time 4/4
-  \tempo Moderato
+  \tempo \markup \large Moderato
   c'2\mp bes
   bes2 g4( f)
   r4 \times 2/3 { g8 a bes } c4 c
   r4 r4 \times 2/3 {a8 ( b cis) } d4
   \times 2/3 { a8 ( g ) a}
   \times 2/3 { bes4 g8}
-  g4 \tempo "accel."
+  g4 \tempo \markup \large "accel."
   \times 2/3 {a8 \cresc bes a}
   \time 3/4
   \times 2/3 {c4\! a8} a4 \times 2/3 { c8 bes c}
@@ -37,14 +37,14 @@
   d2 cis4(d)
   r4 bes4~(\times 2/3 {bes4 c8)} a4~
   a4 g4~(\times 2/3 {g4 a8)} f4
-  \times 2/3 {a8 ( g ) a} \times 2/3 {bes4 g8} g4 \tempo "accel." \times 2/3 {a8 \cresc bes \! a}
+  \times 2/3 {a8 ( g ) a} \times 2/3 {bes4 g8} g4 \tempo \markup \large "accel." \times 2/3 {a8 \cresc bes \! a}
   \time 3/4
   \times 2/3 {c4 a8} a4 \times 2/3 {c8 bes c}
   \times 2/3 {c4 bes8} c2
   d4 d bes \fermata
   \bar "||"
   \key d \major
-  \tempo "Tempo I"
+  \tempo \markup \large "Tempo I"
   g4\p c4. bes8
   a4 a2 \fermata
   a4 ( c4. ) bes8

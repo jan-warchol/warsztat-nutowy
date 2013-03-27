@@ -18,12 +18,12 @@
   \clef bass
   \key d \minor
   \time 4/4
-  \tempo Moderato
+  \tempo \markup \large Moderato
   d2\mp d
   \times 2/3 { g8( f e) } \times 2/3 { f4 g8 } \times 2/3 { e4 (cis8) } d4
   r2 \times 2/3 { c8 d e } f4
   f4 \times 2/3 {e8 f g} \times 2/3 {cis,4 (a8)} d4
-  d4~ \times 2/3 {d4 e8} \times 2/3 {e4 d8} \tempo "accel." e4\cresc
+  d4~ \times 2/3 {d4 e8} \times 2/3 {e4 d8} \tempo \markup \large "accel." e4\cresc
   \time 3/4
   d4(\! \times 2/3 {f4) e8} f4
   e4 \times 2/3 {g8( f) g} \times 2/3 {a4 f8}
@@ -34,14 +34,14 @@
   \times 2/3 {e8( f g)} \times 2/3 {f4 e8} \times 2/3 {e4( f8)} d4
   \times 2/3 {f8 e d} g4( c,) f
   \times 2/3 {d8 c bes} e4( a,) d
-  d4~ \times 2/3 {d4 e8} \times 2/3 {e4 d8} \tempo "accel." e4 \cresc
+  d4~ \times 2/3 {d4 e8} \times 2/3 {e4 d8} \tempo \markup \large "accel." e4 \cresc
   \time 3/4
   d4(\! \times 2/3 {f4 ) e8} f4
   e4 \times 2/3 {g8 ( f ) g} \times 2/3 {a4 f8}
   \times 2/3 {a8 ( g ) a} bes4 g\fermata
   \bar "||"
   \key d \major
-  \tempo "Tempo I"
+  \tempo \markup \large "Tempo I"
   d4\p d2~
   d4 <<
     {
