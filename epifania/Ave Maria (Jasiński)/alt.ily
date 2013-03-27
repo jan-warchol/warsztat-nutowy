@@ -69,7 +69,15 @@
   in mu -- li -- e -- ri -- bus,
   et be -- ne -- di -- ctus
   fru -- ctus Je -- sus.
-  A -- ve, A -- ve, A -- ve, A -- ve
+  A -- ve, A -- ve,
+  \override LyricText #'Y-offset = #-1.6
+  \override LyricHyphen #'Y-offset = #-1.6
+  A -- ve,
+  \override LyricText #'Y-offset = #-2.5
+  \override LyricHyphen #'Y-offset = #-2.5
+  A -- ve
+  \revert LyricText #'Y-offset
+  \revert LyricHyphen #'Y-offset
   be -- ne -- di -- cta tu
   in mu -- li -- e -- ri -- bus,
   et be -- ne -- di -- ctus
