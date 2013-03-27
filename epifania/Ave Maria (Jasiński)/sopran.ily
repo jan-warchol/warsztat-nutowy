@@ -23,7 +23,9 @@
   % w oryginale pierwsza miara 2. taktu była zapisana jako
   % \times 2/3 { e8\melisma f( g)\melismaEnd }
   \times 2/3 { e8 ( f g) } \times 2/3 { f4 e8 } \times 2/3 { e4( f8) } d4
-  \times 2/3 { f8 e d  } bes'4~-\tweak #'positions #'(1 . 1)( \times 2/3 { bes4 c8) } a4~
+  \times 2/3 { f8 e d  }
+  \shape Slur #'((0 . -1.8)(0 . -2)(0 . -2)(0 . -2))
+  bes'4~( \times 2/3 { bes4 c8) } a4~
   a4 r4 r2
   \times 2/3 { f8 (e8) f8 } \times 2/3 { g4 e8 } e4 \tempo \markup \large "accel." \times 2/3 { g8\cresc f8 g8 }
   \time 3/4
