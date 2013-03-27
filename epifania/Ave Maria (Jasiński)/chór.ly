@@ -17,7 +17,9 @@
 
 \header {
   title = "Ave Maria"
-  composer = "Marek Jasiński"
+  composer = \markup \column {
+    " " " " " " "Marek Jasiński"
+  }
 }
 
 %compress = { \markup \scale #'(0.8 . 1) }
