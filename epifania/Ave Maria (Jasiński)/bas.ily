@@ -43,33 +43,9 @@
   \key d \major
   \tempo \markup \large "Tempo I"
   d4\p d2~
-  d4 <<
-    {
-      \voiceOne
-      d4 d \fermata
-      % górny bas
-    }
-    \new Voice {
-      \voiceTwo
-      \parenthesize a4 \parenthesize a \fermata
-      % dolny bas
-    }
-  >>
-  \oneVoice
+  d4 <d \parenthesize a> <d \parenthesize a> \fermata
   d4 d2~
-  d4 <<
-    {
-      \voiceOne
-      d4 d \fermata
-      % górny bas
-    }
-    \new Voice {
-      \voiceTwo
-      \parenthesize a4 \parenthesize a \fermata
-      % dolny bas
-    }
-  >>
-  \oneVoice
+  d4 <d \parenthesize a> <d \parenthesize a> \fermata
   d4\f d4. d8
   d4 d2~
   d2.
