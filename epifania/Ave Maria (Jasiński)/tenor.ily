@@ -55,8 +55,8 @@
   \time 2/4
   d4. d8 e4 d~
   d2
-  e4 d4 (
-  d2 )
+  e4 d4 ~
+  d2
   R2
   d2
   d2 \fermata
