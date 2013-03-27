@@ -67,15 +67,15 @@
   A -- ve,
   A -- ve,
   Do -- mi -- nus te -- cum,
-  te -- cum
+  te -- \tweak #'X-offset #-1 cum
   be -- ne di -- cta tu in mu -- li --  e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus Je -- sus
+  et be -- ne -- di -- ctus \tweak #'X-offset #-0.3 fru -- ctus Je -- sus
   A -- ve,
   A -- ve __
   A -- ve __
   A -- ve,
   be -- ne -- di -- cta tu in mu -- li -- e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus Je -- sus.
+  et be -- ne -- di -- ctus \tweak #'X-offset #-0.3 fru -- ctus Je -- sus.
   San -- cta Ma -- ri -- a, Ma -- ter De -- i,
   o -- ra pro no -- bis pec -- ca -- to -- ri -- bus
   nunc in ho -- ra __ mor -- tis __

@@ -66,17 +66,17 @@
   A -- ve,
   gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum,
-  Do -- mi -- nus te -- cum,
+  Do -- mi -- nus te -- \tweak #'X-offset #-1 cum,
   be -- ne -- di -- cta tu,
   be -- ne -- di -- cta
-  fru -- ctus ven -- tris tu -- i, Je -- sus
+  fru -- ctus \tweak #'X-offset #-0.3 ven -- tris tu -- i, Je -- sus
   A -- ve Ma -- ri -- a,
   gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum,
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu,
   be -- ne -- di -- cta
-  fru -- ctus ven -- tris tu -- i, Je -- sus.
+  fru -- ctus \tweak #'X-offset #-0.3 ven -- tris tu -- i, Je -- sus.
   San -- cta, San -- cta Ma -- ter De -- i,
   o -- ra pro -- no -- bis __
   nunc in ho -- ra __ mor -- tis __

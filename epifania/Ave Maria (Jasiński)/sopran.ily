@@ -109,12 +109,12 @@
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu
   in mu -- li -- e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus ven -- tris
+  et be -- ne -- di -- ctus fru -- ctus \tweak #'X-offset #-0.3 ven -- tris
   tu -- i, Je -- sus.
   A -- ve,
   A -- ve,
   be -- ne -- di -- cta tu in mu -- li -- e -- ri -- bus
-  et be -- ne -- di -- ctus fru -- ctus ven -- tris
+  et be -- ne -- di -- ctus fru -- ctus \tweak #'X-offset #-0.3 ven -- tris
   tu -- i, Je -- sus.
   San -- cta Ma -- ri -- a
   Ma -- ter De -- i
