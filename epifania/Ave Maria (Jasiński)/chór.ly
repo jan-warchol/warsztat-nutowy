@@ -5,8 +5,10 @@
   indent = 0 \mm
   left-margin = 12 \mm
   right-margin = 14 \mm
-  %top-markup-spacing #'basic-distance = 5
-  %markup-system-spacing #'basic-distance = 40
+  top-markup-spacing #'basic-distance = 12
+  markup-system-spacing #'basic-distance = 22
+  top-system-spacing #'basic-distance = 12
+  last-bottom-spacing #'basic-distance = 12
   %page-count =
   system-count = 6
   systems-per-page = 3
