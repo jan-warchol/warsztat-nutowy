@@ -10,16 +10,11 @@
   title = Cancer
   composer = "Tadeusz Piskozub"
 }
-tempomarker =
-{
-  \override Score.MetronomeMark #'extra-offset = #'( -7.0 . 2.4 )
-  \override Score.MetronomeMark #'transparent = ##t
-  \tempo 4=200
-}
 staffprops =
 {
   \key c \minor
   \time 4/4
+  \tempo 4=200
 }
 %--------------------------------MELODY--------------------------------
 IntroFirstGuitar =
@@ -694,7 +689,6 @@ bassguitarmelody =
 everything =
 {
   <<
-    \tempomarker
     \new Staff = firstguitar
     {
       \clef "treble_8"
