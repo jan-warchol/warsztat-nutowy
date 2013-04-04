@@ -1,8 +1,8 @@
 \version "2.10.33"
 \paper
 {
-  left-margin=1.5\cm
-  line-width=18.5\cm
+  left-margin=1.3\cm
+  right-margin=1.2\cm
 }
 #(set-global-staff-size 20)		% default staff size is 20
 \header
@@ -685,15 +685,14 @@ bassguitarmelody =
   <c, bes,, >2 c,8 bes,, as,, g,, |
   <c, f,, >1 \bar "|."
 }
-%--------------------------------ALL-FILE VARIABLE--------------------------------
-everything =
-{
-  <<
-    \new Staff = firstguitar
-    {
+
+%--------------------------------SCORE-LAYOUT--------------------------------
+\score {
+  \new StaffGroup <<
+    \new Staff = firstguitar {
       \clef "treble_8"
       \set Staff.instrumentName = "Distortion guitar 1"
-      \set Staff.shortInstrumentName = "G 1 "
+      \set Staff.shortInstrumentName = "G1 "
       \set Staff.midiInstrument = "distorted guitar"
       \new Voice = firstguitar
       {
@@ -701,11 +700,10 @@ everything =
         \firstguitarmelody
       }
     }
-    \new Staff = secondguitar
-    {
+    \new Staff = secondguitar {
       \clef "bass"
       \set Staff.instrumentName = "Distortion guitar 2"
-      \set Staff.shortInstrumentName = "G 2 "
+      \set Staff.shortInstrumentName = "G2 "
       \set Staff.midiInstrument = "distorted guitar"
       \new Voice = secondguitar
       {
@@ -713,8 +711,7 @@ everything =
         \secondguitarmelody
       }
     }
-    \new Staff = bassguitar
-    {
+    \new Staff = bassguitar {
       \clef "bass_8"
       \set Staff.instrumentName = "Bass"
       \set Staff.shortInstrumentName = "B "
@@ -726,34 +723,7 @@ everything =
       }
     }
   >>
-}
-%--------------------------------SCORE-LAYOUT--------------------------------
-\score
-{
-  \everything
-  \layout
-  {
-    \context
-    {
-      \Lyrics
-      \override LyricSpace #'minimum-distance = #0.8
-    }
-    indent = 2.5\cm
-  }
-}
-
-%--------------------------------SCORE-MIDI--------------------------------
-\score
-{
-  \unfoldRepeats
-  {
-    \everything
-  }
-  \midi
-  {
-    \context
-    {
-      \Score
-    }
+  \layout {
+    indent = 3\cm
   }
 }
