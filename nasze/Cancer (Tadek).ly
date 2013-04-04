@@ -400,6 +400,7 @@ secondguitarmelody =
   es8 es es d c2 |
   bes,8 c c bes, d2 |
   % 129
+  \clef "treble_8"
   g,8 g, g, g, d2 |
   c8 d es d es f es f |
   g4 f8 es f4 d8 es |
@@ -415,7 +416,7 @@ secondguitarmelody =
   d'8~<d' bes> \times 2/3{d'8 c' bes} c'8 bes \times 2/3{a8 g f} |
   \times 2/3{g f es} \times 2/3{f es d} \times 2/3{es d c} as,4 |
   % 141
-  \clef "treble_8" c d8 es \times 2/3{f8 g a} \times 2/3{bes8 c' d'} |
+  c d8 es \times 2/3{f8 g a} \times 2/3{bes8 c' d'} |
   g'4 f'8 es' f' es' \times 2/3{c'8 d' es'} |
   f'8 es' \times 2/3{f'8 es' d'} es'8 d' c' bes |
   es' d' c' bes c'2 |
