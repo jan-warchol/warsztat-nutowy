@@ -50,7 +50,7 @@
   a4 ( c4. ) bes8
   a4 a2 \fermata
   a4 \f  bes4. a8
-  b4 b \times 2/3 {gis8 ( ais ) gis}
+  b!4 b \times 2/3 {gis8 ( ais ) gis}
   \times 2/3 {b4 b8} d2
   \time 2/4
   d4. d8 e4 d~

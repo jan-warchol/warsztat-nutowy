@@ -90,7 +90,7 @@
     {
       \voiceOne
       % górny sopran
-      fis'2
+      fis'?2
       fis2 \fermata
     }
     \new Voice {
