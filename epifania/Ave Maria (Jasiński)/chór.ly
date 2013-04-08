@@ -16,7 +16,7 @@
 }
 
 \header {
-  title = "Ave Maria"
+  title = \markup \magnify #2.5 { Ave Maria }
   composer = \markup \column {
     " " " " " " "Marek Jasiński"
   }
