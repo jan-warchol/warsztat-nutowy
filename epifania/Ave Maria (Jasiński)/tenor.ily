@@ -45,7 +45,7 @@
   \bar "||"
   \key d \major
   \tempo \markup \large "Tempo I"
-  g4\p c4. bes8
+  a4\p c4. bes8
   a4 a2 \fermata
   a4 ( c4. ) bes8
   a4 a2 \fermata
