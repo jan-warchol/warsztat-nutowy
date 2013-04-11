@@ -133,6 +133,7 @@ text = \lyricmode {
   \relative f' {
     \key d \minor
     \time 4/4
+    \once \override Score.RehearsalMark #'self-alignment-X = #-1
     \mark \markup "Solo na tle ostinata:"
     r8 a c a g16\melisma f\melismaEnd g4 r8
     bes8 bes c bes a16\melisma g\melismaEnd a4 r8
@@ -225,5 +226,8 @@ text = \lyricmode {
     ma -- ga po -- kor -- nym
     czy -- nić do -- brze,
     u -- czy u -- bo -- gich dróg swo -- ich.
+  }
+  \layout {
+    indent = 0
   }
 }
