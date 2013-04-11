@@ -144,6 +144,7 @@ text = \lyricmode {
     r8 d d d c d a\melisma g\melismaEnd
     f8 f g a c\melisma bes\melismaEnd g4
     \bar "||"
+    \break
     a4. c8 c4 c
     d8 d d c a4 a
     r8 bes d d c d a g
@@ -153,6 +154,7 @@ text = \lyricmode {
     r8 d d d c d a g
     f4 g8\melisma a\melismaEnd g4 g
     \bar "||"
+    \break
     c4 c8 c c4 c
     bes8 bes bes c d4 d
     d4 d8 d c4 d
@@ -162,6 +164,7 @@ text = \lyricmode {
     d4 d c a8\melisma g\melismaEnd
     f f g a c\melisma bes \melismaEnd c4
     \bar "||"
+    \break
     <<
       {
         \voiceOne
