@@ -127,8 +127,13 @@ bassmelody = \relative f {
   }
 }
 akordy = \chordmode {
-  \set chordNameLowercaseMinorr = ##t
-
+  \set chordNameLowercaseMinor = ##t
+  s4
+  a2.:m d a:m d a:m g
+  \cadenzaOn
+  e\breve:m d4 a2:m
+  a\breve:m s4 d2
+  \cadenzaOff
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
@@ -147,6 +152,7 @@ secondverse = \lyricmode {
 
 \score {
   \new ChoirStaff <<
+    \new ChordNames { \germanChords \akordy }
     \new Staff = women <<
       \clef treble
       \new Voice = soprano {
