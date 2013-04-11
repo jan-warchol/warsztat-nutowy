@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 17.5)
+#(set-global-staff-size 18.7)
 
 right = { \once \override LyricText #'self-alignment-X = #-0.8 }
 righty = { \once \override LyricText #'self-alignment-X = #-0.6 }
@@ -22,11 +22,10 @@ m = #(define-music-function (parser location off) (number?)
 }
 
 \paper {
-  paper-width = 165 \mm
-  paper-height = 240 \mm
-  line-width = 145 \mm
   top-margin = 10 \mm
-  markup-system-spacing #'basic-distance = #15
+  left-margin = 15 \mm
+  right-margin = 15 \mm
+  markup-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
@@ -37,7 +36,7 @@ sopranomelody = \relative c'' {
     f,8[ g8] a4 g g | g8[-\tweak #'Y-offset #2 \cresc a]\! bes[ c] a4 a
     d8[ -\tweak #'X-offset #-1.3 \f c] bes-\tweak #'positions #'(2.80 . 2.50) [ a] f[ g] a4 | a4 g8[ f] g4 g
   }
-  g4 a bes a | f2\p f 
+  g4 a bes a | f2\p f
   \bar "|."
 }
 altomelody = \relative f' {
@@ -85,6 +84,7 @@ akordy = \chordmode {
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
   \override LyricText #'font-name = #"Minion Pro Medium"
+  \override LyricText #'font-size = #2
   \m #-3.2 W_swo -- \m #0 im \m #0 wiel -- \m #-1 kim
   mi -- ło -- \righty sier -- \rightyy dziu
   Bóg nas zro -- \rightyy dził do na -- \rightyy dzie -- i,
@@ -209,6 +209,7 @@ text = \lyricmode {
   \addlyrics {
     \set stanza = "1."
     \override LyricText #'font-name = #"Minion Pro Medium Condensed"
+    \override LyricText #'font-size = #1.5
     Do Cie -- bie, Pa -- nie,
     wzno -- szę du -- szę mo -- ją,
     racz mnie wy -- słu -- chać
