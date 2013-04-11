@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 17.5)
+#(set-global-staff-size 20)
 
 \header	{
   title = "Cała ziemio"
@@ -8,12 +8,11 @@
 }
 
 \paper {
-  paper-width = 165 \mm
-  paper-height = 240 \mm
-  line-width = 145 \mm
   top-margin = 10 \mm
-  system-system-spacing #'basic-distance = #15
-  markup-system-spacing #'basic-distance = #14
+  left-margin = 16 \mm
+  right-margin = 15 \mm
+  markup-system-spacing #'basic-distance = #13
+  system-system-spacing #'basic-distance = #13
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -41,8 +40,9 @@ sopranomelody = \relative f' {
       e2
     }
   }
+  \bar "|."
   \overrideProperty #"Score.NonMusicalPaperColumn"
-  #'line-break-system-details #`((Y-offset . 70))
+  #'line-break-system-details #`((Y-offset . 66))
   \repeat volta 2 {
     \cadenzaOn
     a\breve g8 fis e4 e2
@@ -167,7 +167,7 @@ text = \lyricmode {
 secondverse = \lyricmode {
   \repeat unfold 27 \skip4
   \once \override LyricHyphen #'minimum-distance = #1
-  \tweak #'X-offset #-1.5 \markup \scale #'(0.9 . 1)
+  \tweak #'X-offset #-1.5 \markup \scale #'(1 . 1)
   "Zwycięstwo mu zgotowała Je" --
   \tweak #'X-offset #-1.2 \markup \bold \underline go
   pra -- \tweak #'X-offset #0 wi -- ca
