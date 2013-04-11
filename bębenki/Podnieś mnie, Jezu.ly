@@ -1,11 +1,20 @@
 \version "2.17.2"
-#(set-global-staff-size 18)
+#(set-global-staff-size 18.5)
 
 \header	{
-  title = "Podnieś mnie, Jezu"
+  title = \markup \column { "Podnieś mnie, Jezu" " " " " }
   poet = "słowa: Elżbieta Drożniewicz"
   composer = "muzyka: Jacek Sykulski"
 }
+
+\paper {
+  top-markup-spacing #'basic-distance = #7
+  left-margin = 16 \mm
+  right-margin = 15 \mm
+  last-bottom-spacing #'basic-distance = #12
+  ragged-last-bottom = ##f
+}
+
 commonprops = {
   \key e \minor
   \time 2/4
