@@ -196,5 +196,6 @@ secondverse = \lyricmode {
     indent = 0
     \override LyricText #'font-name = #"Minion Pro Medium"
     \override LyricText #'font-size = #1.5
+    \set Timing.beamHalfMeasure = ##f
   }
 }
