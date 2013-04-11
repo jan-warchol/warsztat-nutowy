@@ -143,6 +143,9 @@ text = \lyricmode {
     bes4 c8 bes a16\melisma g\melismaEnd a4 r8
     r8 d d d c d a\melisma g\melismaEnd
     f8 f g a c\melisma bes\melismaEnd g4
+    \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+    \once \override Score.RehearsalMark #'self-alignment-X = #1
+    \mark \markup \small \italic "(... do wielkiej nadziei)"
     \bar "||"
     \break
     a4. c8 c4 c
@@ -153,6 +156,9 @@ text = \lyricmode {
     bes8 bes bes bes a4 a
     r8 d d d c d a g
     f4 g8\melisma a\melismaEnd g4 g
+    \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+    \once \override Score.RehearsalMark #'self-alignment-X = #1
+    \mark \markup \small \italic "(... do wielkiej nadziei)"
     \bar "||"
     \break
     c4 c8 c c4 c
@@ -163,6 +169,9 @@ text = \lyricmode {
     bes8 bes bes c a16\melisma g\melismaEnd a4 r8
     d4 d c a8\melisma g\melismaEnd
     f f g a c\melisma bes \melismaEnd c4
+    \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+    \once \override Score.RehearsalMark #'self-alignment-X = #1
+    \mark \markup \small \italic "(... do wielkiej nadziei)"
     \bar "||"
     \break
     <<
@@ -191,6 +200,9 @@ text = \lyricmode {
     >>
     \oneVoice
     r2
+    \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+    \once \override Score.RehearsalMark #'self-alignment-X = #1
+    \mark \markup \small \italic "(... do wielkiej nadziei)"
     \bar "|."
   }
   \addlyrics {
