@@ -194,5 +194,7 @@ secondverse = \lyricmode {
   \layout {
     \override NoteHead #'style = #'altdefault
     indent = 0
+    \override LyricText #'font-name = #"Minion Pro Medium"
+    \override LyricText #'font-size = #1.5
   }
 }
