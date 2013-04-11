@@ -129,7 +129,11 @@ bassmelody = \relative f {
 akordy = \chordmode {
   \set chordNameLowercaseMinor = ##t
   s4
-  a2.:m d a:m d a:m g
+  a2.:m d
+  \once \override ChordName #'Y-offset = #-1
+  a:m d
+  \once \override ChordName #'Y-offset = #-1
+  a:m g
   \cadenzaOn
   e\breve:m d4 a2:m
   a\breve:m s4 d2
