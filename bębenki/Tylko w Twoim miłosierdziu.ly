@@ -1,13 +1,18 @@
 \version "2.17.3"
-#(set-global-staff-size 20)
+#(set-global-staff-size 18)
 
 \header	{
-  title = "Tylko w Twoim Miłosierdziu"
+  title = \markup \column { "Tylko w Twoim Miłosierdziu" " " }
   poet = "słowa zwrotek: Ps 145"
   composer = "muzyka: Paweł Bębenek"
 }
 
 \paper {
+  top-margin = 10 \mm
+  left-margin = 14 \mm
+  right-margin = 13 \mm
+  markup-system-spacing #'basic-distance = #15
+  system-system-spacing #'basic-distance = #13
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -150,7 +155,7 @@ text = \lyricmode {
   mój, na -- dzie -- ja ma.
   \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
   \bolden \markup \underline mój i kró -- lu,
-  \tweak #'X-offset #-0.5 \markup \scale #'(0.94 . 1) "i błogosławić imię Twe na zawsze"
+  \tweak #'X-offset #-0.5 \markup \scale #'(0.95 . 1) "i błogosławić imię Twe na zawsze"
   \bolden \markup \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
