@@ -84,6 +84,7 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
+  \override LyricText #'font-name = #"Minion Pro Medium"
   \m #-3.2 W_swo -- \m #0 im \m #0 wiel -- \m #-1 kim
   mi -- ło -- \righty sier -- \rightyy dziu
   Bóg nas zro -- \rightyy dził do na -- \rightyy dzie -- i,
@@ -207,6 +208,7 @@ text = \lyricmode {
   }
   \addlyrics {
     \set stanza = "1."
+    \override LyricText #'font-name = #"Minion Pro Medium Condensed"
     Do Cie -- bie, Pa -- nie,
     wzno -- szę du -- szę mo -- ją,
     racz mnie wy -- słu -- chać
