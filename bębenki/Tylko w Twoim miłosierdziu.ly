@@ -140,21 +140,25 @@ akordy = \chordmode {
   \cadenzaOff
 }
 %--------------------------------LYRICS--------------------------------
+bolden = {
+  \once \override LyricText #'font-name = #"Minion Pro Bold"
+}
+
 text = \lyricmode {
   Tyl -- ko w_Two -- im mi -- ło -- \tweak #'X-offset #-0.8 sier -- \tweak #'X-offset #-1 dziu,
   \tweak #'X-offset #-0.3 Pa -- nie mój, na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
   \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
-  \markup \bold \underline mój i kró -- lu,
-  \tweak #'X-offset #-0.5 \markup \scale #'(0.9 . 1) "i błogosławić imię Twe na zawsze"
-  \markup \bold \underline i na wie -- ki.
+  \bolden \markup \underline mój i kró -- lu,
+  \tweak #'X-offset #-0.5 \markup \scale #'(0.94 . 1) "i błogosławić imię Twe na zawsze"
+  \bolden \markup \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
   \repeat unfold 22 \skip4
   \tweak #'X-offset #-1.5 "Każdego dnia będę Ciebie"
-  \markup \bold \underline bło -- go -- sła -- wił,
+  \bolden \markup \underline bło -- go -- sła -- wił,
   \tweak #'X-offset #-0.5 "i na wieki wysławiał"
-  \markup \bold \underline Two -- je i -- mię.
+  \bolden \markup \underline Two -- je i -- mię.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
@@ -173,6 +177,8 @@ secondverse = \lyricmode {
       }
     >>
     \new Lyrics = sopranolyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
     }
     \lyricsto soprano \text
     \new Lyrics = sopranolyrics \with {
