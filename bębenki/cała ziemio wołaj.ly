@@ -20,22 +20,22 @@ sopranomelody = \relative f' {
   \repeat volta 2 {
     \key a \minor
     \time 2/4
-    e8 a a g
+    e8^\mf a a g
     a4 \tweak Beam #'positions #'(2.5 . 2.8) a8 b
     \tweak Beam #'positions #'(3.2 . 3.2) c c b g
-    a4 a
+    a4^\< a
   }
   \alternative {
     {
       \tweak Beam #'positions #'(1.25 . 2.25)
-      e8\melisma a\melismaEnd g\melisma fis\melismaEnd
+      e8-\tweak #'X-offset #0.5 ^\f \melisma a\melismaEnd g\melisma fis\melismaEnd
       e2
       d8\melisma e\melismaEnd \tweak Beam #'positions #'(1.25 . 0.8) fis \melisma d\melismaEnd
       e2
     }
     {
       \tweak Beam #'positions #'(1.25 . 2.25)
-      e8\melisma a\melismaEnd g fis
+      e8-\tweak #'X-offset #0.5 ^\f \melisma a\melismaEnd g fis
       e2
       d8 g fis4
       e2
