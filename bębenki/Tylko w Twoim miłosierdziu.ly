@@ -141,7 +141,7 @@ akordy = \chordmode {
   a:m g
   \cadenzaOn
   e\breve:m d4 a2:m
-  a\breve:m s4 d2
+  a\breve:m7 s4 d2
   \cadenzaOff
 }
 %--------------------------------LYRICS--------------------------------
