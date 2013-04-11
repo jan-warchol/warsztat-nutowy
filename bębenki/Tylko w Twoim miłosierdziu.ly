@@ -137,12 +137,12 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
-  Tyl -- ko w_Two -- im mi -- ło -- sier -- dziu,
-  Pa -- nie mój, na -- dzie -- ja ma. Tyl -- ko
+  Tyl -- ko w_Two -- im mi -- ło -- \tweak #'X-offset #-0.8 sier -- \tweak #'X-offset #-1 dziu,
+  \tweak #'X-offset #-0.3 Pa -- nie mój, na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
-  \tweak #'X-offset #-1.5 "Chcę Cię wywyższać, Boże"
+  \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
   \markup \bold \underline mój i kró -- lu,
-  \tweak #'X-offset #-0.5 "i błogosławić imię Twe na zawsze"
+  \tweak #'X-offset #-0.5 \markup \scale #'(0.9 . 1) "i błogosławić imię Twe na zawsze"
   \markup \bold \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
