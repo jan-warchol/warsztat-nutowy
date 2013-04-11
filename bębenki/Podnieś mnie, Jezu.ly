@@ -47,8 +47,8 @@ altomelody = \relative f' {
   d8 d d d | b4 b |
   % amen
   b4( c | a2) | b4
-  d4( | cis8[ b] a[ c]) | b4 %nie ma pewności co do c/cis
-  c4( | a2) | b( | b)
+  d4( | cis8[ b] a[ c]) | b4 \melisma %nie ma pewności co do c/cis
+  c4( | a2) | b( | b) \melismaEnd
   \bar "|."
 }
 tenormelody = \relative c' {
@@ -92,7 +92,7 @@ text =  \lyricmode 	{
   Pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
   pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
   za -- nurz mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia. \break
-  A -- men, a -- men.
+  A -- men, a -- men. __
 }
 tenortext =  \lyricmode {
   Pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
