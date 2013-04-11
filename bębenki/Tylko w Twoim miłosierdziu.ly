@@ -140,13 +140,17 @@ text = \lyricmode {
   Tyl -- ko w_Two -- im mi -- ło -- sier -- dziu,
   Pa -- nie mój, na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
-  "Chcę Cię wywyższać, Boże" mój i kró -- lu,
-  "i błogosławić imię Twe na zawsze" i na wie -- ki.
+  \tweak #'X-offset #-1.5 "Chcę Cię wywyższać, Boże"
+  \markup \bold \underline mój i kró -- lu,
+  \tweak #'X-offset #-0.5 "i błogosławić imię Twe na zawsze"
+  \markup \bold \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
   \repeat unfold 22 \skip4
-  "Każdego dnia będę Ciebie" bło -- go -- sła -- wił,
-  "i na wieki wysławiał" Two -- je i -- mię.
+  \tweak #'X-offset #-1.5 "Każdego dnia będę Ciebie"
+  \markup \bold \underline bło -- go -- sła -- wił,
+  \tweak #'X-offset #-0.5 "i na wieki wysławiał"
+  \markup \bold \underline Two -- je i -- mię.
 }
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
