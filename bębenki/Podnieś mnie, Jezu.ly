@@ -1,23 +1,17 @@
-\version "2.12.3"
-\pointAndClickOff
+\version "2.17.2"
+#(set-global-staff-size 18)
+
 \header	{
   title = "Podnieś mnie, Jezu"
   poet = "słowa: Elżbieta Drożniewicz"
   composer = "muzyka: Jacek Sykulski"
 }
 commonprops = {
-  \autoBeamOff
   \key e \minor
   \time 2/4
-}
-scoretempomarker = {
   \tempo 4=60
   \set Score.tempoHideNote = ##t
 }
-\paper {
-  page-count = #1
-}
-#(set-global-staff-size 18)
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
   b,4 e8 fis | g[( fis)] g e |
@@ -44,7 +38,7 @@ altomelody = \relative f' {
   d8 d d d | b4 b |
   % amen
   b4( c | a2) | b4
-  d4( | cis8[ b] a[ c]) | b4			%SPRAWDZIĆ CIS I ŁUKI LEGATO
+  d4( | cis8[ b] a[ c]) | b4 %nie ma pewności co do c/cis
   c4( | a2) | b( | b)
   \bar "|."
 }
@@ -77,6 +71,7 @@ bassmelody = \relative f {
   \bar "|."
 }
 akordy = \chordmode {
+  \set chordNameLowercaseMinor = ##t
   e2:m e:m d b:m
   e2:m e:m d b:m
   g g d b:m
@@ -96,13 +91,11 @@ tenortext =  \lyricmode {
   za -- nurz mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia.
   A -- men, a -- men, a -- men.
 }
-stanzas = \markup {
-}
-%--------------------------------ALL-FILE VARIABLE--------------------------------
 
-fourstaveschoir = {
+%--------------------------------LAYOUT--------------------------------
+\score {
+  
   \new ChoirStaff <<
-    \scoretempomarker
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble
@@ -152,26 +145,7 @@ fourstaveschoir = {
     }
     \new Lyrics = basslyrics \lyricsto bass \text
   >>
-}
-
-%---------------------------------MIDI---------------------------------
-\score {
-  \unfoldRepeats \fourstaveschoir
-  \midi {
-    \context {
-      \Staff \remove "Staff_performer"
-    }
-    \context {
-      \Voice
-      \consists "Staff_performer"
-      \remove "Dynamic_performer"
-    }
-  }
-}
-
-%--------------------------------LAYOUT--------------------------------
-\score {
-  \fourstaveschoir
+  
   \layout {
     indent = 0\cm
     \context {
@@ -179,5 +153,3 @@ fourstaveschoir = {
     }
   }
 }
-
-\stanzas
