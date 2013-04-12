@@ -19,6 +19,7 @@ m = #(define-music-function (parser location off) (number?)
   title = "Pieśń o nadziei"
   poet = "słowa: Ps 25"
   composer = "muzyka: Dawid Kusz OP"
+  tagline = "skład nut ‒ Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
 }
 
 \paper {

@@ -5,6 +5,7 @@
   title = \markup \column { "Podnieś mnie, Jezu" " " " " }
   poet = "słowa: Elżbieta Drożniewicz"
   composer = "muzyka: Jacek Sykulski"
+  tagline = "skład nut ‒ Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
 }
 
 \paper {
