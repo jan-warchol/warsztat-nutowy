@@ -151,7 +151,10 @@ bolden = {
 
 text = \lyricmode {
   Tyl -- ko w_Two -- im mi -- ło -- \tweak #'X-offset #-0.8 sier -- \tweak #'X-offset #-1 dziu,
-  \tweak #'X-offset #-0.3 Pa -- nie mój, na -- dzie -- ja ma. Tyl -- ko
+  \tweak #'X-offset #-0.3 Pa --
+  \tweak #'X-offset #-0.4 nie
+  \tweak #'X-offset #-0.8 mój,
+  na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
   \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
   \bolden \markup \underline mój i kró -- lu,
