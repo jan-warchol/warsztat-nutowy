@@ -63,7 +63,7 @@
 \markup \justify {
   \italic Uwaga! zawsze gdy coś nie działa tak jak powinno,
   sprawdź czy nie ma literówek i spróbuj jeszcze raz.
-  "Jeżeli to nic nie da," skontaktuj się ze mną.
+  "Jeżeli to nic nie da," skontaktuj się z Jankiem.
 }
 
 
@@ -209,7 +209,7 @@
   Program sam wstawia kreski taktowe - wystarczy
   podać metrum poleceniem \typewriter "\\time":
 }
-\markup \typewriter "\relative f' { \\time 3/4  g g g f f f }"
+\markup \typewriter "\relative f' { \\time 3/4  g4 g g f f f }"
 \relative f' { \time 3/4  g4 g g f f f }
 
 \markup \justify {
