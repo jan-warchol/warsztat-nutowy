@@ -17,6 +17,11 @@
   top-markup-spacing #'basic-distance = 6
   last-bottom-spacing #'basic-distance = 11
 }
+
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
   \dynamicUp
@@ -94,12 +99,14 @@ akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text = \lyricmode {
+  Oj -- \m #-0.8 cze, daj mi Du -- cha,
   Oj -- cze, daj mi Du -- cha,
-  Oj -- cze, daj mi Du -- cha,
-  bym z_wdzięcz -- no -- ścią
+  \m #-2.2 \markup \scale #'(0.95 . 1) bym
+  \m #-2.2 \markup \scale #'(0.9 . 1) "z wdzię" --
+  czno -- ścią
   przy -- jął każ -- de u -- po -- ko -- rze -- nie,
-  i prze -- ciw -- noś -- ci
-  któ -- re przy -- cho -- dzą do mnie.
+  i prze -- ciw -- no -- ści
+  któ -- re przy -- cho -- dzą do \m #-1.5 mnie.
 }
 
 %--------------------------------ALL-FILE VARIABLE--------------------------------
@@ -148,5 +155,7 @@ text = \lyricmode {
   >>
   \layout {
     indent = 0
+    \override LyricText #'font-name =
+    #"Minion Pro Medium Condensed"
   }
 }
