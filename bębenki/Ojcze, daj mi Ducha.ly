@@ -1,16 +1,21 @@
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 20)
 
 \header {
-  title = "Ojcze, daj mi Ducha"
+  title = \markup \column {
+    "Ojcze, daj mi Ducha" " "
+  }
   composer = "opracowanie: Jakub Tomalak"
   poet = "słowa i melodia tradycyjne"
 }
 
 \paper {
-  %markup-system-spacing #'padding = -2
-  %last-bottom-spacing #'basic-distance = 6
-  %tagline = ##f
+  system-count = 3
+  left-margin = 19 \mm
+  right-margin = 17 \mm
+  ragged-last-bottom = ##f
+  top-markup-spacing #'basic-distance = 6
+  last-bottom-spacing #'basic-distance = 11
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
