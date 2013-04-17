@@ -52,6 +52,8 @@ text = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = soprano {
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
       \clef treble
       \new Voice = soprano {
         \sopranomelody
@@ -60,6 +62,8 @@ text = \lyricmode {
     \new Lyrics = sopranolyrics \lyricsto soprano \text
 
     \new Staff = alto {
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
       \clef treble
       \new Voice = alto {
         \altomelody
@@ -68,6 +72,8 @@ text = \lyricmode {
     \new Lyrics = altolyrics \lyricsto alto \text
 
     \new Staff = tenor {
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
       \clef "treble_8"
       \new Voice = tenor {
         \tenormelody
@@ -76,6 +82,8 @@ text = \lyricmode {
     \new Lyrics = tenorlyrics \lyricsto tenor \text
 
     \new Staff = bass {
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
       \clef bass
       \new Voice = bass {
         \bassmelody
