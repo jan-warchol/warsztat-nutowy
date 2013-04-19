@@ -58,7 +58,7 @@ altomelody = \relative f' {
   \time 4/4
   \tempo 4=65
   c2 c4 c8 c
-  c4 d2( c4)
+  c4( d2) c4
   d2 c4 c8 c
   c4 d4~ d8 r f f
   e( f) e2 e8 c
@@ -76,7 +76,7 @@ tenormelody = \relative f {
   \time 4/4
   \tempo 4=65
   a2 a4 a8 a
-  a4 bes2( a4)
+  a4( bes2) a4
   a4( g) f f8 f
   f( g) a4~ a8 r bes8 c
   g4 g2 g8 f
