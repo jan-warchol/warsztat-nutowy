@@ -161,5 +161,9 @@ text = \lyricmode {
     indent = 0
     \override LyricText #'font-name =
     #"Minion Pro Medium Condensed"
+
+    \context {
+      \Staff \consists "Ambitus_engraver"
+    }
   }
 }
