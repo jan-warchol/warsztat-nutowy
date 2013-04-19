@@ -20,6 +20,12 @@
   ragged-last-bottom = ##f
   top-markup-spacing #'basic-distance = 6
   last-bottom-spacing #'basic-distance = 11
+  #(define fonts
+     (make-pango-font-tree
+      "Minion Pro"
+      "Liberation Sans"
+      "Liberation Mono"
+      (/ staff-height pt 20)))
 }
 
 m = #(define-music-function (parser location off) (number?)
