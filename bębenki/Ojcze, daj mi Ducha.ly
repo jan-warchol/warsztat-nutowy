@@ -45,6 +45,7 @@ sopranomelody = \relative f' {
   g4 g2 g8 a
   bes2 f8 f f g
   a2( g)
+  \break
   f2 r8 a bes a
   g4 g2.
   bes2 f8 f f g
