@@ -17,9 +17,10 @@
   system-count = 3
   left-margin = 19 \mm
   right-margin = 17 \mm
-  ragged-last-bottom = ##f
+  %ragged-last-bottom = ##f
   top-markup-spacing #'basic-distance = 6
   last-bottom-spacing #'basic-distance = 11
+  system-system-spacing #'basic-distance = #15
   #(define fonts
      (make-pango-font-tree
       "Minion Pro"
@@ -117,60 +118,64 @@ text = \lyricmode {
   czno -- ścią
   przy -- jął każ -- de u -- po -- ko -- rze -- nie,
   i prze -- ciw -- no -- ści
-  któ -- re przy -- cho -- dzą do \m #-1.5 mnie.
+  któ -- re przy -- cho -- dzą do __ \m #-1.5 mnie.
+}
+soptext = \lyricmode {
+  \skip4 \skip4 \skip4 \skip4
+  Du -- cha,
+  \repeat unfold 29 \skip4  do \m #-1.5 mnie.
+}
+bastext = \lyricmode {
+  \repeat unfold 35 \skip4  do \m #-1.5 mnie.
 }
 
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
 \score {
   \new ChoirStaff <<
-    \new Staff = soprano {
-      \set Staff.instrumentName = "S "
-      \set Staff.shortInstrumentName = "S "
+    \new Staff = women <<
       \clef treble
       \new Voice = soprano {
+        \voiceOne
         \sopranomelody
       }
-    }
-    \new Lyrics = sopranolyrics \lyricsto soprano \text
-
-    \new Staff = alto {
-      \set Staff.instrumentName = "A "
-      \set Staff.shortInstrumentName = "A "
-      \clef treble
       \new Voice = alto {
+        \voiceTwo
         \altomelody
       }
+    >>
+    \new Lyrics \with {
+      alignAboveContext = women
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'basic-distance = #0
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.5
     }
-    \new Lyrics = altolyrics \lyricsto alto \text
+    \lyricsto soprano \soptext
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+    }
+    \lyricsto alto \text
 
-    \new Staff = tenor {
-      \set Staff.instrumentName = "T "
-      \set Staff.shortInstrumentName = "T "
-      \clef "treble_8"
+    \new Staff = men <<
+      \clef bass
       \new Voice = tenor {
+        \voiceOne
         \tenormelody
       }
-    }
-    \new Lyrics = tenorlyrics \lyricsto tenor \text
-
-    \new Staff = bass {
-      \set Staff.instrumentName = "B "
-      \set Staff.shortInstrumentName = "B "
-      \clef bass
       \new Voice = bass {
+        \voiceTwo
         \bassmelody
       }
+    >>
+    \new Lyrics \with {
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'basic-distance = #0
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.3
     }
-    \new Lyrics = basslyrics \lyricsto bass \text
+    \lyricsto bass \bastext
   >>
   \layout {
     indent = 0
     \override LyricText #'font-name =
     #"Minion Pro Medium Condensed"
-
-    \context {
-      \Staff \consists "Ambitus_engraver"
-    }
   }
 }
