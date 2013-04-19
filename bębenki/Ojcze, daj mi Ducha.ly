@@ -105,8 +105,8 @@ akordy = \chordmode {
 text = \lyricmode {
   Oj -- \m #-0.8 cze, daj mi Du -- cha,
   Oj -- cze, daj mi Du -- cha,
-  \m #-2.2 \markup \scale #'(0.95 . 1) bym
-  \m #-2.2 \markup \scale #'(0.9 . 1) "z wdzię" --
+  \m #-2.2 \markup \scale #'(0.96 . 1) bym
+  \m #-2.0 \markup \scale #'(0.94 . 1) "z wdzię" --
   czno -- ścią
   przy -- jął każ -- de u -- po -- ko -- rze -- nie,
   i prze -- ciw -- no -- ści
