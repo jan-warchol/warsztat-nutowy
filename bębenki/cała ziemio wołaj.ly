@@ -5,7 +5,10 @@
   title = "Cała ziemio"
   poet = "słowa: Ps 98"
   composer = "muzyka: Dawid Kusz OP"
-  tagline = "skład nut ‒ Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {

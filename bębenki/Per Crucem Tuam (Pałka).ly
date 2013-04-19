@@ -4,6 +4,10 @@
 \header	{
   title = "Per Crucem Tuam"
   composer = "muzyka: Piotr Pałka"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {
@@ -11,10 +15,11 @@
   paper-height = 240 \mm
   line-width = 145 \mm
   top-margin = 8 \mm
+  bottom-margin = 4 \mm
   ragged-last-bottom = ##f
   page-count = 1
-  markup-system-spacing #'padding = -2
-  last-bottom-spacing #'basic-distance = 6
+  markup-system-spacing #'padding = -3
+  last-bottom-spacing #'basic-distance = 8
   tagline = ##f
 }
 %--------------------------------MELODY--------------------------------

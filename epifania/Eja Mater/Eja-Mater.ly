@@ -17,6 +17,10 @@ ml = #(define-music-function (parser location off) (number?)
 \header {
   title = "Eja, Mater"
   composer = "Antonín Dvořák"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \markup {

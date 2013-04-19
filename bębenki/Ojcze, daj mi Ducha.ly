@@ -8,7 +8,7 @@
   composer = "opracowanie: Jakub Tomalak"
   poet = "słowa i melodia tradycyjne"
   tagline = \markup {
-    skład nut ‒ Jan Warchoł
+    skład nut: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
 }

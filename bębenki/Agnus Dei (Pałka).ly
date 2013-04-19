@@ -10,6 +10,10 @@ m = #(define-music-function (parser location off) (number?)
   title = "Agnus Dei"
   subtitle = "Missa Padre Pio"
   composer = "muzyka: Piotr Pałka"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {

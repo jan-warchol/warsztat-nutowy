@@ -2,15 +2,23 @@
 
 #(set-global-staff-size 15)
 
+\header {
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
+}
+
 \paper {
   indent = 0
   top-margin = 13 \mm
-  bottom-margin = 11 \mm
+  bottom-margin = 6.5 \mm
   line-width = 177 \mm
   tagline = ##f
   page-count = #1
   ragged-last-bottom = ##f
   system-system-spacing #'minimum-distance = #17.5
+  last-bottom-spacing #'minimum-distance = #10
 }
 
 \score {

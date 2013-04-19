@@ -5,6 +5,10 @@
   title = "Miłujcie się wzajemnie"
   poet = "słowa: 1 Kor 13, 1-13"
   composer = "muzyka: U. Rogala"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {

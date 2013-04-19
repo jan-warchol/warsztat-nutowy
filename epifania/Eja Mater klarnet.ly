@@ -5,6 +5,10 @@
   subtitle = "III. Eja Mater"
   composer = "Antonín Dvořák"
   instrument = \markup { \concat { "Clarinetti in B" \flat } }
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {

@@ -5,7 +5,10 @@
   title = \markup \column { "Tylko w Twoim Miłosierdziu" " " }
   poet = "słowa zwrotek: Ps 145"
   composer = "muzyka: Paweł Bębenek"
-  tagline = "skład nut ‒ Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 \paper {

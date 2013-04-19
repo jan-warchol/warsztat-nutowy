@@ -17,6 +17,10 @@
   title = "Tota pulchra es Maria"
   subtitle = Motet
   composer = "Grzegorz Gerwazy Gorczycki (1665? - 1734)"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 % \markup to jakby pole tekstowe
