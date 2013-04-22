@@ -23,13 +23,14 @@
 \markup \vspace #1
 
 \markup \justify {
-  \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.  Są umieszczane na
-  środku taktu i zawsze wyglądają jak pauzy całonutowe. Pauza całotaktowa
-  w metrum 4/4 trwa tyle, co pauza całonutowa, ale w "metrum 1/4" "tyle co ćwierćnutowa"
-  - mimo to obie wyglądają tak samo:
+  \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.
+  Są umieszczane na środku taktu i zawsze wyglądają jak
+  pauzy całonutowe. Pauza całotaktowa w metrum 4/4 trwa
+  tyle, co pauza całonutowa, a w "metrum 1/4"
+  "tyle co ćwierćnutowa" - mimo to obie wyglądają tak samo:
 }
 \score {
-  { R1  \time 1/4  R4 }
+  { \numericTimeSignature R1  \time 1/4  R4 }
   \layout { line-width = 6\cm ragged-right = ##f }
 }
 
@@ -55,8 +56,9 @@
 }
 
 \markup \justify {
-  Jeśli ostatnia sylaba w słowie jest śpiewana na wielu nutach, to rysuje się za nią
-  linię przedłużającą, żeby wskazać jak długo ta sylaba trwa:
+  Jeśli ostatnia sylaba w słowie jest śpiewana na wielu nutach,
+  to rysuje się za nią linię przedłużającą, żeby wskazać
+  jak długo ta sylaba trwa:
 }
 
 \score {
@@ -74,7 +76,11 @@
     \lyricsto mix \lyricmode {
       do -- na __ no -- bis __ A -- _
       \override BalloonTextItem #'annotation-balloon = ##f
-      \balloonGrobText #'LyricText #'(-2 . -1.5) \markup \smaller \italic "ta sylaba jest śpiewana na dwóch nutach, ale nie wstawiamy linii przedłużającej bo nie ma gdzie"
+      \balloonGrobText #'LyricText #'(-2 . -1.5)
+      \markup \smaller \italic {
+        ta sylaba jest śpiewana na dwóch nutach, ale nie
+        wstawiamy linii przedłużającej bo nie ma gdzie
+      }
       gnus _ De -- _ i
     }
   >>
