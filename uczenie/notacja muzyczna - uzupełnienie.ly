@@ -23,6 +23,16 @@
 \markup \vspace #1
 
 \markup \justify {
+  Metrum 4/4 oznacza się na ogół jako
+  \raise #0.6 \musicglyph #"timesig.C44",
+  zaś \raise #0.6 \musicglyph #"timesig.C22" oznacza metrum 2/2
+  (określane jako \concat { \italic "alla breve"). }
+  W muzyce dawnej \raise #0.6 \musicglyph #"timesig.C22"
+  oznaczało 4/2, ale raczej nie zdarza nam się śpiewać z takich nut.
+}
+\markup \vspace #1
+
+\markup \justify {
   \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.
   Są umieszczane na środku taktu i zawsze wyglądają jak
   pauzy całonutowe. Pauza całotaktowa w metrum 4/4 trwa

@@ -45,11 +45,12 @@
 { a'8 g'16 a'16 }
 
 \markup \justify {
-  Większość utworów jest podzielona na takty. \bold Metrum określa, ile
-  nut danego rodzaju mieści się "w takcie," "np. 4/4" (oznaczane "też C)"
+  Większość utworów jest podzielona na takty. \bold Metrum określa,
+  ile nut danego rodzaju mieści się "w takcie," "np. 4/4"
+  (oznaczane często jako \raise #0.6 \musicglyph #"timesig.C44" )
   to cztery ćwierćnuty w takcie, a 3/8 to trzy ósemki na takt:
 }
-{ \time 3/8 \autoBeamOff d'8 d' d' f' f' f' }
+{ \time 3/8 \autoBeamOff d'8 d' d' f' f' f' \time 4/4 e'4 e' e' e' }
 
 \markup \justify {
   Pauzy oznaczające przerwę w dźwięku też mają wartość rytmiczną.  Poniżej
