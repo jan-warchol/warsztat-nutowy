@@ -33,6 +33,20 @@
 \markup \vspace #1
 
 \markup \justify {
+  Znaki chromatyczne obowiązują "do końca" taktu, ale jeśli
+  nuty są połączone "za pomocą" łuku przedłużającego,
+  to działanie znaku chromatycznego jest przedłużane (oczywiście
+  na ogół warto dodać znak przypominający dla pewności):
+}
+\score {
+  {
+    as'1_"as" ~ as'1_"as" ~ as'2_"as"
+    \once \override Accidental #'stencil = ##f
+    a'_"a"
+  }
+}
+
+\markup \justify {
   \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.
   Są umieszczane na środku taktu i zawsze wyglądają jak
   pauzy całonutowe. Pauza całotaktowa w metrum 4/4 trwa
