@@ -134,3 +134,74 @@ tenI = {
   Os ju -- sti me -- di -- ta -- bi -- tur
   sa -- pi -- en -- ti -- am,
 }
+
+\markup "real-life example:"
+
+tenorI = \relative f {
+  \unisono {
+    r2 c'\p
+    c c
+    r c4\< c
+    f4. f8\! f2
+    d2\mf ( c4) c
+    b4.( a8 g4) g4\dim
+    a2
+  }
+  \rownyRytm {
+    c2\p
+    c c
+    r d4\mf d
+    e4. g8 g2
+  }
+  \podzial {
+    g4\f(f2 e4~
+    e d2 c4~
+    c b2 a4~
+    a4 g2)
+  }
+  \unisono {
+    f4
+    f4\dim ( e8 d e4) e
+    g2 r
+    R1
+  }
+}
+
+tenorII = \relative f {
+  r2 c'\p
+  c c
+  r c4\< c
+  f4. f8\! f2
+  d2\mf ( c4) c
+  b4.( a8 g4) g4\dim
+  a2 a2\p
+  a a
+  r a4\mf a
+  c4. e8 e2
+  a,4\f(f' g, e'
+  a, d g, c~
+  c b2 a4~
+  a4 g2)
+  f4
+  f4\dim ( e8 d e4) e
+  g2 r
+}
+
+
+\new Staff = "tenors" {
+  \dynamicUp
+  \tupletUp
+  \clef "treble_8"
+  \key c \major
+  \time 2/2
+  <<
+    \tenorI
+    \tenorII
+  >>
+}
+\addlyrics {
+  Os ju -- sti me -- di -- ta -- bi -- tur
+  sa -- pi -- en -- ti -- am,
+  Os ju -- sti me -- di -- ta -- bi -- tur
+  sa -- pi -- en -- ti -- am,
+}
