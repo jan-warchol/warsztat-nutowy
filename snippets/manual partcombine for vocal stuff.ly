@@ -1,18 +1,12 @@
 \version "2.17.10"
 
 tenI = \relative f {
-  \set Staff.midiInstrument = "clarinet"
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
   \dynamicUp
   \tupletUp
   \clef "treble_8"
-  % podaj tonację, na przykład \key g \minor
   \key c \major
-  % podaj metrum, na przykład \time 4/4
   \time 2/2
-  % wpisz nuty:
-  \tempo "Nicht schnell"
+  
   r2 c'\p
   c c
   r c4\< c
@@ -55,19 +49,12 @@ bum = {
 
 
 tenII = \relative f {
-  \set Staff.midiInstrument = "clarinet"
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
   \dynamicUp
   \tupletUp
   \clef "treble_8"
-  % podaj tonację, na przykład \key g \minor
   \key c \major
-  % podaj metrum, na przykład \time 4/4
   \time 2/2
-  % wpisz nuty:
-  \tempo "Nicht schnell"
-
+  
   \new Voice {
     \bum
     r2 c'\p
@@ -100,7 +87,7 @@ tenII = \relative f {
 
 
 
-\new Staff = "ook" \with { \consists "Ambitus_engraver" } {
+\new Staff = "ook" {
   <<
     \tenI
     \tenII
