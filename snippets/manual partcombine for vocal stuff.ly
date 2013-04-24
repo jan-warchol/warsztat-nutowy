@@ -41,10 +41,11 @@ tenI = \relative f {
 
 bum = {
   \hideNotes
-  \override Hairpin #'stencil = ##f
-  \override DynamicText #'stencil = ##f
-  \override DynamicTextSpanner #'stencil = ##f
-  \override Slur #'stencil = ##f
+  \omit Hairpin
+  \omit DynamicText
+  \omit DynamicTextSpanner
+  \omit Slur
+  \omit PhrasingSlur
 }
 
 
