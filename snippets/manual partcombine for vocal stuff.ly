@@ -1,81 +1,104 @@
 \version "2.17.10"
 
-unisono = {
-  \hideNotes
-  \oneVoice
-  \omit Hairpin
-  \omit DynamicText
-  \omit DynamicTextSpanner
-  \omit Slur
-  \omit PhrasingSlur
-}
+unisono =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \oneVoice
+     \new Voice {
+       \hideNotes
+       \oneVoice
+       \omit Hairpin
+       \omit DynamicText
+       \omit DynamicTextSpanner
+       \omit Slur
+       \omit PhrasingSlur
+       #music
+     }
+   #})
 
-razem = {
-  \unHideNotes
-}
+razem =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \unHideNotes
+     \oneVoice
+     #music
+   #})
 
-dolny = {
-  \unHideNotes
-  \voiceTwo
-  \omit Hairpin
-  \omit DynamicText
-  \omit DynamicTextSpanner
-  \omit Slur
-}
+gorny =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \voiceTwo
+     \new Voice = gorny {
+       \voiceOne
+       \omit Hairpin
+       \omit DynamicText
+       \omit DynamicTextSpanner
+       #music
+     }
+   #})
 
-tenI = \relative f {
+tenII = {
   r2 c'\p
-  c c
-  r c4\< c
-  f4. f8\! f2
-  d2\mf ( c4) c
+  c' c'
+  r c'4\< c'
+  f'4. f'8\! f'2
+  d'2\mf ( c'4) c'
   b4.( a8 g4) g4\dim
-  a2  c2\p
-  c c
-  r d4\mf d
-  e4. g8 g2
-  \voiceOne g4\f(f2 e4~
-  e d2 c4~
-  c b2 a4~
-  a4 g2) \oneVoice f4
-  f4\dim ( e8 d e4) e
-  g2 r
-  R1
-}
-
-tenII = \relative f {
-  \new Voice {
-    \unisono
-    r2 c'\p
-    c c
-    r c4\< c
-    f4. f8\! f2
-    d2\mf ( c4) c
-    b4.( a8 g4) g4\dim
-    a2
-  } \razem  a2\p
+  a2
+  a2\p
   a a
   r a4\mf a
-  c4. e8 e2
-  <<
-    \new Voice = ten {
-      \dolny
-      a,4\f(f' g, e'
-      a, d g, c~
-      c b2 a4~
-      a4 g2)
-      \unisono
-      f4
-      f4\dim ( e8 d e4) e
-      g2 r
-    }
-    \new Lyrics \with { alignAboveContext = #"ook" }
-    \lyricsto ten \lyricmode { la lal al la la l }
-  >>
+  c'4. e'8 e'2
+  a4\f(f' g e'
+  a d' g c')
+  c' b2 a4
+  a4 g2 f4
+  f4\dim ( e8 d e4) e
+  g2 r
+}
+
+tenI = {
+  \unisono {
+    r2 c'\p
+    c' c'
+  }
+  \razem {
+    r e'4\< e'
+    a'4. a'8\! a'2
+  }
+  \unisono {
+    d'2\mf ( c'4) c'
+  }
+  \gorny {
+    d'1
+  }
+  \razem {
+    c'2 c'\p
+    c' c'
+  }
+  \gorny {
+    e'1\mp
+    g'2 e'
+  }
+  \gorny {
+    a4\f f' g e'
+    a d' g c'
+  }
+  \gorny {
+    c'2 d'
+    b a
+  }
+  \unisono {
+    f4\dim ( e8 d e4) e
+    g2 r
+  }
 }
 
 
-\new Staff = "ook" {
+\new Staff = "tenors" {
   \dynamicUp
   \tupletUp
   \clef "treble_8"
