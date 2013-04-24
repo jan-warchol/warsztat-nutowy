@@ -29,6 +29,19 @@ unisono = {
   \omit PhrasingSlur
 }
 
+razem = {
+  \unHideNotes
+}
+
+dolny = {
+  \unHideNotes
+  \voiceTwo
+  \omit Hairpin
+  \omit DynamicText
+  \omit DynamicTextSpanner
+  \omit Slur
+}
+
 tenII = \relative f {
   \new Voice {
     \unisono
@@ -39,13 +52,13 @@ tenII = \relative f {
     d2\mf ( c4) c
     b4.( a8 g4) g4\dim
     a2
-  } \undo \unisono  a2\p
+  } \razem  a2\p
   a a
   r a4\mf a
   c4. e8 e2
   <<
     \new Voice = ten {
-      \voiceTwo
+      \dolny
       a,4\f(f' g, e'
       a, d g, c~
       c b2 a4~
