@@ -1,12 +1,6 @@
 \version "2.17.10"
 
 tenI = \relative f {
-  \dynamicUp
-  \tupletUp
-  \clef "treble_8"
-  \key c \major
-  \time 2/2
-  
   r2 c'\p
   c c
   r c4\< c
@@ -35,14 +29,7 @@ unisono = {
   \omit PhrasingSlur
 }
 
-
 tenII = \relative f {
-  \dynamicUp
-  \tupletUp
-  \clef "treble_8"
-  \key c \major
-  \time 2/2
-  
   \new Voice {
     \unisono
     r2 c'\p
@@ -74,8 +61,12 @@ tenII = \relative f {
 }
 
 
-
 \new Staff = "ook" {
+  \dynamicUp
+  \tupletUp
+  \clef "treble_8"
+  \key c \major
+  \time 2/2
   <<
     \tenI
     \tenII
