@@ -69,7 +69,7 @@ tenII = \relative f {
   r a4\mf a
   c4. e8 e2
   <<
-    \new Voice {
+    \new Voice = ten {
       \voiceTwo
       a,4\f(f' g, e'
       a, d g, c~
@@ -81,7 +81,7 @@ tenII = \relative f {
       g2 r
     }
     \new Lyrics \with { alignAboveContext = #"ook" }
-    \lyricmode { la lal al la la l }
+    \lyricsto ten \lyricmode { la lal al la la l }
   >>
 }
 
