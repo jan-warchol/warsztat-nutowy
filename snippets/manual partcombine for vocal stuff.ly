@@ -2,6 +2,7 @@
 
 unisono = {
   \hideNotes
+  \oneVoice
   \omit Hairpin
   \omit DynamicText
   \omit DynamicTextSpanner
