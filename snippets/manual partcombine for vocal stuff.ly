@@ -6,6 +6,7 @@ unisono =
    #{
      \oneVoice
      \new Voice {
+       \override NoteColumn.ignore-collision = ##t
        \hideNotes
        \oneVoice
        \omit Hairpin
@@ -15,9 +16,10 @@ unisono =
        \omit PhrasingSlur
        #music
      }
+     \revert NoteColumn.ignore-collision
    #})
 
-razem =
+rownyRytm =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
@@ -26,18 +28,36 @@ razem =
      #music
    #})
 
-gorny =
+podzial =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
      \voiceTwo
-     \new Voice = gorny {
+     \new Voice  {
        \voiceOne
        \omit Hairpin
        \omit DynamicText
        \omit DynamicTextSpanner
        #music
      }
+   #})
+
+zTekstem =
+#(define-music-function (parser location name staff music text)
+   (string? string? ly:music? ly:music?)
+   #{
+     \voiceTwo
+     <<
+       \new Voice = #name {
+         \voiceOne
+         \omit Hairpin
+         \omit DynamicText
+         \omit DynamicTextSpanner
+         #music
+       }
+       \new Lyrics \with { alignAboveContext = #staff }
+       \lyricsto #name \lyricmode { #text }
+     >>
    #})
 
 tenII = {
@@ -65,29 +85,28 @@ tenI = {
     r2 c'\p
     c' c'
   }
-  \razem {
+  \rownyRytm {
     r e'4\< e'
     a'4. a'8\! a'2
   }
   \unisono {
     d'2\mf ( c'4) c'
   }
-  \gorny {
+  \podzial {
     d'1
   }
-  \razem {
+  \rownyRytm {
     c'2 c'\p
     c' c'
   }
-  \gorny {
+  \zTekstem foo tenors {
     e'1\mp
     g'2 e'
-  }
-  \gorny {
     a4\f f' g e'
     a d' g c'
   }
-  \gorny {
+  \lyricmode { ho ho ho fa la __ _ _ lo lo la __ _ }
+  \podzial {
     c'2 d'
     b a
   }
