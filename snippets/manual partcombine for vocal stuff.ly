@@ -26,20 +26,7 @@ tenI = \relative f {
   R1
 }
 
-%{
-
-  \override Dots #'stencil = ##f
-  \override NoteHead #'stencil = ##f
-  \override NoteHead #'no-ledgers = ##t
-  \override Stem #'stencil = ##f
-  \override Flag #'stencil = ##f
-  \override Beam #'stencil = ##f
-  \override Accidental #'stencil = ##f
-  \override Rest #'stencil = ##f
-  \override TabNoteHead #'stencil = ##f
-%}
-
-bum = {
+unisono = {
   \hideNotes
   \omit Hairpin
   \omit DynamicText
@@ -57,7 +44,7 @@ tenII = \relative f {
   \time 2/2
   
   \new Voice {
-    \bum
+    \unisono
     r2 c'\p
     c c
     r c4\< c
@@ -65,7 +52,7 @@ tenII = \relative f {
     d2\mf ( c4) c
     b4.( a8 g4) g4\dim
     a2
-  } \undo \bum  a2\p
+  } \undo \unisono  a2\p
   a a
   r a4\mf a
   c4. e8 e2
@@ -76,7 +63,7 @@ tenII = \relative f {
       a, d g, c~
       c b2 a4~
       a4 g2)
-      \bum
+      \unisono
       f4
       f4\dim ( e8 d e4) e
       g2 r
