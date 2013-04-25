@@ -2,5 +2,8 @@
 *.mid
 *.midi
 *.pdf
+*.jpg
+*.jpeg
+*.png
 *.zip
 *.bak
