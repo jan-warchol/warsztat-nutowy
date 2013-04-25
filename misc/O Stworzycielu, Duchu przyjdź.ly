@@ -7,6 +7,10 @@
   }
   composer = "Hraban Maur, IX wiek"
   poet = "tłumaczenie: Adam Mickiewicz"
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 commonprops = {
   \autoBeamOff
