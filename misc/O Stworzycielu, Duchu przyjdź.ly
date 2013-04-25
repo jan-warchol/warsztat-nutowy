@@ -34,13 +34,13 @@ melody = \relative c' {
   g4 f2 \breathe
   % nawiedź...
   f4 c4 d4 f4
-  g4( f4) g4 a4  g2 \breathe
+  g4( \noBreak f4) g4 a4  g2 \breathe
   % niebieską...
   f4  g4( a4) f4( e4)
   d4( c4) f4( g4)
   c,4 d4 f2 \breathe
   % sercom...
-  e4( f4) d4  c4( bes4) d4 d4(
+  e4( \noBreak f4) d4  c4( \noBreak bes4) d4 d4(
   e d4) c4 bes4  c2 \breathe
   \bar ":|"
   % amen
@@ -51,9 +51,9 @@ melody = \relative c' {
 text =  \lyricmode {
   \set stanza = "1. "
   O Stwo -- rzy -- cie -- lu, Du -- chu, \m #-1.5 przyjdź,
-  na -- wiedź dusz wier -- nych To -- bie \m #-1.5 krąg,
+  na -- wiedź dusz wier -- nych To -- \noBreak bie \m #-1.5 krąg,
   nie -- bie -- ską ła -- skę ze -- słać \m #-1 racz
-  ser -- com, co dzie -- łem są \m #-2 Twych \m #-0.5 rąk.
+  ser -- \noBreak com, co dzie -- łem są \m #-2 Twych \m #-0.5 rąk.
   A -- men.
 }
 stanzas = \markup {
