@@ -29,23 +29,22 @@ m = #(define-music-function (parser location off) (number?)
 
 %--------------------------------MELODY--------------------------------
 melody = \relative c' {
-  c4 d4 c4( bes4) |
-  c4 d4( c4) f4 |
-  g4 f2 r4 |
+  c4 d4 c4( bes4)
+  c4 d4( c4) f4
+  g4 f2 \breathe
   % nawiedź...
-  f4 c4 d4 f4 |
-  \break
-  g4( f4) g4 a4 | g2 r4
+  f4 c4 d4 f4
+  g4( f4) g4 a4  g2 \breathe
   % niebieską...
-  f4 | g4( a4) f4( e4) |
-  d4( c4) f4( g4) |
-  c,4 d4 f2 |
+  f4  g4( a4) f4( e4)
+  d4( c4) f4( g4)
+  c,4 d4 f2 \breathe
   % sercom...
-  r4 e4( f4) d4 | c4( bes4) d4 d4( |
-  e d4) c4 bes4 | c2 r2
+  e4( f4) d4  c4( bes4) d4 d4(
+  e d4) c4 bes4  c2 \breathe
   \bar ":|"
   % amen
-  c2(^\markup { \italic zakończenie } d4 c4) |
+  c2(^\markup { \italic zakończenie } d4 c4)
   bes2( c2)
   \bar"|."
 }
@@ -141,6 +140,15 @@ stanzas = \markup {
     indent = 0\cm
     \context {
       \Staff \consists "Ambitus_engraver"
+    }
+    \context {
+      \Score
+      timing = ##f
+      barAlways = ##t
+      defaultBarType = ""
+    }
+    \context {
+      \Staff \remove "Time_signature_engraver"
     }
   }
   \midi { }
