@@ -10,7 +10,7 @@
 }
 commonprops = {
   \autoBeamOff
-  \key f \major
+  \key g \major
   \time 4/4
   \set Score.tempoHideNote = ##t
   \tempo 4=130
@@ -29,23 +29,23 @@ m = #(define-music-function (parser location off) (number?)
 
 %--------------------------------MELODY--------------------------------
 melody = \relative c' {
-  c4 d4 c4( bes4)
-  c4 d4( c4) f4
-  g4 f2 \breathe
+  d4 e4 d4( c4)
+  d4 e4( d4) g4
+  a4 g2 \breathe
   % nawiedź...
-  f4 c4 d4 f4
-  g4( \noBreak f4) g4 a4  g2 \breathe
+  g4 d4 e4 g4
+  a4( \noBreak g4) a4 b4  a2 \breathe
   % niebieską...
-  f4  g4( a4) f4( e4)
-  d4( c4) f4( g4)
-  c,4 d4 f2 \breathe
+  g4  a4( b4) g4( fis4)
+  e4( d4) g4( a4)
+  d,4 e4 g2 \breathe
   % sercom...
-  e4( \noBreak f4) d4  c4( \noBreak bes4) d4 d4(
-  e d4) c4 bes4  c2 \breathe
+  fis4( \noBreak g4) e4  d4( \noBreak c4) e4 e4(
+  fis e4) d4 c4  d2 \breathe
   \bar ":|"
   % amen
-  c2(^\markup { \italic zakończenie } d4 c4)
-  bes2( c2)
+  d2(^\markup { \italic zakończenie } e4 d4)
+  c2( d2)
   \bar"|."
 }
 text =  \lyricmode {
