@@ -65,30 +65,30 @@ stanzas = \markup {
         \line {
           "2. "
           \column	{
-            "Pocieszycielem jesteś zwan"
-            "I najwyższego Boga dar."
-            "Tyś namaszczeniem naszych dusz"
-            "Zdrój żywy, miłość, ognia żar."
+            \line { \concat { Pocie \underline szy cielem } jesteś zwan }
+            \line { I \concat { najwyższe \underline go } Boga dar. }
+            \line { Tyś \underline namaszczeniem naszych dusz }
+            \line { \underline Zdrój \concat { ży \underline wy, } \concat { mi \underline łość, } ognia żar. }
           }
         }
         \vspace #1
         \line {
           "3. "
           \column {
-            "Ty darzysz łaską siedmiokroć,"
-            "Bo moc z prawicy Ojca masz,"
-            "Przez Ojca obiecany nam,"
-            "Mową wzbogacasz język nasz."
+            \line { Ty \concat { da \underline rzysz } \concat { łas \underline ką } siedmiokroć, }
+            \line { Bo moc z \concat { prawi \underline cy } Ojca masz, }
+            \line { Przez \underline Ojca \concat { \underline obie cany } nam, }
+            \line { \concat { \underline Mo wą } \concat { \underline wzbo ga \underline casz } język nasz. }
           }
         }
         \vspace #1
         \line {
           "4. "
           \column {
-            "Światłem rozjaśnij naszą myśl,"
-            "W serca nam miłość świętą wlej,"
-            "I wątłą słabość naszych ciał,"
-            "Pokrzep stałością mocy swej."
+            \line { Światłem \concat { \underline roz jaś \underline nij } naszą myśl, }
+            \line { W serca nam \concat { mi \underline łość } świętą wlej, }
+            \line { I \underline wątłą \underline słabość naszych ciał, }
+            \line { \concat { \underline Po krzep } \concat { \underline sta ło \underline ścią } mocy swej. }
           }
         }
       }
@@ -97,30 +97,30 @@ stanzas = \markup {
         \line {
           "5. "
           \column	{
-            "Nieprzyjaciela odpędź w dal"
-            "I twym pokojem obdarz wraz."
-            "Niech w drodze za przewodem Twym,"
-            "Miniemy zło, co kusi nas."
+            \line { \concat { Nieprzy \underline ja cie \underline la } odpędź w dal }
+            \line { I twym \concat { poko \underline jem } obdarz wraz. }
+            \line { Niech w \underline drodze \underline za \concat { \underline prze wodem } Twym, }
+            \line { \concat { \underline Mi nie \underline my } zło, \underline co kusi nas. }
           }
         }
         \vspace #1
         \line {
           "6. "
           \column {
-            "Daj nam przez Ciebie Ojca znać,"
-            "Daj, by i Syn poznany był,"
-            "I Ciebie, jedno Tchnienie Dwóch,"
-            "Niech wyznajemy z wszystkich sił."
+            \line { Daj nam \underline przez \concat { Cie \underline bie } Ojca znać, }
+            \line { Daj, by i Syn \concat { \underline po znany } był, }
+            \line { I \underline Ciebie, \underline jedno Tchnienie Dwóch, }
+            \line { \underline Niech \concat { wy \underline zna je \underline my } z wszystkich sił. }
           }
         }
         \vspace #1
         \line {
           "7. "
           \column {
-            "Niech Bogu Ojcu chwała brzmi,"
-            "Synowi, który zmartwychwstał,"
-            "I Temu, co pociesza nas,"
-            "Niech hołd wieczystych płynie chwał."
+            \line { Niech \concat { Bo \underline gu } \concat { Oj \underline cu } chwała brzmi, }
+            \line { Synowi, \concat { któ \underline ry } zmartwychwstał, }
+            \line { I \underline Temu, \underline co \concat { \underline po ciesza } nas, }
+            \line { \underline Niech hołd \concat { \underline wie czy \underline stych } płynie chwał. }
           }
         }
       }
