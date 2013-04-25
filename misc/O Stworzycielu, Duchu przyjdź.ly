@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.16.1"
 \header	{
   title = "O Stworzycielu, Duchu, przyjdź"
   subtitle =  \markup \column {
@@ -21,33 +21,25 @@ commonprops = {
   top-margin = 20 \mm
 }
 #(set-global-staff-size 20)
+
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
+
 %--------------------------------MELODY--------------------------------
 melody = \relative c' {
   c4 d4 c4( bes4) |
   c4 d4( c4) f4 |
-  g4
-  \once \override Voice.NoteHead #'extra-offset = #'( -2.5 . 0.0 )
-  \once \override Voice.Stem #'extra-offset = #'( -2.5 . 0.0 )
-  f2
-  \once \override Voice.Rest #'extra-offset = #'( -1.0 . 0.0 )
-  r4 |
+  g4 f2 r4 |
   % nawiedź...
-  f4 c4
-  \once \override Voice.NoteHead #'extra-offset = #'( -1.0 . 0.0 )
-  \once \override Voice.Stem #'extra-offset = #'( -1.0 . 0.0 )
-  d4
-  \once \override Voice.NoteHead #'extra-offset = #'( -1.0 . 0.0 )
-  \once \override Voice.Stem #'extra-offset = #'( -1.0 . 0.0 )
-  f4 |
+  f4 c4 d4 f4 |
   \break
   g4( f4) g4 a4 | g2 r4
   % niebieską...
   f4 | g4( a4) f4( e4) |
   d4( c4) f4( g4) |
-  c,4 d4
-  \once \override Voice.NoteHead #'extra-offset = #'( -1.0 . 0.0 )
-  \once \override Voice.Stem #'extra-offset = #'( -1.0 . 0.0 )
-  f2 |
+  c,4 d4 f2 |
   % sercom...
   r4 e4( f4) d4 | c4( bes4) d4 d4( |
   e d4) c4 bes4 | c2 r2
@@ -57,13 +49,12 @@ melody = \relative c' {
   bes2( c2)
   \bar"|."
 }
-%--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
   \set stanza = "1. "
-  O Stwo -- rzy -- cie -- lu, Du -- chu, przyjdź,
-  na -- wiedź dusz wier -- nych To -- bie krąg,
-  nie -- bie -- ską ła -- skę ze -- słać racz
-  ser -- com, co dzie -- łem są Twych rąk.
+  O Stwo -- rzy -- cie -- lu, Du -- chu, \m #-1.5 przyjdź,
+  na -- wiedź dusz wier -- nych To -- bie \m #-1.5 krąg,
+  nie -- bie -- ską ła -- skę ze -- słać \m #-1 racz
+  ser -- com, co dzie -- łem są \m #-2 Twych \m #-0.5 rąk.
   A -- men.
 }
 stanzas = \markup {
