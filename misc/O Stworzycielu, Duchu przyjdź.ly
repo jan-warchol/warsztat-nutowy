@@ -1,7 +1,10 @@
 \version "2.12.3"
 \header	{
   title = "O Stworzycielu, Duchu, przyjdź"
-  subtitle = "Hymn do Ducha Świętego"
+  subtitle =  \markup \column {
+    "Hymn do Ducha Świętego"
+    " " " " " "
+  }
   composer = "Hraban Maur, IX wiek"
   poet = "tłumaczenie: Adam Mickiewicz"
 }
@@ -12,7 +15,12 @@ commonprops = {
   \set Score.tempoHideNote = ##t
   \tempo 4=130
 }
-#(set-global-staff-size 22)
+\paper {
+  left-margin = 20 \mm
+  right-margin = 20 \mm
+  top-margin = 20 \mm
+}
+#(set-global-staff-size 20)
 %--------------------------------MELODY--------------------------------
 melody = \relative c' {
   c4 d4 c4( bes4) |
@@ -59,6 +67,7 @@ text =  \lyricmode {
   A -- men.
 }
 stanzas = \markup {
+  \vspace #3
   \fill-line {
     \large {
       \hspace #0.1
@@ -72,7 +81,7 @@ stanzas = \markup {
             "Zdrój żywy, miłość, ognia żar."
           }
         }
-        \hspace #0.1
+        \vspace #1
         \line {
           "3. "
           \column {
@@ -82,7 +91,7 @@ stanzas = \markup {
             "Mową wzbogacasz język nasz."
           }
         }
-        \hspace #0.1
+        \vspace #1
         \line {
           "4. "
           \column {
@@ -104,7 +113,7 @@ stanzas = \markup {
             "Miniemy zło, co kusi nas."
           }
         }
-        \hspace #0.1
+        \vspace #1
         \line {
           "6. "
           \column {
@@ -114,7 +123,7 @@ stanzas = \markup {
             "Niech wyznajemy z wszystkich sił."
           }
         }
-        \hspace #0.1
+        \vspace #1
         \line {
           "7. "
           \column {
