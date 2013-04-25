@@ -55,7 +55,7 @@ melody = \relative c' {
 text =  \lyricmode {
   \set stanza = "1. "
   O Stwo -- rzy -- cie -- lu, Du -- chu, \m #-1.5 przyjdź,
-  na -- wiedź dusz wier -- nych To -- \noBreak bie \m #-1.5 krąg,
+  na -- wiedź dusz wier -- nych \break To -- \noBreak bie \m #-1.5 krąg,
   nie -- bie -- ską ła -- skę ze -- słać \m #-1 racz
   ser -- \noBreak com, co dzie -- łem są \m #-2 Twych \m #-0.5 rąk.
   A -- men.
