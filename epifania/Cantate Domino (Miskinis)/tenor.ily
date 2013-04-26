@@ -26,11 +26,135 @@
   % na razie przepisujcie tylko dolne głosy
   % (tzn. wpiszcie to, co śpiewają soprany drugie,
   % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
+  
+  % w komentarzach to, czego nie potrafię
+  % w danym takcie zrealizować
   r4
   b4.\mp b b4
-  b8 c c2
+  b8 c c2.
+  d4. d d4
+  d8 b b2.
+  c4\mf c4. c 
+  b4 b4. b
+  bes4 bes4. bes
+  a a8~ a2
+  b4.\f b b4 % piu
+  b8->\melisma c\melismaEnd c c->~ c2 % łuczek
+  d4. d d4
+  d8->\melisma b\melismaEnd b b->~ b2 % łuczek
+  c4 c4. c
+  
+  %takt 14
+  b4 b4. b
+  a4 a4. a
+  gis gis8~ gis2 % crescendo, oddech
+  \time 3/4
+  R2.*2
+  b4\p b b
+  c4. c8 c4~
+  c2.~
+  c % decrescendo
+  b4\mf b e % cresc
+  fis fis2~
+  fis4 e b
+  a8 a a a a4
+  b2 gis4
+  fis8 fis fis fis fis 4
+  gis2 gis4~
+  gis 2. % decrescendo
+  b4\mp b b
+  c4. c8 c4~
+  c2.~
+  c % decrescendo
+  
+  %takt 35
+  b4\mf b e
+  fis fis2~
+  fis2.~
+  fis % crescendo
+  e2\f b4
+  a8 a a a a4~
+  a b gis
+  fis8 fis fis fis fis4 % decrescendo
+  f4\p f2~
+  f2.\fermata % decrescendo
+  \key as \major
+  \time 4/4
+  R1
+  c'4.\mp c c4
+  c8 des des2.
+  es4. es es4
+  es8 c c2.
+  des4 des4. des
+  c4 c4. c
+  c4 c4. c
+  bes4. bes8~ bes2
+  c4.\f c c4
+  c8->\melisma des\melismaEnd des des->~ des2 % łuczek
+  es4. es es4
+  
+  %takt 57
+  es8->\melisma c\melismaEnd c c->~ c2 % łuczek
+  des4 des4. des
+  c4 c4. c
+  bes4 bes4. bes
+  a a8~ a2
+  \key bes \major
+  d4.->\f d-> d4->
+  d8-> es es2.
+  f4.-> f-> f4->
+  f8-> d d2. % oddech?
+  \time 3/4
+  es8\f es4 es8 es4 % meno
+  d8\mf d4 d8 d4
+  des8 des4. des4
+  c4.\p c\fermata
+  \time 4/4
+  R1
+  d4.->\mp d-- d4--
+  f4.->\mf f-- f4--\f
+  f8-> d d2.\fermata % crescendo, oddech?
+  c4.->\ff c-> c4->
+  \time 3/4
+  f4.-> f->~
+  f2. % crescendo
   
 }
 \addlyrics {
   Can -- ta -- te Do -- mi -- no,
+  can -- ta -- te Do -- mi -- no,
+  can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.
+  Can -- ta -- te Do -- mi -- no, __
+  can -- ta -- te
+  Do -- mi -- no, __
+  can -- ta -- te,
+ 
+ %takt 14
+  can -- ta -- te can -- ti -- cum no -- vum:
+  et be -- ne  -- di -- ci -- te __
+  no -- mi -- ni e -- ius, __
+  qui -- a mi -- ra -- bi -- li -- a,
+  qui -- a mi -- ra -- bi -- li -- a fe -- cit, __
+  et be -- ne  -- di -- ci -- te __
+ 
+ %takt 35
+  no -- mi -- ni e -- ius, __
+  qui -- a mi -- ra -- bi -- li -- a, __
+  qui -- a mi -- ra -- bi -- li -- a fe -- cit. __
+  Can -- ta -- te Do -- mi -- no,
+  can -- ta -- te Do -- mi -- no,
+  can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum,
+  can -- ta -- te Do -- mi -- no, __
+  can -- ta -- te
+  
+  %takt 57
+  Do -- mi -- no, __
+  can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.
+  Can -- ta -- te Do -- mi -- no,
+  can -- ta -- te Do -- mi -- no
+  et psa -- li -- te in ci -- tha -- ra
+  et vo -- ce psal -- mi.
+  Can -- ta -- te,
+  can -- ta -- te Do -- mi --no
+  can -- ti -- cum no -- vum. __
 }
