@@ -15,6 +15,8 @@
 \header {
 }
 
+\include "./dzielenie-głosów.ily"
+
 \score {
   \new ChoirStaff <<
     \include "sopran.ily"
