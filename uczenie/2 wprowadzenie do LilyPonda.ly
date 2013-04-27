@@ -511,6 +511,30 @@
   problemów w przypadku plików utworzonych za jego pomocą.
 }
 
+\markup \vspace #0.1
+\markup \large \bold "8. Dzielone głosy"
+
+\markup \justify {
+  Jeśli na jednej pięciolinii jest więcej niż jeden głos,
+  trzeba zastosować specjalny sposób, żeby dostać zarówno
+  pdfa jak i właściwe midi.  W folderze z pomocami jest
+  przykład.  Wygląda to tak: należy dodać do pliku
+  specjalne funkcje i zmienić strukturę tak, żeby
+  pięciolinia powstawała z połączenia dwóch zmiennych
+  (tym może się zająć Janek).
+  Wygodnie jest najpierw przepisać partię dolną,
+  a potem wykorzystać powtarzające się fragmenty,
+  kopiując je do partii górnej.  Oprócz uzupełnienia
+  tych miejsc, które się różnią, trzeba jeszcze
+  odpowiednio je oznaczyć: wewnątrz
+  \typewriter "\unisono { }" powinny znaleźć się te
+  fragmenty partii górnego głosu, które są identyczne
+  z dolnym głosem; wewnątrz \typewriter "\rownyRytm { }"
+  wstaw te fragmenty partii górnego głosu które mają
+  taki sam rytm; kiedy rytm jest różny, należy użyć
+  polecenia \typewriter "\podzial { }".
+}
+
 
 %{ TODO (DODAĆ):
 
