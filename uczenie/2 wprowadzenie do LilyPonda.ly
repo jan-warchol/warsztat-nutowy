@@ -431,7 +431,14 @@
 \relative f' {
   c8( d e4~ e8 f g a)
 }
-
+\markup \justify {
+  Łuki można zmienić na przerywane
+  \typewriter "\slurDashed" i kropkowane
+  \typewriter "\slurDotted". Żeby wrócić do
+  zwykłych łuków, użyj \typewriter "\slurSolid".
+  Te polecenia należy wstawiać przed nutą,
+  na której zaczyna się łuk.
+}
 \markup \justify {
   Przy wstawianiu artykulacji, dynamiki itp. pomocny
   jest panel \italic "Szybkie wstawianie", który
