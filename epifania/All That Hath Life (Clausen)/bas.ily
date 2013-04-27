@@ -98,7 +98,7 @@
   % końca kartki
   
   % kartka 7.
-  r4. d8 d d
+  r4. d8\mf d d % tempo primo
   g g g g g g
   g4.\mf g8 g g % crescendo, oddech
   g g g g4 g8
