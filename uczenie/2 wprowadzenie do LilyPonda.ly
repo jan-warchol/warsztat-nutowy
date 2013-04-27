@@ -398,6 +398,14 @@
 \markup \typewriter "{ b4\accent b\\tenuto b\staccato b\fermata }"
 { b4\accent b\tenuto b\staccato b\fermata }
 
+\markup \justify {
+  Przy wstawianiu artykulacji, dynamiki itp. pomocny
+  jest panel \italic "Szybkie wstawianie", który
+  można włączyć "w menu" \italic Narzędzia.
+  Korzystając "z niego" możesz dodać artykulację
+  "do wielu" nut naraz.
+}
+
 \markup \vspace #0.1
 \markup \typewriter \column {
   "% linijki zaczynające się od znaku procenta są ignorowane,"
@@ -450,7 +458,8 @@
 
 %{ TODO (DODAĆ):
 
-   tryb absolutny i przerobić sekcję o relative bazując na absolutnym
+   tryb absolutny i przerobić sekcję o relative
+   bazując na absolutnym
    przypominające znaki chromatyczne
    łuki a melizmaty
    podstawowe markupy
