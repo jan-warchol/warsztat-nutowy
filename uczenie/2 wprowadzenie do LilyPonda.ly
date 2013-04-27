@@ -358,20 +358,20 @@
 \markup \justify {
   Klucze wybiera się za pomocą polecenia \typewriter "\\clef":
 }
-\markup \line \override #'(baseline-skip . 1) {
-  \column {
-    \small \typewriter "\relative f' { \\clef G c }"
-    \score { { \clef G c'4 } \layout {} }
+\markup \line {
+  \override #'(baseline-skip . 1) \column {
+    \small \typewriter "\\clef G"
+    \score { { \clef G s1 } \layout {} }
   }
   \hspace #4
-  \column {
-    \small \typewriter "\relative f' { \\clef \"G_8\" c }"
-    \score { { \clef "G_8" c'4 } \layout {} }
+  \override #'(baseline-skip . 1) \column {
+    \small \typewriter "\\clef \"G_8\""
+    \score { { \clef "G_8" s1 } \layout {} }
   }
   \hspace #4
-  \column {
-    \small \typewriter "\relative f' { \\clef F c }"
-    \score { { \clef F c'4 } \layout {} }
+  \override #'(baseline-skip . 2.8) \column {
+    \small \typewriter "\\clef F"
+    \score { { \clef F s1 } \layout {} }
   }
 }
 
