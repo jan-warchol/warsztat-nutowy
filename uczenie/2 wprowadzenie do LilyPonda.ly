@@ -159,6 +159,49 @@
 \markup \typewriter "\relative f' { \key g \minor  g bes d }"
 \relative f' { \key g \minor  g bes d }
 
+\markup "zestawienie tonacji:"
+\new Staff \with { \remove "Time_signature_engraver" } {
+  \set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \override Score.RehearsalMark #'font-size = #0
+  \override Score.RehearsalMark #'Y-offset = #6
+  \once\override Score.RehearsalMark #'X-offset = #4
+  \mark \markup \column { "Ges-dur" "es-moll" }
+  \key ges \major R1
+  \override Score.RehearsalMark #'X-offset = #0.9
+  \mark \markup \column { "Des-dur" "bes-moll" }
+  \key des \major R1
+  \mark \markup \column { "As-dur" "f-moll" }
+  \key as \major R1
+  \mark \markup \column { "Es-dur" "c-moll" }
+  \key es \major R1
+  \mark \markup \column { "Bes-dur" "g-moll" }
+  \key g \minor R1
+  \mark \markup \column { "F-dur" "d-moll" }
+  \key f \major R1
+}
+
+\new Staff \with { \remove "Time_signature_engraver" } {
+  \set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \override Score.RehearsalMark #'font-size = #0
+  \override Score.RehearsalMark #'Y-offset = #6
+  \once\override Score.RehearsalMark #'X-offset = #3
+  \mark \markup \column { "C-dur" "a-moll" }
+  \key c \major R1
+  \override Score.RehearsalMark #'X-offset = #0.9
+  \mark \markup \column { "G-dur" "e-moll" }
+  \key g \major R1
+  \mark \markup \column { "D-dur" "b-moll" }
+  \key d \major R1
+  \mark \markup \column { "A-dur" "fis-moll" }
+  \key a \major R1
+  \mark \markup \column { "E-dur" "cis-moll" }
+  \key e \major R1
+  \mark \markup \column { "B-dur" "gis-moll" }
+  \key b \major R1
+}
+
 
 
 \markup \vspace #0.1
@@ -385,38 +428,6 @@
 \markup { dynamika i artykulacja }
 \markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
 { a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
-
-\markup "tonacje:"
-{
-  \set Staff.printKeyCancellation = ##f
-  \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \override Score.RehearsalMark #'Y-offset = #8
-  \mark "c-dur" \key c \major R1
-  \mark "d-dur" \key d \major R1
-  \mark "e-dur" \key e \major R1
-  \mark "f-dur" \key f \major R1
-  \mark "g-dur" \key g \major R1
-  \mark "a-dur" \key a \major R1
-  \mark "b-dur" \key b \major R1
-}
-{
-  \set Staff.printKeyCancellation = ##f
-  \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \mark "a-moll" \key a \minor R1
-  \mark "b-moll" \key b \minor R1
-  \mark "c-moll" \key c \minor R1
-  \mark "d-moll" \key d \minor R1
-  \mark "e-moll" \key e \minor R1
-  \mark "f-moll" \key f \minor R1
-  \mark "g-moll" \key g \minor R1
-}
-{
-  \set Staff.printKeyCancellation = ##f
-  \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \mark "es-dur" \key es \major R1
-  \mark "fis-moll" \key fis \minor R1
-  \mark "bes-dur" \key bes \major R1
-}
 
 %\markup \justify {
 %  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
