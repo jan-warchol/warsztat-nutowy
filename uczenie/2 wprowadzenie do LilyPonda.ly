@@ -133,27 +133,28 @@
 \markup \justify {
   LilyPond automatycznie pokaże odpowiednie znaki
   chromatyczne, wystarczy poprawnie nazwać dźwięki.
-  \italic Uwaga! Kiedy przepisujesz nuty, pamiętaj,
-  żeby wpisać rzeczywistą nazwę dźwięku. Przykład:
-  "w przepisywanej" partyturze widać
+  \italic Uwaga!
+  Pamiętaj, żeby wpisać rzeczywistą nazwę dźwięku.
+  \italic Przykład:
+  "w przepisywanej" partyturze widać:
 }
-{ \key f \major bes' }
+{ \key f \major r2 bes'2 }
 \markup \justify {
   przy tej nucie nie stoi żaden znak chromatyczny,
   więc mogłoby się wydawać, że należy wpisać \typewriter b -
   "ale w tonacji" jest bemol na środkowej linii, więc
   ten dźwięk to \typewriter bes i tak należy go zapisać.
-  Jeśli napiszemy \typewriter b "to dostaniemy b"
-  (czyli inny dźwięk niż był w przepisywanej partyturze):
+  Jeśli napiszemy \typewriter b "to dostaniemy b" -
+  niewłaściwy dźwięk:
 }
 
-{ \key f \major b' }
+{ \key f \major r2 b'2 }
 
 \markup \justify {
-  Oczywiście trzeba też podać tonację - służy do tego
-  polecenie \typewriter "\key". Tonacje durowe to
-  \typewriter "\major", \line { molowe \typewriter "\minor" }
-  - zresztą "będę podawał" "co trzeba" wpisać. Na przykład:
+  \bold Tonację określa się poleceniem
+  \typewriter "\key" \italic tonika "z dopiskiem"
+  \typewriter "\minor" (molowa) lub \typewriter "\major"
+  (durowa):
 }
 
 \markup \typewriter "\relative f' { \key g \minor  g bes d }"
@@ -217,11 +218,9 @@
 \relative f' { g1 g2 g4 g8 g16 g }
 
 \markup \justify {
-  Jeśli nuta ma taką samą długość jak poprzednia,
-  to nie trzeba pisać wartości rytmicznej
-  (czyli \typewriter "b8 b b b"
-  program zrozumie tak samo jak
-  \typewriter "b8 b8 b8 b8" ):
+  Jeśli wartość rytmiczna nuty jest taka sama jak poprzednia,
+  to nie trzeba jej pisać (czyli \typewriter "b8 b b b"
+  program zrozumie tak samo jak \typewriter "b8 b8 b8 b8" ):
 }
 
 \markup \typewriter "\relative f' { b8 a g f c'4 g }"
@@ -250,13 +249,13 @@
 
 \markup \justify {
   Program sam wstawia kreski taktowe - wystarczy
-  podać metrum poleceniem \typewriter "\\time":
+  podać \bold metrum poleceniem \typewriter "\\time":
 }
 \markup \typewriter "\relative f' { \\time 3/4  g4 g g f f f }"
 \relative f' { \time 3/4  g4 g g f f f }
 
 \markup \justify {
-  Pauzy zapisuje się używając litery \typewriter r
+  \bold Pauzy zapisuje się używając litery \typewriter r
   (ang. \italic rest ):
 }
 
@@ -264,16 +263,14 @@
 { r1 r2 r4 r8 r16 r }
 
 \markup \justify {
-  Pauzę całotaktową wstawia się za pomocą litery
+  \bold "Pauzę całotaktową" wstawia się za pomocą litery
   \typewriter R . Trzeba podać jej rzeczywistą
   wartość rytmiczną, wynikającą z metrum!
+  (użycie \typewriter R1 w poniższym przykładzie
+  dałoby błędne rezultaty.)
 }
-\markup \typewriter "{ \\time 1/4  R4  \\time 3/4  R2. }"
-{ \time 1/4  R4 \time 3/4  R2. }
-\markup \justify {
-  (użycie \typewriter R1 w powyższym przykładzie
-  dałoby błędne rezultaty)
-}
+\markup \typewriter "{ \\time 2/4  R2  \\time 3/4  R2. }"
+{ \time 2/4  R2 \time 3/4  R2. }
 
 \markup \justify {
   Wiele pauz całotaktowych zapisuje się
@@ -415,10 +412,10 @@
 }
 
 \markup \justify {
-  Specjalne kreski taktowe wpisuje się
-  za pomocą polecenia \typewriter "\bar"
+  Specjalne kreski taktowe wpisuje się poleceniem
+  \typewriter "\bar" \italic "rodzaj kreski."
 }
-\markup \typewriter "{ R1 \bar \"||\" R1 \bar \"|.\" R1 }"
+\markup \typewriter "{ R1  \bar \"||\"  R1  \bar \"|.\"  R1 }"
 { R1 \bar "||" R1 \bar "|." R1 }
 
 \markup \justify {
