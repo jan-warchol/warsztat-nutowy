@@ -383,6 +383,12 @@
 { R1 \bar "||" R1 \bar "|." R1 }
 
 \markup \justify {
+  Oddech (cezurę) wstawia się za pomocą
+  \typewriter "\\breathe":
+}
+{ g'4 a' \breathe f'2 }
+
+\markup \justify {
   \bold Dynamikę wpisuje się za nazwami dźwięków.
   Żeby wpisać crescendo (decrescendo), należy po pierwszej nucie
   wpisać \typewriter "\< (\>)".  Po ostatniej nucie należy
