@@ -324,7 +324,8 @@
 \markup \justify {
   Melizmat (jedną sylabę na wielu dźwiękach)
   można zapisać na dwa sposoby: jeśli melizmat
-  jest połączony łukiem, to wystarczy wpisać łuk i już.
+  jest połączony łukiem, to wystarczy wpisać łuk
+  (patrz dalej) i już.
   Jeśli nie jest, zapisuje się tak: \bold "po pierwszej"
   nucie melizmatu należy napisać \typewriter "\melisma",
   zaś po ostatniej \typewriter "\melismaEnd":
@@ -400,7 +401,9 @@
 
 \markup \justify {
   Czasami (de)crescenda są zapisane słownie -
-  wtedy należy użyć poleceń słownych:
+  wtedy należy użyć innych poleceń
+  (\italic Uwaga! to nie jest to samo co opisywane
+  dalej wstawianie tekstu):
 } \noPageBreak
 \markup \typewriter \column {
   "\relative f' {"
@@ -420,6 +423,16 @@
 { b4\accent b\tenuto b\staccato b\fermata }
 
 \markup \justify {
+  Żeby połączyć nuty łukiem legato, wstaw nawias
+  otwierający za pierwszą nutą i nawias zamykający
+  za ostatnią nutą:
+}
+\markup \typewriter "c8( d e4~ e8 f g a)"
+\relative f' {
+  c8( d e4~ e8 f g a)
+}
+
+\markup \justify {
   Przy wstawianiu artykulacji, dynamiki itp. pomocny
   jest panel \italic "Szybkie wstawianie", który
   można włączyć "w menu" \italic Narzędzia.
@@ -427,15 +440,33 @@
   "do wielu" nut naraz.
 }
 
+\markup \justify {
+  \bold Tempo wstawia się poleceniem
+  \typewriter "\\tempo" \italic tekst \italic wartość :
+}
+\markup \typewriter "\\tempo \"Con moto\" 4=110"
+\relative f' {
+  \tempo "Con moto" 4=110
+  c8 d e f g a b c
+}
+
+\markup \justify {
+  Instrukcje słowne należy umieścić w cudzysłowie
+  i poprzedzić
+  podkreślnikiem _ (wtedy będą pod pięciolinią),
+  karetką ^ (wtedy będą nad pięciolinią)
+  lub myślnikiem (wtedy program sam wybierze).
+}
+\markup \typewriter "{ f'2_\"ping\" g'^\"pong\" }"
+{ f'2_"ping" g'^"pong" }
+
 \markup \vspace #0.1
+\markup \large \bold "7. Praca z programem"
+
 \markup \typewriter \column {
   "% linijki zaczynające się od znaku procenta są ignorowane,"
   "% można w nich umieszczać komentarze."
 }
-
-
-\markup \vspace #0.1
-\markup \large \bold "7. Praca z programem"
 
 \markup \justify {
   Kliknięcie na nutę w oknie podglądu powoduje ustawienie kursora
@@ -473,9 +504,6 @@
   problemów w przypadku plików utworzonych za jego pomocą.
 }
 
-%\markup \justify {
-%  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
-%}
 
 %{ TODO (DODAĆ):
 
