@@ -286,6 +286,20 @@
 \markup \typewriter "{ \\time 5/4  R1*5/4*3 }"
 { \time 5/4 R1*5/4*3 }
 
+\markup \justify {
+  Triole, kwintole itp. wstawia się za pomocą
+  polecenia \typewriter "\\times":
+}
+\markup \typewriter "\\times 2/3 { e4 f g }"
+\relative f' { \times 2/3 { e4 f g } }
+
+\markup \justify {
+  Żeby otrzymać przedtakt, należy napisać
+  \typewriter "\partial" \italic "długość przedtaktu."
+}
+\markup \typewriter "{ \partial 8*3 g8 a b c1 }"
+{ \partial 8*3 g'8 a' b' c''1 }
+
 
 \markup \vspace #0.1
 \markup \large \bold "5. Słowa"
@@ -361,9 +375,28 @@
   }
 }
 
-\markup "Dynamikę również wpisuje się za nazwami dźwięków:"
-\markup \typewriter "\relative f' { g4\f a f2\mp a1\p }"
-\relative f' { g4\f a f2\mp a1\p }
+\markup \justify {
+  Specjalne kreski taktowe wpisuje się poleceniem
+  \typewriter "\bar" \italic "rodzaj kreski."
+}
+\markup \typewriter "{ R1  \bar \"||\"  R1  \bar \"|.\"  R1 }"
+{ R1 \bar "||" R1 \bar "|." R1 }
+
+\markup \justify {
+  \bold Dynamikę wpisuje się za nazwami dźwięków.
+  Żeby wpisać crescendo (decrescendo), należy po pierwszej nucie
+  wpisać \typewriter "\< (\>)".  Po ostatniej nucie należy
+  wstawić \typewriter "\!" (albo jakieś oznaczenie dynamiczne).
+}
+\markup \typewriter
+"\relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }"
+\relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }
+
+\markup \justify {
+  Podobnie \bold artykulację:
+}
+\markup \typewriter "{ b4\accent b\\tenuto b\staccato b\fermata }"
+{ b4\accent b\tenuto b\staccato b\fermata }
 
 \markup \vspace #0.1
 \markup \typewriter \column {
@@ -410,28 +443,6 @@
   kodowania domyślnie, więc nie powinno być żadnych
   problemów w przypadku plików utworzonych za jego pomocą.
 }
-
-\markup \justify {
-  Specjalne kreski taktowe wpisuje się poleceniem
-  \typewriter "\bar" \italic "rodzaj kreski."
-}
-\markup \typewriter "{ R1  \bar \"||\"  R1  \bar \"|.\"  R1 }"
-{ R1 \bar "||" R1 \bar "|." R1 }
-
-\markup \justify {
-  Triole, kwintole itp. wstawia się za pomocą
-  polecenia \typewriter "\\times":
-}
-\markup \typewriter "\\times 2/3 { e4 f g }"
-\relative f' { \times 2/3 { e4 f g } }
-
-\markup "przedtakt"
-\markup \typewriter "\partial 4 g8 a b  a1"
-{ \partial 8 g'8 a'1 }
-
-\markup { dynamika i artykulacja }
-\markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
-{ a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
 
 %\markup \justify {
 %  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
