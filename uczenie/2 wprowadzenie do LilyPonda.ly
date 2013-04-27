@@ -369,7 +369,7 @@
     \score { { \clef "G_8" s1 } \layout {} }
   }
   \hspace #4
-  \override #'(baseline-skip . 2.8) \column {
+  \override #'(baseline-skip . 2.7) \column {
     \small \typewriter "\\clef F"
     \score { { \clef F s1 } \layout {} }
   }
@@ -393,7 +393,7 @@
 \relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }
 
 \markup \justify {
-  Podobnie \bold artykulację:
+  Podobnie \bold artykulacja:
 }
 \markup \typewriter "{ b4\accent b\\tenuto b\staccato b\fermata }"
 { b4\accent b\tenuto b\staccato b\fermata }
@@ -406,7 +406,7 @@
 
 
 \markup \vspace #0.1
-\markup \large \bold "8. Praca z programem"
+\markup \large \bold "7. Praca z programem"
 
 \markup \justify {
   Kliknięcie na nutę w oknie podglądu powoduje ustawienie kursora
