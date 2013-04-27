@@ -1,6 +1,8 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f' {
+\include "./dzielenie-głosów.ily"
+
+\new Staff \with { \consists "Ambitus_engraver" } {
   \tag #'solo {
     \set Staff.midiInstrument = "clarinet"
     \set Staff.midiMinimumVolume = #0.6
@@ -16,20 +18,34 @@
   \dynamicUp
   \tupletUp
   \clef treble
-
-  % UWAGA!
-  % na razie przepisujcie tylko dolne głosy
-  % (tzn. wpiszcie to, co śpiewają soprany drugie,
-  % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
-
   % podaj tonację, na przykład \key g \minor
   
   % podaj metrum, na przykład \time 4/4
   
   % wpisz nuty:
-  
-  
+  <<
+    \relative f' {
+      % Jeśli ten głos nie dzieli się na dolny i górny,
+      % wpisz całą partię tutaj a następnego \relative { }
+      % po prostu nie używaj.
+      % Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+      % (łącznie z tym, co jest śpiewane unisono):
+      
+    }
+    \relative f' {
+      % Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+      % (łącznie z tym, co jest śpiewane unisono).
+      % Zapewne będzie Ci wygodnie skopiować wspólne
+      % fragmenty z tego, co jest już wpisane powyżej.
+      % Żeby odpowiednio połączyć obie partie, użyj
+      % \unisono { } , \rownyRytm { } i \podzial { }
+      % na odpowiednich fragmentach tej partii.
+      
+    }
+  >>
 }
 \addlyrics {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
   
 }
