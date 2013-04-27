@@ -294,7 +294,7 @@
 \relative f' { \times 2/3 { e4 f g } }
 
 \markup \justify {
-  Żeby otrzymać przedtakt, należy napisać
+  Żeby otrzymać przedtakt, użyj
   \typewriter "\partial" \italic "długość przedtaktu."
 }
 \markup \typewriter "{ \partial 8*3 g8 a b c1 }"
