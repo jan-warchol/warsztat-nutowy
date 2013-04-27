@@ -282,6 +282,13 @@
 \markup \typewriter "{ R1*4 }"
 { R1*4 }
 
+\markup \justify {
+  Podobnie zapisuje się pauzy całotaktowe
+  "o nietypowej" długości:
+} \noPageBreak
+\markup \typewriter "{ \\time 5/4  R1*5/4*3 }"
+{ \time 5/4 R1*5/4*3 }
+
 
 \markup \vspace #0.1
 \markup \large \bold "5. Słowa"
