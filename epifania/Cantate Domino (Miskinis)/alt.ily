@@ -1,31 +1,49 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f' {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
-  \dynamicUp
-  \tupletUp
-  \clef treble
-  
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  
-  % UWAGA!
-  % na razie przepisujcie tylko dolne głosy
-  % (tzn. wpiszcie to, co śpiewają soprany drugie,
-  % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
+% funkcje pomocnicze:
+
+unisono =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \oneVoice
+     \new Voice {
+       \override NoteColumn #'ignore-collision = ##t
+       \hideNotes
+       \oneVoice
+       \override Hairpin #'stencil = ##f
+       \override DynamicText #'stencil = ##f
+       \override DynamicTextSpanner #'stencil = ##f
+       \override Slur #'stencil = ##f
+       \override PhrasingSlur #'stencil = ##f
+       #music
+     }
+   #})
+
+rownyRytm =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \unHideNotes
+     \oneVoice
+     #music
+   #})
+
+podzial =
+#(define-music-function (parser location music)
+   (ly:music?)
+   #{
+     \voiceTwo
+     \new Voice  {
+       \voiceOne
+       \override Hairpin #'stencil = ##f
+       \override DynamicText #'stencil = ##f
+       \override DynamicTextSpanner #'stencil = ##f
+       #music
+     }
+   #})
+
+altII = \relative f' {
   
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
@@ -116,7 +134,37 @@
   \time 3/4
   g4.-> a->~
   a2. % crescendo
+}
+
+
+altI = \relative f' {
+}
+
+\new Staff \with { \consists "Ambitus_engraver" } {
+  \tag #'solo {
+    \set Staff.midiInstrument = "clarinet"
+    \set Staff.midiMinimumVolume = #0.6
+    \set Staff.midiMaximumVolume = #0.8
+  }
+  \tag #'chor {
+    \set Staff.midiInstrument = "acoustic grand"
+    \set Staff.midiMinimumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.6
+  }
+  \set Staff.instrumentName = "A "
+  \set Staff.shortInstrumentName = "A "
+  \dynamicUp
+  \tupletUp
+  \clef treble
   
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
+  <<
+    \altI
+    \altII
+  >>
 }
 \addlyrics {
   Can -- ta -- te __ Do -- mi -- no,
