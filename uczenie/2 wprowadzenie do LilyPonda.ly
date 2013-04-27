@@ -399,6 +399,21 @@
 \relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }
 
 \markup \justify {
+  Czasami (de)crescenda są zapisane słownie -
+  wtedy należy użyć poleceń słownych:
+} \noPageBreak
+\markup \typewriter \column {
+  "\relative f' {"
+  "  g8\cresc a b c b c\mf d e"
+  "  f8\decresc e d c e\dim d c b\!"
+  "}"
+}
+\relative f' {
+  g8\cresc a b c b c\mf d e
+  f8\decresc e d c e\dim d c b\!
+}
+
+\markup \justify {
   Podobnie \bold artykulacja:
 }
 \markup \typewriter "{ b4\accent b\\tenuto b\staccato b\fermata }"
