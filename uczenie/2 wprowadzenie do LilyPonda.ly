@@ -372,8 +372,55 @@
 { R1 \bar "||" R1 \bar "|." R1 }
 
 \markup \justify {
-  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
+  Triole, kwintole itp. wstawia się za pomocą
+  polecenia \typewriter "\\times":
 }
+\markup \typewriter "\\times 2/3 { e4 f g }"
+\relative f' { \times 2/3 { e4 f g } }
+
+\markup "przedtakt"
+\markup \typewriter "\partial 4 g8 a b  a1"
+{ \partial 8 g'8 a'1 }
+
+\markup { dynamika i artykulacja }
+\markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
+{ a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
+
+\markup "tonacje:"
+{
+  \set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \override Score.RehearsalMark #'Y-offset = #8
+  \mark "c-dur" \key c \major R1
+  \mark "d-dur" \key d \major R1
+  \mark "e-dur" \key e \major R1
+  \mark "f-dur" \key f \major R1
+  \mark "g-dur" \key g \major R1
+  \mark "a-dur" \key a \major R1
+  \mark "b-dur" \key b \major R1
+}
+{
+  \set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \mark "a-moll" \key a \minor R1
+  \mark "b-moll" \key b \minor R1
+  \mark "c-moll" \key c \minor R1
+  \mark "d-moll" \key d \minor R1
+  \mark "e-moll" \key e \minor R1
+  \mark "f-moll" \key f \minor R1
+  \mark "g-moll" \key g \minor R1
+}
+{
+  \set Staff.printKeyCancellation = ##f
+  \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \mark "es-dur" \key es \major R1
+  \mark "fis-moll" \key fis \minor R1
+  \mark "bes-dur" \key bes \major R1
+}
+
+%\markup \justify {
+%  słowa wstawia się tak - ale pamiętaj, że cresc. itp to dynamika
+%}
 
 %{ TODO (DODAĆ):
 
@@ -406,30 +453,14 @@
 
 %}
 
-\markup \justify {
-  Triole, kwintole itp. wstawia się za pomocą
-  polecenia \typewriter "\\times":
-}
-\markup \typewriter "\\times 2/3 { e4 f g }"
-\relative f' { \times 2/3 { e4 f g } }
+%{ e'4 fis' g' as' }
 
-\markup "przedtakt"
-\markup \typewriter "\partial 4 g8 a b  a1"
-{ \partial 8 g'8 a'1 }
+   { \key a \major e'4 fis' g' as' }
 
-\markup { dynamika i artykulacja }
-\markup \typewriter "a4\p a-> a-- a-. a \f \> a a\! a\fermata"
-{ a'4\p a'-> a'-- a'-. a' \f \> a' a' \! a'\fermata }
+   { \key es \major e'4 fis' g' as' }
 
 
-{ e'4 fis' g' as' }
-
-{ \key a \major e'4 fis' g' as' }
-
-{ \key es \major e'4 fis' g' as' }
-
-
-%{ NIEWYKORZYSTANE:
+   %{ NIEWYKORZYSTANE:
 
    \markup \typewriter "\\time 6/8"
    { \time 6/8 f'8. g'16 a'8 g' g' g' }
