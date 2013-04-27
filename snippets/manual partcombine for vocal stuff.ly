@@ -1,4 +1,4 @@
-\version "2.17.10"
+\version "2.16.1"
 
 unisono =
 #(define-music-function (parser location music)
@@ -6,17 +6,16 @@ unisono =
    #{
      \oneVoice
      \new Voice {
-       \override NoteColumn.ignore-collision = ##t
+       \override NoteColumn #'ignore-collision = ##t
        \hideNotes
        \oneVoice
-       \omit Hairpin
-       \omit DynamicText
-       \omit DynamicTextSpanner
-       \omit Slur
-       \omit PhrasingSlur
+       \override Hairpin #'stencil = ##f
+       \override DynamicText #'stencil = ##f
+       \override DynamicTextSpanner #'stencil = ##f
+       \override Slur #'stencil = ##f
+       \override PhrasingSlur #'stencil = ##f
        #music
      }
-     \revert NoteColumn.ignore-collision
    #})
 
 rownyRytm =
@@ -35,29 +34,11 @@ podzial =
      \voiceTwo
      \new Voice  {
        \voiceOne
-       \omit Hairpin
-       \omit DynamicText
-       \omit DynamicTextSpanner
+       \override Hairpin #'stencil = ##f
+       \override DynamicText #'stencil = ##f
+       \override DynamicTextSpanner #'stencil = ##f
        #music
      }
-   #})
-
-zTekstem =
-#(define-music-function (parser location name staff music text)
-   (string? string? ly:music? ly:music?)
-   #{
-     \voiceTwo
-     <<
-       \new Voice = #name {
-         \voiceOne
-         \omit Hairpin
-         \omit DynamicText
-         \omit DynamicTextSpanner
-         #music
-       }
-       \new Lyrics \with { alignAboveContext = #staff }
-       \lyricsto #name \lyricmode { #text }
-     >>
    #})
 
 tenII = {
@@ -99,13 +80,12 @@ tenI = {
     c'2 c'\p
     c' c'
   }
-  \zTekstem foo tenors {
+  \podzial {
     e'1\mp
     g'2 e'
     a4\f f' g e'
     a d' g c'
   }
-  \lyricmode { ho ho ho fa la __ _ _ lo lo la __ _ }
   \podzial {
     c'2 d'
     b a
