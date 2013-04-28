@@ -52,7 +52,7 @@ basII = \relative f {
   \slurDashed
   \set melismaBusyProperties = #'()
   f g a g4.\<( 
-  es8.\!) es16 es8 f f f
+  es8.--\!) es16 es8 f f f
   \slurSolid
   \unset melismaBusyProperties
   g4\> g8\! r r4
@@ -100,7 +100,7 @@ basII = \relative f {
   a a a g4 g8
   f4 f8 g4.\breathe
   f4 f8\> e4 e8^\markup{\italic{rit.}}
-  d4 d8 e4.
+  d4 d8 e4.~
   e2.\fermata\p
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki
@@ -130,7 +130,7 @@ basII = \relative f {
   % końca kartki
   
   % kartka 7.
-  r4.^\markup{tempo primo} d8\mf d d
+  r4.^\markup{Tempo primo} d8\mf d d
   g g g g g g
   g4.\mf\<\breathe g8 g g
   g g g g4 g8
@@ -159,7 +159,7 @@ basI = \relative f {
     \slurDashed
     \set melismaBusyProperties = #'()
     f g a g4.\<( 
-    es8.\!) es16 es8 f f f
+    es8.--\!) es16 es8 f f f
     \slurSolid
     \unset melismaBusyProperties
     g4\> g8\! r r4
@@ -243,7 +243,7 @@ basI = \relative f {
     % końca kartki
     
     % kartka 7.
-    r4.^\markup{tempo primo} d8\mf d d
+    r4.^\markup{Tempo primo} d8\mf d d
     g g g a a a
     a4.\mf\<\breathe a8 a a
     a a a a4 a8
@@ -318,7 +318,7 @@ basI = \relative f {
   % kartka 4.
   All that hath life and breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
-  praise his name, Al -- le -- lu -- ia. Mm
+  praise his name, Al -- le -- lu -- ia.
   
   % kartka 5.
   All that hath life and breath praise Him, __
