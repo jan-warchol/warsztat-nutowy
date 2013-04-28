@@ -1,8 +1,51 @@
 \version "2.16.1"
 
-\include "./pomocnicze/dzielenie-głosów.ily"
+% -*- master: ./pomocnicze/tenor-solo.ly;
 
-\new Staff \with { \consists "Ambitus_engraver" } {
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisać plik.
+
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "tenorgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
+
+tenordolny = \relative f {
+  % podaj tonację, na przykład \key g \minor
+  
+  % podaj metrum, na przykład \time 4/4
+  
+  % wpisz nuty:
+  
+}
+
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+tenorgorny = \relative f {
+  % podaj tonację, na przykład \key g \minor
+  
+  % podaj metrum, na przykład \time 4/4
+  
+  % wpisz nuty:
+  
+}
+
+
+tenortekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
+  
+}
+
+piecioliniatenoru = \new Staff \with { \consists "Ambitus_engraver" } {
   \tag #'solo {
     \set Staff.midiInstrument = "clarinet"
     \set Staff.midiMinimumVolume = #0.6
@@ -17,35 +60,10 @@
   \set Staff.shortInstrumentName = "T "
   \dynamicUp
   \tupletUp
-  \clef "treble_8"
-  % podaj tonację, na przykład \key g \minor
-  
-  % podaj metrum, na przykład \time 4/4
-  
-  % wpisz nuty:
+  \clef "G_8"
   <<
-    \relative f {
-      % Jeśli ten głos nie dzieli się na dolny i górny,
-      % wpisz całą partię tutaj a następnego \relative { }
-      % po prostu nie używaj.
-      % Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
-      % (łącznie z tym, co jest śpiewane unisono):
-      
-    }
-    \relative f {
-      % Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
-      % (łącznie z tym, co jest śpiewane unisono).
-      % Zapewne będzie Ci wygodnie skopiować wspólne
-      % fragmenty z tego, co jest już wpisane powyżej.
-      % Żeby odpowiednio połączyć obie partie, użyj
-      % \unisono { } , \rownyRytm { } i \podzial { }
-      % na odpowiednich fragmentach tej partii.
-      
-    }
+    \tenordolny
+    \tenorgorny
   >>
 }
-\addlyrics {
-  % Tu wpisz libretto. Będzie ono przyczepione do partii
-  % dolnego głosu (jeśli jest podział).
-  
-}
+\addlyrics \tenortekst
