@@ -28,7 +28,7 @@
   % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
   r4 R1*3  
   r2 r4 d4
-  d'4. d4. e4 d4. d8~ d2
+  d'4. d4. e4 d4. d8~\melisma d2 \melismaEnd
   d4. d4. c4
   d4 a2.
   r2 r4 d,4
@@ -103,5 +103,27 @@ R1
   c2.
 }
 \addlyrics {
+  Can -- ta -- te, can -- ta -- te
+  can -- ti -- cum no -- vum.
+  Can -- ta -- te, can -- ta -- te, can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum:
+  et be -- ne -- di -- ci -- te
+  no -- mi -- ni e -- ius
+  qui -- a mi -- ra -- bi -- li -- a,
+  qui -- a mi -- ra -- bi -- li -- a
+  fe -- cit, 
+  et be -- ne -- di -- ci -- te
+  no -- mi -- ni e -- ius,
+  qui -- a mi -- ra -- bi -- li -- a,
+  qui -- a mi -- ra -- bi -- li -- a fe -- cit.
+  Can -- ta -- te, can -- ta -- te
+  can -- ti -- cum no -- vum,
+  can -- ta -- te, 
+  can -- ta -- te, can -- ta -- te, can -- ta -- te
+  can -- ti -- cum no -- vum.
+  Can -- ta -- te et ex -- sul -- ta -- te,
+  psa -- li -- te ci -- tha -- ra vo -- ce psal -- mi.
+  Can -- ta -- te, can -- ta -- te Do -- mi -- no,
+  can -- ti -- cum no -- vum.
+  
   
 }
