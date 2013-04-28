@@ -328,7 +328,7 @@ tenorI = \relative f {
   % kartka 4.
   All that hath life and breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
-  praise his name, Al -- le -- lu -- ia.
+  praise His name, Al -- le -- lu -- ia.
   
   % kartka 5.
   All that hath life and breath praise Him, __
