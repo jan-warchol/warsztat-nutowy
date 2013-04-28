@@ -1,6 +1,6 @@
 \version "2.16.1"
 
-\include "./dzielenie-głosów.ily"
+\include "./pomocnicze/dzielenie-głosów.ily"
 
 \new Staff \with { \consists "Ambitus_engraver" } {
   \tag #'solo {

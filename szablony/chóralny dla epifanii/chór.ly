@@ -9,13 +9,13 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "epifanijny-styl-nagłówków.ily"
+  \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
 \header {
 }
 
-\include "./dzielenie-głosów.ily"
+\include "./pomocnicze/dzielenie-głosów.ily"
 
 \score {
   \new ChoirStaff <<
