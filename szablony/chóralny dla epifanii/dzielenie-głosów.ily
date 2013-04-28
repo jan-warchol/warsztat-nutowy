@@ -14,6 +14,7 @@ unisono =
        \override Hairpin #'stencil = ##f
        \override DynamicText #'stencil = ##f
        \override DynamicTextSpanner #'stencil = ##f
+       \override TextScript #'stencil = ##f
        \override Slur #'stencil = ##f
        \override PhrasingSlur #'stencil = ##f
        #music
@@ -39,6 +40,7 @@ podzial =
        \override Hairpin #'stencil = ##f
        \override DynamicText #'stencil = ##f
        \override DynamicTextSpanner #'stencil = ##f
+       \override TextScript #'stencil = ##f
        #music
      }
    #})
