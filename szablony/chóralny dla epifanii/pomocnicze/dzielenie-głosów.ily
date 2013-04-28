@@ -7,16 +7,7 @@ unisono =
    (ly:music?)
    #{
      \oneVoice
-     \new Voice {
-       \override NoteColumn #'ignore-collision = ##t
-       \hideNotes
-       \oneVoice
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       \override TextScript #'stencil = ##f
-       \override Slur #'stencil = ##f
-       \override PhrasingSlur #'stencil = ##f
+     \new Devnull {
        #music
      }
    #})
