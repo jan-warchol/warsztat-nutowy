@@ -75,7 +75,7 @@
   e2\f b4
   a8 a a a a4~
   a b gis
-  fis8\> fis fis fis fis4
+  fis8\> fis fis fis fis4\!
   f4\p f2~
   f2.\fermata\> \bar "||"
   \key as \major
