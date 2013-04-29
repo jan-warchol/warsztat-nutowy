@@ -13,6 +13,9 @@
 }
 
 \header {
+  title = "Cantate Domino"
+  composer = "Vytautas Miškinis (*1954)"
+  composerShort = "(Miškinis)"
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
