@@ -1,49 +1,17 @@
 \version "2.16.1"
 
-% funkcje pomocnicze:
+% -*- master: ./pomocnicze/bas-solo.ly;
 
-unisono =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \oneVoice
-     \new Voice {
-       \override NoteColumn #'ignore-collision = ##t
-       \hideNotes
-       \oneVoice
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       \override Slur #'stencil = ##f
-       \override PhrasingSlur #'stencil = ##f
-       #music
-     }
-   #})
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisać plik.
 
-rownyRytm =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \unHideNotes
-     \oneVoice
-     #music
-   #})
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "basgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
 
-podzial =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \voiceTwo
-     \new Voice  {
-       \voiceOne
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       #music
-     }
-   #})
-
-basII = \relative f {
+basdolny = \relative f {
   % w komentarzach to, czego nie umiem zrealizować w danym takcie,
   % nie ma także podwójnych kresek taktowych
   r4
@@ -137,38 +105,23 @@ basII = \relative f {
   f,-> f-> % crescendo
 }
 
-basI = \relative f {
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+basgorny = \relative f {
 }
 
-\new Staff \with { \consists "Ambitus_engraver" } {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "B "
-  \set Staff.shortInstrumentName = "B "
-  \dynamicUp
-  \tupletUp
-  \clef bass
 
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
+bastekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
 
-  <<
-    \basI
-    \basII
-  >>
-
-}
-\addlyrics {
   Can -- ta -- te Do -- mi -- no,
   can -- ta -- te Do -- mi -- no,
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.
@@ -206,3 +159,31 @@ basI = \relative f {
   can -- ta -- te Do -- mi --no
   can -- ti -- cum no -- vum, no -- vum.
 }
+
+piecioliniabasu = \new Staff \with { \consists "Ambitus_engraver" } {
+  \tag #'solo {
+    \set Staff.midiInstrument = "clarinet"
+    \set Staff.midiMinimumVolume = #0.6
+    \set Staff.midiMaximumVolume = #0.8
+  }
+  \tag #'chor {
+    \set Staff.midiInstrument = "acoustic grand"
+    \set Staff.midiMinimumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.6
+  }
+  \set Staff.instrumentName = "B "
+  \set Staff.shortInstrumentName = "B "
+  \dynamicUp
+  \tupletUp
+  \clef F
+
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
+  <<
+    \basdolny
+    \basgorny
+  >>
+}
+\addlyrics \bastekst

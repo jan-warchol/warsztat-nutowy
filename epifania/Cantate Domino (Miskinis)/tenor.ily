@@ -1,32 +1,17 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
-  \dynamicUp
-  \tupletUp
-  \clef "treble_8"
+% -*- master: ./pomocnicze/tenor-solo.ly;
 
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisać plik.
 
-  % UWAGA!
-  % na razie przepisujcie tylko dolne głosy
-  % (tzn. wpiszcie to, co śpiewają soprany drugie,
-  % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "tenorgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
 
+tenordolny = \relative f {
   % w komentarzach to, czego nie potrafię
   % w danym takcie zrealizować
   r4
@@ -119,9 +104,25 @@
   \time 3/4
   f4.-> f->~
   << f2.{s4\< s s\!} >> \bar "|."
-
 }
-\addlyrics {
+
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+tenorgorny = \relative f {
+}
+
+
+tenortekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
+
   Can -- ta -- te Do -- mi -- no,
   can -- ta -- te Do -- mi -- no,
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.
@@ -159,3 +160,31 @@
   can -- ta -- te Do -- mi --no
   can -- ti -- cum no -- vum. __
 }
+
+piecioliniatenoru = \new Staff \with { \consists "Ambitus_engraver" } {
+  \tag #'solo {
+    \set Staff.midiInstrument = "clarinet"
+    \set Staff.midiMinimumVolume = #0.6
+    \set Staff.midiMaximumVolume = #0.8
+  }
+  \tag #'chor {
+    \set Staff.midiInstrument = "acoustic grand"
+    \set Staff.midiMinimumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.6
+  }
+  \set Staff.instrumentName = "T "
+  \set Staff.shortInstrumentName = "T "
+  \dynamicUp
+  \tupletUp
+  \clef "G_8"
+
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
+  <<
+    \tenordolny
+    \tenorgorny
+  >>
+}
+\addlyrics \tenortekst

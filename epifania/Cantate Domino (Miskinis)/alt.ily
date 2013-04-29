@@ -1,53 +1,19 @@
 \version "2.16.1"
 
-% funkcje pomocnicze:
+% -*- master: ./pomocnicze/alt-solo.ly;
 
-unisono =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \oneVoice
-     \new Voice {
-       \override NoteColumn #'ignore-collision = ##t
-       \hideNotes
-       \oneVoice
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       \override Slur #'stencil = ##f
-       \override PhrasingSlur #'stencil = ##f
-       #music
-     }
-   #})
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisać plik.
 
-rownyRytm =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \unHideNotes
-     \oneVoice
-     #music
-   #})
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "altgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
 
-podzial =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \voiceTwo
-     \new Voice  {
-       \voiceOne
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       #music
-     }
-   #})
-
-altII = \relative f' {
-
+altdolny = \relative f' {
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
-
   d4\mp
   a'4. g8~ g2
   e4 g8 g4. d4
@@ -136,9 +102,21 @@ altII = \relative f' {
   \time 3/4
   g4.-> a->~
   << a2.{s4\< s s\!}>> \bar "|."
+
+
 }
 
-altI = \relative f' {
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+altgorny = \relative f' {
+
   \unisono{
     d4\mp
     a'4. g8~ g2
@@ -237,34 +215,11 @@ altI = \relative f' {
   }
 }
 
-\new Staff \with { \consists "Ambitus_engraver" } {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
-  \dynamicUp
-  \tupletUp
-  \clef treble
 
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  <<
-    \altI
-    \altII
-  >>
-}
+alttekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
 
-\addlyrics {
   Can -- ta -- te __ Do -- mi -- no,
   can -- ta -- te __ Do -- mi -- no,
   can -- ta -- te, can -- ta -- te __ can -- ti -- cum no -- vum.
@@ -302,4 +257,33 @@ altI = \relative f' {
   Can -- ta -- te, can -- ta -- te,
   can -- ta -- te Do -- mi -- no
   can -- ti -- cum no -- vum. __
+
 }
+
+piecioliniaaltu = \new Staff \with { \consists "Ambitus_engraver" } {
+  \tag #'solo {
+    \set Staff.midiInstrument = "clarinet"
+    \set Staff.midiMinimumVolume = #0.6
+    \set Staff.midiMaximumVolume = #0.8
+  }
+  \tag #'chor {
+    \set Staff.midiInstrument = "acoustic grand"
+    \set Staff.midiMinimumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.6
+  }
+  \set Staff.instrumentName = "A "
+  \set Staff.shortInstrumentName = "A "
+  \dynamicUp
+  \tupletUp
+  \clef G
+
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
+  <<
+    \altdolny
+    \altgorny
+  >>
+}
+\addlyrics \alttekst

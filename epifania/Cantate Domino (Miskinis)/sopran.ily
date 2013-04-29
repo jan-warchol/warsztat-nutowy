@@ -1,31 +1,17 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f' {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "S "
-  \set Staff.shortInstrumentName = "S "
-  \dynamicUp
-  \tupletUp
-  \clef treble
+% -*- master: ./pomocnicze/sopran-solo.ly;
 
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisać plik.
 
-  % UWAGA!
-  % na razie przepisujcie tylko dolne głosy
-  % (tzn. wpiszcie to, co śpiewają soprany drugie,
-  % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "soprangorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
+
+soprandolny = \relative f' {
   r4 R1*3
   r2 r4 d4 \mf
   d'4. d4. e4 d4. d8~\melisma d2 \melismaEnd
@@ -109,10 +95,28 @@
   c4. -> c4. ~ ->
   c2. \< ^\markup{\italic{non rit.} }
 }
-\addlyrics {
+
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+soprangorny = \relative f' {
+}
+
+
+soprantekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione do partii
+  % dolnego głosu (jeśli jest podział).
+
   Can -- ta -- te, can -- ta -- te
   can -- ti -- cum no -- vum.
-  Can -- ta -- te, can -- ta -- te, can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum:
+  Can -- ta -- te, can -- ta -- te, can -- ta -- te,
+  can -- ta -- te can -- ti -- cum no -- vum:
   et be -- ne -- di -- ci -- te
   no -- mi -- ni e -- ius
   qui -- a mi -- ra -- bi -- li -- a,
@@ -131,6 +135,33 @@
   psa -- li -- te ci -- tha -- ra vo -- ce psal -- mi.
   Can -- ta -- te, can -- ta -- te Do -- mi -- no,
   can -- ti -- cum no -- vum.
-
-
 }
+
+piecioliniasopranu = \new Staff \with { \consists "Ambitus_engraver" } {
+  \tag #'solo {
+    \set Staff.midiInstrument = "clarinet"
+    \set Staff.midiMinimumVolume = #0.6
+    \set Staff.midiMaximumVolume = #0.8
+  }
+  \tag #'chor {
+    \set Staff.midiInstrument = "acoustic grand"
+    \set Staff.midiMinimumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.6
+  }
+  \set Staff.instrumentName = "S "
+  \set Staff.shortInstrumentName = "S "
+  \dynamicUp
+  \tupletUp
+  \clef G
+
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
+
+  <<
+    \soprandolny
+    \soprangorny
+  >>
+}
+\addlyrics \soprantekst
