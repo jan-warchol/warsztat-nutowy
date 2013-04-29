@@ -115,6 +115,97 @@ basdolny = \relative f {
 % na odpowiednich fragmentach tej partii.
 
 basgorny = \relative f {
+  %strona 1
+  \partial 4 r4
+  d4. \mp  d d4
+  d8 e e2.
+  fis4. fis fis4
+  a8 g g2. |
+  a4 \mf a4. a
+  gis4 gis4. gis |
+  g4 g4. g
+  fis4. fis8~ fis2 |
+  d4.\f d d4 | % piu
+  d8->( e) e e~-> e2 |
+  fis4. fis fis4 |
+  a8->( g) g g~-> g2
+  g4 g4. g
+
+  % strona 2 14
+  g4 g4. g
+  f4 f4. f
+  e4. e8~ e2\< | % dynamika \breathe \bar "||"
+  \time 3/4
+  |
+  R2.*2 \!
+  gis4 \p gis gis
+  fis4. fis8 fis4~
+  fis2.~
+  fis2. %dynamika 
+  gis4 \mf gis b % \cresc
+  c c2~
+  c4 b gis
+  fis8 fis8 fis8 fis8 fis4
+  gis2 e4
+  d8 d8 d8 d8 d4
+  e2 e4~
+  e2. %>
+  gis4 \mp gis gis
+  fis4. fis8 fis4~
+  fis2.~
+  fis2. % >
+
+  %strona 3 takt 35
+  gis4 \mf gis b
+  c c2~
+  c2.~
+  c2. %<
+  b2\f gis4
+  fis8 fis8 fis8 fis8 fis4~
+  fis4 gis e
+  d8 d8 d8 d8 d4 %>
+  des\p des2~
+  des2. %>
+  \key as \major
+  \time 4/4
+  R1
+  es4. \mp es es4 |
+  es8 f f2.
+  g4. g g4
+  bes8 as as2.
+  bes 4 bes4. bes |
+  a4 a4. a |
+  as4 as4. as |
+  g g8~ g2 |
+  es4. \f es es4 | %piu
+  es8->( f) f f~-> f2 |
+  g4. g g4
+
+  % strona 4 takt 57
+  bes8->( as) as as~-> as2
+  as4 as4. as
+  as4 as4. as
+  ges4 ges4. ges
+  f f8~ f2
+  \key bes \major
+  f4.->\f f-> f4->
+  f8-> g g2.
+  a4.-> a-> a4->
+  c8-> bes bes2. % oddech?
+  \time 3/4
+  c8 c4 c8 c4
+  bes8 bes4 bes8 bes4
+  bes8 bes4. bes4
+  a4.\p a4.\fermata
+  \time 4/4
+  f4.->\p f-- f4-- % sub, cresc
+  bes4.->\mp bes-- bes4--
+  d4.->\mf d4.-- d4--\f
+  d8-> bes bes2.\fermata \<  % oddech?
+  c4.->\ff \! c-> c4-> |
+  \time 3/4
+  d4.-> c4.~->
+  c2 % cresc
 }
 
 
