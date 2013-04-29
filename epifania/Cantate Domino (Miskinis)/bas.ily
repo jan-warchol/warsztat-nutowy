@@ -88,7 +88,8 @@ basdolny = \relative f {
   bes4.->\f bes-> bes4->
   bes8-> c c2.
   d4.-> d-> d4->
-  g8-> g g2. %oddech?
+  \override BreathingSign #'text = \markup { \musicglyph #"scripts.rvarcomma" }
+  g8-> g g2. \breathe
   \time 3/4
   as8 as4 as8 as4
   g8 g4 g8 g4
@@ -98,11 +99,11 @@ basdolny = \relative f {
   f->\p f-- f4-- % sub, cresc
   f4.->\mp f-- f4--
   bes4.->\mf bes-- bes4--\f
-  bes8-> g g2.\fermata % crescendo, oddech?
+  bes8-> g g2.\fermata \breathe % crescendo, oddech?
   c4.->\ff c-> c4->
   \time 3/4
   c4.-> c->
-  f,-> f-> % crescendo
+  << {f,-> f->} {s4\< s s\!} >>  % crescendo
 }
 
 

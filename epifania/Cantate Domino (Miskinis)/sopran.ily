@@ -88,7 +88,8 @@ soprandolny = \relative f' {
   R1
   g4. ->\mp g4. -- g4 --
   c4.-> \mf c4. -- c4 --
-  c8 -> \f f8 ^\markup \italic allarg. f2. \fermata \<
+  \override BreathingSign #'text = \markup { \musicglyph #"scripts.rvarcomma" }
+  c8 -> \f f8 ^\markup \italic allarg. f2. \fermata \< \breathe
   \tempo "a tempo"
   c4. \ff -> c4. -> c4 ->
   \time 3/4
@@ -158,7 +159,7 @@ piecioliniasopranu = \new Staff \with { \consists "Ambitus_engraver" } {
   \time 4/4
   \tempo "Con moto e ritmico" 4 = 112
   \partial 4
-\set Timing.beamExceptions = #'()
+  \set Timing.beamExceptions = #'()
   <<
     \soprandolny
     \soprangorny
