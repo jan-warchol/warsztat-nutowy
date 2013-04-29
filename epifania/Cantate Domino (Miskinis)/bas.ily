@@ -148,7 +148,7 @@ basgorny = \relative f {
     fis4. fis8 fis4~
     fis2.~
     fis2. \>
-    gis4 \mf gis \cresc b
+    gis4 \mf gis \cresc b\!
     c c2~
     c4 b gis
     fis8 fis8 fis8 fis8 fis4
