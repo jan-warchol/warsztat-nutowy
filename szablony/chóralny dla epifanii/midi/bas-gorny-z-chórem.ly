@@ -12,7 +12,8 @@
     { \pianino \piecioliniasopranu }
     { \pianino \piecioliniaaltu }
     { \pianino \piecioliniatenoru }
-    { \pianino \piecioliniabasu }
+    \new Staff { \pianino \basdolny }
+    \new Staff { \klarnet \basgorny }
   >>
   \midi {}
 }

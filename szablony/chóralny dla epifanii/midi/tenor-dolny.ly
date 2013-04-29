@@ -5,6 +5,6 @@
 \include "../tenor.ily"
 
 \score {
-  { \klarnet \piecioliniatenoru }
+  { \klarnet \tenordolny }
   \midi {}
 }

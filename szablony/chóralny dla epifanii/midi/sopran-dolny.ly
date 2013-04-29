@@ -2,9 +2,9 @@
 
 \include "../pomocnicze/dzielenie-głosów.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
-\include "../tenor.ily"
+\include "../sopran.ily"
 
 \score {
-  { \klarnet \piecioliniatenoru }
+  { \klarnet \soprandolny }
   \midi {}
 }

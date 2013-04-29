@@ -37,6 +37,11 @@
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
 
+    \context {
+      \Staff
+      \consists "Ambitus_engraver"
+    }
+
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
 
     \override Score.BarNumber #'self-alignment-X =
