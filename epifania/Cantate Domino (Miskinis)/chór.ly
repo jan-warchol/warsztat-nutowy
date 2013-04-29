@@ -16,6 +16,17 @@
   title = "Cantate Domino"
   composer = "Vytautas Miškinis (*1954)"
   composerShort = "(Miškinis)"
+  translation = \markup {
+    \typewriter {
+      \column {
+        \vspace #0.5
+        \bold "Cantate    Domino canticum novum, et benedicite   nomini eius, quia mirabilia fecit."
+        "Śpiewajcie Panu   pieśń    nową,  i  błogosławcie imię   Jego, bo   cuda      uczynił."
+        \bold "Cantate    et exsultate,  et psalite    in cithara voce psalmi."
+        "Śpiewajcie i  wielbijcie, i  śpiewajcie z  cytrą        psalmy."
+      }
+    }
+  }
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
