@@ -206,13 +206,17 @@ altgorny = \relative f' {
     f4.->^\markup{\italic{sub} \dynamic p}\cresc f--\! f4--
     f4.->\mp f-- f4--
     g4.->\mf g-- g4--
-  }
-  \rownyRytm{
     \override BreathingSign #'text = \markup { \musicglyph #"scripts.rvarcomma" }
-    g8->\f c c2.\fermata\<\breathe \bar "||"
+    g8->\f
+  }
+  \rownyRytm{ c c2.\fermata\<\breathe \bar "||" }
+  \unisono {
     c4.->\ff c-> c4->
-    \time 3/4
-    bes4.-> a->~
+  }
+  \time 3/4
+  \rownyRytm { bes4.-> }
+  \unisono {
+    a->~
     << a2.{s4\< s s\!}>> \bar "|."
   }
 }
