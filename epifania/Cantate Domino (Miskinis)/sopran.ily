@@ -25,6 +25,7 @@ soprandolny = \relative f' {
   d4. d8~ d2
   d4. d4. c4
   d4 e2. \< \breathe
+  \break
   \bar "||"
   \tempo "più lento e tranquillo" 4=76
   \time 3/4
@@ -54,6 +55,7 @@ soprandolny = \relative f' {
   a8 \> a8 a8 a8 a4
   as2 ^\markup{\italic{rit.} } \p as4~
   as2. \fermata \>
+  \break
   \key as \major
   \time 4/4
   \tempo "Tempo I"
@@ -83,6 +85,7 @@ soprandolny = \relative f' {
   f4 f4 \mf f8 ^\markup{\italic{dim.} } f8~
   f4 f4 es4
   f4 \p c2\fermata
+  \break
   \time 4/4
   \tempo "Tempo I"
   R1

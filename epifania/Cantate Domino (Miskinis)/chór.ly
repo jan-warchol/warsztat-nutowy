@@ -1,14 +1,15 @@
 \version "2.17.2"
-#(set-global-staff-size 16)
+#(set-global-staff-size 15)
 
 \paper {
   indent = 0 \mm
-  left-margin = 12 \mm
-  right-margin = 14 \mm
+  left-margin = 14 \mm
+  right-margin = 12 \mm
   %top-markup-spacing #'basic-distance = 5
   %markup-system-spacing #'basic-distance = 40
-  %page-count =
-  %system-count =
+  page-count = 3
+  system-count = 12
+  systems-per-page = 4
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
