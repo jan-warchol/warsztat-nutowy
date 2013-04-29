@@ -23,7 +23,7 @@ basdolny = \relative f {
   e4 e4. e
   es4 es4. es
   d4. d8~ d2
-  g,4.\f g g4 % piu
+  g,4.\piuf g g4 % piu
   g8->\melisma a\melismaEnd a a~-> a2 % łuczek
   b4. b b4
   e-> e8 e~-> e2

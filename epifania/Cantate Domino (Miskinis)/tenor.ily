@@ -23,7 +23,7 @@ tenordolny = \relative f {
   b4 b4. b
   bes4 bes4. bes
   a a8~ a2
-  b4.^\markup{\italic{più} \dynamic f} b b4
+  b4.\piuf b b4
   b8->( c) c c->~ c2
   d4. d d4
   d8->( b) b b->~ b2
@@ -91,7 +91,7 @@ tenordolny = \relative f {
   \override BreathingSign #'text = \markup { \musicglyph #"scripts.rvarcomma" }
   f8-> d d2.\breathe \bar "||"
   \time 3/4
-  es8^\markup { \italic{meno} \dynamic f } es4 es8 es4
+  es8\menof es4 es8 es4
   d8\mf d4 d8 d4
   des8 des4. des4
   c4.\p c\fermata \bar "||"

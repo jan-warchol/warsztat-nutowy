@@ -17,7 +17,7 @@ soprandolny = \relative f' {
   d'4. d4. e4 d4. d8~\melisma d2 \melismaEnd
   d4. d4. c4
   d4 a2.
-  r2 r4 d,4 ^\markup{\italic{più} \dynamic f}
+  r2 r4 d,4\piuf
   a'4. g8~ g2~ g2. d4
   a'4. g8~ g4 g4
   d'4. ^\markup{\italic{cresc. poco a poco} }d4. e4
@@ -61,7 +61,7 @@ soprandolny = \relative f' {
   es4. es8~ es2
   es4. es4. des4
   es4 bes2.
-  r2 r4 des,4 ^\markup{\italic{più} \dynamic f}
+  r2 r4 des,4 \piuf
   bes'4. as8~ as2~
   as2. des,4
   bes'4. as8~ as4 as4
@@ -76,7 +76,7 @@ soprandolny = \relative f' {
   c'4. -> bes8~ bes2
   \time 3/4
   \tempo "meno mosso" 4=92
-  r4 ^\markup{\italic{meno} \dynamic f} f'4 f8 f8~
+  r4 f'4 \menof f8 f8~
   f4 f4 \mf f8 ^\markup{\italic{dim.} } f8~
   f4 f4 es4
   f4 \p c2\fermata

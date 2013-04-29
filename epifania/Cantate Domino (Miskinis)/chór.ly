@@ -13,7 +13,6 @@
 }
 
 % TODO:
-% move piuf
 % beamexception
 % numery taktów
 
@@ -21,6 +20,7 @@
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
+\include "./pomocnicze/specjalna-dynamika.ily"
 \include "sopran.ily"
 \include "alt.ily"
 \include "tenor.ily"

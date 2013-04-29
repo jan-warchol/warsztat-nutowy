@@ -22,7 +22,7 @@ altdolny = \relative f' {
   d4. d e4
   d4. d8~d2
   d4. d c4
-  d a'2 d,4^\markup{\italic{più} \dynamic f}
+  d a'2 d,4\piuf
   a'4. g8~ g2
   e4 g8 g4. d4 a'4. g8~ g2
   fis4 g8 g4. g4
@@ -72,7 +72,7 @@ altdolny = \relative f' {
   es4. es f4
   es4. es8~ es2
   es4. es des4
-  es bes'2 es,4^\markup{\italic{più} \dynamic f}
+  es bes'2 es,4\piuf
   bes'4. as8~as2
   f4 as8 as4. es4
   bes'4. as8~ as2
@@ -93,7 +93,7 @@ altdolny = \relative f' {
   f4 f es
   f\p g2\fermata \bar "||"
   \time 4/4
-  f4.->^\markup{\italic{sub} \dynamic p}\cresc f--\! f4--
+  f4.->^\subp \cresc f--\! f4--
   f4.->\mp f-- f4--
   g4.->\mf g-- g4--
   \override BreathingSign #'text = \markup { \musicglyph #"scripts.rvarcomma" }
