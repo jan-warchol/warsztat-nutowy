@@ -12,6 +12,7 @@
 % (łącznie z tym, co jest śpiewane unisono):
 
 soprandolny = \relative f' {
+  \set Timing.beamExceptions = #'()
   r4 R1*3
   r2 r4 d4 \mf
   d'4. d4. e4 d4. d8~\melisma d2 \melismaEnd
@@ -36,6 +37,7 @@ soprandolny = \relative f' {
   c2.~
   c2. \<
   b2\! ^\markup{\italic{leggiero} } gis4
+  \set Timing.beamExceptions = #'()
   gis8 ^\markup{\italic{dim. poco a poco} } gis8 gis8 gis8 fis4~
   fis4 fis 4 gis4
   a8 a8 a8 a8 a4
@@ -55,6 +57,7 @@ soprandolny = \relative f' {
   \key as \major
   \time 4/4
   \tempo "Tempo I"
+  \set Timing.beamExceptions = #'()
   R1*4\!
   r2 r4 des,4 \mf
   es'4. es4. f4
@@ -155,7 +158,7 @@ piecioliniasopranu = \new Staff \with { \consists "Ambitus_engraver" } {
   \time 4/4
   \tempo "Con moto e ritmico" 4 = 112
   \partial 4
-
+\set Timing.beamExceptions = #'()
   <<
     \soprandolny
     \soprangorny

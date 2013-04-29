@@ -116,6 +116,7 @@ basdolny = \relative f {
 
 basgorny = \relative f {
   %strona 1
+  \set Timing.beamExceptions = #'()
   \rownyRytm {
     r4
     d4. \mp  d d4
@@ -173,6 +174,7 @@ basgorny = \relative f {
     des2. \>
     \key as \major
     \time 4/4
+    \set Timing.beamExceptions = #'()
     R1\!
     es4. \mp es es4 |
     es8 f f2.

@@ -14,6 +14,7 @@
 altdolny = \relative f' {
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
+  \set Timing.beamExceptions = #'()
   d4\mp
   a'4. g8~ g2
   e4 g8 g4. d4
@@ -64,6 +65,7 @@ altdolny = \relative f' {
   des2.\fermata\> \bar "||"
   \key as \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
   r2\! r4 es\mp
   bes'4. as8~ as2
   f4 as8 as4. es4

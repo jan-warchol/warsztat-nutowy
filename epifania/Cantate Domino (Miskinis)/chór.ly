@@ -12,10 +12,6 @@
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
-% TODO:
-% beamexception
-% numery taktów
-
 \header {
 }
 

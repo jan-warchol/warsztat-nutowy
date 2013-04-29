@@ -14,6 +14,7 @@
 tenordolny = \relative f {
   % w komentarzach to, czego nie potrafię
   % w danym takcie zrealizować
+  \set Timing.beamExceptions = #'()
   r4
   b4.\mp b b4
   b8 c c2.
@@ -65,6 +66,7 @@ tenordolny = \relative f {
   f2.\fermata\> \bar "||"
   \key as \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
   R1\!
   c'4.\mp c c4
   c8 des des2.
