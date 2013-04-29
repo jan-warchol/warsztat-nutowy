@@ -114,28 +114,28 @@ soprantekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione do partii
   % dolnego głosu (jeśli jest podział).
 
-  Can -- ta -- te, can -- ta -- te
+  Can -- ta -- te, can -- ta -- te __
   can -- ti -- cum no -- vum.
-  Can -- ta -- te, can -- ta -- te, can -- ta -- te,
-  can -- ta -- te can -- ti -- cum no -- vum:
-  et be -- ne -- di -- ci -- te
-  no -- mi -- ni e -- ius
-  qui -- a mi -- ra -- bi -- li -- a,
+  Can -- ta -- te, __ can -- ta -- te, __ can -- ta -- te,
+  can -- ta -- te __ can -- ti -- cum no -- vum:
+  et be -- ne -- di -- ci -- te __
+  no -- mi -- ni e -- ius __
+  qui -- a mi -- ra -- bi -- li -- a, __
   qui -- a mi -- ra -- bi -- li -- a
-  fe -- cit,
-  et be -- ne -- di -- ci -- te
-  no -- mi -- ni e -- ius,
+  fe -- cit, __
+  et be -- ne -- di -- ci -- te __
+  no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a,
-  qui -- a mi -- ra -- bi -- li -- a fe -- cit.
-  Can -- ta -- te, can -- ta -- te
+  qui -- a mi -- ra -- bi -- li -- a fe -- cit. __
+  Can -- ta -- te, can -- ta -- te __
   can -- ti -- cum no -- vum,
-  can -- ta -- te,
-  can -- ta -- te, can -- ta -- te, can -- ta -- te
+  can -- ta -- te, __
+  can -- ta -- te, __ can -- ta -- te, can -- ta -- te
   can -- ti -- cum no -- vum.
-  Can -- ta -- te et ex -- sul -- ta -- te,
-  psa -- li -- te ci -- tha -- ra vo -- ce psal -- mi.
+  Can -- ta -- te __ et ex -- sul -- ta -- te, __
+  psa -- li -- te __ ci -- tha -- ra __ vo -- ce psal -- mi.
   Can -- ta -- te, can -- ta -- te Do -- mi -- no,
-  can -- ti -- cum no -- vum.
+  can -- ti -- cum no -- vum. __
 }
 
 piecioliniasopranu = \new Staff \with { \consists "Ambitus_engraver" } {
