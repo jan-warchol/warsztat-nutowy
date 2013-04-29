@@ -21,12 +21,12 @@
   \time 4/4
   \tempo "Con moto e ritmico" 4 = 112
   \partial 4
-  
+
   % UWAGA!
   % na razie przepisujcie tylko dolne głosy
   % (tzn. wpiszcie to, co śpiewają soprany drugie,
   % alty 2gie, tenory 2 i basy 2). Górne głosy będą później.
-  
+
   % w komentarzach to, czego nie potrafię
   % w danym takcie zrealizować
   r4
@@ -34,7 +34,7 @@
   b8 c c2.
   d4. d d4
   d8 b b2.
-  c4\mf c4. c 
+  c4\mf c4. c
   b4 b4. b
   bes4 bes4. bes
   a a8~ a2
@@ -43,7 +43,7 @@
   d4. d d4
   d8->( b) b b->~ b2
   c4 c4. c
-  
+
   %takt 14
   b4 b4. b
   a4 a4. a
@@ -66,7 +66,7 @@
   c4. c8 c4~
   c2.~
   c\>
-  
+
   %takt 35
   b4\mf b e
   fis fis2~
@@ -92,7 +92,7 @@
   c4.\f c c4
   c8->( des) des des->~ des2
   es4. es es4
-  
+
   %takt 57
   es8->( c) c c->~ c2
   des4 des4. des
@@ -119,7 +119,7 @@
   \time 3/4
   f4.-> f->~
   << f2.{s4\< s s\!} >> \bar "|."
-  
+
 }
 \addlyrics {
   Can -- ta -- te Do -- mi -- no,
@@ -129,16 +129,16 @@
   can -- ta -- te
   Do -- mi -- no, __
   can -- ta -- te,
- 
- %takt 14
+
+  %takt 14
   can -- ta -- te can -- ti -- cum no -- vum:
   et be -- ne  -- di -- ci -- te __
   no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a,
   qui -- a mi -- ra -- bi -- li -- a fe -- cit, __
   et be -- ne  -- di -- ci -- te __
- 
- %takt 35
+
+  %takt 35
   no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a, __
   qui -- a mi -- ra -- bi -- li -- a fe -- cit. __
@@ -147,7 +147,7 @@
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum,
   can -- ta -- te Do -- mi -- no, __
   can -- ta -- te
-  
+
   %takt 57
   Do -- mi -- no, __
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.

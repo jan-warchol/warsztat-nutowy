@@ -42,13 +42,13 @@ podzial =
        #music
      }
    #})
-  
+
 altII = \relative f' {
-  
+
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
-  
-  d4\mp 
+
+  d4\mp
   a'4. g8~ g2
   e4 g8 g4. d4
   a'4. g8~g2
@@ -61,7 +61,7 @@ altII = \relative f' {
   e4 g8 g4. d4 a'4. g8~ g2
   fis4 g8 g4. g4
   d4. d e4
-  
+
   %takt 14
   d4. d8~ d2
   d4. d c4
@@ -84,7 +84,7 @@ altII = \relative f' {
   R2.*2\!
   b4\mp b b
   c4. c8 c4~
-  
+
   %takt 35
   c2.~
   c\>
@@ -110,7 +110,7 @@ altII = \relative f' {
   bes'4. as8~as2
   f4 as8 as4. es4
   bes'4. as8~ as2
-  
+
   %takt 57
   g4 as8 as4. as4
   es4. es f4
@@ -140,7 +140,7 @@ altII = \relative f' {
 
 altI = \relative f' {
   \unisono{
-    d4\mp 
+    d4\mp
     a'4. g8~ g2
     e4 g8 g4. d4
     a'4. g8~g2
@@ -153,7 +153,7 @@ altI = \relative f' {
     e4 g8 g4. d4 a'4. g8~ g2
     fis4 g8 g4. g4
     d4. d e4
-    
+
     %takt 14
     d4. d8~ d2
     d4. d c4
@@ -178,7 +178,7 @@ altI = \relative f' {
     R2.*2\!
     e4\mp e e
     e4. e8 e4~
-    
+
     %takt 35
     e2.~
     e\>
@@ -206,7 +206,7 @@ altI = \relative f' {
     bes'4. as8~as2
     f4 as8 as4. es4
     bes'4. as8~ as2
-    
+
     %takt 57
     g4 as8 as4. as4
     es4. es f4
@@ -253,7 +253,7 @@ altI = \relative f' {
   \dynamicUp
   \tupletUp
   \clef treble
-  
+
   \key g \major
   \time 4/4
   \tempo "Con moto e ritmico" 4 = 112
@@ -271,7 +271,7 @@ altI = \relative f' {
   Can -- ta -- te __ Do -- mi -- no,
   can -- ta -- te __ Do -- mi -- no,
   can -- ta -- te, can -- ta -- te __
-  
+
   %takt 15
   can -- ti -- cum no -- vum:
   et be -- ne -- di -- ci -- te __
@@ -279,7 +279,7 @@ altI = \relative f' {
   qui -- a mi -- ra -- bi -- li -- a, __
   qui -- a mi -- ra -- bi -- li -- a fe -- cit, __
   et be -- ne -- di -- ci -- te __
-  
+
   %takt 37
   no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a,
@@ -290,14 +290,14 @@ altI = \relative f' {
   can -- ti -- cum no -- vum,
   can -- ta -- te __ Do -- mi -- no,
   can -- ta -- te __
-  
+
   %takt 57
   Do -- mi -- no,
   can -- ta -- te, can -- ta -- te __
   can -- ti -- cum no -- vum.
   Can -- ta -- te __
   et ex -- sul -- ta -- te, __
-  psa -- li -- te __ ci -- tha -- ra __ 
+  psa -- li -- te __ ci -- tha -- ra __
   vo -- ce psal -- mi.
   Can -- ta -- te, can -- ta -- te,
   can -- ta -- te Do -- mi -- no

@@ -73,68 +73,68 @@ basII = \relative f {
   e2. % decrescendo
   e4\mf e gis % cresc
   a a2~
-a4 gis e
-e8 e e e e4
-e2 b4
-a8 a a a a4
-b2 b4~
-b2. % decrescendo
-e4\mp e e
-e4. e8 e4~
-e2.~
-e2. % decrescendo
+  a4 gis e
+  e8 e e e e4
+  e2 b4
+  a8 a a a a4
+  b2 b4~
+  b2. % decrescendo
+  e4\mp e e
+  e4. e8 e4~
+  e2.~
+  e2. % decrescendo
 
-%takt 35
-e4\mf e g
-a a2~
-a2.~
-a2. % crescendo
-gis2\f e4
-e8 e e e e4~
-e e b
-a8 a a a a4 % decrescendo
-as\p as2~
-as2.\fermata % decrescendo
-\key as \major
-\time 4/4
-R1
-as4.\mp as as4
-as8 bes bes2.
-c4. c c4
-f8 f f2.
-ges4 ges4. ges
-f4 f4. f
-fes4 fes4. fes
-es4. es8~ es2
-as,4.\f as as4 % piu
-as8->\melisma bes\melismaEnd bes bes~-> bes2 % łuczek
-c4. c c4
+  %takt 35
+  e4\mf e g
+  a a2~
+  a2.~
+  a2. % crescendo
+  gis2\f e4
+  e8 e e e e4~
+  e e b
+  a8 a a a a4 % decrescendo
+  as\p as2~
+  as2.\fermata % decrescendo
+  \key as \major
+  \time 4/4
+  R1
+  as4.\mp as as4
+  as8 bes bes2.
+  c4. c c4
+  f8 f f2.
+  ges4 ges4. ges
+  f4 f4. f
+  fes4 fes4. fes
+  es4. es8~ es2
+  as,4.\f as as4 % piu
+  as8->\melisma bes\melismaEnd bes bes~-> bes2 % łuczek
+  c4. c c4
 
-%takt 57
-f-> f8 f->~f2
-f4 f4. f
-es4 es4. es
-des4 des4. des
-c4. c8~ c2
-\key bes \major
-bes4.->\f bes-> bes4->
-bes8-> c c2.
-d4.-> d-> d4->
-g8-> g g2. %oddech?
-\time 3/4
-as8 as4 as8 as4
-g8 g4 g8 g4
-ges8 ges4. ges4
-f4.\p f4.\fermata
-\time 4/4
-f->\p f-- f4-- % sub, cresc
-f4.->\mp f-- f4--
-bes4.->\mf bes-- bes4--\f
-bes8-> g g2.\fermata % crescendo, oddech?
-c4.->\ff c-> c4->
-\time 3/4
-c4.-> c->
-f,-> f-> % crescendo
+  %takt 57
+  f-> f8 f->~f2
+  f4 f4. f
+  es4 es4. es
+  des4 des4. des
+  c4. c8~ c2
+  \key bes \major
+  bes4.->\f bes-> bes4->
+  bes8-> c c2.
+  d4.-> d-> d4->
+  g8-> g g2. %oddech?
+  \time 3/4
+  as8 as4 as8 as4
+  g8 g4 g8 g4
+  ges8 ges4. ges4
+  f4.\p f4.\fermata
+  \time 4/4
+  f->\p f-- f4-- % sub, cresc
+  f4.->\mp f-- f4--
+  bes4.->\mf bes-- bes4--\f
+  bes8-> g g2.\fermata % crescendo, oddech?
+  c4.->\ff c-> c4->
+  \time 3/4
+  c4.-> c->
+  f,-> f-> % crescendo
 }
 
 basI = \relative f {
@@ -161,7 +161,7 @@ basI = \relative f {
   \time 4/4
   \tempo "Con moto e ritmico" 4 = 112
   \partial 4
-  
+
   <<
     \basI
     \basII
@@ -176,16 +176,16 @@ basI = \relative f {
   can -- ta -- te
   Do -- mi -- no, __
   can -- ta -- te,
- 
- %takt 14
+
+  %takt 14
   can -- ta -- te can -- ti -- cum no -- vum:
   et be -- ne  -- di -- ci -- te __
   no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a,
   qui -- a mi -- ra -- bi -- li -- a fe -- cit, __
   et be -- ne  -- di -- ci -- te __
- 
- %takt 35
+
+  %takt 35
   no -- mi -- ni e -- ius, __
   qui -- a mi -- ra -- bi -- li -- a, __
   qui -- a mi -- ra -- bi -- li -- a fe -- cit. __
@@ -194,7 +194,7 @@ basI = \relative f {
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum,
   can -- ta -- te Do -- mi -- no, __
   can -- ta -- te
-  
+
   %takt 57
   Do -- mi -- no, __
   can -- ta -- te, can -- ta -- te can -- ti -- cum no -- vum.
