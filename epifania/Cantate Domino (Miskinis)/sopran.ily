@@ -24,8 +24,8 @@ soprandolny = \relative f' {
   d4. d8~ d2
   d4. d4. c4
   d4 e2. \<
+  \bar "||"
   \time 3/4
-  % nie pamiętam jak się robiło podwójną kreskę taktową
   gis,4 \p gis4 gis4
   fis4. fis8 fis4~
   fis2.~
@@ -34,14 +34,12 @@ soprandolny = \relative f' {
   c4 c2~
   c2.~
   c2. \<
-  % znaczek się zrobił jakiś wielki
-  b2 ^\markup{\italic{leggiero} } gis4
+  b2\! ^\markup{\italic{leggiero} } gis4
   gis8 ^\markup{\italic{dim. poco a poco} } gis8 gis8 gis8 fis4~
   fis4 fis 4 gis4
   a8 a8 a8 a8 a4
   gis4 gis2~ gis2. \>
-  % gis czy g??
-  R R
+  R\! R
   gis4 \mp gis4 gis4
   fis4. fis8 fis4~
   fis2.~ fis2. \>
@@ -56,8 +54,8 @@ soprandolny = \relative f' {
   \key as \major
   \time 4/4
   \tempo "Tempo I"
-  % kreska taktowa
-  R R R R r2 r4 des,4 \mf
+  R1*3\!
+  r2 r4 des,4 \mf
   es'4. es4. f4
   es4. es8~ es2
   es4. es4. des4
@@ -77,8 +75,7 @@ soprandolny = \relative f' {
   c'4. -> bes8~ bes2
   \key bes \major
   \time 3/4
-  \tempo "meno mosso"
-  % ćwierćnutka =92
+  \tempo "meno mosso" 4=92
   r4 ^\markup{\italic{meno} \dynamic f} f'4 f8 f8~
   f4 f4 \mf f8 ^\markup{\italic{dim.} } f8~
   f4 f4 es4
