@@ -54,7 +54,7 @@ soprandolny = \relative f' {
   \key as \major
   \time 4/4
   \tempo "Tempo I"
-  R1*3\!
+  R1*4\!
   r2 r4 des,4 \mf
   es'4. es4. f4
   es4. es8~ es2
@@ -73,7 +73,6 @@ soprandolny = \relative f' {
   c'4. -> bes8~ bes2~
   bes4 f4 f4 f4
   c'4. -> bes8~ bes2
-  \key bes \major
   \time 3/4
   \tempo "meno mosso" 4=92
   r4 ^\markup{\italic{meno} \dynamic f} f'4 f8 f8~
