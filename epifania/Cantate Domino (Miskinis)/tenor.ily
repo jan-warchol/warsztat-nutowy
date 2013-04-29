@@ -157,7 +157,7 @@ tenortekst = \lyricmode {
   et psa -- li -- te in ci -- tha -- ra
   et vo -- ce psal -- mi.
   Can -- ta -- te,
-  can -- ta -- te Do -- mi --no
+  can -- ta -- te Do -- mi -- no
   can -- ti -- cum no -- vum. __
 }
 

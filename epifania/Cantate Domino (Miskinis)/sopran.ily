@@ -23,8 +23,9 @@ soprandolny = \relative f' {
   d'4. ^\markup{\italic{cresc. poco a poco} }d4. e4
   d4. d8~ d2
   d4. d4. c4
-  d4 e2. \<
+  d4 e2. \< \breathe
   \bar "||"
+  \tempo "più lento e tranquillo" 4=76
   \time 3/4
   gis,4 \p gis4 gis4
   fis4. fis8 fis4~
@@ -78,18 +79,18 @@ soprandolny = \relative f' {
   r4 ^\markup{\italic{meno} \dynamic f} f'4 f8 f8~
   f4 f4 \mf f8 ^\markup{\italic{dim.} } f8~
   f4 f4 es4
-  f4 \p c2
+  f4 \p c2\fermata
   \time 4/4
   \tempo "Tempo I"
   R1
   g4. ->\mp g4. -- g4 --
   c4.-> \mf c4. -- c4 --
-  c8 -> \f f8 f2. \fermata \< \ff
+  c8 -> \f f8 ^\markup \italic allarg. f2. \fermata \<
   \tempo "a tempo"
-  c4. -> c4. -> c4 ->
+  c4. \ff -> c4. -> c4 ->
   \time 3/4
-  c4. -> c4. ~ ->
-  c2. \< ^\markup{\italic{non rit.} }
+  c4. -> <c f>4. ~ ->
+  << <c f>2.^\markup{\italic{non rit.} } {s4\< s s\!}>>
 }
 
 

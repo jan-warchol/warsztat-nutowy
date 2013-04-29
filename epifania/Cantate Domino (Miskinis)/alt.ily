@@ -31,7 +31,7 @@ altdolny = \relative f' {
   %takt 14
   d4. d8~ d2
   d4. d c4
-  d e2.\fermata\< \breathe \bar "||"
+  d e2.\< \breathe \bar "||"
   \time 3/4
   b4\p b b
   c4. c8 c4~
@@ -86,7 +86,7 @@ altdolny = \relative f' {
   \key bes \major
   c'4. bes8~ bes2~
   bes4 f f f c'4. bes8~ bes2~
-  bes1\fermata \bar "||"
+  bes1 \bar "||"
   \time 3/4
   r4 f f8 f~
   f4 f f8\dim f~\!

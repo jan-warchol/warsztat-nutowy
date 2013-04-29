@@ -12,6 +12,11 @@
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
+% TODO:
+% move piuf
+% beamexception
+% numery taktów
+
 \header {
 }
 
