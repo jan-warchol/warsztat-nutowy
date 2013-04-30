@@ -58,7 +58,8 @@ soprandolny = \relative f' {
   \break
   \key as \major
   \time 4/4
-  \tempo "Tempo I"
+  \once \set Score.tempoHideNote = ##t
+  \tempo "Tempo I" 4 = 112
   \set Timing.beamExceptions = #'()
   R1*4\!
   r2 r4 es4 \mf
