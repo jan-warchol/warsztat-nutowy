@@ -3,7 +3,7 @@
 % -*- master: ./pomocnicze/alt-solo.ly;
 
 % Uwaga! z przyczyn technicznych przed skompilowaniem
-% partii trzeba zapisać plik.
+% partii trzeba zapisywać plik.
 
 % Jeśli ten głos nie dzieli się na dolny i górny,
 % wpisz całą partię tutaj a zmiennej "altgorny"
@@ -40,12 +40,13 @@ altgorny = \relative f' {
 
 
 alttekst = \lyricmode {
-  % Tu wpisz libretto. Będzie ono przyczepione do partii
-  % dolnego głosu (jeśli jest podział).
-  
+  % Tu wpisz libretto. Będzie ono przyczepione
+  % do partii dolnego głosu (jeśli jest podział).
+
 }
 
-piecioliniaaltu = \new Staff \with { \consists "Ambitus_engraver" } {
+piecioliniaaltu =
+\new Staff \with { \consists "Ambitus_engraver" } {
   \tag #'solo {
     \set Staff.midiInstrument = "clarinet"
     \set Staff.midiMinimumVolume = #0.6
