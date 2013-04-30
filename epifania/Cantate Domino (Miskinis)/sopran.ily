@@ -61,14 +61,14 @@ soprandolny = \relative f' {
   \tempo "Tempo I"
   \set Timing.beamExceptions = #'()
   R1*4\!
-  r2 r4 es,4 \mf
+  r2 r4 es4 \mf
   es'4. es4. f4
   es4. es8~ es2
   es4. es4. des4
   es4 bes2.
   r2 r4 es,4 \piuf
   bes'4. as8~ as2~
-  as2. es,4
+  as2. es4
   bes'4. as8~ as4 as4
   es'4. es4. f4
   es4. es8~ es2
