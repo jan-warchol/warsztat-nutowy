@@ -1,8 +1,11 @@
 \version "2.16.1"
 
-bas = { \include "../bas.ily" }
+\include "../pomocnicze/specjalna-dynamika.ily"
+\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../bas.ily"
 
 \score {
-  \keepWithTag #'solo \bas
+  { \klarnet \piecioliniabasu }
   \midi {}
 }

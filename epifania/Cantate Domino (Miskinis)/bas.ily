@@ -272,17 +272,7 @@ bastekst = \lyricmode {
   can -- ti -- cum no -- vum, no -- vum.
 }
 
-piecioliniabasu = \new Staff \with { \consists "Ambitus_engraver" } {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
+piecioliniabasu = {
   \set Staff.instrumentName = "B "
   \set Staff.shortInstrumentName = "B "
   \dynamicUp

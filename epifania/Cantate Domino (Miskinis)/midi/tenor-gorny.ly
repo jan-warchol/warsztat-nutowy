@@ -3,9 +3,9 @@
 \include "../pomocnicze/specjalna-dynamika.ily"
 \include "../pomocnicze/dzielenie-głosów.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
-\include "../sopran.ily"
+\include "../tenor.ily"
 
 \score {
-  { \klarnet \piecioliniasopranu }
+  { \klarnet \tenorgorny }
   \midi {}
 }

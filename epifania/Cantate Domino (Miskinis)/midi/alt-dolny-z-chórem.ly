@@ -11,7 +11,8 @@
 \score {
   <<
     { \pianino \piecioliniasopranu }
-    { \pianino \piecioliniaaltu }
+    \new Staff { \klarnet \altdolny }
+    \new Staff { \pianino \altgorny }
     { \pianino \piecioliniatenoru }
     { \pianino \piecioliniabasu }
   >>
