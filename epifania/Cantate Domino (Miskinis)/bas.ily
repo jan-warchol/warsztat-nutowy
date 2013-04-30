@@ -53,7 +53,7 @@ basdolny = \relative f {
   e2. % decrescendo
 
   %takt 35
-  e4\mf e g
+  e4\mf e gis
   a a2~
   a2.~
   a2. % crescendo
