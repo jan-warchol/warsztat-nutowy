@@ -183,7 +183,7 @@ basgorny = \relative f {
     bes8 as as2.
     bes 4 bes4. bes |
     a4 a4. a |
-    as4 as4. as |
+    as!4 as4. as |
     g g8~ g2 |
     es4. \piuf es es4^\markup \italic più |
     es8->( f) f f~-> f2 |
