@@ -81,10 +81,11 @@
   a2 e
   g g
   fis f
-  \time 5/4
-  e4( fis!4. a8 b2)
   \time 6/4
-  cis1\fermata \bar "|."
+  e2( fis!4. a8 b2)
+  % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
+  % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
+  cis1.\fermata \bar "|."
   
 }
 \addlyrics {

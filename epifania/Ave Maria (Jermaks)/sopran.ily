@@ -68,8 +68,10 @@
   \tempo "Meno mosso"  e'4 (^\p  a' ) \melismaEnd e'2 ^\<
   es'4 (\melisma a' ^\!) \melismaEnd es'2
   d'4 (\melisma a') ^\> \melismaEnd d'2
-  \time 5/4 cis'4 ^\! ( \melisma d'4. ^\< fis'8  a'4 ^\! cis''4) \melismaEnd %w orginale chyba bład bo nie mozna sie doliczyc nutek 
-  \time 6/4 b'2 (^\> \melisma a'1 ^\! \fermata )\melismaEnd \bar "|." %położenie fermaty jak dla s2 , trzeba dodać ostatni dzwiek s1
+  \time 6/4 cis'2 ^\! ( \melisma d'4. ^\< fis'8  a'4 ^\! cis''4) \melismaEnd
+  % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
+  % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
+  b'2 (^\> \melisma a'1 ^\! \fermata )\melismaEnd \bar "|." %położenie fermaty jak dla s2 , trzeba dodać ostatni dzwiek s1
 }
 \addlyrics {
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __

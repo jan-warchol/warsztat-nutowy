@@ -65,8 +65,10 @@
   cis'2 cis'
   c' c'
   b b
-  \time 5/4 a4 (\melisma b4. d'8 fis'2) \melismaEnd
-  \time 6/4 fis' (\melisma e'1\fermata  )  \melismaEnd \bar "|."
+  \time 6/4 a2 (\melisma b4. d'8 fis'2) \melismaEnd
+  % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
+  % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
+  fis' (\melisma e'1\fermata  )  \melismaEnd \bar "|."
 }
 \addlyrics {
 
