@@ -74,7 +74,7 @@ tenordolny = \relative f {
   es8 c c2.
   des4 des4. des
   c4 c4. c
-  c4 c4. c
+  ces4 ces4. ces
   bes4. bes8~ bes2
   c4.\f c c4
   c8->( des) des des->~ des2
