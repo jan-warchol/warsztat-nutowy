@@ -11,6 +11,7 @@ alt = {
   \override DynamicText #'stencil = ##f
   \override DynamicTextSpanner #'stencil = ##f
   \override TextScript #'stencil = ##f
+  \set Timing.beamExceptions = #'()
 
   % oznaczenia dynamiczne w parti sopranu
   cis'2 cis'4. cis'8

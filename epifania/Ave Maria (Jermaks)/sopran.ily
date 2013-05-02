@@ -8,6 +8,7 @@ sopran = {
   \key a \major
   \time 4/4
   \voiceOne
+  \set Timing.beamExceptions = #'()
 
 
   %partia sopranów
@@ -53,7 +54,7 @@ sopran = {
   e' ^\! fis'4 gis' ^\<
   fis'4. ( \melisma   gis'8^\!) \melismaEnd a'2
   b'2 ^\cresc cis''4 dis''4
-  cis''4. (^\< \melisma dis''8 ) \melismaEnd e''2 ^\!
+  cis''4. (^\< \melisma dis''8 ) \melismaEnd e''2
   fis''4. ^\f gis''8 fis''4 (\melisma e'')\melismaEnd
   dis'' cis''8 b' ^\> a'4 (\melisma b') \melismaEnd
   << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Piu sosten." gis'4 ^\!

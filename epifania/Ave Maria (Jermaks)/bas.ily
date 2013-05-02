@@ -14,6 +14,7 @@ bas = \relative f {
   \override DynamicText #'stencil = ##f
   \override DynamicTextSpanner #'stencil = ##f
   \override TextScript #'stencil = ##f
+  \set Timing.beamExceptions = #'()
 
   % Prawdopodobnie należałoby przenieść część
   % (całość?) dynamiki z górnej pięciolinii, ale nie
