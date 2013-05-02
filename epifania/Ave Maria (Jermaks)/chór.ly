@@ -9,18 +9,35 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "epifanijny-styl-nagłówków.ily"
+  \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
 \header {
 }
 
+\include "sopran.ily"
+\include "alt.ily"
+\include "tenor.ily"
+\include "bas.ily"
+
 \score {
   \new ChoirStaff <<
-    \include "sopran.ily"
-    \include "alt.ily"
-    \include "tenor.ily"
-    \include "bas.ily"
+    \new Staff = panie <<
+      \new Voice = sopran {
+        \sopran
+      }
+      \new Voice = alt {
+        \alt
+      }
+    >>
+    \new Staff = panowie <<
+      \new Voice = tenor {
+        \tenor
+      }
+      \new Voice = bas {
+        \bas
+      }
+    >>
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu

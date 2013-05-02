@@ -1,18 +1,6 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
+tenor = \relative f {
   \dynamicUp
   \tupletUp
   \clef "treble_8"
@@ -22,12 +10,13 @@
   % podaj metrum, na przykład \time 4/4
   \time 4/4
   % wpisz nuty:
-  
+  \voiceOne
+
   % Prawdopodobnie należałoby przenieść część
   % (całość?) dynamiki z górnej pięciolinii, ale nie
   % jestem tego pewna, więc umieszczam tylko
   % tę szczątkową z dolnej.
-  
+
   a2\p e4. a8
   g2 g
   fis f4. f8
@@ -38,7 +27,7 @@
   bis dis8 dis bis bis dis4
   e\mp( dis8 cis) b4 a
   gis(a8) b gis4.( b8)
-  
+
   % takt 11.
   cis2 dis4 cis
   b( fis8 gis) a2
@@ -51,9 +40,9 @@
   cis( b8 a) gis4 e
   e( fis8 gis fis2)
   gis1\mp
-  
+
   % takt 22.
-   a2\mp e4. a8
+  a2\mp e4. a8
   g2 g
   fis f
   e2 a
@@ -63,7 +52,7 @@
   bis dis8 dis bis4 dis
   e\mp(dis8 cis) b4 a
   gis( a8 b) gis4.( b8)
-  
+
   % takt 32.
   cis2 dis4( cis)
   b4( fis8) gis a2
@@ -76,7 +65,7 @@
   cis( b8 a) gis4 e
   e( fis8 gis fis2)
   gis1
-  
+
   % takt 42.
   a2 e
   g g
@@ -86,13 +75,13 @@
   % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
   cis1.\fermata \bar "|."
-  
+
 }
 \addlyrics {
-  
+
   % wyrzuciłam przedłużenie ostatniej sylaby (__)
   % w przypadkach, gdy odnosiło się do basa.
-  
+
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na,
   Do -- mi -- nus te -- cum, __
   be -- ne -- di -- cta tu,
@@ -102,7 +91,7 @@
   ven -- tris, fru -- ctus __ ven -- tris
   tu -- i, Je -- su, tu -- i,
   Je -- su, __ tu -- i, Je -- su.
-  
+
   % takt 22.
   San -- cta Ma -- ri -- a,
   ma -- ter De -- i,
@@ -117,5 +106,5 @@
   mor -- tis no -- strae.
   A -- men, a -- men,
   a -- men, a -- men.
-  
+
 }

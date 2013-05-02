@@ -1,18 +1,6 @@
 \version "2.16.1"
 
-\new Staff \with { \consists "Ambitus_engraver" } \relative f {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "B "
-  \set Staff.shortInstrumentName = "B "
+bas = \relative f {
   \dynamicUp
   \tupletUp
   \clef bass
@@ -21,12 +9,13 @@
   % podaj metrum, na przykład \time 4/4
   \time 4/4
   % wpisz nuty:
-  
+  \voiceTwo
+
   % Prawdopodobnie należałoby przenieść część
   % (całość?) dynamiki z górnej pięciolinii, ale nie
   % jestem tego pewna, więc umieszczam tylko
   % tę szczątkową z dolnej.
-  
+
   a,2\p a4. a8
   a2 a
   a a4. a8
@@ -37,7 +26,7 @@
   gis4 fis8 fis dis dis gis,4
   a2\mp b4 cis
   e4. e8 gis4( gis,)
-  
+
   % takt 11.
   fis( gis8 a) gis4 a
   b4.\melisma cis8\melismaEnd dis4( b)
@@ -50,9 +39,9 @@
   cis,2 cis4 cis8\melisma b\melismaEnd
   a2( b)
   e,1\mp % !!! tu się dzielą basy, górny ma b !!!
-  
+
   % takt 22.
-   a2\mp a4. a8
+  a2\mp a4. a8
   a2 a
   a a
   a2 a'4.( fis8)
@@ -62,7 +51,7 @@
   gis4 fis8 fis dis4 gis,4
   a2\mp b4 cis
   e2 gis4( gis,)
-  
+
   % takt 32.
   fis( gis8 a) gis4( a)
   b4. cis8 dis4( b)
@@ -75,7 +64,7 @@
   cis,2 cis4 cis8\melisma b\melismaEnd
   a2( b)
   e,1 % !!! tu się dzielą basy, górny ma b !!!
-  
+
   % takt 42.
   a2 a
   a a
@@ -83,13 +72,13 @@
   \time 6/4
   a1.
   a\fermata \bar "|." % !!! tu się dzielą basy, górny ma e !!!
-  
+
 }
 \addlyrics {
-  
+
   % wyrzuciłam przedłużenie ostatniej sylaby (__)
   % w przypadkach, gdy odnosiło się do tenora.
-  
+
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta __ tu,
@@ -99,7 +88,7 @@
   ven -- tris, __ fru -- ctus __ ven -- tris __
   tu -- i, Je -- su, tu -- i,
   Je -- su, tu -- i, __ Je -- su.
-  
+
   % takt 22.
   San -- cta Ma -- ri -- a,
   ma -- ter De -- i, __
@@ -114,5 +103,5 @@
   mor -- tis __ no -- strae.
   A -- men, a -- men,
   a -- men, a -- men.
-  
+
 }
