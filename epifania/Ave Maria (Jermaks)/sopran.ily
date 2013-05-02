@@ -63,7 +63,8 @@ sopran = {
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
   b'2 (^\> \melisma a'1 ^\! \fermata )\melismaEnd \bar "|." %położenie fermaty jak dla s2 , trzeba dodać ostatni dzwiek s1
 }
-\addlyrics {
+
+soprantekst = \lyricmode {
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu __

@@ -30,6 +30,7 @@
         \alt
       }
     >>
+    \new Lyrics \lyricsto sopran \soprantekst
     \new Staff = panowie <<
       \new Voice = tenor {
         \tenor
@@ -38,6 +39,7 @@
         \bas
       }
     >>
+    \new Lyrics \lyricsto bas \bastekst
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu

@@ -59,8 +59,8 @@ alt = {
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
   fis' (\melisma e'1\fermata  )  \melismaEnd \bar "|."
 }
-\addlyrics {
 
+alttekst = \lyricmode {
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __
   Do -- mi -- nus te -- cum,
   be -- ne -- di -- cta tu __

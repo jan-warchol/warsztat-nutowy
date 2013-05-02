@@ -77,8 +77,7 @@ tenor = \relative f {
   cis1.\fermata \bar "|."
 
 }
-\addlyrics {
-
+tenortext = \lyricmode {
   % wyrzuciłam przedłużenie ostatniej sylaby (__)
   % w przypadkach, gdy odnosiło się do basa.
 

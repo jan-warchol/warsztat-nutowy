@@ -74,8 +74,8 @@ bas = \relative f {
   a\fermata \bar "|." % !!! tu się dzielą basy, górny ma e !!!
 
 }
-\addlyrics {
 
+bastekst = \lyricmode {
   % wyrzuciłam przedłużenie ostatniej sylaby (__)
   % w przypadkach, gdy odnosiło się do tenora.
 
