@@ -31,7 +31,7 @@ alt = {
   gis' fis'
   e'4. ( \melisma fis'8 ) \melismaEnd gis'2
   fis'4 ( \melisma a'8 ) \melismaEnd b' a'4 (\melisma gis' ) \melismaEnd
-  gis'8 \melisma fis' \melismaEnd e' fis' fis'4 (\melisma dis' ) \melismaEnd
+  gis'8( \melisma fis') \melismaEnd e' fis' fis'4 (\melisma dis' ) \melismaEnd
   e'2 e'4 cis'
   cis'2 dis'
   cis'4 ( \melisma b ) \melismaEnd e'2
