@@ -10,6 +10,10 @@ bas = \relative f {
   \time 4/4
   % wpisz nuty:
   \voiceTwo
+  \override Hairpin #'stencil = ##f
+  \override DynamicText #'stencil = ##f
+  \override DynamicTextSpanner #'stencil = ##f
+  \override TextScript #'stencil = ##f
 
   % Prawdopodobnie należałoby przenieść część
   % (całość?) dynamiki z górnej pięciolinii, ale nie

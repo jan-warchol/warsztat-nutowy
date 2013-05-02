@@ -7,6 +7,10 @@ alt = {
   \key a \major
   \time 4/4
   \voiceTwo
+  \override Hairpin #'stencil = ##f
+  \override DynamicText #'stencil = ##f
+  \override DynamicTextSpanner #'stencil = ##f
+  \override TextScript #'stencil = ##f
 
   % oznaczenia dynamiczne w parti sopranu
   cis'2 cis'4. cis'8
