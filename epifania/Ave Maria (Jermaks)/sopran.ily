@@ -61,7 +61,7 @@ sopran = {
   \time 6/4 cis'2 ^\! ( \melisma d'4. ^\< fis'8  a'4 ^\! cis''4) \melismaEnd
   % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
-  b'2 (^\> \melisma a'1 ^\! \fermata )\melismaEnd \bar "|." %położenie fermaty jak dla s2 , trzeba dodać ostatni dzwiek s1
+  e''1.\fermata \bar "|."
 }
 
 soprantekst = \lyricmode {

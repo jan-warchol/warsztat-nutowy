@@ -61,7 +61,11 @@ alt = {
   \time 6/4 a2 (\melisma b4. d'8 fis'2) \melismaEnd
   % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
-  fis' (\melisma e'1\fermata  )  \melismaEnd \bar "|."
+  <<
+    { b'2 (^\> \melisma a'1 ^\! \fermata )\melismaEnd }
+    { fis'2 (\melisma e'1\fermata  )  \melismaEnd }
+  >>
+  \bar "|."
 }
 
 alttekst = \lyricmode {
