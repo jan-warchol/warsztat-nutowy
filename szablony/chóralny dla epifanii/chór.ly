@@ -13,6 +13,20 @@
 }
 
 \header {
+  %title =
+  %composer =
+  %kompozytor-krotki =
+  %adres-biblijny =
+  %przygotowanie-nut = \markup \column \right-align {
+  %  \bold "przygotowanie nut:"
+  %  ""
+  %}
+  %tlumaczenie = \markup \typewriter \column {
+  %  \vspace #1
+  %  \bold
+  %  ""
+  %  ""
+  %}
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
