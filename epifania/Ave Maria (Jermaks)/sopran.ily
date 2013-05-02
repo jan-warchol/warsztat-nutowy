@@ -66,11 +66,11 @@ sopran = {
 
 soprantekst = \lyricmode {
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __
-  Do -- mi -- nus te -- cum,
+  Do -- mi -- \tweak #'X-offset #-1 nus te -- cum,
   be -- ne -- di -- cta tu __
   in mu -- li -- e -- ri -- bus,
   et be -- ne -- di -- ctus fru -- ctus
-  ven -- tris, fru -- ctus ven -- tris
+  ven -- \tweak #'X-offset #-1 tris, fru -- ctus ven -- \tweak #'X-offset #-1 tris
   tu -- i, Je -- su, tu -- i,
   Je -- su, tu -- i, Je -- su.
   San -- cta Ma -- ri -- a,
@@ -81,8 +81,8 @@ soprantekst = \lyricmode {
   pec -- ca -- to -- ri -- bus,
   nunc et in ho -- ra,
   nunc et in ho -- ra,
-  mor -- tis no -- strae,
-  mor -- tis no -- strae,
+  mor -- tis no -- \tweak #'X-offset #-1 strae,
+  \tweak #'X-offset #-1.2 mor -- \tweak #'X-offset #-0.5 tis no -- strae,
   mor -- tis no -- strae.
   A -- men, a -- men,
   a -- men, a -- men. __

@@ -103,7 +103,7 @@ bastekst = \lyricmode {
   nunc et in ho -- ra, __
   nunc et in ho -- ra __
   mor -- tis no -- strae,
-  mor -- tis no -- strae,
+  \tweak #'X-offset #-1.2 mor -- \tweak #'X-offset #-0.5 tis no -- strae,
   mor -- tis __ no -- strae.
   A -- men, a -- men,
   a -- men, a -- men.

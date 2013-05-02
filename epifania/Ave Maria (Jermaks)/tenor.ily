@@ -39,7 +39,7 @@ tenor = \relative f {
   a4.( b8) cis2
   dis cis4( b)
   a4.( b8) cis2
-  cis8\f\melisma b cis\melismaEnd dis cis2
+  cis8\f(\melisma b cis)\melismaEnd dis cis2
   b4 cis8 dis cis4( b)
   cis( b8 a) gis4 e
   e( fis8 gis fis2)
