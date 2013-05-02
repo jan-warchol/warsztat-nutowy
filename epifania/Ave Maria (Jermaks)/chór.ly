@@ -13,6 +13,36 @@
 }
 
 \header {
+  title = "Ave Maria"
+  composer = "Romualds Jermaks (*1931)"
+  adres-biblijny = "Łk 1,28"
+  kompozytor-krotki = "Jermaks"
+  przygotowanie-nut = \markup \right-column {
+    \bold "przygotowanie nut:"
+    "Dominika Kochanowska"
+    "Basia Mroczek"
+    "Janek Warchoł"
+    " "
+  }
+  tlumaczenie = \markup \scale #'(0.95 . 1) \typewriter \column {
+    " "
+    \bold
+    "Ave     Maria, gratia plena, Dominus   tecum;"
+    "Zdrowaś Mario, łaski  pełna, Pan     z Tobą;"
+    " "
+    \bold
+    "benedicta      tu in     mulieribus,  et benedictus    fructus ventris tui,     Iesus."
+    "błogosławionaś Ty między niewiastami, i  błogosławiony owoc    łona    Twojego, Jezus."
+    " "
+    \bold
+    "Sancta Maria, Mater Dei,  ora      pro nobis peccatoribus,"
+    "Święta Mario, Matko Boża, módl się za  nami  grzesznymi,"
+    " "
+    \bold
+    "nunc  et in hora    mortis  nostrae. Amen."
+    "teraz i  w  godzinę śmierci naszej.  Amen."
+    " "
+  }
 }
 
 \include "sopran.ily"
