@@ -32,8 +32,14 @@ sopran = {
   fis''4. ^\f ^\<   gis''8  fis''4 ( ^\! \melisma e'')\melismaEnd
   dis''  cis''8 b' a'4( ^\>\melisma b' ^\!) \melismaEnd
   cis''2 gis'4 ^\> gis' ^\!
-  gis'2 ( ^\< \melisma fis'4 ^\! ^\markup \italic "rit." b'^\> ^\mp  ) \melismaEnd
-  b'1
+  <<
+    {
+      gis'2 ( ^\< \melisma fis'4 ^\! ^\markup \italic "rit." b'^\> ^\mp  ) \melismaEnd
+      b'1
+    }
+    \new Lyrics \with { alignAboveContext = panie }
+    \lyricmode { Je1 -- su.1 }
+  >>
   \tempo "Tempo I"
   e'4 (^\! ^\mp ^\< \melisma cis'' ) \melismaEnd e'4. ^\! e'8
   es'4 (\melisma c'') \melismaEnd es'2
@@ -87,7 +93,8 @@ soprantekst = \lyricmode {
   et be -- ne -- di -- ctus fru -- ctus
   ven -- \tweak #'X-offset #-1 tris, fru -- ctus ven -- \tweak #'X-offset #-1 tris
   tu -- i, Je -- su, tu -- i,
-  Je -- su, tu -- i, Je -- su.
+  Je -- su, tu -- \set associatedVoice = alt i,
+  Je -- su, Je -- \set associatedVoice = sopran su.
   San -- cta Ma -- ri -- a,
   ma -- ter De -- i, __
   San -- cta Ma -- ri -- a,
