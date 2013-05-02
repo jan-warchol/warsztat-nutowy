@@ -38,6 +38,7 @@ bookTitleMarkup = \markup {
     \fill-line \general-align #Y #-1 {
       \fromproperty #'header:translation
       \right-column {
+        \italic \fromproperty #'header:adres-biblijny
         \italic \fromproperty #'header:przygotowanie-nut
         \bold \fromproperty #'header:composer
         \bold \fromproperty #'header:arranger
