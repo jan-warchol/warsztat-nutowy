@@ -24,7 +24,7 @@ basdolny = \relative f {
   es4 es4. es
   d4. d8~ d2
   g,4.\piuf g g4 % piu
-  g8->\melisma a\melismaEnd a a~-> a2 % łuczek
+  g8^>\melisma a\melismaEnd a a~^> a2 % łuczek
   b4. b b4
   e-> e8 e~-> e2
   e4 e4. e
@@ -75,7 +75,7 @@ basdolny = \relative f {
   fes4 fes4. fes
   es4. es8~ es2
   as,4.\f as as4 % piu
-  as8->\melisma bes\melismaEnd bes bes~-> bes2 % łuczek
+  as8^>\melisma bes\melismaEnd bes bes~-> bes2 % łuczek
   c4. c c4
 
   %takt 57
@@ -127,13 +127,17 @@ basgorny = \relative f {
     a4 \mf a4. a
     gis4 gis4. gis |
     g!4 g4. g
-    fis4. fis8~ fis2 |
+    fis!4. fis8~ fis2 |
     d4.\f d d4 | % piu
     d8->( e) e e~-> e2 |
     fis4. fis fis4 |
   }
   \podzial {
-    a8->( g) g g~-> g2
+    % FIXME: why
+    % a8-\tweak #'X-offset #-1 -\tweak #'Y-offset #5 ->(
+    % gives idiotic results (checked with 2.17.13) ??
+    a8-\tweak #'X-offset #0.2 ->(
+    g) g g~-> g2
   }
   \rownyRytm {
     g4 g4. g

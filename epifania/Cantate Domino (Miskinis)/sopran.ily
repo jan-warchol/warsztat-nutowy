@@ -33,9 +33,10 @@ soprandolny = \relative f' {
   fis4. fis8 fis4~
   fis2.~
   fis2. \>
-  gis4 \mp gis4 b4
-  c4 c2~
-  c2.~
+  gis4 \mp gis4 \tweak Stem #'length #6 b4
+  \tweak Stem #'length #6 c4
+  \tweak Stem #'length #6 c2~
+  \tweak Stem #'length #6 c2.~
   c2. \<
   b2\! ^\markup{\italic{leggiero} } gis4
   \set Timing.beamExceptions = #'()
