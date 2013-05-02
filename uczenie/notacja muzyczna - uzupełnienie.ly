@@ -23,13 +23,38 @@
 \markup \vspace #1
 
 \markup \justify {
-  \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.  Są umieszczane na
-  środku taktu i zawsze wyglądają jak pauzy całonutowe. Pauza całotaktowa
-  w metrum 4/4 trwa tyle, co pauza całonutowa, ale w "metrum 1/4" "tyle co ćwierćnutowa"
-  - mimo to obie wyglądają tak samo:
+  Metrum 4/4 oznacza się na ogół jako
+  \raise #0.6 \musicglyph #"timesig.C44",
+  zaś \raise #0.6 \musicglyph #"timesig.C22" oznacza metrum 2/2
+  (określane jako \concat { \italic "alla breve"). }
+  W muzyce dawnej \raise #0.6 \musicglyph #"timesig.C22"
+  oznaczało 4/2, ale raczej nie zdarza nam się śpiewać z takich nut.
+}
+\markup \vspace #1
+
+\markup \justify {
+  Znaki chromatyczne obowiązują "do końca" taktu, ale jeśli
+  nuty są połączone "za pomocą" łuku przedłużającego,
+  to działanie znaku chromatycznego jest przedłużane (oczywiście
+  na ogół warto dodać znak przypominający dla pewności):
 }
 \score {
-  { R1  \time 1/4  R4 }
+  {
+    as'1_"as" ~ as'1_"as" ~ as'2_"as"
+    \once \override Accidental #'stencil = ##f
+    a'_"a"
+  }
+}
+
+\markup \justify {
+  \bold { Pauzy całotaktowe } to specjalny rodzaj pauz.
+  Są umieszczane na środku taktu i zawsze wyglądają jak
+  pauzy całonutowe. Pauza całotaktowa w metrum 4/4 trwa
+  tyle, co pauza całonutowa, a w "metrum 1/4"
+  "tyle co ćwierćnutowa" - mimo to obie wyglądają tak samo:
+}
+\score {
+  { \numericTimeSignature R1  \time 1/4  R4 }
   \layout { line-width = 6\cm ragged-right = ##f }
 }
 
@@ -55,8 +80,9 @@
 }
 
 \markup \justify {
-  Jeśli ostatnia sylaba w słowie jest śpiewana na wielu nutach, to rysuje się za nią
-  linię przedłużającą, żeby wskazać jak długo ta sylaba trwa:
+  Jeśli ostatnia sylaba w słowie jest śpiewana na wielu nutach,
+  to rysuje się za nią linię przedłużającą, żeby wskazać
+  jak długo ta sylaba trwa:
 }
 
 \score {
@@ -74,7 +100,11 @@
     \lyricsto mix \lyricmode {
       do -- na __ no -- bis __ A -- _
       \override BalloonTextItem #'annotation-balloon = ##f
-      \balloonGrobText #'LyricText #'(-2 . -1.5) \markup \smaller \italic "ta sylaba jest śpiewana na dwóch nutach, ale nie wstawiamy linii przedłużającej bo nie ma gdzie"
+      \balloonGrobText #'LyricText #'(-2 . -1.5)
+      \markup \smaller \italic {
+        ta sylaba jest śpiewana na dwóch nutach, ale nie
+        wstawiamy linii przedłużającej bo nie ma gdzie
+      }
       gnus _ De -- _ i
     }
   >>
