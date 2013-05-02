@@ -1,7 +1,9 @@
 oddHeaderMarkup = \markup \small \fill-line {
   \line {
     \on-the-fly #not-first-page \fromproperty #'header:title
-    \on-the-fly #not-first-page \fromproperty #'header:composerShort
+    \on-the-fly #not-first-page \concat {
+      "(" \fromproperty #'header:kompozytor-krotki ")"
+    }
     \on-the-fly #not-first-page "-"
     \on-the-fly #print-page-number-check-first \normalsize \bold \fromproperty #'page:page-number-string
   }
@@ -10,7 +12,9 @@ oddHeaderMarkup = \markup \small \fill-line {
 evenHeaderMarkup = \markup \small \fill-line {
   \line {
     \on-the-fly #not-first-page \fromproperty #'header:title
-    \on-the-fly #not-first-page \fromproperty #'header:composerShort
+    \on-the-fly #not-first-page \concat {
+      "(" \fromproperty #'header:kompozytor-krotki ")"
+    }
     \on-the-fly #not-first-page "-"
     \on-the-fly #print-page-number-check-first \normalsize \bold \fromproperty #'page:page-number-string
   }
@@ -36,8 +40,10 @@ bookTitleMarkup = \markup {
       \bold \fromproperty #'header:subsubtitle
     }
     \fill-line \general-align #Y #-1 {
-      \fromproperty #'header:translation
+      \fromproperty #'header:tlumaczenie
       \right-column {
+        \italic \fromproperty #'header:adres-biblijny
+        \italic \fromproperty #'header:przygotowanie-nut
         \bold \fromproperty #'header:composer
         \bold \fromproperty #'header:arranger
         \bold \fromproperty #'header:poet
