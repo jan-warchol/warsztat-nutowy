@@ -59,12 +59,12 @@ sopran = {
   dis'' cis''8 b' ^\> a'4 (\melisma b') \melismaEnd
   << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Piu sosten." gis'4 ^\!
   <<
-    \new Voice = foo {
+    {
       gis'2 (^\< \melisma fis'4 ^\! b') \melismaEnd
       b'1  ^\> <>\!
     }
     \new Lyrics \with { alignAboveContext = panie }
-    \lyricsto foo \lyricmode { no -- strae. }
+    \lyricmode { no1 -- strae.1 }
   >>
   \tempo "Meno mosso"  e'4 (^\p  a' ) \melismaEnd e'2 ^\<
   es'4 (\melisma a' ^\!) \melismaEnd es'2
@@ -98,7 +98,7 @@ soprantekst = \lyricmode {
   nunc et in ho -- ra,
   mor -- tis no -- \tweak #'X-offset #-1 strae,
   \tweak #'X-offset #-1.2 mor -- \tweak #'X-offset #-0.5 tis no -- strae,
-  mor -- tis no -- strae.
+  mor -- \set associatedVoice = alt tis no -- strae, no -- strae.
   A -- men, a -- men,
   a -- men, a -- men. __
 }
