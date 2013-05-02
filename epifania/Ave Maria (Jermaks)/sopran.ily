@@ -57,8 +57,14 @@ sopran = {
   fis''4. ^\f gis''8 fis''4 (\melisma e'')\melismaEnd
   dis'' cis''8 b' ^\> a'4 (\melisma b') \melismaEnd
   << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Piu sosten." gis'4 ^\!
-  gis'2 (^\< \melisma fis'4 ^\! b') \melismaEnd
-  b'1  ^\>
+  <<
+    \new Voice = foo {
+      gis'2 (^\< \melisma fis'4 ^\! b') \melismaEnd
+      b'1  ^\> <>\!
+    }
+    \new Lyrics \with { alignAboveContext = panie }
+    \lyricsto foo \lyricmode { no -- strae. }
+  >>
   \tempo "Meno mosso"  e'4 (^\p  a' ) \melismaEnd e'2 ^\<
   es'4 (\melisma a' ^\!) \melismaEnd es'2
   d'4 (\melisma a') ^\> \melismaEnd d'2
