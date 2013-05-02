@@ -13,18 +13,36 @@
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
+%{
+  FIXME: there's too much space between:
+  - title and translation
+  - translation and music
+  - editors and composer
+  but i can only insert full empty lines - i.e.
+  \vspace #0.4 has the same effect as \vspace #1
+%}
+
 \header {
   title = "Cantate Domino"
   composer = "Vytautas Miškinis (*1954)"
   kompozytor-krotki = "Miškinis"
-  tlumaczenie = \markup \typewriter \column {
-    \vspace #0.5
+  przygotowanie-nut = \markup \right-column {
+    \bold "przygotowanie nut:"
+    "Basia Mroczek"
+    "Marlena Świło"
+    "Adrian Trzeciak"
+    "Janek Warchoł"
+    " "
+  }
+  tlumaczenie = \markup \scale #'(0.95 . 1) \typewriter \column {
+    " "
     \bold
     "Cantate    Domino canticum novum, et benedicite   nomini eius, quia mirabilia fecit."
     "Śpiewajcie Panu   pieśń    nową,  i  błogosławcie imię   Jego, bo   cuda      uczynił."
     \bold
     "Cantate    et exsultate,  et psalite    in cithara voce psalmi."
     "Śpiewajcie i  wielbijcie, i  śpiewajcie z  cytrą        psalmy."
+    " "
   }
 }
 
