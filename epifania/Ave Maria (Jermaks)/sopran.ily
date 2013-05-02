@@ -55,7 +55,7 @@ sopran = {
   gis'2 ) \melismaEnd
   cis'' ^\mp ^\! dis''4 ^\< e'' ^\!
   b'4. (\melisma gis'8) \melismaEnd b'2 ^\>
-  a' ^\! ^\< b'4 (\melisma cis'') \melismaEnd
+  << { a'2^\! } { s4 s4 ^\< } >> b'4 (\melisma cis'') \melismaEnd
   gis'4. ^\! e'8 ^\> fis'2
   e' ^\! fis'4 gis' ^\<
   fis'4. ( \melisma   gis'8^\!) \melismaEnd a'2
@@ -63,7 +63,7 @@ sopran = {
   cis''4. (^\< \melisma dis''8 ) \melismaEnd e''2
   fis''4. ^\f gis''8 fis''4 (\melisma e'')\melismaEnd
   dis'' cis''8 b' ^\> a'4 (\melisma b') \melismaEnd
-  << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Piu sosten." gis'4 ^\!
+  << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Più sosten." gis'4 ^\!
   <<
     {
       gis'2 (^\< \melisma fis'4 ^\! b') \melismaEnd
