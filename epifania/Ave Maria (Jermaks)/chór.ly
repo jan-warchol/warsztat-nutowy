@@ -81,6 +81,7 @@
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
+    \override DynamicTextSpanner #'style = #'none
 
     \override Score.BarNumber #'self-alignment-X =
     #(lambda (grob)

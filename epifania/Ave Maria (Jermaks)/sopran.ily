@@ -31,8 +31,8 @@ sopran = {
   fis''4. ^\f ^\<   gis''8  fis''4 ( ^\! \melisma e'')\melismaEnd
   dis''  cis''8 b' a'4( ^\>\melisma b' ^\!) \melismaEnd
   cis''2 gis'4 ^\> gis' ^\!
-  gis'2 ( ^\< \melisma fis'4 ^\! ^"rit." b'  ) \melismaEnd
-  b'1^\> ^\mp   % tutaj znaki dynamiczne rzeba poprawić bo nie sa dokładnie w tym miejscu co być powinny
+  gis'2 ( ^\< \melisma fis'4 ^\! ^\markup \italic "rit." b'^\> ^\mp  ) \melismaEnd
+  b'1
   \tempo "Tempo I"
   e'4 (^\! ^\mp ^\< \melisma cis'' ) \melismaEnd e'4. ^\! e'8
   es'4 (\melisma c'') \melismaEnd es'2
@@ -41,18 +41,22 @@ sopran = {
   e''2 e''4. ^\< e''8 ^\!
   dis''2 dis''
   fis''4. fis''8 fis''4 (\melisma e'') \melismaEnd
-  dis''2  (^\> \melisma gis' ) \melismaEnd % od połowy taktu widełki
+  <<
+    { dis''2  ( \melisma }
+    { s4 s4^\> }
+  >>
+  gis'2 ) \melismaEnd
   cis'' ^\mp ^\! dis''4 ^\< e'' ^\!
   b'4. (\melisma gis'8) \melismaEnd b'2 ^\>
   a' ^\! ^\< b'4 (\melisma cis'') \melismaEnd
   gis'4. ^\! e'8 ^\> fis'2
   e' ^\! fis'4 gis' ^\<
-  fis'4. ( \melisma   gis'8^\!) \melismaEnd a'2 % znów widełki
+  fis'4. ( \melisma   gis'8^\!) \melismaEnd a'2
   b'2 ^\cresc cis''4 dis''4
   cis''4. (^\< \melisma dis''8 ) \melismaEnd e''2 ^\!
   fis''4. ^\f gis''8 fis''4 (\melisma e'')\melismaEnd
   dis'' cis''8 b' ^\> a'4 (\melisma b') \melismaEnd
-  cis''2 ^\! gis'4 ^\>  ^\mp \tempo "Piu sosten." gis'4 ^\! % poprawić umiejscowienie znaków dynamicznych
+  << { cis''2 ^\! } { s4. s8 ^\>  ^\mp } >> gis'4 \tempo "Piu sosten." gis'4 ^\!
   gis'2 (^\< \melisma fis'4 ^\! b') \melismaEnd
   b'1  ^\>
   \tempo "Meno mosso"  e'4 (^\p  a' ) \melismaEnd e'2 ^\<
@@ -61,7 +65,11 @@ sopran = {
   \time 6/4 cis'2 ^\! ( \melisma d'4. ^\< fis'8  a'4 ^\! cis''4) \melismaEnd
   % w orginale chyba bład bo nie mozna sie doliczyc nutek --Dominika
   % Zuzia powiedziała, że pierwsza nuta powinna być półnutą --Janek
-  e''1.\fermata \bar "|."
+  <<
+    { e''1.\fermata }
+    { s1.\> <>\! }
+  >>
+  \bar "|."
 }
 
 soprantekst = \lyricmode {
