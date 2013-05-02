@@ -91,11 +91,11 @@ bastekst = \lyricmode {
 
   A -- ve Ma -- ri -- a, gra -- ti -- a ple -- na, __
   Do -- mi -- nus te -- cum,
-  be -- ne -- di -- cta __ tu,
+  be -- ne -- di -- cta tu,
   be -- ne -- di -- cta tu
-  in mu -- li -- e -- ri -- bus, __
-  et __ be -- ne -- di -- ctus __ fru -- ctus
-  ven -- tris, __ fru -- ctus __ ven -- tris __
+  in mu -- li -- e -- ri -- bus,
+  et __ be -- ne -- di -- ctus fru -- ctus
+  ven -- tris, fru -- ctus ven -- tris
   tu -- i, Je -- su, tu -- i,
   Je -- su, tu -- i, __ Je -- su.
 
@@ -105,7 +105,7 @@ bastekst = \lyricmode {
   San -- cta Ma -- ri -- a,
   ma -- ter De -- i, ma -- ter De -- i,
   o -- ra pro no -- bis __
-  pec -- ca -- to -- ri -- bus, __
+  pec -- ca -- to -- ri -- bus
   nunc et in ho -- ra, __
   nunc et in ho -- ra __
   mor -- tis no -- strae,
