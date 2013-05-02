@@ -3,8 +3,8 @@
 
 \paper {
   indent = 0 \mm
-  left-margin = 12 \mm
-  right-margin = 14 \mm
+  left-margin = 14 \mm
+  right-margin = 12 \mm
   top-markup-spacing #'basic-distance = 4
   last-bottom-spacing #'basic-distance = 4
   %markup-system-spacing #'basic-distance = 40
