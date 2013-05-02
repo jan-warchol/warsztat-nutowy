@@ -42,7 +42,9 @@ bas = \relative f {
   gis4 a8 b fis4( gis)
   cis,2 cis4 cis8\melisma b\melismaEnd
   a2( b)
-  e,1\mp % !!! tu się dzielą basy, górny ma b !!!
+  \once \override Arpeggio #'stencil =
+  #ly:arpeggio::brew-chord-bracket
+  <e, b'>1\mp \arpeggio
 
   % takt 22.
   a2\mp a4. a8
@@ -67,7 +69,9 @@ bas = \relative f {
   gis4 a8 b fis4( gis)
   cis,2 cis4 cis8\melisma b\melismaEnd
   a2( b)
-  e,1 % !!! tu się dzielą basy, górny ma b !!!
+  \once \override Arpeggio #'stencil =
+  #ly:arpeggio::brew-chord-bracket
+  <e, b'>1\arpeggio
 
   % takt 42.
   a2 a
@@ -75,7 +79,9 @@ bas = \relative f {
   a a
   \time 6/4
   a1.
-  a\fermata \bar "|." % !!! tu się dzielą basy, górny ma e !!!
+  \once \override Arpeggio #'stencil =
+  #ly:arpeggio::brew-chord-bracket
+  <a e'>\arpeggio \fermata \bar "|."
 
 }
 
