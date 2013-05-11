@@ -15,6 +15,11 @@
 }
 
 \paper {
+  #(define fonts
+    (make-pango-font-tree "antpolt"
+                          "Nimbus Sans"
+                          "Luxi Mono"
+                          (/ staff-height pt 20)))
   left-margin = 21 \mm
   right-margin = 20 \mm
   top-markup-spacing #'basic-distance = 10
