@@ -105,6 +105,7 @@ stanzas = {}
     >>
   >>
   \layout {
+    \accidentalStyle neo-modern
     indent = 0\cm
     \context {
       \Score
