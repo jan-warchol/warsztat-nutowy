@@ -29,42 +29,42 @@
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative f' {
   \key e \minor
-  e8 fis g4 g2 \breathe
-  fis8 g a4 a2 \breathe
-  g8 a b4 a8 g fis4 e4 \breathe
+  e4 fis g2 g1 \breathe
+  fis4 g a2 a1 \breathe
+  g4 a b2 a4 g fis2 e2 \breathe
   \bar "||"
-  fis\breve e8 fis g4 a4 \breathe
-  b8 b b b a g fis2 e
+  fis\breve e4 fis g2 a2 \breathe
+  b4 b b b a g fis1 e
   \bar "|."
 }
 altomelody = \relative f' {
   \key e \minor
-  e8 e e4 e2 \breathe
-  e8 e e4 e2 \breathe
-  e8 e e4 e8 e dis4 e4 \breathe
+  e4 e e2 e1 \breathe
+  e4 e e2 e1 \breathe
+  e4 e e2 e4 e dis2 e2 \breathe
   \bar "||"
-  dis\breve cis8 dis e4 fis4 \breathe
-  fis8 fis fis fis fis e8 dis2 e
+  dis\breve cis4 dis e2 fis2 \breathe
+  fis4 fis fis fis fis e4 dis1 e
   \bar "|."
 }
 tenormelody = \relative f {
   \key e \minor
-  g8 a8 b4 b2 \breathe
-  a8 b c4 c2 \breathe
-  b8 c b4 a8 g fis4 e4 \breathe
+  g4 a4 b2 b1 \breathe
+  a4 b c2 c1 \breathe
+  b4 c b2 a4 g fis2 e2 \breathe
   \bar "||"
-  fis\breve e8 fis g4 a4 \breathe
-  b8 b b b b b b2 g2
+  fis\breve e4 fis g2 a2 \breathe
+  b4 b b b b b b1 g1
   \bar "|."
 }
 bassmelody = \relative f {
   \key e \minor
-  e8 fis g4 g2 \breathe
-  fis8 g a4 a2 \breathe
-  g8 a g4 fis8 e dis4 e4 \breathe
+  e4 fis g2 g1 \breathe
+  fis4 g a2 a1 \breathe
+  g4 a g2 fis4 e dis2 e2 \breathe
   \bar "||"
-  dis\breve cis8 dis e4 d4 \breathe
-  dis8 dis dis dis dis dis dis2 e2
+  dis\breve cis4 dis e2 d2 \breathe
+  dis4 dis dis dis dis dis dis1 e1
   \bar "|."
 }
 akordy = \chordmode {
@@ -119,8 +119,8 @@ stanzas = {}
     \accidentalStyle neo-modern
     indent = 0\cm
     \override BreathingSign #'text =
-    \markup { \raise #0.5 \musicglyph #"scripts.tickmark" }
-    \override NoteHead #'style = #'harmonic-mixed
+    \markup { \musicglyph #"scripts.rvarcomma" }
+    \override NoteHead #'style = #'petrucci
 
     \context {
       \Score
