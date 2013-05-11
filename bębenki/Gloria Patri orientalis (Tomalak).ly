@@ -90,7 +90,7 @@ stanzas = {}
       \override VerticalAxisGroup #'staff-affinity = #CENTER
       \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
     }
-    \lyricsto alto \text
+    \lyricsto soprano \text
 
     \new Staff = men <<
       \clef bass
