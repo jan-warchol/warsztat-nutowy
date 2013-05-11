@@ -116,6 +116,11 @@ stanzas = {}
       \Staff \remove "Time_signature_engraver"
     }
   }
+  \midi {
+    \context {
+      \Staff
+      \set midiInstrument = #"clarinet"
+  }
 }
 
 \stanzas
