@@ -16,12 +16,16 @@
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative f' {
+  \key e \minor
 }
 altomelody = \relative f' {
+  \key e \minor
 }
 tenormelody = \relative f {
+  \key e \minor
 }
 bassmelody = \relative f {
+  \key e \minor
 }
 akordy = \chordmode {
 }
@@ -65,6 +69,15 @@ stanzas = {}
   >>
   \layout {
     indent = 0\cm
+    \context {
+      \Score
+      timing = ##f
+      barAlways = ##t
+      defaultBarType = ""
+    }
+    \context {
+      \Staff \remove "Time_signature_engraver"
+    }
   }
 }
 
