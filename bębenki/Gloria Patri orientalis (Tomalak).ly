@@ -33,7 +33,6 @@ sopranomelody =	\relative f' {
   fis4 g a2 a1 \breathe
   g4 a b2 a4 g fis2 e2 \breathe
   \bar "||"
-  \once \override NoteHead #'style = #'baroque
   fis\breve e4 fis g2 a2 \breathe
   b4 b b b a g fis1 e
   \bar "|."
@@ -46,7 +45,6 @@ altomelody = \relative f' {
   \once\override NoteColumn #'force-hshift = #1
   e2 \breathe
   \bar "||"
-  \once \override NoteHead #'style = #'baroque
   dis\breve cis4 dis e2 fis2 \breathe
   fis4 fis fis fis fis e4 dis1 e
   \bar "|."
@@ -57,7 +55,6 @@ tenormelody = \relative f {
   a4 b c2 c1 \breathe
   b4 c b2 a4 g fis2 e2 \breathe
   \bar "||"
-  \once \override NoteHead #'style = #'baroque
   fis\breve e4 fis g2 a2 \breathe
   b4 b b b b b b1 g1
   \bar "|."
@@ -70,7 +67,6 @@ bassmelody = \relative f {
   \once\override NoteColumn #'force-hshift = #1
   e2 \breathe
   \bar "||"
-  \once \override NoteHead #'style = #'baroque
   dis\breve cis4 dis e2 d2 \breathe
   dis4 dis dis dis dis dis dis1 e1
   \bar "|."
@@ -129,7 +125,7 @@ stanzas = {}
     indent = 0\cm
     \override BreathingSign #'text =
     \markup { \musicglyph #"scripts.rvarcomma" }
-    \override NoteHead #'style = #'harmonic-mixed
+    \override NoteHead #'style = #'altdefault
     \omit Stem
 
     \context {
