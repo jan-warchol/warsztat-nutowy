@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.17.16"
 #(set-global-staff-size 18)
 
 \header	{
@@ -118,7 +118,10 @@ stanzas = {}
   \layout {
     \accidentalStyle neo-modern
     indent = 0\cm
+    \override BreathingSign #'text =
+    \markup { \raise #0.5 \musicglyph #"scripts.tickmark" }
     \override NoteHead #'style = #'altdefault
+
     \context {
       \Score
       timing = ##f
@@ -132,7 +135,8 @@ stanzas = {}
   \midi {
     \context {
       \Staff
-      \set midiInstrument = #"clarinet"
+      midiInstrument = #"clarinet"
+    }
   }
 }
 
