@@ -17,20 +17,44 @@
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative f' {
   \key e \minor
+  e8 fis g4 g2 \breathe
+  fis8 g a4 a2 \breathe
+  g8 a b4 a8 g fis4 e4 \breathe
+  \bar "||"
+  fis\breve e8 fis g4 a4
 }
 altomelody = \relative f' {
   \key e \minor
+  e8 e e4 e2 \breathe
+  e8 e e4 e2 \breathe
+  e8 e e4 e8 e dis4 e4 \breathe
+  \bar "||"
 }
 tenormelody = \relative f {
   \key e \minor
+  g8 a8 b4 b2 \breathe
+  a8 b c4 c2 \breathe
+  b8 c b4 a8 g fis4 e4 \breathe
+  \bar "||"
 }
 bassmelody = \relative f {
   \key e \minor
+  e8 fis g4 g2 \breathe
+  fis8 g a4 a2 \breathe
+  g8 a g4 fis8 e dis4 e4 \breathe
+  \bar "||"
+
 }
 akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
+  Chwa -- ła Oj -- cu i Sy -- no -- wi,
+  i Du -- cho -- wi Świę -- te -- mu,
+  "jak była na początku, te" --
+  raz i za -- wsze,
+  i na wie -- ki wie -- ków
+  A -- MEN.
 }
 
 stanzas = {}
