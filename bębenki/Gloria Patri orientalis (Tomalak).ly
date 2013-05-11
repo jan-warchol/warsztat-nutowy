@@ -1,8 +1,11 @@
 \version "2.17.3"
-#(set-global-staff-size 16.5)
+#(set-global-staff-size 18)
 
 \header	{
-  title = \markup { Gloria Patri \italic orientalis }
+  title = \markup \column {
+    \line { Gloria Patri \italic orientalis }
+    " " " " 
+  }
   dedication = \markup \italic { (ks. Grzegorzowi Mączce) }
   composer = "muzyka: Jakub Tomalak"
   tagline = \markup {
@@ -12,10 +15,11 @@
 }
 
 \paper {
-  left-margin = 16 \mm
-  right-margin = 15 \mm
-  %top-markup-spacing #'basic-distance = 10
-  %system-system-spacing #'basic-distance = 15
+  left-margin = 21 \mm
+  right-margin = 20 \mm
+  top-markup-spacing #'basic-distance = 10
+  markup-system-spacing #'basic-distance = 10
+  system-system-spacing #'basic-distance = 15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative f' {
@@ -64,9 +68,11 @@ akordy = \chordmode {
 text =  \lyricmode {
   Chwa -- ła Oj -- cu i Sy -- no -- wi,
   i Du -- cho -- wi Świę -- te -- mu,
+  \once \override LyricHyphen #'minimum-distance = #1.5
+  \tweak #'X-offset #-0.6
   "jak była na początku, te" --
   raz i za -- wsze,
-  i na wie -- ki wie -- ków
+  i na wie -- ki wie -- ków.
   A -- MEN.
 }
 
@@ -107,6 +113,7 @@ stanzas = {}
   \layout {
     \accidentalStyle neo-modern
     indent = 0\cm
+    \override NoteHead #'style = #'altdefault
     \context {
       \Score
       timing = ##f
