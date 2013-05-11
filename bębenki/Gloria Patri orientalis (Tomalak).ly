@@ -2,6 +2,9 @@
 #(set-global-staff-size 16.5)
 
 \header	{
+  title = \markup { Gloria Patri \italic orientalis }
+  dedication = \markup \italic { (ks. Grzegorzowi Mączce) }
+  composer = "muzyka: Jakub Tomalak"
   tagline = \markup {
     skład nut: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
@@ -21,7 +24,9 @@ sopranomelody =	\relative f' {
   fis8 g a4 a2 \breathe
   g8 a b4 a8 g fis4 e4 \breathe
   \bar "||"
-  fis\breve e8 fis g4 a4
+  fis\breve e8 fis g4 a4 \breathe
+  b8 b b b a g fis2 e
+  \bar "|."
 }
 altomelody = \relative f' {
   \key e \minor
@@ -29,6 +34,9 @@ altomelody = \relative f' {
   e8 e e4 e2 \breathe
   e8 e e4 e8 e dis4 e4 \breathe
   \bar "||"
+  dis\breve cis8 dis e4 fis4 \breathe
+  fis8 fis fis fis fis e8 dis2 e
+  \bar "|."
 }
 tenormelody = \relative f {
   \key e \minor
@@ -36,6 +44,9 @@ tenormelody = \relative f {
   a8 b c4 c2 \breathe
   b8 c b4 a8 g fis4 e4 \breathe
   \bar "||"
+  fis\breve e8 fis g4 a4 \breathe
+  b8 b b b b b b2 g2
+  \bar "|."
 }
 bassmelody = \relative f {
   \key e \minor
@@ -43,7 +54,9 @@ bassmelody = \relative f {
   fis8 g a4 a2 \breathe
   g8 a g4 fis8 e dis4 e4 \breathe
   \bar "||"
-
+  dis\breve cis8 dis e4 d4 \breathe
+  dis8 dis dis dis dis dis dis2 e2
+  \bar "|."
 }
 akordy = \chordmode {
 }
