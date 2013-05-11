@@ -120,7 +120,7 @@ stanzas = {}
     indent = 0\cm
     \override BreathingSign #'text =
     \markup { \raise #0.5 \musicglyph #"scripts.tickmark" }
-    \override NoteHead #'style = #'altdefault
+    \override NoteHead #'style = #'harmonic-mixed
 
     \context {
       \Score
