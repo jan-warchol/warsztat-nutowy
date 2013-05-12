@@ -107,7 +107,8 @@ stanzas = {}
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #2
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'minimum-distance = #5
     }
     \lyricsto soprano \text
 
