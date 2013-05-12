@@ -42,7 +42,9 @@ altomelody = \relative f' {
   \key e \minor
   e4 e e2 e1 \breathe
   e4 e e2 e1 \breathe
-  e4 e e2 e4 e dis2 e2 \breathe
+  e4 e e2 e4 e dis2
+  \once\override NoteColumn #'force-hshift = #1
+  e2 \breathe
   \bar "||"
   \once \override NoteHead #'style = #'baroque
   dis\breve cis4 dis e2 fis2 \breathe
@@ -64,7 +66,9 @@ bassmelody = \relative f {
   \key e \minor
   e4 fis g2 g1 \breathe
   fis4 g a2 a1 \breathe
-  g4 a g2 fis4 e dis2 e2 \breathe
+  g4 a g2 fis4 e dis2
+  \once\override NoteColumn #'force-hshift = #1
+  e2 \breathe
   \bar "||"
   \once \override NoteHead #'style = #'baroque
   dis\breve cis4 dis e2 d2 \breathe
