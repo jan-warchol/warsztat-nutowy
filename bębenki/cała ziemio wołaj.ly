@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 20)
+#(set-global-staff-size 18)
 
 \header	{
   title = "Cała ziemio"
@@ -13,10 +13,10 @@
 
 \paper {
   top-margin = 10 \mm
-  left-margin = 16 \mm
-  right-margin = 15 \mm
+  left-margin = 21 \mm
+  right-margin = 20 \mm
   markup-system-spacing #'basic-distance = #13
-  system-system-spacing #'basic-distance = #13
+  system-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -46,7 +46,7 @@ sopranomelody = \relative f' {
   }
   \bar "|."
   \overrideProperty #"Score.NonMusicalPaperColumn"
-  #'line-break-system-details #`((Y-offset . 66))
+  #'line-break-system-details #`((Y-offset . 68))
   \repeat volta 2 {
     \cadenzaOn
     a\breve g8 fis e4 e2
