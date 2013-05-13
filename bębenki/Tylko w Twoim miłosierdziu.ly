@@ -1,5 +1,5 @@
-\version "2.17.3"
-#(set-global-staff-size 18)
+\version "2.17.2"
+#(set-global-staff-size 16.5)
 
 \header	{
   title = \markup \column { "Tylko w Twoim Miłosierdziu" " " }
@@ -18,8 +18,8 @@
        "Luxi Mono"
        (/ staff-height pt 20)))
   top-margin = 10 \mm
-  left-margin = 14 \mm
-  right-margin = 13 \mm
+  left-margin = 18 \mm
+  right-margin = 17 \mm
   markup-system-spacing #'basic-distance = #15
   system-system-spacing #'basic-distance = #13
 }
