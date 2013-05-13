@@ -12,6 +12,11 @@
 }
 
 \paper {
+  #(define fonts
+     (make-pango-font-tree "Minion Pro"
+       "Nimbus Sans"
+       "Luxi Mono"
+       (/ staff-height pt 20)))
   top-margin = 10 \mm
   left-margin = 14 \mm
   right-margin = 13 \mm
