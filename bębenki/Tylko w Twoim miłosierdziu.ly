@@ -21,7 +21,7 @@
   left-margin = 18 \mm
   right-margin = 17 \mm
   markup-system-spacing #'basic-distance = #15
-  system-system-spacing #'basic-distance = #13
+  system-system-spacing #'basic-distance = #15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -195,7 +195,7 @@ secondverse = \lyricmode {
     >>
     \new Lyrics = sopranolyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.5
     }
     \lyricsto soprano \text
     \new Lyrics = sopranolyrics \with {
