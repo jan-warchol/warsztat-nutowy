@@ -165,13 +165,16 @@ text = \lyricmode {
   \tweak #'X-offset #-0.8 mój,
   na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
+  \once \override LyricSpace #'minimum-distance = #2
   \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
   \bolden \markup \underline mój i kró -- lu,
+  \once \override LyricSpace #'minimum-distance = #2
   \tweak #'X-offset #-0.5 \markup \scale #'(0.95 . 1) "i błogosławić imię Twe na zawsze"
   \bolden \markup \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
   \repeat unfold 22 \skip4
+  \once \override LyricSpace #'minimum-distance = #2
   \tweak #'X-offset #-1.5 "Każdego dnia będę Ciebie"
   \bolden \markup \underline bło -- go -- sła -- wił,
   \tweak #'X-offset #-0.5 "i na wieki wysławiał"
