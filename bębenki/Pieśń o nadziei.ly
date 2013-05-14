@@ -48,6 +48,8 @@ altomelody = \relative f' {
   \key d \minor
   \time 4/4
   \repeat volta 2 {
+    \once \override Dots #'extra-offset = #'(-0.2 . 0)
+    \once \override Dots #'X-extent = #'(0 . 1.3)
     f4. f8 f[ d] e4 | d g g8[ e] f4
     f f c d | d d f8[ d] e4
   }
