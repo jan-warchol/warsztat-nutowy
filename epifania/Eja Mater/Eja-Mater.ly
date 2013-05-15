@@ -79,6 +79,11 @@ ml = #(define-music-function (parser location off) (number?)
     \compressFullBarRests
     \override DynamicTextSpanner #'style = #'none
     \override TextScript #'direction = #UP
+    \override Staff.StaffSymbol #'thickness = #0.7
+    \override Stem #'thickness = #1.4
+    \override Slur #'thickness = #1.5
+    \override Tie #'line-thickness = #1
+    \override Hairpin #'thickness = #1.25
 
     \context {
       \Lyrics
