@@ -2,11 +2,11 @@
 #(set-global-staff-size 16.5)
 
 \header	{
-  title = \markup \column { "Tylko w Twoim Miłosierdziu" " " }
-  poet = "słowa zwrotek: Ps 145"
-  composer = "muzyka: Paweł Bębenek"
+  title = \markup {
+    Porównanie: \italic { Tylko w Twoim miłosierdziu }
+  }
   tagline = \markup {
-    skład nut: Jan Warchoł
+    analiza: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
 }
@@ -188,7 +188,7 @@ secondverse = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new ChordNames { \germanChords \akordy }
+    %\new ChordNames { \germanChords \akordy }
     \new Staff = women \with {
       instrumentName = \markup \center-column { S A }
       shortInstrumentName = \markup \center-column { S A }
@@ -234,4 +234,43 @@ secondverse = \lyricmode {
     \override LyricText #'font-size = #1.5
     \set Timing.beamHalfMeasure = ##f
   }
+}
+
+\markup \vspace #3.5
+
+\markup \epsfile #X #122 #"tylko-w-twoim.eps"
+
+\markup \vspace #2.5
+\markup \fill-line {
+  \null
+  \override #'(thickness . 2)
+  \override #'(span-factor . 1/2)
+  \draw-hline
+  \null
+}
+\markup \vspace #1
+
+\markup \large \fill-line {
+  \null
+  \column  {
+    \override #'(line-width . 100)
+    \justify {
+      Powyżej widać dwie partytury tego samego utworu:
+      jedna została przygotowana przeze mnie, "a druga,"
+      znaleziona "w sieci," trafiła "do śpiewnika" warsztatów
+      muzycznych, które odbywały się "w Poznaniu." "W partyturze"
+      znalezionej "w internecie" widać następujące błędy składu:
+    }
+    \column {
+      \vspace #0.1
+      "• zbyt mała czcionka"
+      "• złe nazwy pięciolinii"
+      "• dziwne odstępy, np. między metrum 3/4 a pierwszymi nutami"
+      "• w zwrotce jest zapisane jakieś kosmiczne metrum"
+      "• w czwartym takcie długie nuty zajmują mniej miejsca niż krótkie"
+      "• tekst recytatywu jest niewłaściwie wyrównany"
+      "• pierwsze sylaby po recytatywie powinny być wyróżnione"
+    }
+  }
+  \null
 }
