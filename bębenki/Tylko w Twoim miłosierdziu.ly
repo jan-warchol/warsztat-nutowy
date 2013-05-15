@@ -185,7 +185,10 @@ secondverse = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new ChordNames { \germanChords \akordy }
-    \new Staff = women <<
+    \new Staff = women \with {
+      instrumentName = \markup \center-column { S A }
+      shortInstrumentName = \markup \center-column { S A }
+    } <<
       \clef treble
       \new Voice = soprano {
         \voiceOne
@@ -205,7 +208,10 @@ secondverse = \lyricmode {
     }
     \lyricsto soprano \secondverse
 
-    \new Staff = men <<
+    \new Staff = men \with {
+      instrumentName = \markup \center-column { T B }
+      shortInstrumentName = \markup \center-column { T B }
+    } <<
       \clef bass
       \new Voice = tenor {
         \voiceOne
