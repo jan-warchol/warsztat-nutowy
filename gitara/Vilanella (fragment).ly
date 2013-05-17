@@ -61,6 +61,9 @@ ciii = \markup {
   % i don't see why this shouldn't be default...
   \override Fingering #'staff-padding = #'()
 
+  \override Staff.OctavateEight #'font-shape = #'roman
+  \override Staff.OctavateEight #'font-size = #-3.3
+
   \context {
     \Staff
     \remove "Time_signature_engraver"
