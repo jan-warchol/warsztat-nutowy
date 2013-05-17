@@ -1,6 +1,22 @@
 \version "2.17.2"
 
-\relative f{
+cii = \markup {
+  \combine
+  \override #'(thickness . 1.5)
+  \translate #'(0.8 . -0.3)
+  \draw-line #'(0 . 2.2)
+  C2
+}
+
+ciii = \markup {
+  \combine
+  \override #'(thickness . 1.5)
+  \translate #'(0.8 . -0.3)
+  \draw-line #'(0 . 2.2)
+  C3
+}
+
+\relative f {
   \clef "G_8"
   \key d \major
   \time 2/4
