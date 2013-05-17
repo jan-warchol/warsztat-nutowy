@@ -1,5 +1,11 @@
 \version "2.17.2"
 
+\paper {
+  left-margin = 15 \mm
+  right-margin = 15 \mm
+  system-system-spacing #'basic-distance = 15
+}
+
 cii = \markup {
   \combine
   \override #'(thickness . 1.5)
