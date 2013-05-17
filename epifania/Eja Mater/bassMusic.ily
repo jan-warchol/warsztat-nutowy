@@ -6,7 +6,7 @@
   r2 r4 c8. \p d16 | % 8
   es8. ( [ g16 ) ] g4 r4 c,8. d16 | % 9
   es8. ( [ g16 ) ] g4 r4 c,8. d16 |
-  es8. ( [ bes'16 \< ) ] bes4~ ( bes8 [ as16 g16 \> ) ] f8 es8 \! | % 11
+  es8. ( [ bes'16 \< ) ] bes4~ ( bes8\! [ as16 g16 \> ) ] f8 es8 \! | % 11
   d4 d4 r4 d8. \p es16 | % 12
   f8. ( [ as16 ) ] as4 r4 d,8. es16 | % 13
   f8. ( [ as16 ) ] as4 r4 d,8. \cresc es16
@@ -35,7 +35,7 @@
   f4 ( d4 \cresc g4 ) f4 | % 44
   es4 d4 g4 f4 | % 45
   e2 \f f2 | % 46
-  f2 ( g4 \dim ) as8 ( [ d,8 ) ] | % 47
+  << f2 ( { s4 s\dim } >> g4 ) as8 ( [ d,8 ) ] | % 47
   g4. \p g8 g,4. g8 | % 48
   c4 r4 g4 g4 | % 49
   c8 ( [ d8 ) ] es8 ( [ g8 ) ] g,4. \dim g8

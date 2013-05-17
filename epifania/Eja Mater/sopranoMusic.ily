@@ -5,7 +5,7 @@
   R1*7 | % 8
   r4 g8.\p as16 g4 g4 | % 9
   r4 g8. as16 g4 g4 |
-  r4 g8. \< as16 g4 ( \! as4 ) | % 11
+  r4 g8. \< as16 g4 ( as4 \! ) | % 11
   as4 \mf r4 r2 | % 12
   r4 c8.\p d16 c4 c4 | % 13
   r4 c8. \cresc d16 c4 c4 | % 14

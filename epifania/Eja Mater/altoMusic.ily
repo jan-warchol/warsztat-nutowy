@@ -39,7 +39,7 @@
   g4 \! ) es4 \> es8 ( [ d8 ) ] b4 | % 41
   c4 \! \p ( es4 g4. ) g8 | % 42
   f2 bes2 | % 43
-  as2 ( g4 \cresc ) as4 | % 44
+  << as2 ( { s4 s \cresc } >> g4) as4 | % 44
   g2 g2 | % 45
   bes2 \f bes2 | % 46
   bes4 as4 \dim g4 f4 | % 47
@@ -73,7 +73,7 @@
   es4 r4 r2 | % 78
   R1 | % 79
   r2 r4 es8. \p \< f16 |
-  g8. ( [ bes16 ) ] bes4~ bes8 \> as8 ( [ g8 ) ] f8 \! | % 81
+  g8. ( [ bes16 ) ] bes4~ \> bes8 as8 ( [ g8 ) ] f8 \! | % 81
   f8. ( [ g16 ) ] g4 r2 | % 82
   R1 | % 83
   r2 r4 g8. \p as16 | % 84
@@ -91,7 +91,7 @@
   g4 \! es4 \> es8 ( [ d8 ) ] b4 \! | % 97
   c4 \p ( es4 g4 ) f8 ( [ es8 ) ] | % 98
   f2 bes2 | % 99
-  as2 ( g4 \cresc ) as4 |
+  << as2 ( { s4 s\cresc } >> g4 ) as4 |
   g2 g2 | % 101
   c2 \f ( bes4 ) as4 | % 102
   as4 \> as4 g4. f8 \! | % 103

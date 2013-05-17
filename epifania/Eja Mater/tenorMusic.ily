@@ -10,7 +10,8 @@
   r4 d8. \p d16 d4 d4 | % 13
   r4 d8. \cresc d16 d4 d4 | % 14
   r4 f8. \f \< f16 f4 f4 \! | % 15
-  f2. ( es8 \dim ) des8 | % 16
+  \shape Slur #'((0 . -0.5)(0 . -0.75)(0 . -0.75)(0 . -0.5))
+  << f2. ( { s2 s4\dim } >> es8 ) des8 | % 16
   c4 c2. \> ~ ^> | % 17
   c2. \! \p b4 | % 18
   c4 r4 r2 | % 19
@@ -22,7 +23,7 @@
   r4 c8. \pp g16 c4 c4 | % 28
   r4 c8. \p g16 c4 c4 | % 29
   r4 bes2 \< bes4 \! |
-  es4 \> es,4 \! r2 | % 31
+  << es4 { s8 s\>} >> es,4 \! r2 | % 31
   r2 es'2 -\tweak #'X-offset #-4 \mf -^ | % 32
   r2 es2 \cresc -^ | % 33
   r2 g2 -\tweak #'X-offset #-4 \ff ~ -^ | % 34
@@ -35,7 +36,7 @@
   c4 \! es4 g8 \> ( [ f8 ) ] es8 ( [ d8 ) ] | % 41
   c2 \! \p c2 | % 42
   c2 ( es4 ) d8 ( [ c8 ) ] | % 43
-  c4. ( d8 \cresc ) c4 r4 | % 44
+  << c4. ( { s4 s8\cresc } >> d8 ) c4 r4 | % 44
   c4 ( f4 es4 ) d4 | % 45
   c2. \f ( as'4 | % 46
   g4 ) f4 \dim es4 d8 ( [ c8 ) ] | % 47
@@ -85,7 +86,7 @@
   c4 es4 g8 \> ( [ f8 ) ] es8 ( [ d8 ) ] | % 97
   c2 \! \p c2 | % 98
   c2 ( es4 ) d8 ( [ c8 ) ] | % 99
-  c4. ( d8 \cresc ) c4. r8 |
+  << c4. ( { s4 s8\cresc } >> d8 ) c4. r8 |
   c4 ( f4 es4 ) d4 | % 101
   c2. \f ( as'4 | % 102
   g4 \> ) f4 es4. c8 \! | % 103
