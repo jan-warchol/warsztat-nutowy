@@ -48,6 +48,8 @@ ciii = \markup {
 
 \layout {
   indent = 0
+  \override Score.SpacingSpanner #'common-shortest-duration
+  = #(ly:make-moment 1 12)
 
   \override Fingering #'font-size = #-6.5
   % i don't see why this shouldn't be default...
