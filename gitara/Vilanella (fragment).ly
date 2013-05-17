@@ -31,3 +31,16 @@ ciii = \markup {
   <d a' d fis>8 <a a' cis e> <d a' d fis>16 cis b a
   <g-3 b'-2 d-1 g-1>16^\ciii a b-1 c-2 <d-4 a'-1 d-2 fis-1>4^"C2"
 }
+
+\layout {
+  indent = 0
+
+  \context {
+    \Staff
+    \remove "Time_signature_engraver"
+  }
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+}
