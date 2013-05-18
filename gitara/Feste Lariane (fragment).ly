@@ -53,3 +53,16 @@ cv = \markup {
     a, c' e c e c
   }
 >>
+
+\layout {
+  indent = 0
+ 
+  \context {
+    \Staff
+    \remove "Time_signature_engraver"
+  }
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+}
