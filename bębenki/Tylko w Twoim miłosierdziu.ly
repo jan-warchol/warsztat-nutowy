@@ -129,14 +129,14 @@ bassmelody = \relative f {
     }
     {
       a4. a8 a d
-      g2.
+      g,2.
     }
   }
   \bar "finrep"
   \break
   \repeat volta 2 {
     \cadenzaOn
-    e\breve fis8 g a4 a
+    e'\breve fis8 g a4 a
     \bar "|"
     a,\breve a8 a d4 d
     \cadenzaOff
