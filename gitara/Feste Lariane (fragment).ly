@@ -59,6 +59,15 @@ cv = \markup {
   \override Score.SpacingSpanner #'common-shortest-duration
   = #(ly:make-moment 1 16)
 
+  \override Fingering #'font-size = #-6.5
+  \override StrokeFinger #'font-size = #-2.5
+  % i don't see why this shouldn't be default...
+  \override Fingering #'staff-padding = #'()
+  \override StrokeFinger #'staff-padding = #'()
+
+  \override Staff.OctavateEight #'font-shape = #'roman
+  \override Staff.OctavateEight #'font-size = #-3.3
+
   \context {
     \Staff
     \remove "Time_signature_engraver"
