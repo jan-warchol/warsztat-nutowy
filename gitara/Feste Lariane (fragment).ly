@@ -32,11 +32,11 @@ cv = \markup {
     c, c' c c
     |
     d,, b'' b b
-    <d,-3> b' b b
-    <f-2> <a-1> a a
-    <d,-3> a' a a
-    <f-2> <gis-1> gis gis
-    <d-3> gis gis gis
+    d, b' b b
+    f <a-1> a a
+    d, a' a a
+    f <gis-1> gis gis
+    d gis gis gis
     |
     a,,^\cv a'' a a
     c, a' a a
@@ -49,7 +49,7 @@ cv = \markup {
     \voiceTwo
     e,8 b'' d b d b
     a, c' e c e c
-    d, d' f d f d
+    d, <d'-3> <f-2> <d-3> <f-2> <d-3>
     a, c' e c e c
   }
 >>
