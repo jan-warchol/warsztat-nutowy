@@ -25,6 +25,7 @@ cv = \markup {
   \bar "|:"
   \new Voice \relative f, {
     \voiceOne
+    \override Beam #'positions = #'(5 . 5)
     \set Voice.beatStructure = #'(1 1 1 1 1 1)
     \set fingeringOrientations = #'(down)
     \set strokeFingerOrientations = #'(left)
@@ -33,25 +34,33 @@ cv = \markup {
     \override StrokeFinger #'extra-offset = #'(0 . 3)
     e''-\rhf #4 e-\rhf #3 e-\rhf #2
     b e e e
+    \override Beam #'positions = #'(5.5 . 5.5)
     d fis fis fis
     b, fis' fis fis
+    \override Beam #'positions = #'(6 . 6)
     d gis gis gis
     b, gis' gis gis
     |
+    \override Beam #'positions = #'(6.5 . 6.5)
     a,,^\cv a'' a a
     c, a' a a
     e a a a
     c, a' a a
+    \override Beam #'positions = #'(7.5 . 7.5)
     e c' c c
     c, c' c c
     |
+    \override Beam #'positions = #'(7 . 7)
     d,, b'' b b
     d, b' b b
+    \override Beam #'positions = #'(6.5 . 6.5)
     f <a-1> a a
     d, a' a a
+    \override Beam #'positions = #'(6 . 6)
     f <gis-1> gis gis
     d gis gis gis
     |
+    \override Beam #'positions = #'(6.5 . 6.5)
     a,,^\cv a'' a a
     c, a' a a
     e a a a
