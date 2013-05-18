@@ -23,7 +23,12 @@ cv = \markup {
   \bar "|:"
   \new Voice \relative f, {
     \voiceOne
-    e32-\rhf #1 e''-\rhf #4 e-\rhf #3 e-\rhf #2
+    \set fingeringOrientations = #'(down)
+    \set strokeFingerOrientations = #'(left)
+    e32-\rhf #1
+    \set strokeFingerOrientations = #'(up)
+    \override StrokeFinger #'extra-offset = #'(0 . 3)
+    e''-\rhf #4 e-\rhf #3 e-\rhf #2
     b e e e
     d fis fis fis
     b, fis' fis fis
@@ -53,6 +58,9 @@ cv = \markup {
   }
   \new Voice \relative f {
     \voiceTwo
+    \set fingeringOrientations = #'(down)
+    \override Fingering #'extra-offset = #'(0 . 1)
+    \override Fingering #'X-offset = #-1.2
     e,8 b'' d b d b
     a, c' e c e c
     d, <d'-3> <f-2> <d-3> <f-2> <d-3>
