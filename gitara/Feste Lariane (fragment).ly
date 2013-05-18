@@ -20,9 +20,12 @@ cv = \markup {
   \clef "G_8"
   \key a \minor
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1 8)
   \bar "|:"
   \new Voice \relative f, {
     \voiceOne
+    \set Voice.beatStructure = #'(1 1 1 1 1 1)
     \set fingeringOrientations = #'(down)
     \set strokeFingerOrientations = #'(left)
     e32-\rhf #1
@@ -58,6 +61,7 @@ cv = \markup {
   }
   \new Voice \relative f {
     \voiceTwo
+    \set Voice.beatStructure = #'(2 2 2)
     \set fingeringOrientations = #'(down)
     \override Fingering #'extra-offset = #'(0 . 1)
     \override Fingering #'X-offset = #-1.2
