@@ -56,7 +56,9 @@ cv = \markup {
 
 \layout {
   indent = 0
- 
+  \override Score.SpacingSpanner #'common-shortest-duration
+  = #(ly:make-moment 1 16)
+
   \context {
     \Staff
     \remove "Time_signature_engraver"
