@@ -16,19 +16,45 @@ m = #(define-music-function (parser location off) (number?)
        #})
 
 \header	{
-  title = "Pieśń o nadziei"
-  poet = "słowa: Ps 25"
-  composer = "muzyka: Dawid Kusz OP"
-  tagline = \markup {
-    skład nut: Jan Warchoł
+  title = \markup {
+    Porównanie składu nut:
+    \normal-text \italic { Pieśń o nadziei }
+  }
+  subtitle = \markup \normal-text {
+    autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
+  tagline = ##f
 }
+
+\markup \vspace #2
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład A"
+  }
+}
+\markup \vspace #0.5
+
+\markup \translate #'(-1.5 . 0)
+\epsfile #X #99 #"piesn.eps"
+
+\markup \vspace #2.5
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład B"
+  }
+}
+\markup \vspace #1
 
 \paper {
   line-width = 145 \mm
-  top-margin = 10 \mm
-  markup-system-spacing #'basic-distance = #14
+  top-margin = 15 \mm
   system-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
@@ -131,6 +157,42 @@ text = \lyricmode {
     \autoBeamOff
     indent = 0\cm
   }
+}
+
+\markup \vspace #2
+\markup \fill-line {
+  \null
+  \override #'(thickness . 1.5)
+  \override #'(span-factor . 2/3)
+  \draw-hline
+  \null
+}
+\markup \vspace #2.5
+
+\markup \large \fill-line {
+  \null
+  \column {
+    \justify {
+      Powyżej widać dwie partytury tego samego utworu:
+      pochodzącą "z drugiego" tomu śpiewnika
+      \italic "Niepojęta Trójco" \concat { ( \bold A ) }
+      "i przygotowaną" przeze mnie \concat { ( \bold B ). }
+      Dwie rzeczy "w wersji" \bold A są dziwne:
+    }
+    \vspace #0.2
+    "• dlaczego użyto tak małej czcionki bez potrzeby?"
+    \line {
+      •
+      \column {
+        \line {
+          dlaczego zapisano dwie wolty, niepotrzebnie powtarzając
+          takt \italic "“do nadziei”"?
+        }
+        "Przecież za każdym razem jest taki sam."
+      }
+    }
+  }
+  \null
 }
 
 %{
