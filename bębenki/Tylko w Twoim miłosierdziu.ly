@@ -3,13 +3,55 @@
 
 \header	{
   title = \markup {
-    Porównanie: \italic { Tylko w Twoim miłosierdziu }
+    Porównanie składu nut:
+    \normal-text \italic { Tylko w Twoim miłosierdziu }
   }
-  tagline = \markup {
-    analiza: Jan Warchoł
+  subtitle = \markup \normal-text {
+    autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
+  tagline = ##f
 }
+
+\markup \vspace #2
+\markup \large \fill-line {
+  \null
+  \column {
+    \justify {
+      "Z czytelnych," eleganckich nut wygodniej się śpiewa –
+      niestety, wiele partytur jest złożonych niedbale.
+      "W przykładzie" "u góry" widać "m.in." następujące błędy:
+    }
+  }
+  \null
+}
+\markup \vspace #0.2
+\markup \large \fill-line {
+  \null
+  \column  {
+    "• zbyt mała czcionka,"
+    "• niewłaściwe nazwy pięciolinii,"
+    "• wielki odstęp przed pierwszymi nutami,"
+  }
+  \null
+  \column {
+    "• kosmiczne metrum w zwrotce,"
+    "• żle wyrównany tekst recytatywu,"
+    "• sylaby po recytatywie nie są wyróżnione."
+  }
+  \null
+}
+
+\markup \vspace #3
+
+\markup \translate #'(-3 . 0)
+\epsfile #X #122 #"tylko-w-twoim.eps"
+
+\markup \vspace #4
+\markup \large \justify {
+  Poniżej nuty przygotowane przeze mnie:
+}
+\markup \vspace #3
 
 \defineBarLine "finrep" #'("|." ".|:" "")
 
@@ -22,8 +64,9 @@
   top-margin = 10 \mm
   left-margin = 18 \mm
   right-margin = 17 \mm
-  markup-system-spacing #'basic-distance = #15
+  markup-system-spacing #'basic-distance = #5
   system-system-spacing #'basic-distance = #15
+  last-bottom-spacing #'basic-distance = #10
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -234,43 +277,4 @@ secondverse = \lyricmode {
     \override LyricText #'font-size = #1.5
     \set Timing.beamHalfMeasure = ##f
   }
-}
-
-\markup \vspace #3.5
-
-\markup \epsfile #X #122 #"tylko-w-twoim.eps"
-
-\markup \vspace #2.5
-\markup \fill-line {
-  \null
-  \override #'(thickness . 2)
-  \override #'(span-factor . 1/2)
-  \draw-hline
-  \null
-}
-\markup \vspace #1
-
-\markup \large \fill-line {
-  \null
-  \column  {
-    \override #'(line-width . 100)
-    \justify {
-      Powyżej widać dwie partytury tego samego utworu:
-      jedna została przygotowana przeze mnie, "a druga,"
-      znaleziona "w sieci," trafiła "do śpiewnika" warsztatów
-      muzycznych, które odbywały się "w Poznaniu." "W partyturze"
-      znalezionej "w internecie" widać następujące błędy składu:
-    }
-    \column {
-      \vspace #0.1
-      "• zbyt mała czcionka"
-      "• złe nazwy pięciolinii"
-      "• dziwne odstępy, np. między metrum 3/4 a pierwszymi nutami"
-      "• w zwrotce jest zapisane jakieś kosmiczne metrum"
-      "• w czwartym takcie długie nuty zajmują mniej miejsca niż krótkie"
-      "• tekst recytatywu jest niewłaściwie wyrównany"
-      "• pierwsze sylaby po recytatywie powinny być wyróżnione"
-    }
-  }
-  \null
 }
