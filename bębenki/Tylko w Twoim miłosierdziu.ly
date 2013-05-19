@@ -13,7 +13,9 @@
   tagline = ##f
 }
 
-\markup \vspace #4.5
+\markup \vspace #1.5
+\markup \large { Oto przykładowe nuty znalezione w internecie: }
+\markup \vspace #3
 
 \markup \translate #'(-3 . 0)
 \epsfile #X #122 #"tylko-w-twoim.eps"
@@ -23,14 +25,15 @@
   \null
   \column {
     \justify {
-      "Z czytelnych," eleganckich nut wygodniej się śpiewa –
-      niestety, wiele partytur jest złożonych niedbale.
-      "W przykładzie" "u góry" widać "m.in." następujące błędy:
+      Niestety, są one złożone niedbale, "a przecież"
+      "z eleganckich" nut wygodniej się śpiewa.
+      Możemy zauważyć "m.in." następujące błędy
+      (pojawiające się również "w wielu" innych partyturach):
     }
   }
   \null
 }
-\markup \vspace #0.2
+\markup \vspace #0.1
 \markup \large \fill-line {
   \null
   \column  {
@@ -46,7 +49,7 @@
   }
   \null
 }
-\markup \vspace #0.2
+\markup \vspace #0.5
 \markup \large \justify {
   Poniżej nuty przygotowane przeze mnie:
 }
