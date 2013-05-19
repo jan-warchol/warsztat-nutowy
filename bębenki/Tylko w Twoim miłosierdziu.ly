@@ -1,4 +1,4 @@
-\version "2.17.2"
+\version "2.17.16"
 #(set-global-staff-size 16.5)
 
 \header	{
@@ -159,10 +159,11 @@ bolden = {
 }
 
 text = \lyricmode {
-  Tyl -- ko w_Two -- im mi -- ło -- \tweak #'X-offset #-0.8 sier -- \tweak #'X-offset #-1 dziu,
-  \tweak #'X-offset #-0.3 Pa --
-  \tweak #'X-offset #-0.4 nie
-  \tweak #'X-offset #-0.8 mój,
+  Tyl -- ko w_Two -- im mi -- ło -- \tweak #'X-offset #-0.8 LyricText sier --
+  \tweak #'X-offset #-1 LyricText dziu,
+  \tweak #'X-offset #-0.3 LyricText Pa --
+  \tweak #'X-offset #-0.4 LyricText nie
+  \tweak #'X-offset #-0.8 LyricText mój,
   na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
   \once \override LyricSpace #'minimum-distance = #2
