@@ -11,6 +11,8 @@
   }
 }
 
+\defineBarLine "finrep" #'("|." ".|:" "")
+
 \paper {
   #(define fonts
      (make-pango-font-tree "Minion Pro"
@@ -43,7 +45,7 @@ sopranomelody = \relative f' {
       g2.
     }
   }
-  \bar "|."
+  \bar "finrep"
   \break
   \repeat volta 2 {
     \cadenzaOn
@@ -72,7 +74,7 @@ altomelody = \relative f' {
       d2.
     }
   }
-  \bar "|."
+  \bar "finrep"
   \break
   \repeat volta 2 {
     \cadenzaOn
@@ -101,7 +103,7 @@ tenormelody = \relative f {
       b2.
     }
   }
-  \bar "|."
+  \bar "finrep"
   \break
   \repeat volta 2 {
     \cadenzaOn
@@ -130,7 +132,7 @@ bassmelody = \relative f {
       g2.
     }
   }
-  \bar "|."
+  \bar "finrep"
   \break
   \repeat volta 2 {
     \cadenzaOn
@@ -166,6 +168,7 @@ text = \lyricmode {
   \tweak #'X-offset #-0.8 LyricText mój,
   na -- dzie -- ja ma. Tyl -- ko
   mój, na -- dzie -- ja ma.
+  \set stanza = "1."
   \once \override LyricSpace #'minimum-distance = #2
   \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
   \bolden \markup \underline mój i kró -- lu,
