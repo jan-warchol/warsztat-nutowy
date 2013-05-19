@@ -13,7 +13,12 @@
   tagline = ##f
 }
 
-\markup \vspace #2
+\markup \vspace #4.5
+
+\markup \translate #'(-3 . 0)
+\epsfile #X #122 #"tylko-w-twoim.eps"
+
+\markup \vspace #4
 \markup \large \fill-line {
   \null
   \column {
@@ -41,17 +46,11 @@
   }
   \null
 }
-
-\markup \vspace #3
-
-\markup \translate #'(-3 . 0)
-\epsfile #X #122 #"tylko-w-twoim.eps"
-
-\markup \vspace #4
+\markup \vspace #0.2
 \markup \large \justify {
   Poniżej nuty przygotowane przeze mnie:
 }
-\markup \vspace #3
+\markup \vspace #3.5
 
 \defineBarLine "finrep" #'("|." ".|:" "")
 
