@@ -13,47 +13,30 @@
   tagline = ##f
 }
 
-\markup \vspace #1.5
-\markup \large { Oto przykładowe nuty znalezione w internecie: }
-\markup \vspace #3
+\markup \vspace #1
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład A"
+  }
+}
+\markup \vspace #1
 
-\markup \translate #'(-3 . 0)
-\epsfile #X #122 #"tylko-w-twoim.eps"
+\markup \translate #'(-5 . 0)
+\epsfile #X #125 #"tylko-w-twoim.eps"
 
-\markup \vspace #4
-\markup \large \fill-line {
-  \null
-  \column {
-    \justify {
-      Niestety, są one złożone niedbale, "a przecież"
-      "z eleganckich" nut wygodniej się śpiewa.
-      Możemy zauważyć "m.in." następujące błędy
-      (pojawiające się również "w wielu" innych partyturach):
-    }
+\markup \vspace #2
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład B"
   }
-  \null
 }
-\markup \vspace #0.1
-\markup \large \fill-line {
-  \null
-  \column  {
-    "• zbyt mała czcionka,"
-    "• niewłaściwe nazwy pięciolinii,"
-    "• wielki odstęp przed pierwszymi nutami,"
-  }
-  \null
-  \column {
-    "• kosmiczne metrum w zwrotce,"
-    "• żle wyrównany tekst recytatywu,"
-    "• sylaby po recytatywie nie są wyróżnione."
-  }
-  \null
-}
-\markup \vspace #0.5
-\markup \large \justify {
-  Poniżej nuty przygotowane przeze mnie:
-}
-\markup \vspace #3.5
+\markup \vspace #1
 
 \defineBarLine "finrep" #'("|." ".|:" "")
 
@@ -279,4 +262,50 @@ secondverse = \lyricmode {
     \override LyricText #'font-size = #1.5
     \set Timing.beamHalfMeasure = ##f
   }
+}
+
+\markup \vspace #2
+\markup \fill-line {
+  \null
+  \override #'(thickness . 1.5)
+  \override #'(span-factor . 2/3)
+  \draw-hline
+  \null
+}
+\markup \vspace #2
+
+\markup \large \fill-line {
+  \null
+  \override #'(line-width . 110)
+  \column {
+    \line \italic {
+      Z czytelnych, eleganckich nut wygodniej się uczyć.
+    }
+    \justify {
+      Powyżej widać dwie partytury tego samego utworu:
+      znalezioną "w internecie" \concat { ( \bold A ) }
+      "i przygotowaną" przeze mnie \concat { ( \bold B ). }
+      Niestety, "w wersji" \bold A widać często spotykane
+      błędy składu:
+    }
+  }
+  \null
+}
+\markup \vspace #0.2
+\markup \large \fill-line {
+  \null
+  \line {
+    \column  {
+      "• zbyt mała czcionka,"
+      "• niewłaściwe nazwy pięciolinii,"
+      "• wielki odstęp przed pierwszymi nutami,"
+    }
+    \hspace #10
+    \column {
+      "• kosmiczne metrum w zwrotce,"
+      "• żle wyrównany tekst recytatywu,"
+      "• sylaby po recytatywie nie są wyróżnione."
+    }
+  }
+  \null
 }
