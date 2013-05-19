@@ -29,6 +29,7 @@ m = #(define-music-function (parser location off) (number?)
   line-width = 145 \mm
   top-margin = 10 \mm
   markup-system-spacing #'basic-distance = #14
+  system-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative c'' {
@@ -110,7 +111,7 @@ text = \lyricmode {
     >>
     \new Lyrics = sopranolyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.5
     }
     \lyricsto soprano \text
 
