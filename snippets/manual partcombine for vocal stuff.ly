@@ -150,6 +150,7 @@ tenorII = \relative f {
   f4
   f4\dim ( e8 d e4) e
   g2 r
+  R1
 }
 
 
