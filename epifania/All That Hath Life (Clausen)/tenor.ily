@@ -1,50 +1,19 @@
 \version "2.16.1"
 
-% funkcje pomocnicze:
+% -*- master: ./pomocnicze/tenor-solo.ly;
 
-unisono =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \oneVoice
-     \new Voice {
-       \override NoteColumn #'ignore-collision = ##t
-       \hideNotes
-       \oneVoice
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       \override Slur #'stencil = ##f
-       \override PhrasingSlur #'stencil = ##f
-       #music
-     }
-   #})
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisywać plik.
 
-rownyRytm =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \unHideNotes
-     \oneVoice
-     #music
-   #})
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "tenorgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
 
-podzial =
-#(define-music-function (parser location music)
-   (ly:music?)
-   #{
-     \voiceTwo
-     \new Voice  {
-       \voiceOne
-       \override Hairpin #'stencil = ##f
-       \override DynamicText #'stencil = ##f
-       \override DynamicTextSpanner #'stencil = ##f
-       #music
-     }
-   #})
-
-tenorII = \relative f {
-
+tenordolny = \relative f {
+  \key g \major
+  \time 6/8
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
   
@@ -151,7 +120,18 @@ tenorII = \relative f {
   b b4\ff r8 \bar "|."
 }
 
-tenorI = \relative f {
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+tenorgorny = \relative f {
+  \key g \major
+  \time 6/8
   \rownyRytm{
     g8\f g g d' d d
     \slurDashed
@@ -279,33 +259,12 @@ tenorI = \relative f {
   d d4\ff r8 \bar "|."
   }
 }
-  
-\new Staff \with { \consists "Ambitus_engraver" } {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
-  \dynamicUp
-  \tupletUp
-  \clef "treble_8"
-  
-  \key g \major
-  \time 6/8
-  <<
-    \tenorI
-    \tenorII
-  >>
-}
 
-\addlyrics {
+
+tenortekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione
+  % do partii dolnego głosu (jeśli jest podział).
+
   All that hath life and breath praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia!
@@ -359,5 +318,11 @@ tenorI = \relative f {
   Praise Him, laud Him,
   praise Him, laud Him,
   Al -- le -- lu -- ia!
-  
+}
+
+tenor = {
+  <<
+    \tenordolny
+    \tenorgorny
+  >>
 }

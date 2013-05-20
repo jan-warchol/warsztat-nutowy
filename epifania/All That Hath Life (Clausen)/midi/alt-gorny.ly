@@ -2,9 +2,9 @@
 
 \include "../pomocnicze/dzielenie-głosów.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
-\include "../bas.ily"
+\include "../alt.ily"
 
 \score {
-  { \klarnet \bas }
+  { \klarnet \altgorny }
   \midi {}
 }

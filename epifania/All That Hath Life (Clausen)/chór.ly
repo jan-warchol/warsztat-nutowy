@@ -9,18 +9,77 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "epifanijny-styl-nagłówków.ily"
+  \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
 \header {
+  %title =
+  %composer =
+  %kompozytor-krotki =
+  %werset =
+  %przygotowanie-nut = \markup \column \right-align {
+  %  \bold "przygotowanie nut:"
+  %  ""
+  %}
+  %tlumaczenie = \markup \typewriter \column {
+  %  \vspace #1
+  %  \bold
+  %  ""
+  %  ""
+  %}
 }
+
+\include "./pomocnicze/dzielenie-głosów.ily"
+\include "sopran.ily"
+\include "alt.ily"
+\include "tenor.ily"
+\include "bas.ily"
 
 \score {
   \new ChoirStaff <<
-    \include "sopran.ily"
-    \include "alt.ily"
-    \include "tenor.ily"
-    \include "bas.ily"
+    \new Staff {
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \sopran
+    }
+    \addlyrics \soprantekst
+
+    \new Staff {
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \alt
+    }
+    \addlyrics \alttekst
+
+    \new Staff {
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
+      \dynamicUp
+      \tupletUp
+      \clef "G_8"
+
+      \tenor
+    }
+    \addlyrics \tenortekst
+
+    \new Staff {
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
+      \dynamicUp
+      \tupletUp
+      \clef F
+
+      \bas
+    }
+    \addlyrics \bastekst
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu
@@ -30,6 +89,11 @@
 
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+
+    \context {
+      \Staff
+      \consists "Ambitus_engraver"
+    }
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
 

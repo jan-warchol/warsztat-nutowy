@@ -1,16 +1,18 @@
 \version "2.16.1"
 
-sopran = { \include "../sopran.ily" }
-alt = { \include "../alt.ily" }
-tenor = { \include "../tenor.ily" }
-bas = { \include "../bas.ily" }
+\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../sopran.ily"
+\include "../alt.ily"
+\include "../tenor.ily"
+\include "../bas.ily"
 
 \score {
   <<
-    \keepWithTag #'chor \sopran
-    \keepWithTag #'chor \alt
-    \keepWithTag #'solo \tenor
-    \keepWithTag #'chor \bas
+    { \pianino \sopran }
+    { \pianino \alt }
+    { \klarnet \tenor }
+    { \pianino \bas }
   >>
   \midi {}
 }

@@ -1,36 +1,19 @@
 \version "2.16.1"
 
-\include "./dzielenie-głosów.ily"
+% -*- master: ./pomocnicze/alt-solo.ly;
 
-\new Staff \with { \consists "Ambitus_engraver" } {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
-  \dynamicUp
-  \tupletUp
-  \clef treble
-  \key g \major
-  
-  \time 6/8
-  
-  % wpisz nuty:
-  <<
-    \relative f' {
-      % Jeśli ten głos nie dzieli się na dolny i górny,
-      % wpisz całą partię tutaj a następnego \relative { }
-      % po prostu nie używaj.
-      % Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
-      % (łącznie z tym, co jest śpiewane unisono):
-      
+% Uwaga! z przyczyn technicznych przed skompilowaniem
+% partii trzeba zapisywać plik.
+
+% Jeśli ten głos nie dzieli się na dolny i górny,
+% wpisz całą partię tutaj a zmiennej "altgorny"
+% po prostu nie używaj.
+% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
+% (łącznie z tym, co jest śpiewane unisono):
+
+altdolny = \relative f' {
+      \key g \major
+      \time 6/8
       g8\f g g g g g
       \slurDashed
       \set melismaBusyProperties = #'()
@@ -134,16 +117,19 @@
     r d' bes b4.~
     b b4\ff r8 \bar "|."
     }
-    
-    \relative f' {
-      % Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
-      % (łącznie z tym, co jest śpiewane unisono).
-      % Zapewne będzie Ci wygodnie skopiować wspólne
-      % fragmenty z tego, co jest już wpisane powyżej.
-      % Żeby odpowiednio połączyć obie partie, użyj
-      % \unisono { } , \rownyRytm { } i \podzial { }
-      % na odpowiednich fragmentach tej partii.
-      
+
+
+% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
+% (łącznie z tym, co jest śpiewane unisono).
+% Zapewne będzie Ci wygodnie skopiować wspólne
+% fragmenty z tego, co jest już wpisane powyżej.
+% Żeby odpowiednio połączyć obie partie, użyj
+% \unisono { } , \rownyRytm { } i \podzial { }
+% na odpowiednich fragmentach tej partii.
+
+altgorny = \relative f' {
+      \key g \major
+      \time 6/8
       \unisono{
         g8\f g g g g g
         \slurDashed
@@ -252,12 +238,12 @@
         b b4\ff r8 \bar "|."
       }
     }
-  >>
-}
-\addlyrics {
-  % Tu wpisz libretto. Będzie ono przyczepione do partii
-  % dolnego głosu (jeśli jest podział).
-  
+
+
+alttekst = \lyricmode {
+  % Tu wpisz libretto. Będzie ono przyczepione
+  % do partii dolnego głosu (jeśli jest podział).
+
   All that hath life and breath praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
@@ -310,5 +296,11 @@
   Praise Him, laud Him,
   praise Him, laud Him,
   Al -- le -- lu -- ia!
-  
+}
+
+alt = {
+  <<
+    \altdolny
+    \altgorny
+  >>
 }

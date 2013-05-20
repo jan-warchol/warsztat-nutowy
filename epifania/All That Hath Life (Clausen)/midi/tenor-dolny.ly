@@ -2,9 +2,9 @@
 
 \include "../pomocnicze/dzielenie-głosów.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
-\include "../bas.ily"
+\include "../tenor.ily"
 
 \score {
-  { \klarnet \bas }
+  { \klarnet \tenordolny }
   \midi {}
 }

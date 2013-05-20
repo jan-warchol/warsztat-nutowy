@@ -1,8 +1,10 @@
 \version "2.16.1"
 
-tenor = { \include "../tenor.ily" }
+\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../tenor.ily"
 
 \score {
-  \keepWithTag #'solo \tenor
+  { \klarnet \tenor }
   \midi {}
 }
