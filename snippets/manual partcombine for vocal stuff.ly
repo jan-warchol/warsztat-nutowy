@@ -4,7 +4,6 @@ unisono =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \oneVoice
      \new Devnull {
        #music
      }
@@ -14,8 +13,6 @@ rownyRytm =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \unHideNotes
-     \oneVoice
      #music
    #})
 
@@ -32,6 +29,7 @@ podzial =
        \override TextScript #'stencil = ##f
        #music
      }
+     \oneVoice
    #})
 
 tenII = {
@@ -59,20 +57,16 @@ tenI = {
     r2 c'\p
     c' c'
   }
-  \rownyRytm {
-    r e'4\< e'
-    a'4. a'8\! a'2
-  }
+  r e'4\< e'
+  a'4. a'8\! a'2
   \unisono {
     d'2\mf ( c'4) c'
   }
   \podzial {
     d'1
   }
-  \rownyRytm {
-    c'2 c'\p
-    c' c'
-  }
+  c'2 c'\p
+  c' c'
   \podzial {
     e'1\mp
     g'2 e'
@@ -120,12 +114,10 @@ tenorI = \relative f {
     b4.( a8 g4) g4\dim
     a2
   }
-  \rownyRytm {
-    c2\p
-    c c
-    r d4\mf d
-    e4. g8 g2
-  }
+  c2\p
+  c c
+  r d4\mf d
+  e4. g8 g2
   \podzial {
     g4\f(f2 e4~
     e d2 c4~
