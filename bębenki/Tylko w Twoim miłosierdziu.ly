@@ -279,7 +279,7 @@ secondverse = \lyricmode {
   \override #'(line-width . 110)
   \column {
     \line \italic {
-      Z czytelnych, eleganckich nut wygodniej się uczyć.
+      Z czytelnych, eleganckich nut wygodniej się uczy i śpiewa.
     }
     \justify {
       Powyżej widać dwie partytury tego samego utworu:
