@@ -16,7 +16,7 @@
   %title =
   %composer =
   %kompozytor-krotki =
-  %adres-biblijny =
+  %werset =
   %przygotowanie-nut = \markup \column \right-align {
   %  \bold "przygotowanie nut:"
   %  ""
