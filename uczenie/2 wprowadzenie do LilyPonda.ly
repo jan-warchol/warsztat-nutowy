@@ -535,6 +535,13 @@
   polecenia \typewriter "\podzial { }".
 }
 
+\markup \justify {
+  Uwaga: w każdym głosie należy zapisać wsyzstkie oznaczenia,
+  całą dynamikę itp.  Powtarzające się oznaczenia zostaną
+  odpowiednio ukryte, ale powinny być obecne m.in. żebyśmy
+  dostali właściwe MIDI.
+}
+
 
 %{ TODO (DODAĆ):
 
