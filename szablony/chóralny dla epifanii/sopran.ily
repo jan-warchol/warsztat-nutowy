@@ -45,15 +45,7 @@ soprantekst = \lyricmode {
 
 }
 
-piecioliniasopranu = {
-  \set Staff.instrumentName = "S "
-  \set Staff.shortInstrumentName = "S "
-  \dynamicUp
-  \tupletUp
-  \clef G
-  <<
-    \soprandolny
-    \soprangorny
-  >>
-}
-\addlyrics \soprantekst
+sopran = <<
+  \soprandolny
+  \soprangorny
+>>

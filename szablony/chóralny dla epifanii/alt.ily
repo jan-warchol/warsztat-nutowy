@@ -45,15 +45,7 @@ alttekst = \lyricmode {
 
 }
 
-piecioliniaaltu = {
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
-  \dynamicUp
-  \tupletUp
-  \clef G
-  <<
-    \altdolny
-    \altgorny
-  >>
-}
-\addlyrics \alttekst
+alt = <<
+  \altdolny
+  \altgorny
+>>

@@ -3,4 +3,13 @@
 \include "./dzielenie-głosów.ily"
 \include "../sopran.ily"
 
-\score { \piecioliniasopranu }
+\new Staff {
+  \set Staff.instrumentName = "S "
+  \set Staff.shortInstrumentName = "S "
+  \dynamicUp
+  \tupletUp
+  \clef G
+
+  \sopran
+}
+\addlyrics \soprantekst

@@ -45,15 +45,7 @@ tenortekst = \lyricmode {
 
 }
 
-piecioliniatenoru = {
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
-  \dynamicUp
-  \tupletUp
-  \clef "G_8"
-  <<
-    \tenordolny
-    \tenorgorny
-  >>
-}
-\addlyrics \tenortekst
+tenor = <<
+  \tenordolny
+  \tenorgorny
+>>

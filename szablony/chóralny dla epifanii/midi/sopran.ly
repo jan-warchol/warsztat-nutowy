@@ -5,6 +5,6 @@
 \include "../sopran.ily"
 
 \score {
-  { \klarnet \piecioliniasopranu }
+  { \klarnet \sopran }
   \midi {}
 }

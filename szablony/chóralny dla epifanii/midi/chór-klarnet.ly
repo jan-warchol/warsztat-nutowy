@@ -9,10 +9,10 @@
 
 \score {
   <<
-    { \klarnet \piecioliniasopranu }
-    { \klarnet \piecioliniaaltu }
-    { \klarnet \piecioliniatenoru }
-    { \klarnet \piecioliniabasu }
+    { \klarnet \sopran }
+    { \klarnet \alt }
+    { \klarnet \tenor }
+    { \klarnet \bas }
   >>
   \midi {}
 }

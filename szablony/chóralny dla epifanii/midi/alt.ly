@@ -5,6 +5,6 @@
 \include "../alt.ily"
 
 \score {
-  { \klarnet \piecioliniaaltu }
+  { \klarnet \alt }
   \midi {}
 }

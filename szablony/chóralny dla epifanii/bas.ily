@@ -45,15 +45,7 @@ bastekst = \lyricmode {
 
 }
 
-piecioliniabasu = {
-  \set Staff.instrumentName = "B "
-  \set Staff.shortInstrumentName = "B "
-  \dynamicUp
-  \tupletUp
-  \clef F
-  <<
-    \basdolny
-    \basgorny
-  >>
-}
-\addlyrics \bastekst
+bas = <<
+  \basdolny
+  \basgorny
+>>

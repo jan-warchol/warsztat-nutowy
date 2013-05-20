@@ -9,9 +9,9 @@
 
 \score {
   <<
-    { \pianino \piecioliniasopranu }
-    { \pianino \piecioliniaaltu }
-    { \pianino \piecioliniatenoru }
+    { \pianino \sopran }
+    { \pianino \alt }
+    { \pianino \tenor }
     \new Staff { \klarnet \basdolny }
     \new Staff { \pianino \basgorny }
   >>
