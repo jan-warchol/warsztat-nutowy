@@ -1,5 +1,5 @@
 \version "2.17.2"
-#(set-global-staff-size 21)
+#(set-global-staff-size 22)
 
 \header	{
   title = \markup \smaller {
@@ -14,25 +14,25 @@
 }
 
 \markup \vspace #2
-\markup \large \bold {
+\markup \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    \pad-to-box #'(0 . 0) #'(0 . 1.8)
     "przykład A"
   }
 }
 \markup \vspace #0.5
 
 \markup \translate #'(0 . 0)
-\epsfile #X #97.5 #"vilanella.eps"
+\epsfile #X #93 #"vilanella.eps"
 
 \markup \vspace #2.5
-\markup \large \bold {
+\markup \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    \pad-to-box #'(0 . 0) #'(0 . 1.8)
     "przykład B"
   }
 }
@@ -124,7 +124,7 @@ ciii = \markup {
 }
 \markup \vspace #2.5
 
-\markup \column {
+\markup \smaller \column {
   \justify {
     Przykład \bold A pochodzi "z drugiej"
     części \italic { Repertuaru początkującego gitarzysty }
