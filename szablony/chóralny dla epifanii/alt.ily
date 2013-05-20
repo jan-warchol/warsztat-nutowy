@@ -2,14 +2,12 @@
 
 % -*- master: ./pomocnicze/alt-solo.ly;
 
-% Uwaga! z przyczyn technicznych przed skompilowaniem
-% partii trzeba zapisywać plik.
+% Uwaga! z przyczyn technicznych zawsze przed
+% skompilowaniem partii trzeba zapisywać plik.
 
-% Jeśli ten głos nie dzieli się na dolny i górny,
-% wpisz całą partię tutaj a zmiennej "altgorny"
-% po prostu nie używaj.
-% Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
-% (łącznie z tym, co jest śpiewane unisono):
+% Wpisz tutaj całą dolną partię - łącznie z tym, co
+% jest śpiewane unisono, i wszystkimi oznaczeniami.
+% (Jeśli nie ma podziału, po prostu wpisz tu całą partię.)
 
 altdolny = \relative f' {
   % podaj tonację, na przykład \key g \minor
@@ -21,13 +19,15 @@ altdolny = \relative f' {
 }
 
 
-% Jeśli głos się dzieli, tutaj wpisz GÓRNĄ partię
-% (łącznie z tym, co jest śpiewane unisono).
-% Zapewne będzie Ci wygodnie skopiować wspólne
-% fragmenty z tego, co jest już wpisane powyżej.
-% Żeby odpowiednio połączyć obie partie, użyj
-% \unisono { } , \rownyRytm { } i \podzial { }
-% na odpowiednich fragmentach tej partii.
+% Jeśli w którymś miejscu głos się dzieli, tutaj wpisz
+% CAŁĄ górną partię (łącznie z fragmentami, które są
+% unisono z dolną partią, i wszystkimi oznaczeniami).
+
+% Żeby odpowiednio połączyć obie partie, wstaw fragmenty
+% śpiewane razem wewnątrz \unisono { } , a fragmenty
+% o różnym rytmie wewnątrz \podzial { } . Tam, gdzie oba
+% głosy śpiewają różne dźwięku w równym rytmie, nie trzeba
+% używać żadnej specjalnej funkcji.
 
 altgorny = \relative f' {
   % podaj tonację, na przykład \key g \minor
