@@ -1,6 +1,45 @@
 \version "2.17.2"
+#(set-global-staff-size 21)
+
+\header	{
+  title = \markup \smaller {
+    Porównanie składu nut:
+    \normal-text \italic { Vilanella }
+  }
+  subtitle = \markup \smaller \normal-text {
+    autor analizy: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
+  tagline = ##f
+}
+
+\markup \vspace #2
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład A"
+  }
+}
+\markup \vspace #0.5
+
+\markup \translate #'(0 . 0)
+\epsfile #X #97.5 #"vilanella.eps"
+
+\markup \vspace #2.5
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład B"
+  }
+}
+\markup \vspace #1
 
 \paper {
+  top-margin = 12 \mm
   left-margin = 15 \mm
   right-margin = 15 \mm
   system-system-spacing #'basic-distance = 15
@@ -63,6 +102,7 @@ ciii = \markup {
 
   \override Staff.OctavateEight #'font-shape = #'roman
   \override Staff.OctavateEight #'font-size = #-3.3
+  \override Staff.StaffSymbol #'ledger-line-thickness = #'(1.9 . 0)
 
   \context {
     \Staff
@@ -71,5 +111,39 @@ ciii = \markup {
   \context {
     \Score
     \remove "Bar_number_engraver"
+  }
+}
+
+\markup \vspace #2
+\markup \fill-line {
+  \null
+  \override #'(thickness . 1.5)
+  \override #'(span-factor . 2/3)
+  \draw-hline
+  \null
+}
+\markup \vspace #2.5
+
+\markup \column {
+  \justify {
+    Przykład \bold A pochodzi "z drugiej"
+    części \italic { Repertuaru początkującego gitarzysty }
+    wydawnictwa Absonic; przykład \bold B to ten sam fragment
+    złożony przeze mnie.
+  }
+  \vspace #0.3
+  \justify {
+    Nie ma tutaj poważnych błędów składu, natomiast pewnym
+    problemem w wersji \bold A jest grubość linii:
+    pięciolinia, pałeczki, kreski taktowe i linie dodane są
+    praktycznie tej samej grubości, przez co cały obraz trochę się
+    zlewa. Tymczasem pięciolinia powinna być jakby tłem dla nut,
+    tak żeby poszczególne elementy były łatwo odróżnialne.
+  }
+  \vspace #0.3
+  \justify {
+    Oprócz tego w wersji \bold B są nieco krótsze pałeczki,
+    dzięki czemu nuty są wizualnie zwięzłe (a więc łatwiej
+    ogarnąć wzrokiem melodię).
   }
 }
