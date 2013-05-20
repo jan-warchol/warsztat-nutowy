@@ -1,6 +1,44 @@
 \version "2.17.2"
 
+\header {
+  title = \markup \smaller {
+    Porównanie składu nut:
+    \normal-text \italic { Feste Lariane }
+  }
+  subtitle = \markup \smaller \normal-text {
+    autor analizy: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
+  tagline = ##f
+}
+
+\markup \vspace #2
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład A"
+  }
+}
+\markup \vspace #0.5
+
+\markup \translate #'(0 . 0)
+\epsfile #X #102 #"feste.eps"
+
+\markup \vspace #2.5
+\markup \large \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    "przykład B"
+  }
+}
+\markup \vspace #1
+
 \paper {
+  top-margin = 12 \mm
   left-margin = 15 \mm
   right-margin = 15 \mm
   system-system-spacing #'basic-distance = 18
@@ -102,5 +140,39 @@ cv = \markup {
   \context {
     \Score
     \remove "Bar_number_engraver"
+  }
+}
+
+\markup \vspace #2
+\markup \fill-line {
+  \null
+  \override #'(thickness . 1.5)
+  \override #'(span-factor . 2/3)
+  \draw-hline
+  \null
+}
+\markup \vspace #2.5
+
+\markup \column {
+  \justify {
+    Przykład \bold A pochodzi "z drugiej"
+    części \italic { Repertuaru początkującego gitarzysty }
+    wydawnictwa Absonic; przykład \bold B to ten sam fragment
+    złożony przeze mnie.
+  }
+  \vspace #0.3
+  \justify {
+    Podstawową różnicą jest ułożenie trzydziestodwójkowych belek.
+    Powinny one być poziomo, żeby pokazać jednostajność
+    tremolo (cała trudność tej techniki polega właśnie na
+    stworzeniu wrażenia ciągłego dźwięku). Grający powinien
+    widzieć kierunek podążania całej frazy, a nie wizualnie
+    "„wspinać się”" na każdą grupę z osobna.
+  }
+  \vspace #0.3
+  \justify {
+    Oprócz tego wyraźne linie dodane w wersji \bold B
+    (grubsze, ale oddzielone od siebie) nie zlewają się
+    "z pięciolinią," ułatwiając czytanie.
   }
 }
