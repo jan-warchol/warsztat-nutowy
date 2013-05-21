@@ -135,7 +135,7 @@ ciii = \markup {
     wydawnictwa Absonic; przykład \bold B to ten sam fragment
     złożony przeze mnie.
   }
-  \vspace #0.3
+  \vspace #0.5
   \justify {
     Nie ma tutaj poważnych błędów składu, natomiast pewnym
     problemem w wersji \bold A jest grubość linii:
@@ -144,10 +144,10 @@ ciii = \markup {
     zlewa. Tymczasem pięciolinia powinna być jakby tłem dla nut,
     tak żeby poszczególne elementy były łatwo odróżnialne.
   }
-  \vspace #0.3
+  \vspace #0.5
   \justify {
     Oprócz tego w wersji \bold B są nieco krótsze pałeczki,
     dzięki czemu nuty są wizualnie zwięzłe (a więc łatwiej
-    ogarnąć wzrokiem melodię).
+    objąć wzrokiem melodię).
   }
 }

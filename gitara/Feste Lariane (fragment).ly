@@ -162,7 +162,7 @@ cv = \markup {
     wydawnictwa Absonic; przykład \bold B to ten sam fragment
     złożony przeze mnie.
   }
-  \vspace #0.3
+  \vspace #0.5
   \justify {
     Podstawową różnicą jest ułożenie trzydziestodwójkowych belek.
     Powinny one być poziomo, żeby pokazać jednostajność
@@ -171,7 +171,7 @@ cv = \markup {
     widzieć kierunek podążania całej frazy, a nie wizualnie
     "„wspinać się”" na każdą grupę z osobna.
   }
-  \vspace #0.3
+  \vspace #0.5
   \justify {
     Oprócz tego wyraźne linie dodane w wersji \bold B
     (grubsze, ale oddzielone od siebie) nie zlewają się

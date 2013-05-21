@@ -283,7 +283,8 @@ secondverse = \lyricmode {
     }
     \justify {
       Powyżej widać dwie partytury tego samego utworu:
-      znalezioną "w internecie" \concat { ( \bold A ) }
+      znalezioną "na stronie" \typewriter { http://chomikuj.pl/Rabjan/Dokumenty }
+      \concat { ( \bold A ) }
       "i przygotowaną" przeze mnie \concat { ( \bold B ). }
       Niestety, "w wersji" \bold A widać często spotykane
       błędy składu:
