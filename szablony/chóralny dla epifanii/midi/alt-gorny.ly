@@ -5,6 +5,6 @@
 \include "../alt.ily"
 
 \score {
-  { \klarnet \altgorny }
+  \new Staff { \klarnet \altgorny }
   \midi {}
 }

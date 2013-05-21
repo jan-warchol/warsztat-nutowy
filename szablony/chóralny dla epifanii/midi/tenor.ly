@@ -5,6 +5,6 @@
 \include "../tenor.ily"
 
 \score {
-  { \klarnet \tenor }
+  \new Staff { \klarnet \tenor }
   \midi {}
 }

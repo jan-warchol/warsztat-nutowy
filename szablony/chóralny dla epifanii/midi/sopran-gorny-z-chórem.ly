@@ -11,9 +11,9 @@
   <<
     \new Staff { \pianino \soprandolny }
     \new Staff { \klarnet \soprangorny }
-    { \pianino \alt }
-    { \pianino \tenor }
-    { \pianino \bas }
+    \new Staff { \pianino \alt }
+    \new Staff { \pianino \tenor }
+    \new Staff { \pianino \bas }
   >>
   \midi {}
 }

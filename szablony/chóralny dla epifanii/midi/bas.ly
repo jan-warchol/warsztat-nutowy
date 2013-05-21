@@ -5,6 +5,6 @@
 \include "../bas.ily"
 
 \score {
-  { \klarnet \bas }
+  \new Staff { \klarnet \bas }
   \midi {}
 }
