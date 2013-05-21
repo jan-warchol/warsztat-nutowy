@@ -15,10 +15,10 @@
 
 \score {
   \relative f' {
-    \compressFullBarRests
     \clef G
     \key g \minor
     \time 3/4
+
     R2.*7
     f'2.~ \pp \<
     f
@@ -66,4 +66,7 @@
     es4. c8 d4~
     \bar "|."
   }
+  \layout {
+    \compressFullBarRests
+    \override DynamicTextSpanner #'style = #'none
 }
