@@ -69,4 +69,8 @@
   \layout {
     \compressFullBarRests
     \override DynamicTextSpanner #'style = #'none
+
+    \override Score.SpacingSpanner #'common-shortest-duration =
+    #(ly:make-moment 1 16)
+  }
 }
