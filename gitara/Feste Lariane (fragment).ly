@@ -18,7 +18,7 @@
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    "przykład A"
+    "wersja A"
   }
 }
 \markup \vspace #0.5
@@ -32,7 +32,7 @@
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    "przykład B"
+    "wersja B"
   }
 }
 \markup \vspace #1
