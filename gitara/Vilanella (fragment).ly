@@ -69,7 +69,9 @@ ciii = \markup {
   \once \override Beam #'positions = #'(4.8 . 4.3)
   <d a' d fis>8 <a a' cis e>
   \once \override Beam #'positions = #'(3.8 . 3.3)
-  <b fis' b d> <fis-3 fis'-4 a-1 cis-1>^\cii
+  <b fis' b d>
+  \once \override TextScript #'extra-offset = #'(0 . 0.2)
+  <fis-3 fis'-4 a-1 cis-1>^\cii
   <g g' b d>16 a16 <b fis' d'>8 <a e'-1 a-1 d-4>8 <cis'-2>
   <d,, d' a'-1 d-3>8 fis'16
   \set fingeringOrientations = #'(down)
@@ -84,10 +86,12 @@ ciii = \markup {
   <fis d'>16 gis <a cis e>8 <e a b e> <e, gis'-1>
   <a a' cis e>4 q8 q16 q
   <d a' d fis>8 <a a' cis e> <d a' d fis>16 cis b a
+  \once \override TextScript #'extra-offset = #'(0 . 0.4)
   <g-3 b'-2 d-1 g-1>16^\ciii
   \set fingeringOrientations = #'(down)
   a <b-1> <c-2>
   \set fingeringOrientations = #'(left)
+  \once \override TextScript #'extra-offset = #'(0 . 0.3)
   <d-4 a'-1 d-2 fis-1>4^"C2"
 }
 

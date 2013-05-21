@@ -80,6 +80,7 @@ cv = \markup {
     b, gis' gis gis
     |
     \override Beam #'positions = #'(6.5 . 6.5)
+    \once \override TextScript #'extra-offset = #'(0 . 0.4)
     a,,^\cv a'' a a
     c, a' a a
     e a a a
@@ -99,6 +100,7 @@ cv = \markup {
     d gis gis gis
     |
     \override Beam #'positions = #'(6.5 . 6.5)
+    \once \override TextScript #'extra-offset = #'(0 . 0.4)
     a,,^\cv a'' a a
     c, a' a a
     e a a a
