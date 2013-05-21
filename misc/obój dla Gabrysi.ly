@@ -29,7 +29,11 @@
     f4~\( \pp f16. es32 d16. c32 bes16. a32 bes16. c64 d
     d8( \cresc c8~ c16)\) f,\( a c f16. g32 a16. f32
     bes8.(\mf a32 bes) \) bes8~ \trill bes32 a bes c d16.( bes32 f d c bes)
-    g'8\turn( \( g16 a32 bes) es,2\trill
+    g'8 ^\markup \translate #'(-0.65 . 0) \center-column {
+      \translate #'(0 . -1.1) \magnify #0.8 \sharp
+      \musicglyph #"scripts.turn"
+    }
+    ( \( g16 a32 bes) es,2\trill
     d2\)\p \breathe g4~ \p g8 c c( a) f4~
     f8 bes bes g g16( e f g
     a8 a32) f32( g a bes16. a32 bes g e c) c'8.( f,16)
