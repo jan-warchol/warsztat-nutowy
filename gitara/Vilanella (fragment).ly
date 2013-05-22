@@ -3,14 +3,15 @@
 
 \header	{
   title = \markup \smaller {
-    Porównanie składu nut:
-    \normal-text \italic { Vilanella }
+    Porównanie składu nut
   }
-  subtitle = \markup \smaller \normal-text {
+  subtitle = \markup {
+    \normal-text { utwór: \italic { Vilanella } (fragment) }
+  }
+  tagline = \markup \smaller \normal-text {
     autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
-  tagline = ##f
 }
 
 \markup \vspace #2
@@ -106,7 +107,9 @@ ciii = \markup {
 
   \override Staff.OctavateEight #'font-shape = #'roman
   \override Staff.OctavateEight #'font-size = #-3.3
-  \override Staff.StaffSymbol #'ledger-line-thickness = #'(1.9 . 0)
+
+  \override Staff.BarLine #'hair-thickness = #2
+  \override Stem #'thickness = #1.4
 
   \context {
     \Staff
@@ -130,10 +133,10 @@ ciii = \markup {
 
 \markup \smaller \column {
   \justify {
-    Przykład \bold A pochodzi "z drugiej"
+    Nuty u góry (wersja \concat { \bold A ) } pochodzą "z drugiej"
     części \italic { Repertuaru początkującego gitarzysty }
-    wydawnictwa Absonic; przykład \bold B to ten sam fragment
-    złożony przeze mnie.
+    wydawnictwa Absonic; wersja \bold B to ten sam fragment
+    utworu złożony przeze mnie.
   }
   \vspace #0.5
   \justify {

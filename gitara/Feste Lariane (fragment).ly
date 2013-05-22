@@ -2,14 +2,15 @@
 
 \header {
   title = \markup \smaller {
-    Porównanie składu nut:
-    \normal-text \italic { Feste Lariane }
+    Porównanie składu nut
   }
-  subtitle = \markup \smaller \normal-text {
+  subtitle = \markup {
+    \normal-text { utwór: \italic { Feste Lariane } (fragment) }
+  }
+  tagline = \markup \smaller \normal-text {
     autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
-  tagline = ##f
 }
 
 \markup \vspace #2
@@ -135,6 +136,9 @@ cv = \markup {
   \override Staff.OctavateEight #'font-shape = #'roman
   \override Staff.OctavateEight #'font-size = #-3.3
 
+  \override Staff.BarLine #'hair-thickness = #2
+  \override Stem #'thickness = #1.4
+
   \context {
     \Staff
     \remove "Time_signature_engraver"
@@ -157,14 +161,15 @@ cv = \markup {
 
 \markup \column {
   \justify {
-    Przykład \bold A pochodzi "z drugiej"
+    Nuty u góry (wersja \concat { \bold A ) } pochodzą "z drugiej"
     części \italic { Repertuaru początkującego gitarzysty }
-    wydawnictwa Absonic; przykład \bold B to ten sam fragment
-    złożony przeze mnie.
+    wydawnictwa Absonic; wersja \bold B to ten sam fragment
+    utworu złożony przeze mnie.
   }
   \vspace #0.5
   \justify {
-    Podstawową różnicą jest ułożenie trzydziestodwójkowych belek.
+    Podstawową różnicą w składzie jest
+    ułożenie trzydziestodwójkowych belek.
     Powinny one być poziomo, żeby pokazać jednostajność
     tremolo (cała trudność tej techniki polega właśnie na
     stworzeniu wrażenia ciągłego dźwięku). Grający powinien
@@ -173,8 +178,7 @@ cv = \markup {
   }
   \vspace #0.5
   \justify {
-    Oprócz tego wyraźne linie dodane w wersji \bold B
-    (grubsze, ale oddzielone od siebie) nie zlewają się
-    "z pięciolinią," ułatwiając czytanie.
+    Oprócz tego grubsze linie dodane w wersji \bold B
+    nie zlewają się "z pięciolinią," ułatwiając czytanie.
   }
 }
