@@ -37,18 +37,18 @@
 
 \score {
   \new ChoirStaff <<
-    \new Staff {
+    \new Staff = panie {
       \set Staff.instrumentName = \markup \column { "S " "A " }
       \set Staff.shortInstrumentName = \markup \column { "S " "A " }
       \dynamicUp
       \tupletUp
       \clef G
       <<
-        \new Voice {
+        \new Voice = sopran {
           \voiceOne
           \sopran
         }
-        \new Voice {
+        \new Voice = alt {
           \voiceTwo
           \alt
         }
@@ -56,18 +56,18 @@
     }
     \addlyrics \soprantekst
 
-    \new Staff {
+    \new Staff = panowie {
       \set Staff.instrumentName = \markup \column { "T " "B " }
       \set Staff.shortInstrumentName = \markup \column { "T " "B " }
       \dynamicUp
       \tupletUp
       \clef F
       <<
-        \new Voice {
+        \new Voice = tenor {
           \voiceOne
           \tenor
         }
-        \new Voice {
+        \new Voice = bas {
           \voiceTwo
           \bas
         }

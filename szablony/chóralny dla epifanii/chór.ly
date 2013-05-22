@@ -37,7 +37,7 @@
 
 \score {
   \new ChoirStaff <<
-    \new Staff {
+    \new Staff = sopran {
       \set Staff.instrumentName = "S "
       \set Staff.shortInstrumentName = "S "
       \dynamicUp
@@ -48,7 +48,7 @@
     }
     \addlyrics \soprantekst
 
-    \new Staff {
+    \new Staff = alt {
       \set Staff.instrumentName = "A "
       \set Staff.shortInstrumentName = "A "
       \dynamicUp
@@ -59,7 +59,7 @@
     }
     \addlyrics \alttekst
 
-    \new Staff {
+    \new Staff = tenor {
       \set Staff.instrumentName = "T "
       \set Staff.shortInstrumentName = "T "
       \dynamicUp
@@ -70,7 +70,7 @@
     }
     \addlyrics \tenortekst
 
-    \new Staff {
+    \new Staff = bas {
       \set Staff.instrumentName = "B "
       \set Staff.shortInstrumentName = "B "
       \dynamicUp
