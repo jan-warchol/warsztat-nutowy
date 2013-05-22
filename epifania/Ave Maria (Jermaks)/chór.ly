@@ -16,7 +16,7 @@
 \header {
   title = "Ave Maria"
   composer = "Romualds Jermaks (*1931)"
-  adres-biblijny = "Łk 1,28"
+  werset = "Łk 1,28"
   kompozytor-krotki = "Jermaks"
   przygotowanie-nut = \markup \right-column {
     \bold "przygotowanie nut:"

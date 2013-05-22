@@ -1,8 +1,10 @@
 \version "2.16.1"
 
-sopran = { \include "../sopran.ily" }
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../sopran.ily"
 
 \score {
-  \keepWithTag #'solo \sopran
+  \new Staff { \klarnet \sopran }
   \midi {}
 }

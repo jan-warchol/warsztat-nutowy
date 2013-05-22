@@ -1,8 +1,10 @@
 \version "2.16.1"
 
-alt = { \include "../alt.ily" }
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../alt.ily"
 
 \score {
-  \keepWithTag #'solo \alt
+  \new Staff { \klarnet \alt }
   \midi {}
 }
