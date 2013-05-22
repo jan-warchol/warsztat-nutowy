@@ -23,24 +23,20 @@
 }
 
 wersjaA = \markup {
-  \bold {
-    \override #'(thickness . 2)
-    \override #'(box-padding . 0.4)
-    \box {
-      \pad-to-box #'(0 . 0) #'(0 . 2.1)
-      "wersja A"
-    }
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    \line { \bold "wersja A" (Finale) }
   }
 }
 
 wersjaB = \markup {
-  \bold {
-    \override #'(thickness . 2)
-    \override #'(box-padding . 0.4)
-    \box {
-      \pad-to-box #'(0 . 0) #'(0 . 2.1)
-      "wersja B"
-    }
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 2.1)
+    \line { \bold "wersja B" (LilyPond) }
   }
 }
 
@@ -51,7 +47,7 @@ wersjaB = \markup {
 \markup \translate #'(-3 . 0)
 \epsfile #X #117 #"eja-1f.eps"
 
-\markup \vspace #2
+\markup \vspace #1
 \markup \large \wersjaB
 \markup \vspace #0
 
@@ -59,22 +55,24 @@ wersjaB = \markup {
 \epsfile #X #117 #"eja-1l.eps"
 
 \markup \vspace #3
-\markup \large \fill-line {
+\markup \large {
   \column {
     \justify {
     }
   }
 }
-\markup \vspace #2
+\markup \vspace #1
 
 \markup \translate #'(0.7 . 0) \line {
   \column {
     \wersjaA
+    \vspace #0.1
     \translate #'(-0.65 . 0)
     \epsfile #X #50 #"eja-8f.eps"
   }
   \column {
     \wersjaB
+    \vspace #0.1
     \translate #'(-0.75 . 0)
     \epsfile #X #50 #"eja-8l.eps"
   }
