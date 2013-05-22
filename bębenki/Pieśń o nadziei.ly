@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.17.2"
 #(set-global-staff-size 17)
 
 right = { \once \override LyricText #'self-alignment-X = #-0.8 }
@@ -17,14 +17,15 @@ m = #(define-music-function (parser location off) (number?)
 
 \header	{
   title = \markup {
-    Porównanie składu nut:
-    \normal-text \italic { Pieśń o nadziei }
+    Porównanie składu nut
   }
-  subtitle = \markup \normal-text {
+  subtitle = \markup {
+    \normal-text { utwór: \italic { Pieśń o nadziei } }
+  }
+  tagline = \markup \normal-text {
     autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
-  tagline = ##f
 }
 
 \markup \vspace #2
@@ -39,7 +40,7 @@ m = #(define-music-function (parser location off) (number?)
 \markup \vspace #0.5
 
 \markup \translate #'(-1.5 . 0)
-\epsfile #X #99 #"piesn.eps"
+\epsfile #X #99 #"pieśń.eps"
 
 \markup \vspace #2.5
 \markup \large \bold {
@@ -54,7 +55,7 @@ m = #(define-music-function (parser location off) (number?)
 
 \paper {
   line-width = 145 \mm
-  top-margin = 15 \mm
+  top-margin = 14 \mm
   system-system-spacing #'basic-distance = #14
 }
 %--------------------------------MELODY--------------------------------
@@ -159,7 +160,7 @@ text = \lyricmode {
   }
 }
 
-\markup \vspace #2
+\markup \vspace #3
 \markup \fill-line {
   \null
   \override #'(thickness . 1.5)
@@ -173,10 +174,10 @@ text = \lyricmode {
   \null
   \column {
     \justify {
-      Powyżej widać dwie partytury tego samego utworu:
-      pochodzącą "z drugiego" tomu śpiewnika
+      Powyżej widać dwie wersje nut tego samego utworu:
+      pochodzące "z drugiego" tomu śpiewnika
       \italic "Niepojęta Trójco" \concat { ( \bold A ) }
-      "i przygotowaną" przeze mnie \concat { ( \bold B ). }
+      "i przygotowane" przeze mnie \concat { ( \bold B ). }
       Dwie rzeczy "w wersji" \bold A są dziwne:
     }
     \vspace #0.2
