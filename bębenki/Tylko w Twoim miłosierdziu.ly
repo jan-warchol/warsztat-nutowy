@@ -2,15 +2,14 @@
 #(set-global-staff-size 16.5)
 
 \header	{
-  title = \markup {
-    Porównanie składu nut:
-    \normal-text \italic { Tylko w Twoim miłosierdziu }
+  title = "Porównanie składu nut"
+  subtitle = \markup {
+    \normal-text { utwór: \italic { Tylko w Twoim miłosierdziu } }
   }
-  subtitle = \markup \normal-text {
+  tagline = \markup {
     autor analizy: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
-  tagline = ##f
 }
 
 \markup \vspace #1
@@ -22,7 +21,7 @@
     "wersja A"
   }
 }
-\markup \vspace #1
+\markup \vspace #0.5
 
 \markup \translate #'(-5 . 0)
 \epsfile #X #125 #"tylko-w-twoim.eps"
@@ -36,7 +35,7 @@
     "wersja B"
   }
 }
-\markup \vspace #1
+\markup \vspace #0.5
 
 \defineBarLine "finrep" #'("|." ".|:" "")
 
@@ -264,7 +263,7 @@ secondverse = \lyricmode {
   }
 }
 
-\markup \vspace #2
+\markup \vspace #1
 \markup \fill-line {
   \null
   \override #'(thickness . 1.5)
@@ -278,16 +277,18 @@ secondverse = \lyricmode {
   \null
   \override #'(line-width . 110)
   \column {
-    \line \italic {
-      Z czytelnych, eleganckich nut wygodniej się uczy i śpiewa.
-    }
     \justify {
-      Powyżej widać dwie partytury tego samego utworu:
-      znalezioną "na stronie" \typewriter { http://chomikuj.pl/Rabjan/Dokumenty }
-      \concat { ( \bold A ) }
-      "i przygotowaną" przeze mnie \concat { ( \bold B ). }
-      Niestety, "w wersji" \bold A widać często spotykane
-      błędy składu:
+      Porównując nuty znalezione na stronie
+      \smaller \smaller \typewriter
+      \with-url #"http://chomikuj.pl/Rabjan/Dokumenty"
+      { http://chomikuj.pl/Rabjan/Dokumenty }
+      (wersja \concat { \bold A ) }
+      z przygotowanymi przeze mnie
+      (wersja \concat { \bold B ), }
+      można zauważyć, że z czytelnych nut wygodniej
+      śpiewać i uczyć się partii.
+      Wersja \bold A jest mniej przyjemna w użyciu –
+      widać w niej często spotykane błędy składu:
     }
   }
   \null
@@ -298,13 +299,13 @@ secondverse = \lyricmode {
   \line {
     \column  {
       "• zbyt mała czcionka,"
-      "• niewłaściwe nazwy pięciolinii,"
       "• wielki odstęp przed pierwszymi nutami,"
+      "• niewłaściwie podpisane pięciolinie,"
     }
     \hspace #10
     \column {
       "• kosmiczne metrum w zwrotce,"
-      "• źle wyrównany tekst recytatywu,"
+      "• źle ustawiony tekst recytatywu,"
       "• sylaby po recytatywie nie są wyróżnione."
     }
   }
