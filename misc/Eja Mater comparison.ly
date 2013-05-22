@@ -58,6 +58,33 @@ wersjaB = \markup {
 \markup \large {
   \column {
     \justify {
+      Wiele nut jest składanych w Finale.
+      Warto zdawać sobie sprawę, że ten program często
+      się myli, "i żeby" zrobić w nim dobre nuty,
+      potrzeba sporo ręcznych poprawek.
+      Wersja \bold A pokazuje niektóre błędy popełniane
+      przez Finale; wersja \bold B to ten sam utwór złożony
+      przeze mnie w LilyPondzie.
+    }
+    \vspace #0.5
+    \justify {
+      Przykładowo, porównaj położenie kropek – zwłaszcza przy c
+      w ósmym takcie w basach (“fons”).
+      Czasami zdarza się nawet, że Finale zakrywa kropkę
+      następną nutą!
+    }
+    \vspace #0.5
+    \justify {
+      Ponadto, w wersji \bold A rozmieszczenie nut w takcie 10
+      sugeruje, że szesnastki w basach wypadają "na trzecią" miarę
+      (razem z pozostałymi głosami) – a tak nie jest!
+      To naprawdę poważny błąd, który bardzo myli śpiewających.
+      Niestety, ten problem nie należy do rzadkości w przypadku
+      Finale.
+    }
+    \vspace #0.5
+    \justify {
+      Z ustawianiem nut w ramach jednego głosu Finale też miewa problemy:
     }
   }
 }
