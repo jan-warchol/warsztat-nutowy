@@ -1,7 +1,7 @@
 \version "2.16.1"
 
 \include "../pomocnicze/specjalna-dynamika.ily"
-\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
 \include "../sopran.ily"
 \include "../alt.ily"
@@ -12,9 +12,9 @@
   <<
     \new Staff { \klarnet \soprandolny }
     \new Staff { \pianino \soprangorny }
-    { \pianino \piecioliniaaltu }
-    { \pianino \piecioliniatenoru }
-    { \pianino \piecioliniabasu }
+    \new Staff { \pianino \alt }
+    \new Staff { \pianino \tenor }
+    \new Staff { \pianino \bas }
   >>
   \midi {}
 }

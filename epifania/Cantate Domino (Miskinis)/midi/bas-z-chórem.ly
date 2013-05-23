@@ -1,7 +1,7 @@
 \version "2.16.1"
 
 \include "../pomocnicze/specjalna-dynamika.ily"
-\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
 \include "../sopran.ily"
 \include "../alt.ily"
@@ -10,10 +10,10 @@
 
 \score {
   <<
-    { \pianino \piecioliniasopranu }
-    { \pianino \piecioliniaaltu }
-    { \pianino \piecioliniatenoru }
-    { \klarnet \piecioliniabasu }
+    \new Staff { \pianino \sopran }
+    \new Staff { \pianino \alt }
+    \new Staff { \pianino \tenor }
+    \new Staff { \klarnet \bas }
   >>
   \midi {}
 }
