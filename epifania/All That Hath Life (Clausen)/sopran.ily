@@ -55,11 +55,17 @@ soprandolny = {
    %solo
    \tempo "Ad lib. Solo Soprano"
    % dodac expressivo, zmiana kresek taktowych
-   r8 ^\fermata  b' b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata
-   r8 ^\fermata b' g''4. fis''8 e'' d'' e'' e'' g' c'' d''4 d'' \fermata
-   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~^\fermata\melisma} f''4 \melismaEnd c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
-   g''4*6/8 g''4*6/8~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
-   g''4 \melismaEnd \tempo "Slower (in 6)" 8.= 86 r8 r4.
+   \cadenzaOn
+   r8 ^\fermata  b' b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
+   r4 ^\fermata b' g''4. fis''8 e'' d'' \bar ""
+   e'' e'' g' c'' d''4 d'' \fermata \bar ":"
+   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma} f''4^\fermata \melismaEnd 
+   c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
+   \bar "|"
+   g''4 g''4~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
+   \cadenzaOff
+   \tempo "Slower (in 6)" 8.= 86 
+   g''4 \melismaEnd r8 r4.
    r8 b' ^\p ^ "legato" c'' d'' (\melisma b' g') \melismaEnd  
    a'2. \breathe
    \time 5/4 \tempo "a tempo" 8=4 a'2. ^\> a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
@@ -157,33 +163,36 @@ soprangorny = {
    a'4 a'8  g'4 g'8 
    f'4 a'8 e'4. 
    %solo
+   \cadenzaOn
    \tempo "Ad lib. Solo Soprano"
    % dodac expressivo, zmiana kresek taktowych
    r8 ^\fermata  b' b' e''4.
    d''8 e''4 b'8 c'' d'' \melisma
    b' \melismaEnd g' a' b'4 b' ^\fermata
-   r8 ^\fermata b' g''4. 
+   r4 ^\fermata b' g''4. 
    fis''8 e'' d'' e'' e'' g' 
    c'' d''4 d'' \fermata
-   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~^\fermata\melisma}
-   f''4 \melismaEnd c''8 c'' \melisma a''4~
+   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma}
+   f''4^\fermata \melismaEnd c''8 c'' \melisma a''4~
    a''8 \melismaEnd g'' e'' f''
-   g''4*6/8 g''4*6/8~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
-   g''4 \melismaEnd \tempo "Slower (in 6)" 8.= 86 r8 r4.
+   g''4 g''4~ ^\fermata \melisma % sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
+   \cadenzaOff
+   g''4 \melismaEnd r8 r4.
    r8 b'  c'' d'' (\melisma b' g') \melismaEnd  
    a'2. \breathe
    \time 5/4 \tempo "a tempo" 8=4 a'2.  a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
    a'4\! \melismaEnd r4 r r2
-   r1*5/4
-   r1*5/4 
+   R1*5/4
+   R1*5/4 
    g'4 \tempo "sempre legato (without accents)" g' d'' b' a'
    g' fis' e' d' g'
    a' b' a'2 g'4~ \melismaEnd
-   g'2 } r4 g'4 ^\< g' 
+   g'2 } r4 \podzial { g'4 ^\< g' 
    d'' b' a' ^\! g' fis'
    e' d' g' a' b'
    a'2.  g'2~ ^\> \melisma g'4~
     g'1 ~ g'4 ^\!\melismaEnd
+   }
     r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
     %uwaga trzeba porobic porzadek z tymi taktami ad lib.
     
