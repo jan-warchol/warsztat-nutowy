@@ -163,10 +163,11 @@ basgorny = \relative f {
     c4 c8 g b c
     d( b g a4.\>)
     g2.\p
+    r4. d8\mf d d
+    g\< g g
   }
   \rownyRytm{
-    r4. d8\mf d d
-    g\< g g a a a\!
+    a a a\!
     
     % karta 3.
     a4.\breathe a8 a a
@@ -202,21 +203,21 @@ basgorny = \relative f {
     es4.\!~ es4 f8^\markup{\italic{ten.}}
     \time 5/4
     g4 g2\> r4\! r4
+    d\p^\markup{sempre legato (without accents)} g d8 g
   }
-  \rownyRytm{
-    d\p^\markup{sempre legato (without accents)} g d8 g a4 b
-    d,\< g d8\! g a4\> b\!
-    d, g d8 g a4 b
-    d, g d8 g a4 b
-    d, g d8 g a4 b
-    d, g d8 g a4 b
+    
+  \rownyRytm{a4 b }
+  \unisono {
+    d,\< g d8\! g } a4\> b\!
+  \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4 b
     
     % kartka 6.
-    d, g d8 g a4 b
-    d, g d8 g a4 b
-    d, g d8 g a4 b
-    d, g d8 g a4\> b
-    d, g d8 g a4 b
+  \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4\> b
+  \unisono { d, g d8 g } a4 b
     d,8\pp g g4 g2.^\markup{\italic{rit.}} \bar "||"
     \time 6/8
     % nie wiem, co zrobić z tą częścią, aż do

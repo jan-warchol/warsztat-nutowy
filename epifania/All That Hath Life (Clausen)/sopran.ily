@@ -46,7 +46,7 @@ soprandolny = {
    d'' d''16 ( \melisma c'' d''8 ) \melismaEnd f'' ^\tenuto e'' c''
    d''2.
    f''8 ^\tenuto e'' c'' d''4. \breathe
-   g'8 ^\mf ^"Tutti" g' g' d'' d'' d''
+   g'8 ^\mf ^"Tutti" g' g' d'' d'' d'' |
    c'' d'' e'' d''4. \breathe
    c''8 c'' c'' b'4 b'8 
    a'4 a'8 b'4. \breathe
@@ -123,30 +123,30 @@ soprangorny = {
  
   %partia sopranów s2, i solo
   % trzeba poprawić oznaczenia dynamiczne powinny być na górze a są na dole
-   g'8 ^\f \tempo "Lilting" 4.=78 g'  g' d'' d'' d''
+   \unisono { g'8 ^\f \tempo "Lilting" 4.=78 g'  g' } d'' d'' d''
    e'' d'' c'' d''4. 
    g''8. ^\tenuto  g''16 g''8 f'' f'' f'' 
-   d''4 d''8 \! r g' b'
+   d''4 d''8 \! r \unisono { g' b'
    d'' d''16 ( \melisma c'' d''8 ) \melismaEnd  f'' e'' c''
    d''2.
    f''8 ^\tenuto e'' c'' d''4.~ 
    d''4 r8 r4.
    R1*6/8
-   g'8  g' g' d'' c'' d''
+   g'8  g' g' } d'' c'' d''
    \time 9/8 g'' fis'' e'' g'' (\melisma fis'') \melismaEnd e'' d''4. 
    \time 6/8 g'' d'' \breathe
    g''4 g''8 fis''4 fis''8
-   e''4 e''8 d'' b' c''
-   d'' (\melisma b' g') \melismaEnd a'4.
+   e''4 e''8 d'' \unisono { b' c''
+   d'' (\melisma b' g') \melismaEnd a'4. }
    r8 b'  c'' d'' (\melisma b' g') \melismaEnd 
    a'2.~
    a'4. ~ a'8 r r
    r1*6/8 
-   g'8  g' g' d''4. \breathe
-   g'8 g' g' d'' d'' d''
+   \unisono { g'8  g' g' } d''4. \breathe
+   \unisono { g'8 g' g' } d'' d'' d''
    e'' d'' c'' d''4.
    g''8. ^\tenuto g''16 g''8 f'' f'' f''
-   d''4  d''8 ^\tenuto \! r g' b'
+   d''4  d''8 ^\tenuto \! \unisono { r g' b'
    d'' d''16 ( \melisma c'' d''8 ) \melismaEnd f'' ^\tenuto e'' c''
    d''2.
    f''8 ^\tenuto e'' c'' d''4. \breathe
@@ -159,9 +159,15 @@ soprangorny = {
    %solo
    \tempo "Ad lib. Solo Soprano"
    % dodac expressivo, zmiana kresek taktowych
-   r8 ^\fermata  b' b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata
-   r8 ^\fermata b' g''4. fis''8 e'' d'' e'' e'' g' c'' d''4 d'' \fermata
-   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~^\fermata\melisma} f''4 \melismaEnd c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
+   r8 ^\fermata  b' b' e''4.
+   d''8 e''4 b'8 c'' d'' \melisma
+   b' \melismaEnd g' a' b'4 b' ^\fermata
+   r8 ^\fermata b' g''4. 
+   fis''8 e'' d'' e'' e'' g' 
+   c'' d''4 d'' \fermata
+   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~^\fermata\melisma}
+   f''4 \melismaEnd c''8 c'' \melisma a''4~
+   a''8 \melismaEnd g'' e'' f''
    g''4*6/8 g''4*6/8~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
    g''4 \melismaEnd \tempo "Slower (in 6)" 8.= 86 r8 r4.
    r8 b'  c'' d'' (\melisma b' g') \melismaEnd  
@@ -173,7 +179,7 @@ soprangorny = {
    g'4 \tempo "sempre legato (without accents)" g' d'' b' a'
    g' fis' e' d' g'
    a' b' a'2 g'4~ \melismaEnd
-   g'2 r4 g'4 ^\< g' 
+   g'2 } r4 g'4 ^\< g' 
    d'' b' a' ^\! g' fis'
    e' d' g' a' b'
    a'2.  g'2~ ^\> \melisma g'4~

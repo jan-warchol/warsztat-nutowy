@@ -116,7 +116,7 @@ tenordolny = \relative f {
   % kartka 8.
   d4--\mf\< b8 d4-- b8
   d4-- b8 d4-- b8
-  r d bes b4.~
+  r \unisono { d } bes b4.~
   b b4\ff r8 \bar "|."
 }
 
@@ -132,8 +132,9 @@ tenordolny = \relative f {
 tenorgorny = \relative f {
   \key g \major
   \time 6/8
-  \rownyRytm{
-    g8\f g g d' d d
+  \unisono {
+    g8\f g g }
+  \rownyRytm{ d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.\<(
@@ -147,9 +148,9 @@ tenorgorny = \relative f {
     d d16( c d8) f-- e c
     d2.
     f8-- e c d4.\breathe
+    g,4 g8 
   }
-  \rownyRytm{
-    g,4 g8 d'4 d8
+  \rownyRytm{ d'4 d8
     c( d) e d4.\breathe
   }
   
@@ -176,10 +177,12 @@ tenorgorny = \relative f {
     
     % kartka 3.
     c8\< c c c c c
+    c4\cresc c8 
   }
   \rownyRytm{
-    c4\cresc c8 c4 c8
-    g\f g g d' d d
+    c4 c8 }
+  \unisono {
+    g\f g g } \rownyRytm { d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.(
@@ -232,10 +235,14 @@ tenorgorny = \relative f {
     % kartka 7.
     R2.*2^\markup{Tempo primo}
     c8\mf\< c c c c c
+    c4 c8 
   }
   \rownyRytm{
-    c4 c8 c4 c8
-    g\f g g d' d d
+    c4 c8
+  }
+  \unisono {
+    g\f g g }
+  \rownyRytm { d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.(
