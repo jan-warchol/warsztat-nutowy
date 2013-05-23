@@ -40,14 +40,14 @@ wersjaB = \markup {
   }
 }
 
-\markup \vspace #0
+\markup \vspace #0.5
 \markup \large \wersjaA
 \markup \vspace #0
 
 \markup \translate #'(-3 . 0)
 \epsfile #X #117 #"eja-1f.eps"
 
-\markup \vspace #1
+\markup \vspace #1.5
 \markup \large \wersjaB
 \markup \vspace #0
 
@@ -58,12 +58,11 @@ wersjaB = \markup {
 \markup \large {
   \column {
     \justify {
-      Wiele nut jest składanych w Finale.
-      Warto zdawać sobie sprawę, że ten program często
-      się myli, "i żeby" zrobić w nim dobre nuty,
-      potrzeba sporo ręcznych poprawek.
-      Wersja \bold A pokazuje niektóre błędy popełniane
-      przez Finale; wersja \bold B to ten sam utwór złożony
+      Wiele nut jest składanych w programie Finale.
+      Warto zdawać sobie sprawę, że popełnia on sporo błędów,
+      które trzeba ręcznie poprawiać, żeby dostać dobre nuty.
+      W wersji \bold A powyżej widać kilka takich niedociągnięć;
+      wersja \bold B to ten sam fragment utworu złożony
       przeze mnie w LilyPondzie.
     }
     \vspace #0.5
@@ -77,30 +76,31 @@ wersjaB = \markup {
     \justify {
       Ponadto, w wersji \bold A rozmieszczenie nut w takcie 10
       sugeruje, że szesnastki w basach wypadają "na trzecią" miarę
-      (razem z pozostałymi głosami) – a tak nie jest!
+      (razem z “mo” w pozostałych głosach) – a tak nie jest!
       To naprawdę poważny błąd, który bardzo myli śpiewających.
       Niestety, ten problem nie należy do rzadkości w przypadku
       Finale.
     }
     \vspace #0.5
     \justify {
-      Z ustawianiem nut w ramach jednego głosu Finale też miewa problemy:
+      Innym, bardzo często spotykanym problemem jest chaotyczne
+      rozmieszczenie nut, nieodpowiadające wartościom rytmicznym:
     }
   }
 }
-\markup \vspace #1
+\markup \vspace #0.5
 
 \markup \translate #'(0.7 . 0) \line {
   \column {
     \wersjaA
     \vspace #0.1
     \translate #'(-0.65 . 0)
-    \epsfile #X #50 #"eja-8f.eps"
+    \epsfile #X #47 #"eja-8f.eps"
   }
   \column {
     \wersjaB
     \vspace #0.1
     \translate #'(-0.75 . 0)
-    \epsfile #X #50 #"eja-8l.eps"
+    \epsfile #X #47 #"eja-8l.eps"
   }
 }
