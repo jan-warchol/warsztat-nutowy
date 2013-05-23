@@ -1,10 +1,10 @@
 \version "2.16.1"
 
-\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
 \include "../tenor.ily"
 
 \score {
-  { \klarnet \tenordolny }
+  \new Staff { \klarnet \tenordolny }
   \midi {}
 }

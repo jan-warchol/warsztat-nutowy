@@ -1,6 +1,6 @@
 \version "2.16.1"
 
-\include "../pomocnicze/dzielenie-głosów.ily"
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
 \include "../sopran.ily"
 \include "../alt.ily"
@@ -9,11 +9,11 @@
 
 \score {
   <<
-    { \pianino \sopran }
+    \new Staff { \pianino \sopran }
     \new Staff { \pianino \altdolny }
     \new Staff { \klarnet \altgorny }
-    { \pianino \tenor }
-    { \pianino \bas }
+    \new Staff { \pianino \tenor }
+    \new Staff { \pianino \bas }
   >>
   \midi {}
 }
