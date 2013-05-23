@@ -12,6 +12,10 @@
 % (łącznie z tym, co jest śpiewane unisono):
 
 soprandolny = \relative f' {
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   \set Timing.beamExceptions = #'()
   r4 R1*3
   r2 r4 d4 \mf
@@ -143,21 +147,7 @@ soprantekst = \lyricmode {
   can -- ti -- cum no -- vum. __
 }
 
-piecioliniasopranu = {
-  \set Staff.instrumentName = "S "
-  \set Staff.shortInstrumentName = "S "
-  \dynamicUp
-  \tupletUp
-  \clef G
-
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  \set Timing.beamExceptions = #'()
-  <<
-    \soprandolny
-    \soprangorny
-  >>
-}
-\addlyrics \soprantekst
+sopran =  <<
+  \soprandolny
+  \soprangorny
+>>

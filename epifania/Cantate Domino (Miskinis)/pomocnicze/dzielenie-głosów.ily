@@ -6,7 +6,6 @@ unisono =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \oneVoice
      \new Devnull {
        #music
      }
@@ -16,8 +15,6 @@ rownyRytm =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \unHideNotes
-     \oneVoice
      #music
    #})
 
@@ -34,4 +31,5 @@ podzial =
        \override TextScript #'stencil = ##f
        #music
      }
+     \oneVoice
    #})

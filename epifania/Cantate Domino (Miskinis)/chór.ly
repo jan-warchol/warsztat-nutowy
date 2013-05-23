@@ -55,10 +55,49 @@
 
 \score {
   \new ChoirStaff <<
-    \piecioliniasopranu
-    \piecioliniaaltu
-    \piecioliniatenoru
-    \piecioliniabasu
+    \new Staff = sopran {
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \sopran
+    }
+    \addlyrics \soprantekst
+
+    \new Staff = alt {
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \alt
+    }
+    \addlyrics \alttekst
+
+    \new Staff = tenor {
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
+      \dynamicUp
+      \tupletUp
+      \clef "G_8"
+
+      \tenor
+    }
+    \addlyrics \tenortekst
+
+    \new Staff = bas {
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
+      \dynamicUp
+      \tupletUp
+      \clef F
+
+      \bas
+    }
+    \addlyrics \bastekst
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu

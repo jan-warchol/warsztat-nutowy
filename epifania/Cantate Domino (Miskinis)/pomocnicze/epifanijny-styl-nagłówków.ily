@@ -43,7 +43,7 @@ bookTitleMarkup = \markup {
       \fromproperty #'header:tlumaczenie
     }
     \right-column {
-      \italic \fromproperty #'header:adres-biblijny
+      \italic \fromproperty #'header:werset
       \italic \fromproperty #'header:przygotowanie-nut
       \bold \fromproperty #'header:composer
       \bold \fromproperty #'header:arranger

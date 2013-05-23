@@ -14,6 +14,10 @@
 basdolny = \relative f {
   % w komentarzach to, czego nie umiem zrealizować w danym takcie,
   % nie ma także podwójnych kresek taktowych
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   r4
   g,4.\mp g g4
   g8 a a2.
@@ -117,6 +121,10 @@ basdolny = \relative f {
 
 basgorny = \relative f {
   %strona 1
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   \set Timing.beamExceptions = #'()
   \rownyRytm {
     r4
@@ -276,20 +284,7 @@ bastekst = \lyricmode {
   can -- ti -- cum no -- vum, no -- vum.
 }
 
-piecioliniabasu = {
-  \set Staff.instrumentName = "B "
-  \set Staff.shortInstrumentName = "B "
-  \dynamicUp
-  \tupletUp
-  \clef F
-
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  <<
-    \basdolny
-    \basgorny
-  >>
-}
-\addlyrics \bastekst
+bas = <<
+  \basdolny
+  \basgorny
+>>

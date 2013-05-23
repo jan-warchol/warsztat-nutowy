@@ -14,6 +14,10 @@
 tenordolny = \relative f {
   % w komentarzach to, czego nie potrafię
   % w danym takcie zrealizować
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   \set Timing.beamExceptions = #'()
   r4
   b4.\mp b b4
@@ -163,20 +167,7 @@ tenortekst = \lyricmode {
   can -- ti -- cum no -- vum. __
 }
 
-piecioliniatenoru = {
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
-  \dynamicUp
-  \tupletUp
-  \clef "G_8"
-
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  <<
-    \tenordolny
-    \tenorgorny
-  >>
-}
-\addlyrics \tenortekst
+tenor = <<
+  \tenordolny
+  \tenorgorny
+>>

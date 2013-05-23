@@ -12,6 +12,10 @@
 % (łącznie z tym, co jest śpiewane unisono):
 
 altdolny = \relative f' {
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
   \set Timing.beamExceptions = #'()
@@ -119,6 +123,10 @@ altdolny = \relative f' {
 
 altgorny = \relative f' {
 
+  \key g \major
+  \time 4/4
+  \tempo "Con moto e ritmico" 4 = 112
+  \partial 4
   \unisono{
     d4\mp
     a'4. g8~ g2
@@ -266,20 +274,7 @@ alttekst = \lyricmode {
 
 }
 
-piecioliniaaltu = {
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
-  \dynamicUp
-  \tupletUp
-  \clef G
-
-  \key g \major
-  \time 4/4
-  \tempo "Con moto e ritmico" 4 = 112
-  \partial 4
-  <<
-    \altdolny
-    \altgorny
-  >>
-}
-\addlyrics \alttekst
+alt = <<
+  \altdolny
+  \altgorny
+>>

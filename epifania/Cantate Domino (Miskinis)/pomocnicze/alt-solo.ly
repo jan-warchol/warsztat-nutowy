@@ -4,4 +4,13 @@
 \include "./specjalna-dynamika.ily"
 \include "../alt.ily"
 
-\score { \piecioliniaaltu }
+\new Staff {
+  \set Staff.instrumentName = "A "
+  \set Staff.shortInstrumentName = "A "
+  \dynamicUp
+  \tupletUp
+  \clef G
+
+  \alt
+}
+\addlyrics \alttekst
