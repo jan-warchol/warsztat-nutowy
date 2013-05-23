@@ -56,8 +56,8 @@ soprandolny = {
    \tempo "Ad lib. Solo Soprano"
    % dodac expressivo, zmiana kresek taktowych
    \cadenzaOn
-   r8 ^\fermata  b' b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
-   r4 ^\fermata b' g''4. fis''8 e'' d'' \bar ""
+   r4 ^\fermata b'8 b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
+   r4 ^\fermata b'8 g''4. fis''8 e'' d'' \bar ""
    e'' e'' g' c'' d''4 d'' \fermata \bar ":"
    r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma} f''4^\fermata \melismaEnd 
    c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
@@ -162,14 +162,16 @@ soprangorny = {
    a'4 a'8 b'4. \breathe
    a'4 a'8  g'4 g'8 
    f'4 a'8 e'4. 
+   }
+   \unisono {
    %solo
    \cadenzaOn
    \tempo "Ad lib. Solo Soprano"
    % dodac expressivo, zmiana kresek taktowych
-   r8 ^\fermata  b' b' e''4.
+   r4 ^\fermata  b'8 b' e''4.
    d''8 e''4 b'8 c'' d'' \melisma
    b' \melismaEnd g' a' b'4 b' ^\fermata
-   r4 ^\fermata b' g''4. 
+   r4 ^\fermata b'8 g''4. 
    fis''8 e'' d'' e'' e'' g' 
    c'' d''4 d'' \fermata
    r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma}

@@ -58,7 +58,7 @@
       \alt
     }
     \addlyrics \alttekst
-
+    
     \new Staff {
       \set Staff.instrumentName = "T "
       \set Staff.shortInstrumentName = "T "
