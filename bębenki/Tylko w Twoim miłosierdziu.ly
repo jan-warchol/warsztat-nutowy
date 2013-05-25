@@ -2,7 +2,9 @@
 #(set-global-staff-size 16.5)
 
 \header	{
-  title = "Porównanie składu nut"
+  title = \markup \larger \larger {
+    Która wersja nut jest ładniejsza?
+  }
   subtitle = \markup {
     \normal-text {
       utwór:
