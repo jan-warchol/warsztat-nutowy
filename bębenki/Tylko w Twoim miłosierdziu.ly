@@ -4,7 +4,11 @@
 \header	{
   title = "Porównanie składu nut"
   subtitle = \markup {
-    \normal-text { utwór: \italic { Tylko w Twoim miłosierdziu } }
+    \normal-text {
+      utwór:
+      \italic { Tylko w Twoim miłosierdziu }
+      (P. Bębenek)
+    }
   }
   tagline = \markup {
     autor analizy: Jan Warchoł
