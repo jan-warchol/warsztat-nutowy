@@ -164,7 +164,7 @@ cv = \markup {
     Nuty u góry (wersja \concat { \bold A ) } pochodzą "z drugiej"
     części \italic { Repertuaru początkującego gitarzysty }
     wydawnictwa Absonic; wersja \bold B to ten sam fragment
-    utworu złożony przeze mnie.
+    utworu złożony przeze mnie w programie LilyPond.
   }
   \vspace #0.5
   \justify {

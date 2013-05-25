@@ -281,12 +281,12 @@ secondverse = \lyricmode {
       Porównując nuty znalezione na stronie
       \smaller \smaller \typewriter
       \with-url #"http://chomikuj.pl/Rabjan/Dokumenty"
-      { http://chomikuj.pl/Rabjan/Dokumenty }
+      { http://chomikuj.pl/Rabjan }
       (wersja \concat { \bold A ) }
-      z przygotowanymi przeze mnie
+      z przygotowanymi przeze mnie "w programie" LilyPond
       (wersja \concat { \bold B ), }
       można zauważyć, że z czytelnych nut wygodniej
-      śpiewać i uczyć się partii.
+      śpiewać "i uczyć się" partii.
       Wersja \bold A jest mniej przyjemna w użyciu –
       widać w niej często spotykane błędy składu:
     }

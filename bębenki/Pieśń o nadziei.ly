@@ -174,10 +174,11 @@ text = \lyricmode {
   \null
   \column {
     \justify {
-      Powyżej widać dwie wersje nut tego samego utworu:
-      pochodzące "z drugiego" tomu śpiewnika
-      \italic "Niepojęta Trójco" \concat { ( \bold A ) }
-      "i przygotowane" przeze mnie \concat { ( \bold B ). }
+      Nuty u góry (wersja \concat { \bold A ) } pochodzą
+      "z drugiego" tomu śpiewnika \italic "Niepojęta Trójco"
+      i zostały przygotowane w Sibeliusie; wersja \bold B
+      to ten sam utwór złożony przeze mnie "za pomocą"
+      programu LilyPond.
       Dwie rzeczy "w wersji" \bold A są dziwne:
     }
     \vspace #0.2
