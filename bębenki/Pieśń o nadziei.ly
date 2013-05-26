@@ -20,7 +20,11 @@ m = #(define-music-function (parser location off) (number?)
     Porównanie składu nut
   }
   subtitle = \markup {
-    \normal-text { utwór: \italic { Pieśń o nadziei } }
+    \normal-text {
+      utwór:
+      \italic { Pieśń o nadziei }
+      (D. Kusz)
+    }
   }
   tagline = \markup \normal-text {
     autor analizy: Jan Warchoł
@@ -67,7 +71,7 @@ sopranomelody = \relative c'' {
     f,8[ g8] a4 g g | g8[-\tweak #'Y-offset #2 \cresc a]\! bes[ c] a4 a
     d8[ -\tweak #'X-offset #-1.3 \f c] bes-\tweak #'positions #'(2.80 . 2.50) [ a] f[ g] a4 | a4 g8[ f] g4 g
   }
-  g4 a bes a | f2\p f 
+  g4 a bes a | f2\p f
   \bar "|."
 }
 altomelody = \relative f' {
@@ -176,9 +180,9 @@ text = \lyricmode {
     \justify {
       Nuty u góry (wersja \concat { \bold A ) } pochodzą
       "z drugiego" tomu śpiewnika \italic "Niepojęta Trójco"
-      i zostały przygotowane w Sibeliusie; wersja \bold B
-      to ten sam utwór złożony przeze mnie "za pomocą"
-      programu LilyPond.
+      i zostały przygotowane w programie Sibelius;
+      wersja \bold B to ten sam utwór złożony przeze mnie
+      "za pomocą" LilyPonda.
       Dwie rzeczy "w wersji" \bold A są dziwne:
     }
     \vspace #0.2
