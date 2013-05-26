@@ -285,8 +285,7 @@ secondverse = \lyricmode {
       (wersja \concat { \bold B ), }
       można zauważyć, że z czytelnych nut wygodniej
       śpiewać "i uczyć się" partii.
-      Wersja \bold A jest mniej przyjemna w użyciu –
-      widać w niej często spotykane błędy składu:
+      "W wersji" \bold A widać często spotykane błędy składu:
     }
   }
   \null
