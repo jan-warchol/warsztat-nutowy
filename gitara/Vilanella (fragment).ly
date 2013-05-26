@@ -146,8 +146,8 @@ ciii = \markup {
   }
   \vspace #0.5
   \justify {
-    Nie ma tutaj poważnych błędów składu, natomiast pewnym
-    problemem w wersji \bold A jest grubość linii:
+    Nie ma tutaj poważnych błędów składu, ale moim zdaniem
+    wersja \bold A ma pewną drobną niedoskonałość:
     pięciolinia, pałeczki, kreski taktowe i linie dodane są
     praktycznie tej samej grubości, przez co cały obraz trochę się
     zlewa. Tymczasem pięciolinia powinna być jakby tłem dla nut,
