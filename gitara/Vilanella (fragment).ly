@@ -76,7 +76,13 @@ ciii = \markup {
   <g g' b d>16 a16 <b fis' d'>8 <a e'-1 a-1 d-4>8 <cis'-2>
   <d,, d' a'-1 d-3>8 fis'16
   \set fingeringOrientations = #'(down)
-  <g-0> <a-1>32 <g-0> a g fis16 e
+  <g-0>
+  \set subdivideBeams = ##t
+  \set baseMoment = #(ly:make-moment 1/8)
+  \once \override Beam #'positions = #'(2.83 . 2.6)
+  <a-1>32 <g-0> a g fis16 e
+  \unset subdivideBeams
+  \unset baseMoment
   \set fingeringOrientations = #'(left)
   d4\fermata \bar "||" <d a' d fis>
   \once \override Beam #'positions = #'(4 . 3.6)
