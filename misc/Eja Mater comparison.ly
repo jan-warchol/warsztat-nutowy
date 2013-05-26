@@ -27,7 +27,7 @@ wersjaA = \markup {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    \line { \bold "wersja A" (Finale) }
+    \line { \bold "wersja A" \tiny "(zrobiona w Finale)" }
   }
 }
 
@@ -36,7 +36,7 @@ wersjaB = \markup {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    \line { \bold "wersja B" (LilyPond) }
+    \line { \bold "wersja B" \tiny "(zrobiona w LilyPondzie)" }
   }
 }
 
@@ -60,10 +60,10 @@ wersjaB = \markup {
     \justify {
       Wiele nut jest składanych w programie Finale.
       Warto zdawać sobie sprawę, że popełnia on sporo błędów,
-      które trzeba ręcznie poprawiać, żeby dostać dobre nuty.
-      W wersji \bold A powyżej widać kilka takich niedociągnięć;
-      wersja \bold B to ten sam fragment utworu złożony
-      przeze mnie w LilyPondzie.
+      które trzeba ręcznie poprawiać, żeby dostać dobre nuty –
+      w wersji \bold A widać kilka takich niedociągnięć.
+      Wersja \bold B to ten sam fragment utworu złożony
+      przeze mnie w programie LilyPond.
     }
     \vspace #0.5
     \justify {
