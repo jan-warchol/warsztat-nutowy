@@ -19,12 +19,12 @@
 }
 
 \markup \vspace #1
-\markup \large \bold {
+\markup \larger \huge \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    "wersja A"
+    \pad-to-box #'(0 . 0) #'(0 . 2.7)
+    \larger \larger "wersja A"
   }
 }
 \markup \vspace #0.5
@@ -32,13 +32,13 @@
 \markup \translate #'(-5 . 0)
 \epsfile #X #125 #"tylko-w-twoim.eps"
 
-\markup \vspace #2
-\markup \large \bold {
+\markup \vspace #3
+\markup \larger \huge \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    "wersja B"
+    \pad-to-box #'(0 . 0) #'(0 . 2.7)
+    \larger \larger "wersja B"
   }
 }
 \markup \vspace #0.5
@@ -51,7 +51,7 @@
        "Nimbus Sans"
        "Luxi Mono"
        (/ staff-height pt 20)))
-  top-margin = 10 \mm
+  top-margin = 8 \mm
   left-margin = 18 \mm
   right-margin = 17 \mm
   markup-system-spacing #'basic-distance = #5
@@ -269,15 +269,7 @@ secondverse = \lyricmode {
   }
 }
 
-\markup \vspace #1
-\markup \fill-line {
-  \null
-  \override #'(thickness . 1.5)
-  \override #'(span-factor . 2/3)
-  \draw-hline
-  \null
-}
-\markup \vspace #2
+\markup \vspace #3.5
 
 \markup \large \fill-line {
   \null
