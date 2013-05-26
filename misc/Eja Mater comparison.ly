@@ -229,22 +229,19 @@ wersjaB = \markup {
     \justify {
       Innym, bardzo często spotykanym problemem jest chaotyczne
       rozmieszczenie nut, nieodpowiadające wartościom rytmicznym:
+      ósemki zajmujące więcej miejsca niż ćwierćnuty, melodie
+      o równym rytmie "w których" każda nuta zajmuje inną ilość
+      miejsca itp.
+    }
+    \vspace #0.5
+    \justify {
+      Oczywiście żaden program do składu nut nie jest doskonały.
+      Problem z Finale polega na tym, że błędy popełniane przez
+      ten program pojawiają się po prostu zbyt często żeby wygodnie
+      pracować – czasami "w każdym" takcie trzeba coś poprawiać.
+      Jako przykład może posłużyć trzecia strona z porównywanej
+      powyżej partytury (na odwrocie kartki).
     }
   }
 }
 \markup \vspace #0.5
-
-\markup \translate #'(0.7 . 0) \line {
-  \column {
-    \wersjaA
-    \vspace #0.1
-    \translate #'(-0.65 . 0)
-    \epsfile #X #53.5 #"eja-8f.eps"
-  }
-  \column {
-    \wersjaB
-    \vspace #0.1
-    \translate #'(-0.75 . 0)
-    \epsfile #X #53.5 #"eja-8l.eps"
-  }
-}
