@@ -7,7 +7,7 @@ ml = #(define-music-function (parser location off) (number?)
 \paper {
   ragged-right = ##f
   line-width = 180 \mm
-  top-margin = 8 \mm
+  top-margin = 10 \mm
 }
 
 \header	{
@@ -50,14 +50,14 @@ wersjaB = \markup {
   }
 }
 
-\markup \vspace #1
+\markup \vspace #1.5
 \markup \large \wersjaA
 \markup \vspace #0
 
 \markup \translate #'(-5 . 0)
 \epsfile #X #133 #"eja-1f.eps"
 
-\markup \vspace #2
+\markup \vspace #2.5
 \markup \large \wersjaB
 \markup \vspace #0
 
@@ -198,7 +198,7 @@ wersjaB = \markup {
 }
 
 
-\markup \vspace #3
+\markup \vspace #3.5
 \markup \large \larger {
   \column {
     \justify {
@@ -236,12 +236,10 @@ wersjaB = \markup {
     \vspace #0.5
     \justify {
       Oczywiście żaden program do składu nut nie jest doskonały.
-      Problem z Finale polega na tym, że błędy popełniane przez
-      ten program pojawiają się po prostu zbyt często żeby wygodnie
-      pracować – czasami "w każdym" takcie trzeba coś poprawiać.
-      Jako przykład może posłużyć trzecia strona z porównywanej
+      Problem z Finale polega na tym, że błędy pojawiają się
+      w nim po prostu zbyt często –
+      jako przykład może posłużyć trzecia strona z porównywanej
       powyżej partytury (na odwrocie kartki).
     }
   }
 }
-\markup \vspace #0.5
