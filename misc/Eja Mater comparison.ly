@@ -76,7 +76,7 @@ wersjaB = \markup {
 
     }
     \addlyrics \lyricmode {
-      E -- ja, \ml #-0.3 Ma -- ter, fons a --
+      E -- ia, \ml #-0.3 Ma -- ter, fons a --
       mo -- ris, fons a -- mo -- ris,
     }
 
@@ -97,7 +97,7 @@ wersjaB = \markup {
       }
     }
     \addlyrics \lyricmode {
-      E -- ja, \ml #-0.3 Ma -- ter, fons a
+      E -- ia, \ml #-0.3 Ma -- ter, fons a
       -- mo -- ris, fons a -- mo -- ris,
     }
 
@@ -118,7 +118,7 @@ wersjaB = \markup {
       }
     }
     \addlyrics \lyricmode {
-      E -- ja, \ml #-0.3 Ma -- ter, fons a
+      E -- ia, \ml #-0.3 Ma -- ter, fons a
       -- mo -- ris, fons a -- mo -- ris,
     }
 
@@ -140,8 +140,8 @@ wersjaB = \markup {
       }
     }
     \addlyrics \lyricmode {
-      E -- ja, Ma -- ter, fons a --
-      mo -- ris, e -- ja, Ma -- ter,  __ fons a -- mo -- ris, me \ml #-0.5 se-
+      E -- ia, Ma -- ter, fons a --
+      mo -- ris, e -- ia, Ma -- ter,  __ fons a -- mo -- ris, me \ml #-0.5 se-
     }
   >>
 
