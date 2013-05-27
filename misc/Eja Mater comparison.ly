@@ -31,7 +31,10 @@ wersjaA = \markup {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    \line { \bold "wersja A" \tiny "(zrobiona w Finale)" }
+    \line {
+      \larger \bold "wersja A"
+      \smaller "(Finale)"
+    }
   }
 }
 
@@ -40,7 +43,10 @@ wersjaB = \markup {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
-    \line { \bold "wersja B" \tiny "(zrobiona w LilyPondzie)" }
+    \line {
+      \larger \bold "wersja B"
+      \smaller "(LilyPond)"
+    }
   }
 }
 
