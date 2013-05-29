@@ -39,11 +39,11 @@ soprantekst = \lyricmode {
   Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
+  al -- le -- lu -- ja!
+  Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja.
+  al -- le -- lu -- ja!
 }
 
 alt = \relative f' {
@@ -63,11 +63,11 @@ alttekst = \lyricmode {
   Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
+  al -- le -- lu -- ja!
+  Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja.
+  al -- le -- lu -- ja!
 }
 
 tenor = \relative f {
@@ -86,12 +86,12 @@ tenortekst = \lyricmode {
   Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
+  al -- le -- lu -- ja!
+  Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja.
+  al -- le -- lu -- ja!
 }
 
 bas = \relative f {
@@ -111,12 +111,12 @@ bastekst = \lyricmode {
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
+  al -- le -- lu -- ja!
+  Al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja,
-  al -- le -- lu -- ja.
+  al -- le -- lu -- ja!
 }
 
 
