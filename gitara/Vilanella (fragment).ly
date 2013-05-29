@@ -49,7 +49,7 @@
 cii = \markup {
   \combine
   \override #'(thickness . 1.5)
-  \translate #'(0.8 . -0.3)
+  \translate #'(0.85 . -0.3)
   \draw-line #'(0 . 2.2)
   C2
 }
@@ -57,7 +57,7 @@ cii = \markup {
 ciii = \markup {
   \combine
   \override #'(thickness . 1.5)
-  \translate #'(0.8 . -0.3)
+  \translate #'(0.85 . -0.3)
   \draw-line #'(0 . 2.2)
   C3
 }
