@@ -13,20 +13,13 @@
 }
 
 \header {
-  %title =
-  %composer =
-  %kompozytor-krotki =
-  %werset =
-  %przygotowanie-nut = \markup \column \right-align {
-  %  \bold "przygotowanie nut:"
-  %  ""
-  %}
-  %tlumaczenie = \markup \typewriter \column {
-  %  \vspace #1
-  %  \bold
-  %  ""
-  %  ""
-  %}
+  title = Alleluja
+  composer = "Adam Hrynkiewicz"
+  kompozytor-krotki = Hrynkiewicz
+  tagline = \markup {
+    skład nut: Jan Warchoł
+    (jan.warchol@gmail.com, 509 078 203)
+  }
 }
 
 sopran = \relative f' {
