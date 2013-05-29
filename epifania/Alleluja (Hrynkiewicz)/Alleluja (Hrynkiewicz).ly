@@ -5,15 +5,16 @@
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
-  %top-markup-spacing #'basic-distance = 5
-  %markup-system-spacing #'basic-distance = 40
-  %page-count =
-  %system-count =
+  top-markup-spacing #'basic-distance = 9
+  markup-system-spacing #'basic-distance = 19
+  system-system-spacing #'basic-distance = 20
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
 \header {
-  title = Alleluja
+  title = \markup \column {
+    Alleluja " " " " " "
+  }
   composer = "Adam Hrynkiewicz"
   kompozytor-krotki = Hrynkiewicz
   tagline = \markup {
