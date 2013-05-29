@@ -114,7 +114,7 @@ ciii = \markup {
   \override Staff.OctavateEight #'font-shape = #'roman
   \override Staff.OctavateEight #'font-size = #-3.3
 
-  \override Staff.BarLine #'hair-thickness = #2
+  \override Staff.BarLine #'hair-thickness = #2.1
   \override Stem #'thickness = #1.4
 
   \context {
@@ -150,8 +150,9 @@ ciii = \markup {
     wersja \bold A ma pewną drobną niedoskonałość:
     pięciolinia, pałeczki, kreski taktowe i linie dodane są
     praktycznie tej samej grubości, przez co cały obraz trochę się
-    zlewa. Tymczasem pięciolinia powinna być jakby tłem dla nut,
-    tak żeby poszczególne elementy były łatwo odróżnialne.
+    zlewa. Tymczasem pięciolinia powinna być jakby tłem dla nut;
+    z kolei kreski taktowe mają być grube,
+    aby podział na takty był dobrze widoczny.
   }
   \vspace #0.5
   \justify {
