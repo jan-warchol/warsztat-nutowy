@@ -32,6 +32,15 @@
 sopran = \relative f' {
   \key d \major
   \time 4/4
+  r8 fis16\melisma e\melismaEnd fis8 d a'4 a
+  d d cis2
+  g8 b a\melisma g\melismaEnd a4( d)
+  g,4 g8 g e2
+  r8 fis16\melisma e\melismaEnd fis8 d a'4 a
+  d d cis2
+  g16\melisma a b g\melismaEnd a\melisma b cis a\melismaEnd
+  cis\melisma d e cis\melismaEnd d\melisma e fis g\melismaEnd
+  g8\melisma d\melismaEnd cis8. d16 d2
 }
 soprantekst = \lyricmode {
 }
@@ -39,6 +48,15 @@ soprantekst = \lyricmode {
 alt = \relative f' {
   \key d \major
   \time 4/4
+  d4 d cis cis
+  r8 d16\melisma cis\melismaEnd d8 b fis'4 fis8 fis
+  d4 d fis8 e fis8\melisma d\melismaEnd
+  e1
+  d4 d cis cis
+  r8 d16\melisma cis\melismaEnd d8 b fis'2
+  d8\melisma g\melismaEnd e\melisma a\melismaEnd
+  fis\melisma ais\melismaEnd b\melisma fis\melismaEnd
+  g8 g a\melisma g\melismaEnd fis2
 }
 alttekst = \lyricmode {
 }
@@ -46,6 +64,14 @@ alttekst = \lyricmode {
 tenor = \relative f {
   \key d \major
   \time 4/4
+  a4 a e e
+  fis4 b8 b a fis16 gis a16 \melisma g\melismaEnd a\melisma fis\melismaEnd
+  b4( g) fis( a)
+  b2 cis2
+  a4 a e e
+  fis4 b8 b a fis16 gis a16 \melisma g\melismaEnd a\melisma fis\melismaEnd
+  g4 a ais8\melisma cis\melismaEnd fis\melisma d\melismaEnd
+  b4 a8. a16 a2
 }
 tenortekst = \lyricmode {
 }
@@ -53,6 +79,14 @@ tenortekst = \lyricmode {
 bas = \relative f {
   \key d \major
   \time 4/4
+  d4 d8 d a a16\melisma b\melismaEnd cis\melisma b\melismaEnd cis a
+  b4 b fis fis
+  g b d d
+  r8 e16\melisma fis\melismaEnd g8 e a2
+  d,4 d8 d a a16\melisma b\melismaEnd cis\melisma b\melismaEnd cis a
+  b4 b fis fis
+  g4 g fis b
+  g8 g a4 d2
 }
 bastekst = \lyricmode {
 }
