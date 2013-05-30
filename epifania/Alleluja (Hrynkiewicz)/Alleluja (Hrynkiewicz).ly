@@ -1,6 +1,8 @@
 \version "2.16.1"
 #(set-global-staff-size 16)
 
+\include "pomocnicze/ustawienia-midi.ily"
+
 \paper {
   indent = 0 \mm
   left-margin = 14 \mm
@@ -133,6 +135,7 @@ bastekst = \lyricmode {
       \tupletUp
       \clef G
 
+      \klarnet
       \sopran
     }
     \addlyrics \soprantekst
@@ -144,6 +147,7 @@ bastekst = \lyricmode {
       \tupletUp
       \clef G
 
+      \klarnet
       \alt
     }
     \addlyrics \alttekst
@@ -155,6 +159,7 @@ bastekst = \lyricmode {
       \tupletUp
       \clef "G_8"
 
+      \klarnet
       \tenor
     }
     \addlyrics \tenortekst
@@ -166,6 +171,7 @@ bastekst = \lyricmode {
       \tupletUp
       \clef F
 
+      \klarnet
       \bas
     }
     \addlyrics \bastekst
@@ -202,5 +208,8 @@ bastekst = \lyricmode {
                    -1
                    -3))
          (ly:text-interface::print grob)))
+  }
+  \midi {
+    \tempo 4 = 90
   }
 }
