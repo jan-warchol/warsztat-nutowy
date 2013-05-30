@@ -4,6 +4,7 @@
 \include "pomocnicze/ustawienia-midi.ily"
 
 \paper {
+  system-count = 4
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
