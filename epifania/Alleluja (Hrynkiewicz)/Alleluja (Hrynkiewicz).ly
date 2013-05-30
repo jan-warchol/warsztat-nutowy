@@ -95,6 +95,10 @@ tenor = \relative f {
   \cadenzaOn
   a\breve b4 a2
   cis\breve cis4 a2
+  \bar "|"
+  \break
+  a8 g[ a ] a\breve g8 a b a4
+  a\breve g8 a b g e4 fis
 }
 tenortekst = \lyricmode {
   Al -- le -- lu -- ja,
