@@ -110,6 +110,19 @@ tenortekst = \lyricmode {
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.2 ja!
+  \ml #-0.85
+  "Kto pilnie rozważa prawo wolności i w nim"
+  wy -- trwa,
+  \ml #-0.85
+  "otrzyma błogosła" --
+  wień -- stwo.
+  Kto pil --
+  \ml #-0.75
+  "nie rozważa prawo wolności"
+  i w_nim wy -- trwa,
+  \ml #-0.75
+  "otrzy" --
+  ma bło -- go -- sła -- wień -- stwo.
 }
 
 bas = \relative f {
