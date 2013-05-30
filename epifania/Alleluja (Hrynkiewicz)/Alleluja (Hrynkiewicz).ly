@@ -192,6 +192,11 @@ bastekst = \lyricmode {
   \layout {
     \compressFullBarRests
     %\set Score.tempoHideNote = ##t
+    \override NoteHead #'style = #'altdefault
+
+    \override Staff.OctavateEight #'font-shape = #'roman
+    \override Staff.OctavateEight #'font-series = #'bold
+    \override Staff.OctavateEight #'X-offset = #0.7
 
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
