@@ -121,6 +121,9 @@ stanzas = {}
     \override BreathingSign #'text =
     \markup { \musicglyph #"scripts.rvarcomma" }
     \override NoteHead #'style = #'petrucci
+    \override Stem #'thickness = #1.8
+    \override Stem #'details #'lengths = #'(3)
+    \override Stem #'details #'stem-shorten = #'(0.5)
 
     \context {
       \Score
