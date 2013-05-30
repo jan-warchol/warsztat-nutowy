@@ -40,6 +40,9 @@ sopran = \relative f' {
   g16\melisma a b g\melismaEnd a\melisma b cis a\melismaEnd
   cis\melisma d e cis\melismaEnd d\melisma e fis g\melismaEnd
   g8\melisma d\melismaEnd cis8. d16 d2
+  \cadenzaOn
+  a\breve b4 a2
+  a\breve g4 fis2
 }
 soprantekst = \lyricmode {
   Al -- le -- lu -- \ml #-0.3 ja,
@@ -64,6 +67,7 @@ alt = \relative f' {
   d8\melisma g\melismaEnd e\melisma a\melismaEnd
   fis\melisma ais\melismaEnd b\melisma fis\melismaEnd
   g8 g a\melisma g\melismaEnd fis2
+  \cadenzaOn
 }
 alttekst = \lyricmode {
   Al -- le -- lu -- ja,
@@ -87,6 +91,9 @@ tenor = \relative f {
   fis4 b8 b a fis16 gis a16 \melisma g\melismaEnd a\melisma fis\melismaEnd
   g4 a ais8\melisma cis\melismaEnd fis\melisma d\melismaEnd
   b4 a8. a16 a2
+  \cadenzaOn
+  a\breve b4 a2
+  cis\breve cis4 a2
 }
 tenortekst = \lyricmode {
   Al -- le -- lu -- ja,
@@ -111,6 +118,10 @@ bas = \relative f {
   b4 b fis fis
   g4 g fis b
   g8 g a4 d2
+  \break
+  \cadenzaOn
+  d\breve g,4 d'2
+  a\breve a4 d2
 }
 bastekst = \lyricmode {
   Al -- le -- lu -- \ml #-0.3 ja,
