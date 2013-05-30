@@ -84,11 +84,11 @@ tenor = \relative f {
   \key d \major
   \time 4/4
   a4 a e e
-  fis4 b8 b a fis16 gis a16 \melisma g\melismaEnd a\melisma fis\melismaEnd
+  fis4 b8 b a fis16 gis a16 \melisma gis\melismaEnd a\melisma fis\melismaEnd
   b4( g) fis( a)
   b2 cis2
   a4 a e e
-  fis4 b8 b a fis16 gis a16 \melisma g\melismaEnd a\melisma fis\melismaEnd
+  fis4 b8 b a fis16 gis a16 \melisma gis\melismaEnd a\melisma fis\melismaEnd
   g4 a ais8\melisma cis\melismaEnd fis\melisma d\melismaEnd
   b4 a8. a16 a2
   \cadenzaOn
