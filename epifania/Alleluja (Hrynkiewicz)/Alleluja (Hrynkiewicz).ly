@@ -279,6 +279,12 @@ bastekst = \lyricmode {
     \override Staff.OctavateEight #'font-series = #'bold
     \override Staff.OctavateEight #'X-offset = #0.7
 
+    \override Staff.StaffSymbol #'thickness = #0.75
+    \override Stem #'thickness = #1.5
+    \override Slur #'thickness = #1.5
+    \override Tie #'line-thickness = #1
+    \override Hairpin #'thickness = #1.25
+
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
 
