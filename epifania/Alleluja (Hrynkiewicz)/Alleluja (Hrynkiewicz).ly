@@ -42,6 +42,13 @@ sopran = \relative f' {
   cis\melisma d e cis\melismaEnd d\melisma e fis g\melismaEnd
   g8\melisma d\melismaEnd cis8. d16 d2
   \cadenzaOn
+  <>
+  -\tweak #'X-offset #-10
+  -\tweak #'Y-offset #6
+  ^\markup \large {
+    \bold "wersja 4-głosowa"
+    \italic "(śpiewana przez Epifanię):"
+  }
   a\breve b4 a2
   a\breve g4 fis2
 }
@@ -120,6 +127,13 @@ tenor = \relative f {
   \mark "D.C. al Fine"
   \bar "||"
   \break
+  <>
+  -\tweak #'X-offset #-10
+  -\tweak #'Y-offset #6
+  ^\markup \large {
+    \bold "wersja 1-głosowa"
+    \italic "(z oryginalnych nut):"
+  }
   a8 g[ a ] a\breve g8 a b a4
   a\breve g8 a b g e4 fis
   \mark "D.C. al Fine"
