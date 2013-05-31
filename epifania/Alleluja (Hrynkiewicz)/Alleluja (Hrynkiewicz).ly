@@ -41,9 +41,14 @@ sopran = \relative f' {
   g,4 g8 g e2
   r8 fis16\melisma e\melismaEnd fis8 d a'4 a
   d d cis2
-  g16\melisma a b g\melismaEnd a\melisma b cis a\melismaEnd
+  \tweak Beam #'positions #'(2.62 . 2.62)
+  g16\melisma a b g\melismaEnd
+  a\melisma b cis a\melismaEnd
+  \tweak Beam #'positions #'(-2.62 . -2.62)
   cis\melisma d e cis\melismaEnd d\melisma e fis g\melismaEnd
-  g8\melisma d\melismaEnd cis8. d16 d2
+  g8\melisma d\melismaEnd
+  \tweak Beam #'positions #'(-2.25 . -1.95)
+  cis8. d16 d2
   \cadenzaOn
   <>
   -\tweak #'X-offset #-10
@@ -83,7 +88,11 @@ alt = \relative f' {
   e1
   d4 d cis cis
   r8 d16\melisma cis\melismaEnd d8 b fis'2
-  d8\melisma g\melismaEnd e\melisma a\melismaEnd
+  \tweak Beam #'positions #'(0.8 . 1.8)
+  d8\melisma g\melismaEnd
+  \tweak Beam #'positions #'(1.25 . 2.25)
+  e\melisma a\melismaEnd
+  \tweak Beam #'positions #'(1.75 . 2.25)
   fis\melisma ais\melismaEnd b\melisma fis\melismaEnd
   g8 g a\melisma g\melismaEnd fis2
   \cadenzaOn
@@ -303,7 +312,7 @@ bastekst = \lyricmode {
   }
 }
 
-\markup \vspace #5
+\markup \vspace #6
 \markup {
   \override #'(thickness . 1.5)
   \override #'(span-factor . 7/10)
