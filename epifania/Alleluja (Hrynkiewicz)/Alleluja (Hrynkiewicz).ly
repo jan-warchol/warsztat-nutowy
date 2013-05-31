@@ -33,6 +33,8 @@ ml = #(define-music-function (parser location off) (number?)
 sopran = \relative f' {
   \key d \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+
   r8 fis16\melisma e\melismaEnd fis8 d a'4 a
   d d cis2
   g8 b a\melisma g\melismaEnd a4( d)
@@ -73,6 +75,8 @@ soprantekst = \lyricmode {
 alt = \relative f' {
   \key d \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+
   d4 d cis cis
   r8 d16\melisma cis\melismaEnd d8 b fis'4 fis8 fis
   d4 d fis8 e fis8\melisma d\melismaEnd
@@ -106,6 +110,8 @@ alttekst = \lyricmode {
 tenor = \relative f {
   \key d \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+
   a4 a e e
   fis4 b8 b a fis16 gis a16 \melisma gis\melismaEnd a\melisma fis\melismaEnd
   b4( g) fis( a)
@@ -168,6 +174,8 @@ tenortekst = \lyricmode {
 bas = \relative f {
   \key d \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+
   d4 d8 d a a16 b cis\melisma b\melismaEnd cis\melisma a\melismaEnd
   b4 b fis fis
   g b d d
