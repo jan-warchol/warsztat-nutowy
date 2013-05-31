@@ -8,7 +8,7 @@
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
-  top-markup-spacing #'basic-distance = 9
+  top-markup-spacing #'basic-distance = 5
   markup-system-spacing #'basic-distance = 19
   system-system-spacing #'basic-distance = 20
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
@@ -16,13 +16,14 @@
 
 \header {
   title = \markup \column {
-    Alleluja " " " " " "
+    Alleluja " " " "
   }
-  composer = "Adam Hrynkiewicz"
+  composer = "muzyka: Adam Hrynkiewicz"
   kompozytor-krotki = Hrynkiewicz
-  tagline = \markup {
-    skład nut: Jan Warchoł
-    (jan.warchol@gmail.com, 509 078 203)
+  tagline = ##f
+  arranger = \markup \right-column {
+    \normal-text "skład nut: Jan Warchoł"
+    \normal-text "(jan.warchol@gmail.com, 509 078 203)"
   }
 }
 
@@ -167,11 +168,11 @@ tenortekst = \lyricmode {
 bas = \relative f {
   \key d \major
   \time 4/4
-  d4 d8 d a a16\melisma b\melismaEnd cis\melisma b\melismaEnd cis a
+  d4 d8 d a a16 b cis\melisma b\melismaEnd cis\melisma a\melismaEnd
   b4 b fis fis
   g b d d
   r8 e16\melisma fis\melismaEnd g8 e a2
-  d,4 d8 d a a16\melisma b\melismaEnd cis\melisma b\melismaEnd cis a
+  d,4 d8 d a a16 b cis\melisma b\melismaEnd cis\melisma a\melismaEnd
   b4 b fis fis
   g4 g fis b
   g8 g a4 d2
@@ -182,12 +183,12 @@ bas = \relative f {
 }
 bastekst = \lyricmode {
   Al -- le -- lu -- \ml #-0.3 ja,
-  al -- le -- lu -- \ml #-0.2 ja,
+  al -- le -- lu -- ja,*
   al -- le -- lu -- \ml #-0.3 ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.3 ja!
   Al -- le -- lu -- ja,
-  al -- le -- lu -- \ml #-0.2 ja,
+  al -- le -- lu -- ja,*
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.4 ja,
   al -- le -- lu -- \ml #-0.3 ja!
@@ -291,5 +292,57 @@ bastekst = \lyricmode {
   }
   \midi {
     \tempo 4 = 90
+  }
+}
+
+\markup \vspace #5
+\markup {
+  \override #'(thickness . 1.5)
+  \override #'(span-factor . 7/10)
+  \draw-hline
+}
+\markup \vspace #0
+\markup \line {
+  \raise #-0.5
+  \huge
+  *
+  \hspace #1.2
+  \override #'(line-width . 55)
+  \small \justify {
+    W oryginalnych nutach tekst był inaczej podłożony
+    (zapewne przez pomyłkę,
+    bo oryginalna wersja nie pasuje do melodii):
+  }
+  \hspace #1.7
+  \raise #2
+  \score {
+    <<
+      \new Staff \with {
+        \remove "Clef_engraver"
+        \remove "Key_engraver"
+        \remove "Time_signature_engraver"
+        fontSize = #-3
+        \override StaffSymbol #'staff-space = #(magstep -3)
+        \override StaffSymbol #'thickness = #(magstep -3)
+      } \new Voice = bass \relative f {
+        \key d \major
+        \clef F
+        \time 4/4
+        d4 d8 d a a16\melisma b\melismaEnd
+        cis\melisma b\melismaEnd cis a
+      }
+      \new Lyrics = sopranolyrics \with {
+        \override VerticalAxisGroup
+        #'nonstaff-relatedstaff-spacing #'padding = #0.4
+        \override VerticalAxisGroup
+        #'nonstaff-relatedstaff-spacing #'basic-distance = #1
+      } \lyricsto bass \lyricmode {
+        \override LyricText #'font-size = #-2
+        Al -- le -- lu -- \ml #-0.3 ja,
+        al -- le -- lu -- \ml #-0.2 ja,
+      }
+    >>
+    \layout {
+    }
   }
 }
