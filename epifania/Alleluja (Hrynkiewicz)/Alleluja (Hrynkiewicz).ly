@@ -242,6 +242,7 @@ bastekst = \lyricmode {
     \context {
       \Staff
       \consists "Ambitus_engraver"
+      \RemoveEmptyStaves
     }
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
