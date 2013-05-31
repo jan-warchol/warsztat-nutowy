@@ -54,6 +54,12 @@ soprantekst = \lyricmode {
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.2 ja!
+  \ml #-0.85
+  "Kto pilnie rozważa prawo wolności i w nim"
+  wy -- trwa,
+  \ml #-0.85
+  "otrzyma błogosła" --
+  wień -- stwo.
 }
 
 alt = \relative f' {
@@ -81,6 +87,12 @@ alttekst = \lyricmode {
   al -- le -- lu -- \ml #-0.3 ja,
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.3 ja!
+  \ml #-0.85
+  "Kto pilnie rozważa prawo wolności i w nim"
+  wy -- trwa,
+  \ml #-0.85
+  "otrzyma błogosła" --
+  wień -- stwo.
 }
 
 tenor = \relative f {
@@ -154,6 +166,12 @@ bastekst = \lyricmode {
   al -- le -- lu -- ja,
   al -- le -- lu -- \ml #-0.4 ja,
   al -- le -- lu -- \ml #-0.3 ja!
+  \ml #-0.85
+  "Kto pilnie rozważa prawo wolności i w nim"
+  wy -- trwa,
+  \ml #-0.85
+  "otrzyma błogosła" --
+  wień -- stwo.
 }
 
 
