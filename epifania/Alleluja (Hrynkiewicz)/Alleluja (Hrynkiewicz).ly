@@ -106,13 +106,24 @@ tenor = \relative f {
   fis4 b8 b a fis16 gis a16 \melisma gis\melismaEnd a\melisma fis\melismaEnd
   g4 a ais8\melisma cis\melismaEnd fis\melisma d\melismaEnd
   b4 a8. a16 a2
+  \override Score.RehearsalMark #'break-visibility = #'#(#t #f #f)
+  \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+  \override Score.RehearsalMark #'Y-offset = #4
+  % this is necessary because barline has considerable thickness:
+  \override Score.RehearsalMark #'X-offset =
+  #ly:self-alignment-interface::aligned-on-x-parent
+  \mark "Fine"
+  \bar "|."
   \cadenzaOn
   a\breve b4 a2
   cis\breve cis4 a2
-  \bar "|"
+  \mark "D.C. al Fine"
+  \bar "||"
   \break
   a8 g[ a ] a\breve g8 a b a4
   a\breve g8 a b g e4 fis
+  \mark "D.C. al Fine"
+  \bar "||"
 }
 tenortekst = \lyricmode {
   Al -- le -- lu -- ja,
