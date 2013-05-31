@@ -69,6 +69,8 @@ alt = \relative f' {
   fis\melisma ais\melismaEnd b\melisma fis\melismaEnd
   g8 g a\melisma g\melismaEnd fis2
   \cadenzaOn
+  fis\breve g4 fis2
+  e\breve e4 d2
 }
 alttekst = \lyricmode {
   Al -- le -- lu -- ja,
