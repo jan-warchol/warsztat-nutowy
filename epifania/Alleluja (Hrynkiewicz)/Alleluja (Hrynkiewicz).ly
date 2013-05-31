@@ -342,7 +342,7 @@ bastekst = \lyricmode {
     <<
       \new Staff \with {
         \remove "Clef_engraver"
-        \remove "Key_engraver"
+        \override KeySignature #'stencil = ##f
         \remove "Time_signature_engraver"
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
