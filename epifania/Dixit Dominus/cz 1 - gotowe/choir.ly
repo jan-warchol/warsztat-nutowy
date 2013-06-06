@@ -4,7 +4,15 @@
 
 \include "filename.ily"
 
-scripture = \markup { \column \right-align { "nuty przepisane przez" "Olę Woźniak i Marlenę Świło" " "} }
+scripture = \markup {
+  \column \right-align {
+    \bold "przygotowanie nut:"
+    "Ola Woźniak"
+    "Marlena Świło"
+    "Janek Warchoł"
+    " "
+  }
+}
 
 translation = \markup {
   \typewriter {
