@@ -89,7 +89,7 @@ music = \relative f {
   <d-4 a'-1 d-2 fis-1>4^\cII
 }
 
-\markup \vspace #0.5
+\markup \vspace #1
 \markup \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
@@ -103,7 +103,7 @@ music = \relative f {
 \markup \translate #'(0 . 0)
 \epsfile #X #93 #"vilanella.eps"
 
-\markup \vspace #1.5
+\markup \vspace #2
 \markup \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
@@ -116,6 +116,47 @@ music = \relative f {
 
 \score {
   \music
+  \layout {
+    indent = 0
+    \override Score.SpacingSpanner #'common-shortest-duration
+    = #(ly:make-moment 1 12)
+
+    \override Fingering #'font-size = #-6.5
+    % i don't see why this shouldn't be default...
+    \override Fingering #'staff-padding = #'()
+
+    \override Staff.OctavateEight #'font-shape = #'roman
+    \override Staff.OctavateEight #'font-size = #-3.3
+    \override Staff.OctavateEight #'X-offset = #0.7
+
+    \override Staff.BarLine #'hair-thickness = #2.1
+    \override Stem #'thickness = #1.4
+
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
+    }
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
+  }
+}
+
+\markup \vspace #1.5
+\markup \bold {
+  \override #'(thickness . 2)
+  \override #'(box-padding . 0.4)
+  \box {
+    \pad-to-box #'(0 . 0) #'(0 . 1.8)
+    "version C"
+  }
+}
+\markup \vspace #0
+
+\score {
+  \music
+
   \layout {
     indent = 0
     \override Score.SpacingSpanner #'common-shortest-duration
@@ -146,57 +187,17 @@ music = \relative f {
 }
 
 \markup \vspace #1
-\markup \bold {
-  \override #'(thickness . 2)
-  \override #'(box-padding . 0.4)
-  \box {
-    \pad-to-box #'(0 . 0) #'(0 . 1.8)
-    "version C"
-  }
-}
-\markup \vspace #0
-
-\score {
-  \music
-
-  \layout {
-    indent = 0
-    \override Score.SpacingSpanner #'common-shortest-duration
-    = #(ly:make-moment 1 12)
-
-    \override Fingering #'font-size = #-6.5
-    % i don't see why this shouldn't be default...
-    \override Fingering #'staff-padding = #'()
-
-    \override Staff.OctavateEight #'font-shape = #'roman
-    \override Staff.OctavateEight #'font-size = #-3.3
-    \override Staff.OctavateEight #'X-offset = #0.7
-
-    \override Staff.BarLine #'hair-thickness = #2.1
-    \override Stem #'thickness = #1.4
-
-    \context {
-      \Staff
-      \remove "Time_signature_engraver"
-    }
-    \context {
-      \Score
-      \remove "Bar_number_engraver"
-    }
-  }
-}
-
-\markup \vspace #1
-\markup \column {
+\markup \small \column {
   \line {
-    version A – published by \italic Absonic
+    version A – all lines have the same thickness
+    (this version was published by \italic Absonic)
   }
   \line {
-    version A – typeset by me with LilyPond with
-    all lines having the same thickness
+    version B – different objects have different thicknesses
+    (this was typeset by me using LilyPond)
   }
   \line {
-    version A – typeset by me with LilyPond with
-    lines having varying thickness
+    version C – all lines have the same thickness
+    (this was typeset by me using LilyPond)
   }
 }
