@@ -321,7 +321,7 @@ bastekst = \lyricmode {
 \markup \vspace #6
 \markup {
   \override #'(thickness . 1.5)
-  \override #'(span-factor . 7/10)
+  \override #'(span-factor . 1/2)
   \draw-hline
 }
 \markup \vspace #0
@@ -330,42 +330,9 @@ bastekst = \lyricmode {
   \huge
   *
   \hspace #1.2
-  \override #'(line-width . 55)
+  \override #'(line-width . 60)
   \small \justify {
-    W oryginalnych nutach tekst był inaczej podłożony
-    (zapewne przez pomyłkę,
-    bo oryginalna wersja nie pasuje do melodii):
-  }
-  \hspace #1.7
-  \raise #2
-  \score {
-    <<
-      \new Staff \with {
-        \remove "Clef_engraver"
-        \override KeySignature #'stencil = ##f
-        \remove "Time_signature_engraver"
-        fontSize = #-3
-        \override StaffSymbol #'staff-space = #(magstep -3)
-        \override StaffSymbol #'thickness = #(magstep -3)
-      } \new Voice = bass \relative f {
-        \key d \major
-        \clef F
-        \time 4/4
-        d4 d8 d a a16\melisma b\melismaEnd
-        cis\melisma b\melismaEnd cis a
-      }
-      \new Lyrics = sopranolyrics \with {
-        \override VerticalAxisGroup
-        #'nonstaff-relatedstaff-spacing #'padding = #0.4
-        \override VerticalAxisGroup
-        #'nonstaff-relatedstaff-spacing #'basic-distance = #1
-      } \lyricsto bass \lyricmode {
-        \override LyricText #'font-size = #-2
-        Al -- le -- lu -- \ml #-0.3 ja,
-        al -- le -- lu -- \ml #-0.2 ja,
-      }
-    >>
-    \layout {
-    }
+    W niektórych nutach w tym miejscu jest błędnie podłożony tekst.
+    Powyższa wersja została zatwierdzona przez autora w maju 2013 r.
   }
 }
