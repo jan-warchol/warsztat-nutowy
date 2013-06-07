@@ -3,13 +3,13 @@
 
 \header	{
   title = \markup \smaller {
-    Line thickness considerations
+    Grubość linii – zestawienie
   }
   subtitle = \markup {
-    \normal-text { piece: \italic { Vilanella, } W. Długoraj (excerpt) }
+    \normal-text { utwór: \italic { Vilanella, } W. Długoraj (fragment) }
   }
   tagline = \markup \smaller \normal-text {
-    comparison author: Jan Warchoł
+    autor zestawienia: Jan Warchoł
     (jan.warchol@gmail.com, +48 509 078 203)
   }
 }
@@ -89,13 +89,13 @@ music = \relative f {
   <d-4 a'-1 d-2 fis-1>4^\cII
 }
 
-\markup \vspace #1
+\markup \vspace #0.5
 \markup \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 1.8)
-    "version A"
+    "wersja A"
   }
 }
 \markup \vspace #0
@@ -109,7 +109,7 @@ music = \relative f {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 1.8)
-    "version B"
+    "wersja B"
   }
 }
 \markup \vspace #0
@@ -149,7 +149,7 @@ music = \relative f {
   \override #'(box-padding . 0.4)
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 1.8)
-    "version C"
+    "wersja C"
   }
 }
 \markup \vspace #0
@@ -189,15 +189,15 @@ music = \relative f {
 \markup \vspace #1
 \markup \small \column {
   \line {
-    version A – all lines have the same thickness
-    (this version was published by \italic Absonic)
+    wersja A – wydana przez \italic Absonic.
+    Wszystkie linie mają tutaj mniej więcej tę samą grubość.
   }
   \line {
-    version B – different objects have different thicknesses
-    (this was typeset by me using LilyPond)
+    wersja B – złożona przeze mnie w LilyPondzie.
+    Różne obiekty mają tutaj różne grubości.
   }
   \line {
-    version C – all lines have the same thickness
-    (this was typeset by me using LilyPond)
+    wersja C – złożona przeze mnie w LilyPondzie.
+    Wszystkie linie mają tutaj tę samą grubość.
   }
 }
