@@ -1,5 +1,5 @@
 \version "2.17.16"
-#(set-global-staff-size 16.5)
+#(set-global-staff-size 16.3)
 
 \header	{
   title = \markup \larger \larger {
@@ -30,7 +30,7 @@
 \markup \vspace #0.5
 
 \markup \translate #'(-5 . 0)
-\epsfile #X #125 #"tylko-w-twoim.eps"
+\epsfile #X #127 #"tylko-w-twoim.eps"
 
 \markup \vspace #3
 \markup \larger \huge \bold {
@@ -238,7 +238,7 @@ secondverse = \lyricmode {
     >>
     \new Lyrics = sopranolyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.5
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.7
     }
     \lyricsto soprano \text
     \new Lyrics = sopranolyrics \with {
