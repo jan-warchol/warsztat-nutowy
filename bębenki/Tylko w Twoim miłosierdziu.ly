@@ -3,7 +3,7 @@
 
 \header	{
   title = \markup \larger \larger {
-    Która wersja nut jest ładniejsza?
+    Która wersja nut jest bardziej czytelna?
   }
   subtitle = \markup {
     \normal-text {
