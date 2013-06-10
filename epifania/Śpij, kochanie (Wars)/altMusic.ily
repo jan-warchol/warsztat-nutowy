@@ -5,7 +5,7 @@
   \dynamicUp
   \autoBeamOff
   %str1
- \partial 4 b'8 \mp [ ( \melisma g ]
+  \partial 4 b'8 \mp [ ( \melisma g ]
   fis [ a b g ]
   e [ g b g d a' b g ] ) \melismaEnd
   d4 ( \melisma c
@@ -33,21 +33,21 @@
   g g
   g ( \melisma fis d cis ) \melismaEnd
   \repeat volta 2 {
-   d ( \melisma cis ) \melismaEnd
-   %str3
-   d ( \melisma cis ) \melismaEnd
-   d ( \melisma fis
-   fis cis ) \melismaEnd
-   fis \mp ( \melisma g ) \melismaEnd
-   fis ( \melisma g ) \melismaEnd
-   g8 g g g
-   a a g r
-   r d4 \mf f8
-   fis d r fis
-   r d4 f8
-   fis d r4
-   g g
-   g g
+    d ( \melisma cis ) \melismaEnd
+    %str3
+    d ( \melisma cis ) \melismaEnd
+    d ( \melisma fis
+    fis cis ) \melismaEnd
+    fis \mp ( \melisma g ) \melismaEnd
+    fis ( \melisma g ) \melismaEnd
+    g8 g g g
+    a a g r
+    r d4 \mf f8
+    fis d r fis
+    r d4 f8
+    fis d r4
+    g g
+    g g
   }
   \alternative {
     {

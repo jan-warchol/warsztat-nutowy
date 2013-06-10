@@ -12,7 +12,7 @@
   Ach, śpij, bo no -- cą, kie -- dy gwia -- zdy się na nie -- bie zło -- cą,
   wszy -- stkie dzie -- ci, na -- wet złe, po -- grą -- żo -- ne są we śnie,
   a ty je -- dna ty -- lko nie.
-  A __ 
+  A __
   %str3
   a __
   By -- ły so -- bie ko -- tki dwa,

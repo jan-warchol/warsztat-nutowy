@@ -21,7 +21,7 @@
       \set Staff.shortInstrumentName = "S "
       \include "sopranMusic.ily"
     }
- 
+
     \addlyrics \include "sopranWords.ily"
 
     \new Staff = alt {
@@ -38,7 +38,7 @@
       \include "tenorMusic.ily"
     }
     \addlyrics \include "tenorWords.ily"
-    
+
     \new Staff = basy {
       \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
@@ -47,7 +47,7 @@
     \addlyrics \include "basWords.ily"
   >>
 
-   \layout {
+  \layout {
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
     \override Score.BarNumber #'self-alignment-X = #CENTER
   }
