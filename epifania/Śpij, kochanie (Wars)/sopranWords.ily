@@ -1,6 +1,6 @@
 \lyricmode {
   %str1
-  W_gó -- rze ty -- le gwiad, w_do -- le ty -- le miast,
+  W_gó -- rze ty -- le gwiazd, w_do -- le ty -- le miast,
   gwia -- zdy mia -- stom da -- ją znać, że dzie -- ci mu -- szą spać.
   Ach, śpij, ko -- cha -- nie,
   je -- śli
@@ -19,7 +19,7 @@
   a __ ko -- tki dwa,
   sza -- re, bu -- re, sza -- re, bu -- re o -- by -- dwa.
   Ach, śpij, bo wła -- śnie księ -- życ zie -- wa i za chwi -- lę za -- śnie.
-  A gdy ra -- no przy -- jdzie świt, księ -- ży -- co -- wi bę -- dzie wstyd,
+  A gdy ra -- no przyj -- dzie świt, księ -- ży -- co -- wi bę -- dzie wstyd,
   że on za -- snął, a nie ty.
-  zas -- snął, a nie ty.
+  za -- snął, a nie ty.
 }
