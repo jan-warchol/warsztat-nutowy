@@ -1,4 +1,4 @@
-\version "2.15.36"
+\version "2.17.3"
 #(set-global-staff-size 15.1)
 
 ml = #(define-music-function (parser location off) (number?)
@@ -77,6 +77,10 @@ ml = #(define-music-function (parser location off) (number?)
 
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+
+    \override LyricText #'stencil =
+    #(lambda (grob)
+       (ly:stencil-scale (lyric-text::print grob) 0.95 1))
 
     \context {
       \Staff

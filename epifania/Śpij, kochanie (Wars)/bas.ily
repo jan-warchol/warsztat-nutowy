@@ -25,7 +25,7 @@ bas = \relative c' {
   b <e e,>
   a, a
   c ( \melisma d8 ) \melismaEnd r
-  <g g,>4 \mf \breathe <gis gis,> \breathe
+  <g g,>4 -\tweak #'X-offset #-2.6 \mf \breathe <gis gis,> \breathe
   <a a,>8 d,16 e d e d8
   %str2
   <g g,>4 <gis gis,>

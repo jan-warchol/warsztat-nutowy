@@ -60,11 +60,11 @@ tenor = \relative c' {
   \alternative {
     {
       g ( \melisma fis
-      g r ) \melismaEnd
+      g ) r \melismaEnd
     }
     {
       g ( \melisma fis
-      d r ) \melismaEnd
+      d ) r \melismaEnd
     }
   }
   \bar "|."
@@ -79,7 +79,7 @@ tenortekst = \lyricmode {
   a, a, a, a, a. __
   Śpij, bo no -- cą, ach, śpij, gdy zło -- cą,
   a, a, a, a, a. __
-  A, __
+  A,
   %str3
   a, a, __ a, __ a, __
   sza -- re, bu -- re o -- by -- dwa.

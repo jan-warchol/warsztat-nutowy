@@ -73,7 +73,7 @@ sopran = \relative c'' {
 soprantekst = \lyricmode {
   %str1
   \ml #-3.2 W_gó -- rze ty -- le \ml #-2.2 gwiazd,
-  w_do -- le ty -- le \ml #-2.2 miast,
+  \ml #-2.5 w_do -- le ty -- le \ml #-2.2 miast,
   gwia -- zdy mia -- stom da -- ją \ml #-1.2 znać, że dzie -- ci mu -- szą spać.
   Ach, śpij, ko -- cha -- nie,
   je -- śli
@@ -84,7 +84,7 @@ soprantekst = \lyricmode {
   więc dla -- cze -- go nie \ml #-2 chcesz spać?
   Ach, śpij, bo no -- cą, kie -- dy gwia -- zdy się na nie -- bie zło -- cą,
   \ml #-3.2 wszy -- stkie dzie -- ci, na -- wet \ml #-0.5 złe, po -- grą -- żo -- ne są we \ml #-0.7 śnie,
-  a ty je -- dna ty -- lko nie.
+  a ty je -- dna tyl -- ko nie.
   A __
   %str3
   a __
