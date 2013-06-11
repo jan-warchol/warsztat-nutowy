@@ -7,7 +7,7 @@
   %str1
   \partial 4 b'8 \mp [ ( \melisma g ]
   fis [ a b g ]
-  e [ g b g d a' b g ] ) \melismaEnd
+  e [ g b g] d[ a' b g ] ) \melismaEnd
   d4 ( \melisma c
   b2 ) \melismaEnd
   d4 ( \melisma c
