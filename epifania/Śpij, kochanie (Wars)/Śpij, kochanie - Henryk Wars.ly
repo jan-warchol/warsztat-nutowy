@@ -18,42 +18,88 @@ ml = #(define-music-function (parser location off) (number?)
   copyright = "przepisała: Aleksandra Woźniak"
 }
 
+\include "sopran.ily"
+\include "alt.ily"
+\include "tenor.ily"
+\include "bas.ily"
+
 \score {
-  \new ChoirStaff
-  <<
+  \new ChoirStaff <<
     \new Staff = sopran {
       \set Staff.instrumentName = "Sopran "
       \set Staff.shortInstrumentName = "S "
-      \include "sopranMusic.ily"
-    }
+      \dynamicUp
+      \tupletUp
+      \clef G
 
-    \addlyrics \include "sopranWords.ily"
+      \sopran
+    }
+    \addlyrics \soprantekst
 
     \new Staff = alt {
       \set Staff.instrumentName = "Alt "
       \set Staff.shortInstrumentName = "A "
-      \include "altMusic.ily"
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \alt
     }
-    \addlyrics \include "altWords.ily"
+    \addlyrics \alttekst
 
     \new Staff = tenor {
-      \clef "treble_8"
       \set Staff.instrumentName = "Tenor "
       \set Staff.shortInstrumentName = "T "
-      \include "tenorMusic.ily"
-    }
-    \addlyrics \include "tenorWords.ily"
+      \dynamicUp
+      \tupletUp
+      \clef "G_8"
 
-    \new Staff = basy {
+      \tenor
+    }
+    \addlyrics \tenortekst
+
+    \new Staff = bas {
       \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
-      \include "basMusic.ily"
+      \dynamicUp
+      \tupletUp
+      \clef F
+
+      \bas
     }
-    \addlyrics \include "basWords.ily"
+    \addlyrics \bastekst
   >>
 
+  % blok \layout zawiera ogólne ustawienia stylu
   \layout {
+    \compressFullBarRests
+    %\set Score.tempoHideNote = ##t
+
+    \override Lyrics.VerticalAxisGroup
+    #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+
+    \context {
+      \Staff
+      \consists "Ambitus_engraver"
+    }
+
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
-    \override Score.BarNumber #'self-alignment-X = #CENTER
+
+    \override Score.BarNumber #'self-alignment-X =
+    #(lambda (grob)
+       (let ((break-dir (ly:item-break-dir grob)))
+         (set! (ly:grob-property grob 'self-alignment-X)
+               (if (= break-dir RIGHT)
+                   1
+                   0))))
+
+    \override Score.BarNumber #'stencil =
+    #(lambda (grob)
+       (let ((break-dir (ly:item-break-dir grob)))
+         (set! (ly:grob-property grob 'font-size)
+               (if (= break-dir RIGHT)
+                   -1
+                   -3))
+         (ly:text-interface::print grob)))
   }
 }
