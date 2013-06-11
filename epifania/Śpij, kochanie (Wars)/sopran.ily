@@ -19,6 +19,7 @@ sopran = \relative c'' {
   g4 r
   b8 g d a'
   g4 r
+  \break
   e8 g c e
   d b g8. a16
   b8 g fis g
@@ -36,10 +37,12 @@ sopran = \relative c'' {
   a d, r b'16 c
   d e d e d8 b
   a d, r g16 a
+  \break
   b b b b b8 g16 a
   b b b b b8 g16 a
   b8 g d a'
   g4 r
+  \break
   \repeat volta 2 {
     fis8 \mp [ ( \melisma b ] g4 ) \melismaEnd
     %str3

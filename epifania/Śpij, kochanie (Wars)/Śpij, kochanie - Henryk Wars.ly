@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.17.16"
 #(set-global-staff-size 15.1)
 
 ml = #(define-music-function (parser location off) (number?)
@@ -8,6 +8,8 @@ ml = #(define-music-function (parser location off) (number?)
 
 \paper {
   indent = 10 \mm
+  system-count = 8
+  last-bottom-spacing #'basic-distance = #10
 }
 
 \header {
@@ -76,7 +78,7 @@ ml = #(define-music-function (parser location off) (number?)
     %\set Score.tempoHideNote = ##t
 
     \override Lyrics.VerticalAxisGroup
-    #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
+    #'nonstaff-unrelatedstaff-spacing #'padding = #0.9
 
     \override LyricText #'stencil =
     #(lambda (grob)
