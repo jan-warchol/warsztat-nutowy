@@ -1,6 +1,11 @@
 \version "2.15.36"
 #(set-global-staff-size 15.1)
 
+ml = #(define-music-function (parser location off) (number?)
+        #{
+          \once \override Lyrics.LyricText #'X-offset = #off
+        #})
+
 \paper {
   indent = 10 \mm
 }
