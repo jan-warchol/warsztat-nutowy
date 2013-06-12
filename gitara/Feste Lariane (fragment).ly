@@ -117,7 +117,7 @@ cv = \markup {
     \override Fingering #'X-offset = #-1.2
     e,8 b'' d b d b
     a, c' e c e c
-    d, <d'-3> <f-2> <d-3> <f-2> <d-3>
+    <d,-0> <d'-3> <f-2> <d-3> <f-2> <d-3>
     a, c' e c e c
   }
 >>
