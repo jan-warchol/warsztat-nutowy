@@ -48,7 +48,7 @@ sopran = \relative c'' {
     %str3
     fis8 [ ( \melisma b ] g4 ) \melismaEnd
     fis8 b d b
-    c a fis4
+    cis ais fis4
     a8 \mf [ ( \melisma d ] b4 ) \melismaEnd
     a8 d b4
     a16 \< b a b c d c d \!
