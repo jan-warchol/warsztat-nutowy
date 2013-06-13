@@ -40,6 +40,9 @@ bas = \relative c' {
   <a a,>8 d,16 e d e d8
   <g g,>4 <f f,>
   <e e,> <es es,>
+  % w nutach Epifanii te dwa takty wyglądają następująco:
+  % { d4 a | g8 d16 fis e d cis8 }
+  % \addlyrics { a __ pa ra ra ra __ }
   <d d,>2
   g,8 d' fis16 e d cis
   \repeat volta 2 {
