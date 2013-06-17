@@ -1,8 +1,10 @@
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \header	{
-  title = "Cała ziemio"
+  title = \markup \column {
+    "Cała ziemio" " "
+  }
   poet = "słowa: Ps 98"
   composer = "muzyka: Dawid Kusz OP"
   tagline = \markup {
@@ -12,11 +14,12 @@
 }
 
 \paper {
-  top-margin = 10 \mm
-  left-margin = 21 \mm
-  right-margin = 20 \mm
-  markup-system-spacing #'basic-distance = #13
-  system-system-spacing #'basic-distance = #14
+  top-margin = 40 \mm
+  bottom-margin = 40 \mm
+  line-width = 145 \mm
+
+  markup-system-spacing #'basic-distance = #17
+  system-system-spacing #'basic-distance = #15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -46,7 +49,7 @@ sopranomelody = \relative f' {
   }
   \bar "|."
   \overrideProperty #"Score.NonMusicalPaperColumn"
-  #'line-break-system-details #`((Y-offset . 68))
+  #'line-break-system-details #`((Y-offset . 73))
   \repeat volta 2 {
     \cadenzaOn
     a\breve g8 fis e4 e2
