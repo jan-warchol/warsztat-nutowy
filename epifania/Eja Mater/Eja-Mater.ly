@@ -8,22 +8,41 @@ ml = #(define-music-function (parser location off) (number?)
   systems-per-page = 4
   page-count = 4
 
-  top-margin = 8 \mm
+  top-margin = 6 \mm
   left-margin = 16 \mm
   right-margin = 15 \mm
-  last-bottom-spacing #'basic-distance = 10
+  last-bottom-spacing #'basic-distance = 8
+  top-system-spacing #'basic-distance = 10
+  markup-system-spacing #'basic-distance = 10
+
+  oddFooterMarkup = \markup {
+    \fill-line {
+      \fromproperty #'header:tagline
+    }
+  }
+  oddHeaderMarkup = \markup \small \fill-line {
+    \line {
+      \on-the-fly #not-first-page \fromproperty #'header:title
+      \on-the-fly #not-first-page \concat {
+        "(" \fromproperty #'header:composer ")"
+      }
+      \on-the-fly #not-first-page "-"
+      \on-the-fly #print-page-number-check-first \normalsize \bold \fromproperty #'page:page-number-string
+    }
+  }
+  evenHeaderMarkup = \oddHeaderMarkup
 }
 
 \header {
   title = "Eja, Mater"
   composer = "Antonín Dvořák"
-  tagline = \markup {
+  tagline = \markup \small {
     skład nut: Jan Warchoł
     (jan.warchol@gmail.com, 509 078 203)
   }
 }
 
-\markup {
+\markup \scale #'(0.85 . 0.85) {
   \typewriter {
     \column {
       \bold
