@@ -12,17 +12,18 @@ ml = #(define-music-function (parser location off) (number?)
 
 \header	{
   title = \markup \larger {
-    Porównanie składu nut
+    Musiktypsättningsjämförelse
   }
   subtitle = \markup {
     \normal-text {
-      utwór: \italic { Stabat Mater }
-      (A. Dvořák, fragmenty)
+      verk: \italic { Stabat Mater }
+      (A. Dvořák, utdrag)
     }
   }
   tagline = \markup \larger \normal-text {
-    autor analizy: Jan Warchoł
-    (jan.warchol@gmail.com, 509 078 203)
+    analys: Jan Warchoł
+    (jan.warchol@gmail.com, +48 509 078 203),
+    översättning: Karl Hammar
   }
 }
 
@@ -32,7 +33,7 @@ wersjaA = \markup {
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
     \line {
-      \larger \bold "wersja A"
+      \larger \bold "version A"
       \smaller "(Finale)"
     }
   }
@@ -44,7 +45,7 @@ wersjaB = \markup {
   \box {
     \pad-to-box #'(0 . 0) #'(0 . 2.1)
     \line {
-      \larger \bold "wersja B"
+      \larger \bold "version B"
       \smaller "(LilyPond)"
     }
   }
@@ -202,44 +203,40 @@ wersjaB = \markup {
 \markup \large \larger {
   \column {
     \justify {
-      Wiele nut jest składanych w programie Finale.
-      Warto zdawać sobie sprawę, że popełnia on sporo błędów,
-      które trzeba ręcznie poprawiać, żeby dostać dobre nuty –
-      w wersji \bold A widać kilka takich niedociągnięć.
-      Wersja \bold B to ten sam fragment utworu złożony
-      przeze mnie w programie LilyPond.
+      Mycket musik sätts med programmet Finale.
+      Det är bra att vara medveten om att Finale gör många typografiska
+      misstag som måste korrigeras för hand om man will göra ett partitur
+      av hög klass –
+      version \bold A är visar på några sådana brister.
+      Version \bold B är samma fragment satt med LilyPond.
     }
     \vspace #0.5
     \justify {
-      Przykładowo, porównaj położenie kropek – zwłaszcza przy c
-      w ósmym takcie w basach (“fons”).
-      Czasami zdarza się nawet, że Finale zakrywa kropkę
-      następną nutą!
+      Jämför hur punten i den punterade notes placerats – t.ex.
+      bredvid basens c i takt 8 (på den sjugna stavelsen ”fons”).
+      Ibland gör Finale så att en annan not helt täcker punten.
     }
     \vspace #0.5
     \justify {
-      Ponadto, w wersji \bold A rozmieszczenie nut w takcie 10
-      sugeruje, że szesnastki w basach wypadają "na trzecią" miarę
-      (razem z “mo” w pozostałych głosach) – a tak nie jest!
-      To naprawdę poważny błąd, który bardzo myli śpiewających.
-      Niestety, ten problem nie należy do rzadkości w przypadku
-      Finale.
+      Jämför noternas placering i takt 10 i version \bold A.
+      Basens två sextondelar är placerade samtidigt
+      med de andra stämmornas tredje slag (deras ”mo”).
+      Det är givetvis helt fel och är ett grovt
+      typsättningsfel som förbryllar de flesta sångare.
+      Tyvärr händer det ofta i Finale.
     }
     \vspace #0.5
     \justify {
-      Innym, bardzo często spotykanym problemem jest chaotyczne
-      rozmieszczenie nut, nieodpowiadające wartościom rytmicznym:
-      ósemki zajmujące więcej miejsca niż ćwierćnuty, melodie
-      o równym rytmie "w których" każda nuta zajmuje inną ilość
-      miejsca itp.
+      Ett annat vanligt fel är den kaotiska notplaceringen som inte
+      överenstämmer med tonernas längd: åttondelar får mer plats
+      än fjärdedelar, i melodier med konstant rytm fördelas noterna
+      ojämnt, etc.
     }
     \vspace #0.5
     \justify {
-      Oczywiście żaden program do składu nut nie jest doskonały.
-      Problem z Finale polega na tym, że błędy pojawiają się
-      w nim po prostu zbyt często –
-      jako przykład może posłużyć trzecia strona z porównywanej
-      powyżej partytury (na odwrocie kartki).
+      Givetvis är inget notsättningsprogram perfekt,
+      men i Finale uppträder felen för ofta för att man ska kunna
+      arbeta bekvämnt – se tredje sidan av bilagan (”Eja Mater”).
     }
   }
 }
