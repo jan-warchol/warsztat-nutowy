@@ -69,7 +69,7 @@ stanzas = \markup {
         \line {
           "2. "
           \column	{
-            \line { \concat { Pocie \underline szy cielem } jesteś zwan }
+            \line { \concat { Pocie \underline szy cie \underline lem } jesteś zwan }
             \line { I \concat { najwyższe \underline go } Boga dar. }
             \line { Tyś \underline namaszczeniem naszych dusz }
             \line { \underline Zdrój \concat { ży \underline wy, } \concat { mi \underline łość, } ognia żar. }
