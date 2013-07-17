@@ -12,8 +12,8 @@
   top-markup-spacing #'basic-distance = #15
   print-page-number = ##f
   indent = 0 \mm
-  left-margin = 16 \mm
-  right-margin = 15 \mm
+  left-margin = 13 \mm
+  right-margin = 12 \mm
 
   oddFooterMarkup = \markup {
     \column {
@@ -270,7 +270,11 @@ introText =  \lyricmode {
   \once \override LyricText #'X-offset = #-1.5
   "znajdowali się wszyscy razem na tym" sa -- mym miej -- scu.
   \once \override LyricText #'X-offset = #-1.5
-  "Nagle dał się słyszeć z nieba szum, jakby uderzenie gwałto" -- wne -- go wi -- chru,
+  \markup \raise #0.8 \override #'(baseline-skip . 0.4) \column {
+    \line { "Nagle dał się słyszeć z nieba szum," }
+    \line { "                       jakby uderzenie gwałto" }
+  }
+  -- wne -- go wi -- chru,
   \once \override LyricText #'X-offset = #-1.5
   "i napełnił cały dom, w którym" prze -- by -- wa -- li.
 }
@@ -288,7 +292,11 @@ introTextII =  \lyricmode {
   \markup \bold Świę --
   \markup \bold tym,
   \once \override LyricText #'X-offset = #-1.5
-  "i zaczęli mówić obcymi językami, tak jak im Duch po" -- zwa -- lał mó -- wić.
+  \markup \raise #0.8 \override #'(baseline-skip . 0.4) \column {
+    \line { "i zaczęli mówić obcymi językami," }
+    \line { "                         tak jak im Duch po" }
+  }
+  -- zwa -- lał mó -- wić.
 }
 
 refrainText = \lyricmode {
@@ -464,6 +472,14 @@ verseIIBass = \lyricmode {
       \Staff
       \RemoveEmptyStaves
       \override VerticalAxisGroup #'remove-first = ##t
+    }
+    
+    \context {
+      \Lyrics 
+      \override LyricText #'font-name = "Free Serif"
+      %   \override LyricText #'stencil =
+      %  #(lambda (grob)
+      %    (ly:stencil-scale (lyric-text::print grob) 0.99 1))
     }
   }
   \midi {
