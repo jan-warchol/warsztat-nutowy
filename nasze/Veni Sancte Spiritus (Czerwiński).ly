@@ -250,6 +250,22 @@ introText =  \lyricmode {
   "i napełnił cały dom, w którym" prze -- by -- wa -- li.
 }
 
+introTextII =  \lyricmode {
+  U -- ka --
+  \once \override LyricText #'X-offset = #-1.5
+  "zały się im też języki" jak -- by z_og -- nia,
+  \once \override LyricText #'X-offset = #-1.5
+  "które się rozdzieliły i na każdym z nich" spo -- czął je -- den.
+  \once \override LyricText #'X-offset = #-1.5
+  "I wszyscy zostali napełnieni"
+  \markup \bold Du --
+  \markup \bold chem
+  \markup \bold Świę --
+  \markup \bold tym,
+  \once \override LyricText #'X-offset = #-1.5
+  "i zaczęli mówić obcymi językami, tak jak im Duch po" -- zwa -- lał mó -- wić.
+}
+
 refrainText = \lyricmode {
   Ve -- ni San -- cte Spi -- ri -- tus,
   Ve -- ni San -- cte Spi -- ri -- tus,
@@ -359,6 +375,8 @@ stanzas = \markup {
     }
     \new Lyrics = tenlyrics \lyricsto tenor
     { \introText \refrainText \verseTenorText }
+    \new Lyrics = tenlyricsII \lyricsto tenor
+    { \introTextII }
 
     \new Staff = bass {
       \clef bass
@@ -375,6 +393,8 @@ stanzas = \markup {
     }
     \new Lyrics = basslyrics \lyricsto bass
     { \introText \refrainText \verseBassText }
+    \new Lyrics = basslyricsII \lyricsto bass
+    { \introTextII }
   >>
   \layout {
     \context {
