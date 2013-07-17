@@ -127,6 +127,28 @@ bassIntro = \relative f {
 
 % refrain:
 
+topIRefrain = \relative f'' {
+  \repeat volta 2 {
+    fis4. e8 | fis4. fis8 |
+    g8 g g g | a8( g16) fis( e4) |
+  }
+  \alternative {
+    { fis2 | g | e4 e4 }
+    { fis2( | e4. d8) | d2 }
+  }
+}
+
+topIIRefrain = \relative f'' {
+  \repeat volta 2 {
+    d4. d8 | d4. d8 |
+    d8 d d d | d8( d16) cis( <a cis>4) |
+  }
+  \alternative {
+    { d2 | e4.( d8) | d4 cis4 }
+    { d2( | cis4. d8) | d2 }
+  }
+}
+
 sopranoRefrain = \relative f' {
   \mark \markup \large \musicglyph #"scripts.segno"
   \time 2/4
@@ -276,6 +298,12 @@ refrainText = \lyricmode {
   Ve -- ni San -- cte Spi -- ri -- tus.
 }
 
+refrainTopText = \lyricmode {
+  Przy -- bądź, przy -- bądź, przy -- bądź
+  Du -- chu Świę -- ty!
+  Przy -- bądź, Du -- chu, przy -- bądź!
+}
+
 verseSopranoText = \lyricmode {
   \set stanza = "1."
   A -- po -- sto -- łów zgroma -- dzo -- nych na -- peł -- ni -- łeś swo -- ją mo -- cą.
@@ -315,6 +343,42 @@ verseIIBass = \lyricmode {
 
 \score {
   \new ChoirStaff <<
+    \new Staff = topI {
+      \clef treble
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
+      
+      \new Voice = topI {
+	\commonprops
+	\customInstrumentS
+	\new Devnull {
+	  \tenorIntro
+	}
+	\break
+	\topIRefrain
+      }
+    }
+    \new Lyrics = topIlyrics \lyricsto topI 
+    { \refrainTopText }
+    
+    \new Staff = topII {
+      \clef treble
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
+      
+      \new Voice = topII {
+	\commonprops
+	\customInstrumentS
+	\new Devnull {
+	  \tenorIntro
+	}
+	\break
+	\topIIRefrain
+      }
+    }
+    \new Lyrics = topIIlyrics \lyricsto topII 
+    { \refrainTopText }
+    
     \new Staff = soprano {
       \clef treble
       \set Staff.instrumentName = "S "
