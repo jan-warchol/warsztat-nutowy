@@ -1,37 +1,7 @@
 \version "2.16.0"
 \include "deutsch.ly"
-\header	{
-  title = \markup \column {
-    \larger \larger "Veni Sancte Spiritus"
-    " " " " " "
-  }
-  subtitle = ""
-  composer = \markup {\bold "muzyka:" Łukasz Czerwiński }
-  poet = \markup \override #'(baseline-skip . 2.5) \column {
-    \bold "słowa:"
-    "wstęp: Biblia Pallotinum wyd. trzecie (Dz 2, 1-2)"
-    "zwrotki: Łukasz Czerwiński" " " " " " "
-  }
 
-  tagline = \markup \override #'(baseline-skip . 2.5)
-  \center-column {
-    "autor: Łukasz Czerwiński, 2013"
-    "kontakt: milimetr88@gmail.com"
-    " "
-    \tiny "skład nut: Jan Warchoł, jan.warchol@gmail.com"
-  }
-}
-
-
-commonprops = {
-  \key d \major
-  \tempo 4=75
-  \set Score.tempoHideNote = ##t
-  \override Staff.KeySignature #'Y-extent = #'(5 . -10)
-  \override NoteHead #'style = #'altdefault
-  \numericTimeSignature
-  \override Staff.InstrumentName #'self-alignment-X = #right
-}
+#(set-global-staff-size 16.3)
 
 \paper {
   %page-count = #1
@@ -57,11 +27,55 @@ commonprops = {
       }
     }
   }
-
   evenFooterMarkup = \oddFooterMarkup
-
 }
-#(set-global-staff-size 16.3)
+
+startParenthesis = {
+  \once \override ParenthesesItem #'stencils = #(lambda (grob)
+                                                  (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
+                                                        (right-par (grob-interpret-markup grob (markup #:null))))
+                                                    (list (car par-list)right-par )))
+}
+
+endParenthesis = {
+  \once \override ParenthesesItem #'stencils = #(lambda (grob)
+                                                  (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
+                                                        (left-par (grob-interpret-markup grob (markup #:null))))
+                                                    (list left-par (cadr par-list))))
+}
+
+\header	{
+  title = \markup \column {
+    \larger \larger "Veni Sancte Spiritus"
+    " " " " " "
+  }
+  subtitle = ""
+  composer = \markup {\bold "muzyka:" Łukasz Czerwiński }
+  poet = \markup \override #'(baseline-skip . 2.5) \column {
+    \bold "słowa:"
+    "wstęp: Biblia Pallotinum wyd. trzecie (Dz 2, 1-2)"
+    "zwrotki: Łukasz Czerwiński" " " " " " "
+  }
+
+  tagline = \markup \override #'(baseline-skip . 2.5)
+  \center-column {
+    "autor: Łukasz Czerwiński, 2013"
+    "kontakt: milimetr88@gmail.com"
+    " "
+    \tiny "skład nut: Jan Warchoł, jan.warchol@gmail.com"
+  }
+}
+
+commonprops = {
+  \key d \major
+  \tempo 4=75
+  \set Score.tempoHideNote = ##t
+  \override Staff.KeySignature #'Y-extent = #'(5 . -10)
+  \override NoteHead #'style = #'altdefault
+  \numericTimeSignature
+  \override Staff.InstrumentName #'self-alignment-X = #right
+}
+
 %--------------------------------MELODY--------------------------------
 sopranoMelody =	\relative f' {
   \time 2/4
@@ -110,20 +124,6 @@ bassMelody = \relative f {
 }
 
 %%%%%%%%%%%%%%%%%%
-startParenthesis = {
-  \once \override ParenthesesItem #'stencils = #(lambda (grob)
-                                                  (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
-                                                        (right-par (grob-interpret-markup grob (markup #:null))))
-                                                    (list (car par-list)right-par )))
-}
-
-endParenthesis = {
-  \once \override ParenthesesItem #'stencils = #(lambda (grob)
-                                                  (let ((par-list (parentheses-item::calc-parenthesis-stencils grob))
-                                                        (left-par (grob-interpret-markup grob (markup #:null))))
-                                                    (list left-par (cadr par-list))))
-}
-
 
 mainMelodyIntroT = \relative f {
 
@@ -138,7 +138,6 @@ mainMelodyIntroT = \relative f {
 
   cis'\breve*1/2 cis8 h cis4 cis4
   cis\breve*1/2 h8 a8 a2 a2
-
 
   \cadenzaOff
   \bar"||" \break
@@ -156,8 +155,6 @@ mainMelodyIntroB = \relative f {
 
   a'\breve*1/2 a8 a8 a4 a4  \bar "|" \break
   fis\breve*1/2fis8 fis8 e2 a2
-
-
 
   \cadenzaOff
   \bar"||" \break
@@ -182,7 +179,6 @@ emptyMelody = {
 }
 
 sopranoMelodyThree = \relative f' {
-
   \parenthesize \time 4/4
 
   \cadenzaOn
@@ -226,12 +222,10 @@ bassMelodyThree = \relative f {
   d8 d4 d8 e8 d4 e8 |
   fis8 d4 fis8 g d4. |
   \once \override DynamicText #'stencil = ##f d8 \mf d d d a4. a8 d2
-
 }
 
 akordy = \chordmode {
   \set chordNameLowercaseMinor = ##t
-
 }
 %--------------------------------LYRICS--------------------------------
 textSopranoVeni = \lyricmode {
@@ -244,9 +238,7 @@ textSopranoVeni = \lyricmode {
 textSopranoTwoStanzaTwoA =  \lyricmode {
   % \repeat unfold 28 \skip4
   % \set stanza = "1. "
-
   "Kie" -- dy
-
   \once \override LyricText #'X-offset = #-2.5
   "nadszedł wreszcie dzień Pięć" -- dzie -- siąt -- ni -- cy
   \once \override LyricText #'X-offset = #-2
@@ -259,7 +251,6 @@ textSopranoTwoStanzaTwoB =  \lyricmode {
   "Nagle dał się słyszeć z nieba szum, jakby uderzenie gwałto" -- wne -- go wi -- chru,
   \once \override LyricText #'X-offset = #-2
   "i napełnił cały dom, w którym" prze -- by -- wa -- li.
-
 }
 
 
@@ -350,7 +341,6 @@ customInstrumentA = \customInstrument
 customInstrumentT = \customInstrument
 customInstrumentB = \customInstrument
 
-
 instrumentNameTB = {
   \set Staff.instrumentName = \markup \column \right-align { T B }
   \set Staff.shortInstrumentName = \markup \column \right-align { T B }
@@ -363,7 +353,6 @@ instrumentNameSA = {
 stavesIntroduction = {
 
   \new ChoirStaff <<
-    \new ChordNames { \germanChords \akordy }
 
     %{
       \new Staff = soprano_alto {
@@ -605,7 +594,6 @@ fourstaveschoirTwo = {
   }
 }
 
-
 %--------------------------------LAYOUT--------------------------------
 
 \markup { \large \bold Wstęp }
@@ -622,9 +610,7 @@ fourstaveschoirTwo = {
   }
 }
 
-
 \pageBreak
-
 
 \score {
   \fourstaveschoir
@@ -636,8 +622,6 @@ fourstaveschoirTwo = {
 }
 
 \score {
-
-
   \fourstaveschoirTwo
 
   \layout {
@@ -647,6 +631,5 @@ fourstaveschoirTwo = {
     \autoBeamOff
   }
 }
-
 
 \stanzas
