@@ -187,11 +187,13 @@ sopranoVerse = \relative f' {
 	    (ly:time-signature::print grob) 0.1 0.4 0.4 0.3 ))
   \time 4/4
   \cadenzaOn
+  \tieDashed \set melismaBusyProperties = ##f
   d16 ^\markup {"rytm" \italic "ad lib."} d16 \bar "|"
   \cadenzaOff
-  d8 d4 d16 d16 e8 d8 d e |
-  fis d d fis g d4. |
+  d8 d4 d8 e8 d8~ d e |
+  fis d~ d fis g d4. |
   fis8 fis e d e4. d8 |
+  \tieSolid \unset melismaBusyProperties
   e2 r4.
   r8  \once \override DynamicText #'stencil = ##f d'1 \pp ~ d2 (g,2)
   \once \override DynamicText #'stencil = ##f fis8 \mf fis e d e4. d8 | d2
@@ -227,7 +229,8 @@ bassVerse = \relative f {
   d'8 d d d a4. d8 a2 h4 cis8
   ^\markup {"rytm" \italic "ad lib."}
   \once \override DynamicText #'stencil = ##f d8 \f
-  d8 d4 d8 e8 d4 e8 |
+  \tieDashed \set melismaBusyProperties = ##f
+  d8~ d4 d8 e8 d8~ d8 e8 |
   fis8 d4 fis8 g d4. |
   \once \override DynamicText #'stencil = ##f d8 \mf d d d a4. a8 d2
 }
@@ -275,10 +278,15 @@ refrainText = \lyricmode {
 
 verseSopranoText = \lyricmode {
   \set stanza = "1."
-  A -- po -- sto -- łów zgro -- ma -- dzo -- nych na -- peł -- ni -- łeś swo -- ją mo -- cą.
+  A -- po -- sto -- łów zgroma -- dzo -- nych na -- peł -- ni -- łeś swo -- ją mo -- cą.
   \veniExclaim
   A --
   \veniExclaim
+}
+
+verseIISoprano = \lyricmode {
+  \set stanza = "2." _ _ Ty __ _ na -- tchną -- łeś __ _
+  Swych ucz -- niów __ _ od -- wa -- gą,
 }
 
 verseAltoText = \lyricmode {
@@ -293,31 +301,16 @@ verseTenorText = \lyricmode { \verseAltoText }
 verseBassText = \lyricmode {
   O --
   \veniExclaim
-  Przy -- bądź! Ob -- da -- rzaj nas, Pa -- nie, pło -- mie -- niem Swej wia -- ry.
+  Przy -- bądź! Ob -- da -- rzaj nas, Pa -- nie, _
+  pło -- mie -- niem Swej wia -- ry.
   \veniExclaim
 }
 
-stanzas = \markup {
-  \fill-line {
-    {
-      \hspace #0.1
-      \column {
-	\vspace #0.3
-	\line {
-	  "2. "
-	  \column {
-	    "Ty natchnąłeś Swych uczniów odwagą. "
-	    "Veni Sancte Spiritus! Przybądź!"
-
-	    "Chcemy, Panie, świadczyć z mocą, z radością "
-	    "głosić Twoją chwałę!"
-	  }
-	}
-	\vspace #1.5
-      }
-      \hspace #0.5
-    }
-  }
+verseIIBass = \lyricmode {
+  \set stanza = "(2.)"
+  Przy -- bądź! \skip 4
+  Chce _ -- my, Pa -- nie, świad -- czyć z_mo -- cą,
+  z_ra -- do -- ścią,
 }
 
 \score {
@@ -341,6 +334,8 @@ stanzas = \markup {
     }
     \new Lyrics = soplyrics \lyricsto soprano 
     { \refrainText \verseSopranoText }
+    \new Lyrics = soplyricsII \lyricsto soprano
+    { \repeat unfold 28 { \skip 4 } \verseIISoprano }
 
     \new Staff = alto {
       \clef treble
@@ -394,7 +389,11 @@ stanzas = \markup {
     \new Lyrics = basslyrics \lyricsto bass
     { \introText \refrainText \verseBassText }
     \new Lyrics = basslyricsII \lyricsto bass
-    { \introTextII }
+    { 
+      \introTextII
+      \repeat unfold 36 { \skip 4 }
+      \verseIIBass
+    }
   >>
   \layout {
     \context {
@@ -412,5 +411,3 @@ stanzas = \markup {
     }
   }
 }
-
-\stanzas
