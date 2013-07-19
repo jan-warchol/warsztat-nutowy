@@ -62,6 +62,10 @@ instrumentNameSA = {
   \set Staff.instrumentName = \markup \column \right-align { S A }
   \set Staff.shortInstrumentName = \markup \column \right-align { S A }
 }
+instrumentNameTop = {
+  \set Staff.instrumentName = \markup \column \right-align { SI SII }
+  \set Staff.shortInstrumentName = \markup \column \right-align { SI SII }
+}
 
 % CONTENT BEGINGS HERE:
 
@@ -202,7 +206,7 @@ bassRefrain = \relative f {
 
 % verse:
 
-sopranoVerse = \relative f' {
+sopranoVerseI = \relative f' {
   \override Score.TimeSignature #'stencil =
   #(lambda (grob)
 	  (parenthesize-stencil 
@@ -215,6 +219,10 @@ sopranoVerse = \relative f' {
   d8 d4 d8 e8 d8~ d e |
   fis d~ d fis g d4. |
   fis8 fis e d e4. d8 |
+  \tieSolid \unset melismaBusyProperties
+}
+
+sopranoVerseII = \relative f' {
   \tieSolid \unset melismaBusyProperties
   e2 r4.
   r8  \once \override DynamicText #'stencil = ##f d'1 \pp ~ d2 (g,2)
@@ -233,8 +241,14 @@ sopranoVerse = \relative f' {
 }
 
 altoVerse = \relative f' {
+  \set Staff.instrumentName = "A"
+  \set Staff.shortInstrumentName = "A"
+  \oneVoice
   r8 d1 ~ d1
-  d8 d a a cis4. d8 d4( cis4) r4.
+  d8 d a a cis4. d8
+  \voiceTwo
+  \instrumentNameSA
+  d4( cis4) r4.
   r8 d1 ~ d1
   d8 d d d cis4. d8 a2
 }
@@ -345,52 +359,45 @@ verseBassText = \lyricmode {
 verseIIBass = \lyricmode {
   \set stanza = "(2.)"
   Przy -- bądź! \skip 4
-  Chce _ -- my, Pa -- nie, świad -- czyć z_mo -- cą,
+  Chce -- _ my, Pa -- nie, świad -- czyć z_mo -- cą,
   z_ra -- do -- ścią,
 }
 
 \score {
   \new ChoirStaff <<
-    \new Staff = topI {
+    \new Staff = top {
       \clef treble
-      \set Staff.instrumentName = "S "
-      \set Staff.shortInstrumentName = "S "
-      
-      \new Voice = topI {
-	\commonprops
-	\customInstrumentS
-	\new Devnull {
-	  \tenorIntro
+      \instrumentNameTop
+      <<
+	\new Voice = topI {
+	  \voiceOne
+	  \commonprops
+	  \customInstrumentS
+	  \new Devnull {
+	    \tenorIntro
+	  }
+	  \break
+	  \topIRefrain
 	}
-	\break
-	\topIRefrain
-      }
+	\new Voice = topII {
+	  \voiceTwo
+	  \commonprops
+	  \customInstrumentS
+	  \new Devnull {
+	    \tenorIntro
+	  }
+	  \break
+	  \topIIRefrain
+	}
+      >>
     }
-    \new Lyrics = topIlyrics \lyricsto topI 
+    \new Lyrics = toplyrics \lyricsto topI 
     { \refrainTopText }
     
-    \new Staff = topII {
+    \new Staff = sopranosolo {
       \clef treble
-      \set Staff.instrumentName = "S "
-      \set Staff.shortInstrumentName = "S "
-      
-      \new Voice = topII {
-	\commonprops
-	\customInstrumentS
-	\new Devnull {
-	  \tenorIntro
-	}
-	\break
-	\topIIRefrain
-      }
-    }
-    \new Lyrics = topIIlyrics \lyricsto topII 
-    { \refrainTopText }
-    
-    \new Staff = soprano {
-      \clef treble
-      \set Staff.instrumentName = "S "
-      \set Staff.shortInstrumentName = "S "
+      \set Staff.instrumentName = "S"
+      \set Staff.shortInstrumentName = "S"
       
       \new Voice = soprano {
 	\commonprops
@@ -399,64 +406,78 @@ verseIIBass = \lyricmode {
 	  \tenorIntro
 	}
 	\break
-	\sopranoRefrain
+	\new Devnull {
+	  \sopranoRefrain
+	}
 	\break
-	\sopranoVerse
+	\sopranoVerseI
       }
     }
     \new Lyrics = soplyrics \lyricsto soprano 
-    { \refrainText \verseSopranoText }
+    { \verseSopranoText }
     \new Lyrics = soplyricsII \lyricsto soprano
-    { \repeat unfold 28 { \skip 4 } \verseIISoprano }
+    { \verseIISoprano }
 
-    \new Staff = alto {
+    \new Staff = women {
       \clef treble
-      \set Staff.instrumentName = "A "
-      \set Staff.shortInstrumentName = "A "
-      
-      \new Voice = alto {
-	\commonprops
-	\new Devnull {
-	  \tenorIntro
+      \instrumentNameSA
+      <<
+	\new Voice = soprano {
+	  \voiceOne
+	  \commonprops
+	  \customInstrumentS
+	  \new Devnull {
+	    \tenorIntro
+	  }
+	  \break
+	  \sopranoRefrain
+	  \break
+	  \new Devnull {
+	    \sopranoVerseI
+	  }
+	  \sopranoVerseII
 	}
-	\customInstrumentA
-	\altoRefrain
-	\altoVerse
-      }
+	\new Voice = alto {
+	  \voiceTwo
+	  \commonprops
+	  \new Devnull {
+	    \tenorIntro
+	  }
+	  \customInstrumentA
+	  \altoRefrain
+	  \altoVerse
+	}
+      >>
     }
     \new Lyrics = altolyrics \lyricsto alto 
     { \refrainText \verseAltoText }
 
-    \new Staff = tenor {
-      \clef "treble_8"
-      \set Staff.instrumentName = "T "
-      \set Staff.shortInstrumentName = "T "
-      
-      \new Voice = tenor {
-	\commonprops
-	\customInstrumentT
-	\tenorIntro
-	\tenorRefrain
-	\tenorVerse
-      }
-    }
-    \new Lyrics = tenlyrics \lyricsto tenor
-    { \introText \refrainText \verseTenorText }
-    \new Lyrics = tenlyricsII \lyricsto tenor
-    { \introTextII }
-
-    \new Staff = bass {
+    \new Staff = men {
       \clef bass
-      \set Staff.instrumentName = "B "
-      \set Staff.shortInstrumentName = "B "
-      
-      \new Voice = bass {
-	\commonprops
-	\customInstrumentB
-	\bassIntro
-	\bassRefrain
-	\bassVerse
-      }
+      \instrumentNameTB
+      <<
+	\new Voice = tenor {
+	  \voiceOne
+	  \commonprops
+	  \customInstrumentT
+	  \tenorIntro
+	  \tenorRefrain
+	  \tenorVerse
+	}
+	\new Voice = bass {
+	  \voiceTwo
+	  \commonprops
+	  \customInstrumentB
+	  \bassIntro
+	  \bassRefrain
+	  \bassVerse
+	}
+      >>
+    }
+    \new Lyrics = tenlyrics \with { alignAboveContext = men } \lyricsto tenor
+    \lyricmode {
+      \repeat unfold 58 \skip 4
+      A -- "-"
     }
     \new Lyrics = basslyrics \lyricsto bass
     { \introText \refrainText \verseBassText }
