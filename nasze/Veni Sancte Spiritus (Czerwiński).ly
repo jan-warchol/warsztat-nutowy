@@ -217,6 +217,7 @@ commonprops = {
 % intro:
 
 tenorIntro = \relative f {
+  \repeat volta 2 {
   \override ParenthesesItem #'font-size = #0
   \cadenzaOn
   d8 e8 fis\breve*1/2 a8 a8 fis4 fis4 \bar"|"
@@ -226,9 +227,11 @@ tenorIntro = \relative f {
   cis'\breve*1/2 cis8 h cis4 cis4 \bar"|"
   cis\breve*1/2 h8 a8 a2 a2 \bar"|"
   \cadenzaOff
+  }
 }
 
 bassIntro = \relative f {
+  \repeat volta 2 {
   \override ParenthesesItem #'font-size = #0
   \cadenzaOn
   d8 d8 d\breve*1/2 d8 d8 d4 d4 \bar"|"
@@ -236,6 +239,7 @@ bassIntro = \relative f {
   a'\breve*1/2 a8 a8 a4 a4  \bar "|"
   fis\breve*1/2fis8 fis8 e2 a2 \bar"|"
   \cadenzaOff
+  }
 }
 
 % refrain:
