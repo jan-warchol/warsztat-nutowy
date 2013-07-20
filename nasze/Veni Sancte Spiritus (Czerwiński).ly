@@ -1,7 +1,7 @@
 \version "2.17.6"
 \include "deutsch.ly"
 
-#(set-global-staff-size 15.6)
+#(set-global-staff-size 15.4)
 
 \paper {
   page-count = #1
@@ -9,8 +9,8 @@
   %ragged-bottom = ##t
   system-system-spacing #'padding = #3.5
   %score-system-spacing #'basic-distance = #23
-  top-markup-spacing #'basic-distance = #3
-  markup-system-spacing #'basic-distance = #17
+  top-markup-spacing #'basic-distance = #1.5
+  markup-system-spacing #'basic-distance = #17.7
   print-page-number = ##f
   indent = 0 \mm
   left-margin = 13 \mm
@@ -182,9 +182,10 @@ instrumentNameTop = {
 \header	{
   title = \markup \column {
     \larger \larger "Veni Sancte Spiritus"
+    \vspace #0.5
   }
   subtitle = ""
-  composer = \markup \override #'(baseline-skip . 1.1)
+  composer = \markup \override #'(baseline-skip . 2.3)
   \right-column {
     " "
     \line { \bold "muzyka:" Łukasz Czerwiński (milimetr88@gmail.com) }
@@ -241,14 +242,14 @@ bassIntro = \relative f {
 
 topIRefrain = \relative f'' {
   \repeat volta 2 {
-    <>^\markup \normalsize "(nadgłos jest opcjonalny)"
+    <>^\markup \small "(nadgłos dedykowany Lili Pawełek)"
     fis4. e8 | fis4. fis8 |
     g8 g g g | a8( g16) fis( e4) |
   }
   \alternative {
     { \break fis2 | g | e4 e4 }
     { 
-      \shape #'((0.2 . -1)(0 . -0.9)(0 . -0.9)(-0.2 . -1)) Slur
+      \shape #'((0.2 . -1)(1 . -0.8)(-0.7 . -0.8)(-0.2 . -1)) Slur
       fis2( | e4. d8) | d2 }
   }
 }
@@ -261,7 +262,7 @@ topIIRefrain = \relative f'' {
   \alternative {
     { d2 | e4.( d8) | d4 cis4 }
     {
-      \shape #'((0 . 1)(0 . 0.7)(0 . 0.7)(0 . 1)) Slur
+      \shape #'((0 . 0.9)(0 . 0.6)(0 . 0.6)(0 . 0.9)) Slur
       d2( | cis4. d8) | d2 }
   }
 }
@@ -348,7 +349,7 @@ sopranoVerseII = \relative f' {
   e2 r2
   \once \override DynamicText #'stencil = ##f d'1 \pp ~ d2 (g,2)
   \once \override DynamicText #'stencil = ##f fis8 \mf fis e d e4. d8 | d2
-  \mark \markup \column {
+  \mark \markup \smaller \column {
     \line {
       \bold 1: Dal segno \scale #'(0.8 . 0.8) {
 	(→ \raise #1 \tiny \musicglyph #"scripts.segno" ) 
@@ -400,6 +401,10 @@ veniExclaim = \lyricmode {
   Ve -- ni Sanc -- te Spi -- ri -- tus!
 }
 
+glosic = \lyricmode {
+  gło -- sić Two -- ją chwa -- _ łę!
+}
+
 introText =  \lyricmode {
   "Kie" -- dy
   \once \override LyricText #'X-offset = #-1.5
@@ -407,7 +412,7 @@ introText =  \lyricmode {
   \once \override LyricText #'X-offset = #-1.5
   "znajdowali się wszyscy razem na tym" sa -- mym miej -- scu.
   \once \override LyricText #'X-offset = #-1.5
-  \markup \raise #1.6 \override #'(baseline-skip . 0.4) \column {
+  \markup \raise #2.3 \override #'(baseline-skip . 0.4) \column {
     \line { "Nagle dał się słyszeć z nieba szum," }
     \line { "                       jakby uderzenie gwałto" }
   }
@@ -429,11 +434,16 @@ introTextII =  \lyricmode {
   \markup \bold Świę --
   \markup \bold tym,
   \once \override LyricText #'X-offset = #-1.5
-  \markup \raise #1.3 \override #'(baseline-skip . 0.4) \column {
+  \override LyricHyphen #'extra-offset = #'(0 . -2.3)
+  \markup \override #'(baseline-skip . 0.4) \column {
     \line { "i zaczęli mówić obcymi językami," }
     \line { "                         tak jak im Duch po" }
   }
-  -- zwa -- lał mó -- wić.
+  --
+  \override LyricText #'extra-offset = #'(0 . -2.3)
+  zwa -- lał mó -- wić.
+  \revert LyricText #'extra-offset
+  \revert LyricHyphen #'extra-offset
 }
 
 refrainText = \lyricmode {
@@ -460,29 +470,40 @@ verseSopranoText = \lyricmode {
 verseIISoprano = \lyricmode {
   \set stanza = "2." _ _ Ty __ _ na -- tchną -- łeś __ _
   Swych ucz -- niów __ _ od -- wa -- gą,
+  \veniExclaim
 }
 
 verseAltoText = \lyricmode {
+  \set stanza = "(1-2.)"
   O --
   \veniExclaim
+  \set stanza = "1."
   A --
   \veniExclaim
+}
+
+verseIIAltoText = \lyricmode {
+  \repeat unfold 36 { \skip 4 }
+  \set stanza = "2."
+  A --
+  \glosic
 }
 
 verseTenorText = \lyricmode { \verseAltoText }
 
 verseBassText = \lyricmode {
-  tus!
+  -tus!
   Przy -- bądź! Ob -- da -- rzaj nas, Pa -- nie, _
   pło -- mie -- niem Swej wia -- ry.
   \veniExclaim
 }
 
 verseIIBass = \lyricmode {
-  \set stanza = "(2.)"
+  \set stanza = "2."
   Przy -- bądź! \skip 4
   Chce -- _ my, Pa -- nie, świad -- czyć z_mo -- cą,
   z_ra -- do -- ścią,
+  \glosic
 }
 
 \score {
@@ -579,6 +600,8 @@ verseIIBass = \lyricmode {
     }
     \new Lyrics = altolyrics \lyricsto alto 
     { \refrainText \verseAltoText }
+    \new Lyrics = altolyricsII \lyricsto alto 
+    { \verseIIAltoText }
 
     \new Staff = men {
       \clef bass
