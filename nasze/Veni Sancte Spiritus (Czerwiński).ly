@@ -1,15 +1,16 @@
 \version "2.17.6"
 \include "deutsch.ly"
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 15.5)
 
 \paper {
-  %page-count = #1
-  % ragged-last-bottom = ##f
-  ragged-bottom = ##t
-  system-system-spacing #'basic-distance = #16
-  score-system-spacing #'basic-distance = #23
-  top-markup-spacing #'basic-distance = #15
+  page-count = #1
+  ragged-last-bottom = ##f
+  %ragged-bottom = ##t
+  system-system-spacing #'padding = #3
+  %score-system-spacing #'basic-distance = #23
+  top-markup-spacing #'basic-distance = #4
+  markup-system-spacing #'basic-distance = #17
   print-page-number = ##f
   indent = 0 \mm
   left-margin = 13 \mm
@@ -31,6 +32,115 @@
 }
 
 % MISC DEFINITIONS:
+
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR %% Store the following until
+%LSR %%   %% end of include file
+%LSR %% as splitStaffBarLine-1.0.ily.
+%LSR %% To use it in your projects, write
+%LSR %%   \include "<path-to-file/>splitStaffBarLine-1.0.ily"
+%LSR %% to define the commands described below.
+%LSR %%
+%LSR %% Cheers,
+%LSR %%   Alexander
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR %% splitStaffBarLine
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR %% Version 1.0
+%LSR %% 2009, Alexander Kobel (www.a-kobel.de)
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR %% Defines the
+%LSR %%   \splitStaffBarLine
+%LSR %% command, which adds arrows in north-east and south-east
+%LSR %% directions at a bar line, to denote that several voices
+%LSR %% sharing a staff will each continue on a staff of their own in
+%LSR %% the next system.
+%LSR %% Automatically inserts a break at this position, otherwise
+%LSR %% the symbol does not make any sense.
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR %% As a side-effect, defines the markup command
+%LSR %%   \arrow-at-angle <angle> <length> <fill>
+%LSR %% as a helper function, which draws an arrow of length <length>
+%LSR %% at an angle of <angle> (in degrees).
+%LSR %% If <fill> = #t, the arrowhead is filled.
+%LSR %% Internally uses the fontsize and thickness properties, as
+%LSR %% \arrow-head and \draw-line do.
+%LSR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LSR
+%LSR
+%LSR %% This should also work with older version, probably up
+%LSR %% to <= 2.10. Please report if this is the case.
+
+#(define-markup-command (arrow-at-angle layout props angle-deg length fill)
+   (number? number? boolean?)
+   (let* (
+          ;; PI-OVER-180 and degrees->radians are taken from flag-styles.scm
+          (PI-OVER-180 (/ (atan 1 1) 45))
+          (degrees->radians (lambda (degrees) (* degrees PI-OVER-180)))
+          (angle-rad (degrees->radians angle-deg))
+          (target-x (* length (cos angle-rad)))
+          (target-y (* length (sin angle-rad))))
+     (interpret-markup layout props
+                       (markup
+                        #:translate (cons (/ target-x 2) (/ target-y 1.4))
+                        #:rotate angle-deg
+                        #:translate (cons (/ length -2) 0)
+                        #:concat (#:draw-line (cons length 0)	
+                                              #:arrow-head X RIGHT fill)))))
+
+splitStaffBarLineMarkup = \markup
+\with-dimensions #'(0 . 0) #'(0 . 0)
+\translate #'(4.5 . 0) {
+  \combine
+    \arrow-at-angle #45 #(sqrt 8) ##f
+    \arrow-at-angle #-45 #(sqrt 8) ##f
+}
+
+joinStaffUpMarkup = \markup \with-dimensions #'(0 . 0) #'(0 . 0) {
+  \arrow-at-angle #45 #(sqrt 8) ##f
+}
+
+joinStaffDownMarkup = \markup \with-dimensions #'(0 . 0) #'(0 . 0) {
+  \arrow-at-angle #-45 #(sqrt 8) ##f
+}
+
+splitStaffBarLine = {
+  \once \override Staff.BarLine #'stencil =
+    #(lambda (grob)
+       (ly:stencil-combine-at-edge
+        (ly:bar-line::print grob)
+        X RIGHT
+        (grob-interpret-markup grob splitStaffBarLineMarkup)
+        0))
+  \break
+}
+
+joinStaffUp = {
+  \once \override Staff.BarLine #'stencil =
+    #(lambda (grob)
+       (ly:stencil-combine-at-edge
+        (ly:bar-line::print grob)
+        X RIGHT
+        (grob-interpret-markup grob joinStaffUpMarkup)
+        0))
+  \break
+}
+
+joinStaffDown = {
+  \once \override Staff.BarLine #'stencil =
+    #(lambda (grob)
+       (ly:stencil-combine-at-edge
+        (ly:bar-line::print grob)
+        X RIGHT
+        (grob-interpret-markup grob joinStaffDownMarkup)
+        0))
+  \break
+}
+
 
 startParenthesis = {
   \once \override ParenthesesItem #'stencils = #(lambda (grob)
@@ -72,23 +182,21 @@ instrumentNameTop = {
 \header	{
   title = \markup \column {
     \larger \larger "Veni Sancte Spiritus"
-    " " " " " "
   }
   subtitle = ""
-  composer = \markup {\bold "muzyka:" Łukasz Czerwiński }
+  composer = \markup \override #'(baseline-skip . 0.75)
+  \right-column {
+    " "
+    \line { \bold "muzyka:" Łukasz Czerwiński (milimetr88@gmail.com) }
+    \small "skład nut: Jan Warchoł, jan.warchol@gmail.com"
+  }
   poet = \markup \override #'(baseline-skip . 2.5) \column {
     \bold "słowa:"
     "wstęp: Biblia Pallotinum wyd. trzecie (Dz 2, 1-2)"
-    "zwrotki: Łukasz Czerwiński" " " " " " "
+    "zwrotki: Łukasz Czerwiński"
   }
 
-  tagline = \markup \override #'(baseline-skip . 2.5)
-  \center-column {
-    "autor: Łukasz Czerwiński, 2013"
-    "kontakt: milimetr88@gmail.com"
-    " "
-    \tiny "skład nut: Jan Warchoł, jan.warchol@gmail.com"
-  }
+  tagline = ##f
 }
 
 commonprops = {
@@ -112,7 +220,7 @@ tenorIntro = \relative f {
   \cadenzaOn
   d8 e8 fis\breve*1/2 a8 a8 fis4 fis4 \bar"|"
   h\breve*1/2 a8 g8
-  \shape #'((0 . 0.2)(0 . 0.7)(0 . 0.7)(0 . 0.5)) Slur
+  %\shape #'((0 . 0.2)(0 . 0.7)(0 . 0.7)(0 . 0.5)) Slur
   fis4. ( g16 [fis])  e2 \bar"|"
   cis'\breve*1/2 cis8 h cis4 cis4 \bar"|"
   cis\breve*1/2 h8 a8 a2 a2 \bar"|"
@@ -137,8 +245,10 @@ topIRefrain = \relative f'' {
     g8 g g g | a8( g16) fis( e4) |
   }
   \alternative {
-    { fis2 | g | e4 e4 }
-    { fis2( | e4. d8) | d2 }
+    { \break fis2 | g | e4 e4 }
+    { 
+      \shape #'((0.2 . -1)(0 . -0.9)(0 . -0.9)(-0.2 . -1)) Slur
+      fis2( | e4. d8) | d2 }
   }
 }
 
@@ -149,7 +259,9 @@ topIIRefrain = \relative f'' {
   }
   \alternative {
     { d2 | e4.( d8) | d4 cis4 }
-    { d2( | cis4. d8) | d2 }
+    {
+      \shape #'((0 . 1)(0 . 0.7)(0 . 0.7)(0 . 1)) Slur
+      d2( | cis4. d8) | d2 }
   }
 }
 
@@ -187,8 +299,14 @@ tenorRefrain = \relative c' {
     h8 a h h     | cis8 h16 a16 ~ a4 |
   }
   \alternative {
-    { a8 a h16 ([a16]) fis8 | g4. h8 | a2 }
-    { a8 a h16 ([a16]) fis8 | g4. g8 | fis2 }
+    { a8 a
+      \once \override Beam #'positions = #'(4.8 . 4.4)
+      \shape #'((0 . -0.2)(0 . -0.6)(0 . -0.6)(0 . -0.2)) Slur
+      h16 ([a16]) fis8 | g4. h8 | a2 }
+    { a8 a
+      \once \override Beam #'positions = #'(4.8 . 4.4)
+      \shape #'((0 . -0.2)(0 . -0.6)(0 . -0.6)(0 . -0.2)) Slur
+      h16 ([a16]) fis8 | g4. g8 | fis2 }
   }
 }
 
@@ -219,7 +337,9 @@ sopranoVerseI = \relative f' {
   d8 d4 d8 e8 d8~ d e |
   fis d~ d fis g d4. |
   fis8 fis e d e4. d8 |
+  \joinStaffDown
   \tieSolid \unset melismaBusyProperties
+  \break
 }
 
 sopranoVerseII = \relative f' {
@@ -248,6 +368,7 @@ altoVerse = \relative f' {
   d8 d a a cis4. d8
   \voiceTwo
   \instrumentNameSA
+  \joinStaffUp
   d4( cis4) r4.
   r8 d1 ~ d1
   d8 d d d cis4. d8 a2
@@ -262,6 +383,7 @@ tenorVerse = \relative c' {
 
 bassVerse = \relative f {
   r8 d1 ~ d2 (g,2)
+  \override TextScript #'X-offset = #-3.5
   d'8 d d d a4. d8 a2 h4 cis8
   ^\markup {"rytm" \italic "ad lib."}
   \once \override DynamicText #'stencil = ##f d8 \f
@@ -284,7 +406,7 @@ introText =  \lyricmode {
   \once \override LyricText #'X-offset = #-1.5
   "znajdowali się wszyscy razem na tym" sa -- mym miej -- scu.
   \once \override LyricText #'X-offset = #-1.5
-  \markup \raise #0.8 \override #'(baseline-skip . 0.4) \column {
+  \markup \raise #1.6 \override #'(baseline-skip . 0.4) \column {
     \line { "Nagle dał się słyszeć z nieba szum," }
     \line { "                       jakby uderzenie gwałto" }
   }
@@ -306,7 +428,7 @@ introTextII =  \lyricmode {
   \markup \bold Świę --
   \markup \bold tym,
   \once \override LyricText #'X-offset = #-1.5
-  \markup \raise #0.8 \override #'(baseline-skip . 0.4) \column {
+  \markup \raise #1.3 \override #'(baseline-skip . 0.4) \column {
     \line { "i zaczęli mówić obcymi językami," }
     \line { "                         tak jak im Duch po" }
   }
@@ -349,8 +471,7 @@ verseAltoText = \lyricmode {
 verseTenorText = \lyricmode { \verseAltoText }
 
 verseBassText = \lyricmode {
-  O --
-  \veniExclaim
+  tus!
   Przy -- bądź! Ob -- da -- rzaj nas, Pa -- nie, _
   pło -- mie -- niem Swej wia -- ry.
   \veniExclaim
@@ -365,7 +486,11 @@ verseIIBass = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff = top {
+    \new Staff = top \with {
+      fontSize = #-2
+      \override StaffSymbol.staff-space = #(magstep -2)
+      \override StaffSymbol.thickness = #(magstep -1)
+    }{
       \clef treble
       \instrumentNameTop
       <<
@@ -391,7 +516,9 @@ verseIIBass = \lyricmode {
 	}
       >>
     }
-    \new Lyrics = toplyrics \lyricsto topI 
+    \new Lyrics = toplyrics \with {
+      \override LyricText #'font-size = #0
+    } \lyricsto topI 
     { \refrainTopText }
     
     \new Staff = sopranosolo {
@@ -431,7 +558,7 @@ verseIIBass = \lyricmode {
 	  }
 	  \break
 	  \sopranoRefrain
-	  \break
+	  \splitStaffBarLine
 	  \new Devnull {
 	    \sopranoVerseI
 	  }
@@ -474,13 +601,12 @@ verseIIBass = \lyricmode {
 	}
       >>
     }
-    \new Lyrics = tenlyrics \with { alignAboveContext = men } \lyricsto tenor
-    \lyricmode {
-      \repeat unfold 58 \skip 4
-      A -- "-"
-    }
     \new Lyrics = basslyrics \lyricsto bass
-    { \introText \refrainText \verseBassText }
+    { 
+      \introText
+      \repeat unfold 35 { \skip 4 }
+      \verseBassText
+    }
     \new Lyrics = basslyricsII \lyricsto bass
     { 
       \introTextII
