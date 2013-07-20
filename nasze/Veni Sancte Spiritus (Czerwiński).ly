@@ -1,15 +1,15 @@
 \version "2.17.6"
 \include "deutsch.ly"
 
-#(set-global-staff-size 15.5)
+#(set-global-staff-size 15.6)
 
 \paper {
   page-count = #1
   ragged-last-bottom = ##f
   %ragged-bottom = ##t
-  system-system-spacing #'padding = #3
+  system-system-spacing #'padding = #3.5
   %score-system-spacing #'basic-distance = #23
-  top-markup-spacing #'basic-distance = #4
+  top-markup-spacing #'basic-distance = #3
   markup-system-spacing #'basic-distance = #17
   print-page-number = ##f
   indent = 0 \mm
@@ -173,8 +173,8 @@ instrumentNameSA = {
   \set Staff.shortInstrumentName = \markup \column \right-align { S A }
 }
 instrumentNameTop = {
-  \set Staff.instrumentName = \markup \column \right-align { SI SII }
-  \set Staff.shortInstrumentName = \markup \column \right-align { SI SII }
+  \set Staff.instrumentName = \markup \column \right-align { "S I" "S II" }
+  \set Staff.shortInstrumentName = \markup \column \right-align { "S I" "S II" }
 }
 
 % CONTENT BEGINGS HERE:
@@ -184,7 +184,7 @@ instrumentNameTop = {
     \larger \larger "Veni Sancte Spiritus"
   }
   subtitle = ""
-  composer = \markup \override #'(baseline-skip . 0.75)
+  composer = \markup \override #'(baseline-skip . 1.1)
   \right-column {
     " "
     \line { \bold "muzyka:" Łukasz Czerwiński (milimetr88@gmail.com) }
@@ -241,6 +241,7 @@ bassIntro = \relative f {
 
 topIRefrain = \relative f'' {
   \repeat volta 2 {
+    <>^\markup \normalsize "(nadgłos jest opcjonalny)"
     fis4. e8 | fis4. fis8 |
     g8 g g g | a8( g16) fis( e4) |
   }
@@ -344,8 +345,8 @@ sopranoVerseI = \relative f' {
 
 sopranoVerseII = \relative f' {
   \tieSolid \unset melismaBusyProperties
-  e2 r4.
-  r8  \once \override DynamicText #'stencil = ##f d'1 \pp ~ d2 (g,2)
+  e2 r2
+  \once \override DynamicText #'stencil = ##f d'1 \pp ~ d2 (g,2)
   \once \override DynamicText #'stencil = ##f fis8 \mf fis e d e4. d8 | d2
   \mark \markup \column {
     \line {
@@ -369,15 +370,15 @@ altoVerse = \relative f' {
   \voiceTwo
   \instrumentNameSA
   \joinStaffUp
-  d4( cis4) r4.
-  r8 d1 ~ d1
+  d4( cis4) r2
+  d1 ~ d1
   d8 d d d cis4. d8 a2
 }
 
 tenorVerse = \relative c' {
   r8 a1 ~ a2 (h2)
-  a8 a fis fis g4. fis8 a2 r4.
-  r8 a1 ~ a2 (h2)
+  a8 a fis fis g4. fis8 a2 r2
+  a1 ~ a2 (h2)
   a8 a fis fis g4. fis8 fis2
 }
 
