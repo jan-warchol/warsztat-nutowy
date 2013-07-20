@@ -1,13 +1,13 @@
 \version "2.17.6"
 \include "deutsch.ly"
 
-#(set-global-staff-size 15.4)
+#(set-global-staff-size 15.5)
 
 \paper {
   page-count = #1
   ragged-last-bottom = ##f
   %ragged-bottom = ##t
-  system-system-spacing #'padding = #3.5
+  system-system-spacing #'padding = #4
   %score-system-spacing #'basic-distance = #23
   top-markup-spacing #'basic-distance = #1.5
   markup-system-spacing #'basic-distance = #17.7
@@ -493,6 +493,7 @@ verseTenorText = \lyricmode { \verseAltoText }
 
 verseBassText = \lyricmode {
   -tus!
+  \set stanza = "(1.)"
   Przy -- bądź! Ob -- da -- rzaj nas, Pa -- nie, _
   pło -- mie -- niem Swej wia -- ry.
   \veniExclaim
@@ -598,9 +599,13 @@ verseIIBass = \lyricmode {
 	}
       >>
     }
-    \new Lyrics = altolyrics \lyricsto alto 
+    \new Lyrics = womenlyrics \with {
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.7
+    }
+    \lyricsto alto 
     { \refrainText \verseAltoText }
-    \new Lyrics = altolyricsII \lyricsto alto 
+    \new Lyrics = womenlyricsII \lyricsto alto 
     { \verseIIAltoText }
 
     \new Staff = men {
