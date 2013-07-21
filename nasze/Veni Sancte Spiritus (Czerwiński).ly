@@ -13,8 +13,8 @@
   markup-system-spacing #'basic-distance = #17.7
   print-page-number = ##f
   indent = 0 \mm
-  left-margin = 13 \mm
-  right-margin = 12 \mm
+  left-margin = 18 \mm
+  right-margin = 17 \mm
 
   oddFooterMarkup = \markup {
     \column {
@@ -340,7 +340,7 @@ sopranoVerseI = \relative f' {
   \tieDashed \set melismaBusyProperties = ##f
   d16 ^\markup {"rytm" \italic "ad lib."} d16 \bar "|"
   \cadenzaOff
-  d8 d4 d8 e8 d8~ d e |
+  d8 d4 d16~ d e8 d8~ d e |
   fis d~ d fis g d4. |
   fis8 fis e d e4. d8 |
   \joinStaffDown
@@ -402,7 +402,7 @@ bassVerse = \relative f {
 % LYRICS ====================================
 
 veniExclaim = \lyricmode {
-  Ve -- ni Sanc -- te Spi -- ri -- tus!
+  Ve -- ni San -- cte Spi -- ri -- tus!
 }
 
 glosic = \lyricmode {
@@ -465,14 +465,15 @@ refrainTopText = \lyricmode {
 
 verseSopranoText = \lyricmode {
   \set stanza = "1."
-  A -- po -- sto -- łów zgroma -- dzo -- nych na -- peł -- ni -- łeś swo -- ją mo -- cą.
+  A -- po -- sto -- łów zgro -- ma -- dzo -- nych
+  na -- peł -- ni -- łeś swo -- ją mo -- cą.
   \veniExclaim
   A --
   \veniExclaim
 }
 
 verseIISoprano = \lyricmode {
-  \set stanza = "2." _ _ Ty __ _ na -- tchną -- łeś __ _
+  \set stanza = "2." _ _ Ty __ _ na -- _ tchną -- łeś __ _
   Swych ucz -- niów __ _ od -- wa -- gą,
   \veniExclaim
 }
