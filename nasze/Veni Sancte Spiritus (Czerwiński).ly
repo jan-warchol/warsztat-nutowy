@@ -237,7 +237,7 @@ bassIntro = \relative f {
   d8 d8 d\breve*1/2 d8 d8 d4 d4 \bar"|"
   g\breve*1/2 g8 g8 d2 a2 \bar "|"
   a'\breve*1/2 a8 a8 a4 a4  \bar "|"
-  fis\breve*1/2fis8 fis8 e2 a2 \bar"|"
+  fis\breve*1/2fis8 fis8 e2 a,2 \bar"|"
   \cadenzaOff
   }
 }
