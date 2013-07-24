@@ -13,7 +13,8 @@
 }
 
 \header {
-  %title =
+  title = "Nadzieja poranka"
+  subtitle = "Hymn Światowych Dni Młodzieży Rio 2013"
   %composer =
   %kompozytor-krotki =
   %werset =
@@ -27,6 +28,15 @@
   %  ""
   %  ""
   %}
+}
+
+nieparzZwrotki = \markup \column {
+  \line { \bold 1. zwrotka \italic "(Wiem, że...)" }
+  \line { \bold 3. zwrotka \italic "(Tu od wschodu...)" }
+}
+parzZwrotki = \markup \column {
+  \line { \bold 2. zwrotka \italic "(Oto młodzież...)" }
+  \line { \bold 4. zwrotka \italic "(Odpowiadając...)" }
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
@@ -77,6 +87,9 @@
 
   % blok \layout zawiera ogólne ustawienia stylu
   \layout {
+    \textLengthOn
+    \override MultiMeasureRest #'expand-limit = #0
+
     \compressFullBarRests
     %\set Score.tempoHideNote = ##t
 
