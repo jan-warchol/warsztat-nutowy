@@ -1,4 +1,6 @@
 \version "2.16.1"
+\language "deutsch"
+
 #(set-global-staff-size 16)
 
 \paper {
@@ -9,7 +11,7 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
+  \include "./pomocnicze/epifanijny-styl-naglowkow.ily"
 }
 
 \header {
@@ -30,6 +32,17 @@
   %}
 }
 
+slowa = \lyricmode {
+  \set stanza = \markup \italic "ref."
+  Chry -- stus nas za -- pra -- sza:
+  \override LyricText #'font-shape = #'italic
+  Przyjdź -- cie, przy -- ja -- cie -- le!
+  \revert LyricText #'font-shape
+  Chry -- stus nas po -- sy -- ła:
+  \override LyricText #'font-shape = #'italic
+  Bądź -- cie mis -- jo -- na -- rza -- mi!
+}
+
 nieparzZwrotki = \markup \column {
   \line { \bold 1. zwrotka \italic "(Wiem, że...)" }
   \line { \bold 3. zwrotka \italic "(Tu od wschodu...)" }
@@ -39,7 +52,7 @@ parzZwrotki = \markup \column {
   \line { \bold 4. zwrotka \italic "(Odpowiadając...)" }
 }
 
-\include "./pomocnicze/dzielenie-głosów.ily"
+\include "./pomocnicze/dzielenie-glosow.ily"
 \include "sopran.ily"
 \include "alt.ily"
 \include "tenor.ily"
@@ -56,7 +69,7 @@ parzZwrotki = \markup \column {
 
       \sopran
     }
-    \addlyrics \soprantekst
+    \addlyrics { \slowa \slowa \slowa }
 
     \new Staff = alt {
       \set Staff.instrumentName = "A "
@@ -67,7 +80,7 @@ parzZwrotki = \markup \column {
 
       \alt
     }
-    \addlyrics \alttekst
+    \addlyrics { \slowa \slowa \slowa }
 
     \new Staff = tenor {
       \set Staff.instrumentName = "T "
@@ -78,7 +91,7 @@ parzZwrotki = \markup \column {
 
       \tenor
     }
-    \addlyrics \tenortekst
+    \addlyrics { \slowa \slowa \slowa }
 
     \new Staff = bas {
       \set Staff.instrumentName = "B "
@@ -89,7 +102,7 @@ parzZwrotki = \markup \column {
 
       \bas
     }
-    \addlyrics \bastekst
+    \addlyrics { \slowa \slowa \slowa }
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu

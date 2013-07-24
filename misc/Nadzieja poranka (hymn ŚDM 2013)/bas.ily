@@ -3,7 +3,6 @@
 % -*- master: ./pomocnicze/bas-solo.ly;
 
 bas = \relative f {
-  \clef F
   % tonacja jest jakaś dziwna, zajmiemy się nią potem.
 
   % metrum:
@@ -23,11 +22,11 @@ bas = \relative f {
     \bar "||"
     R1
     \bar "||"
-    bes8. d16~ d4 r f8 des |
+    b8. d16~ d4 r f8 des |
     c8. f16~ f4 r2 |
     g,8. g16~ g4 r4 c8 c |
     c8. c16~ c4 r2
-    bes8. d16~ d4 r b8 d |
+    b8. d16~ d4 r b8 d |
     c8. c16~ c4 r2 |
     c8. c16~ c4 r8 e c c |
     f,8. f16~ f4~ f r |
@@ -35,11 +34,11 @@ bas = \relative f {
   \repeat volta 2 {
     \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
     \mark \markup \normalsize "Ostatni refren:"
-    bes8. d16~ d4 r f8 des |
+    b8. d16~ d4 r f8 des |
     c8. f16~ f4 r2 |
     g,8. g16~ g4 r4 c8 c |
     c8. c16~ c4 r2
-    bes8. d16~ d4 r b8 d |
+    b8. d16~ d4 r b8 d |
     c8. c16~ c4 r2 |
     c8. c16~ c4 r8 e c c |
     f,8. f16~ f4~ f r |
@@ -49,7 +48,4 @@ bas = \relative f {
 }
 
 bastekst = \lyricmode {
-  % Tu wpisz libretto. Będzie ono przyczepione
-  % do partii dolnego głosu (jeśli jest podział).
-
 }
