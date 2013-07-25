@@ -1,8 +1,7 @@
 \version "2.16.1"
+#(ly:set-option 'relative-includes #t)
 
-\include "../pomocnicze/dzielenie-głosów-midi.ily"
-\include "../pomocnicze/ustawienia-midi.ily"
-\include "../tenor.ily"
+\include "naglowek.ily"
 
 \score {
   \new Staff { \klarnet \tenorgorny }

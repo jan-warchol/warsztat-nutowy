@@ -1,5 +1,5 @@
 \version "2.16.1"
-\language "deutsch"
+#(ly:set-option 'relative-includes #t)
 
 #(set-global-staff-size 16)
 
@@ -11,19 +11,20 @@
   %markup-system-spacing #'basic-distance = 40
   %page-count =
   %system-count =
-  \include "./pomocnicze/epifanijny-styl-naglowkow.ily"
+  %\include "./pomocnicze/epifanijny-styl-naglowkow.ily"
 }
+
 
 \header {
   title = "Nadzieja poranka"
   subtitle = "Hymn Światowych Dni Młodzieży Rio 2013"
-  %composer =
-  %kompozytor-krotki =
-  %werset =
-  %przygotowanie-nut = \markup \column \right-align {
-  %  \bold "przygotowanie nut:"
-  %  ""
-  %}
+  composer = "muzyka i tekst: ks. José Cândido"
+  poet = "tłum. Katarzyna i Dominik Osińscy"
+  dedication = "tytuł oryg.: Esperança do Amanhecer"
+  tagline = \markup \center-column {
+    \bold "skład nut:"
+    "Janek Warchoł (jan.warchol@gmail.com)"
+  }
   %tlumaczenie = \markup \typewriter \column {
   %  \vspace #1
   %  \bold
@@ -41,15 +42,7 @@ slowa = \lyricmode {
   Chry -- stus nas po -- sy -- ła:
   \override LyricText #'font-shape = #'italic
   Bądź -- cie mis -- jo -- na -- rza -- mi!
-}
-
-nieparzZwrotki = \markup \column {
-  \line { \bold 1. zwrotka \italic "(Wiem, że...)" }
-  \line { \bold 3. zwrotka \italic "(Tu od wschodu...)" }
-}
-parzZwrotki = \markup \column {
-  \line { \bold 2. zwrotka \italic "(Oto młodzież...)" }
-  \line { \bold 4. zwrotka \italic "(Odpowiadając...)" }
+  \revert LyricText #'font-shape
 }
 
 \include "./pomocnicze/dzielenie-glosow.ily"
@@ -87,8 +80,8 @@ parzZwrotki = \markup \column {
       \set Staff.shortInstrumentName = "T "
       \dynamicUp
       \tupletUp
+      
       \clef "G_8"
-
       \tenor
     }
     \addlyrics { \slowa \slowa \slowa }

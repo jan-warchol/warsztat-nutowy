@@ -1,7 +1,7 @@
 \version "2.16.1"
+#(ly:set-option 'relative-includes #t)
 
-\include "../pomocnicze/dzielenie-głosów-midi.ily"
-\include "../pomocnicze/ustawienia-midi.ily"
+\include "naglowek-pomocnicze.ily"
 \include "../sopran.ily"
 
 \score {

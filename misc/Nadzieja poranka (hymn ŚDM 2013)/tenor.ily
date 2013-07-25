@@ -8,7 +8,9 @@ tenor = \relative f {
 
   % metrum:
   \time 4/4
-  \tempo 4 = 110
+  
+  \include "globalne-muzyczne.ily"
+ 
   \repeat volta 2 {
     R1
     \bar "||"
@@ -34,7 +36,7 @@ tenor = \relative f {
   }
   \repeat volta 2 {
     \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
-    \mark \markup \normalsize "Ostatni refren:"
+    \mark \markup \smaller "Ostatni refren:"
     f8. b16~ b4 r des8 b
     a8. c16~ c4 r2
     b8. b16~ b4 r b8 b
@@ -42,9 +44,9 @@ tenor = \relative f {
     f8. b16~ b4 r d8 h
     a8. c16~ c4 r2
     b8. b16~ b4 r8 c b b
-    b8. b16~( b4 a4) r4
+    b8. b16~ (b4 a4) r4
     \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-    \mark \markup \normalsize "powtarzać do wyciszenia"
+    \mark \markup \smaller "powtarzać do wyciszenia"
   }
 }
 

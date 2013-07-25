@@ -1,13 +1,16 @@
 \version "2.16.1"
+\language "deutsch"
 
 % -*- master: ./pomocnicze/alt-solo.ly;
 
 alt = \relative c' {
-\clef G
   % tonacja jest jakaś dziwna, zajmiemy się nią potem.
  
   % metrum:
   \time 4/4
+  
+  \include "./globalne-muzyczne.ily"
+  
   \repeat volta 2 {
     
   % zwrotka 1. i 3.
@@ -21,7 +24,7 @@ alt = \relative c' {
     h8. h16~ h4 r2 |
     
     a8. d16~ d4 r fis8 dis |
-    e8 (e16) e16~ e4 r2 |
+    e8. e16~ e4 r2 |
     
     fis8. fis16~ fis4 r8 d8 e e |
     cis8. cis16~ cis4 r2 |
@@ -50,7 +53,7 @@ alt = \relative c' {
     es8. es16~ es4~ es4 r4 |
     
     \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
-    \mark \markup \normalsize "powtarzać do wyciszenia"
+    \mark \markup \smaller "powtarzać do wyciszenia"
     
   }
   
