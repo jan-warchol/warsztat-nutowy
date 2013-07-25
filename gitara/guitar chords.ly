@@ -176,6 +176,17 @@ gMajBassf = \markup {
   \fret-diagram #"s:1.5;1-3-4;2-o;3-o;4-3-3;5-2-1;6-3-2;"
 }
 
+gMajPinky = \markup {
+  \override #'(fret-diagram-details . (
+                                       (orientation . landscape)
+                                       (string-thickness-factor . 0.2)
+                                       (finger-code . in-dot)
+                                       ;(dot-color . white)
+                                       (dot-radius . 0.35)
+                                       (dot-position . 0.6)))
+  \fret-diagram #"s:1.5;1-3-4;2-o;3-o;4-o;5-2-2;6-3-3;"
+}
+
 aMin = \markup {
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
