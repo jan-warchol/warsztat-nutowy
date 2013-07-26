@@ -1,6 +1,7 @@
 \version "2.17.21"
 
-cMaj = \markup {
+cMaj = \markup \general-align #Y #0 {
+  C
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -11,7 +12,8 @@ cMaj = \markup {
   \fret-diagram #"s:1.5;1-o;2-1-1;3-o;4-2-2;5-3-3;6-o;"
 }
 
-cMajBassG = \markup {
+cMajBassG = \markup \general-align #Y #0 {
+  \concat { C \lower #0.7 \teeny G }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -22,7 +24,8 @@ cMajBassG = \markup {
   \fret-diagram #"s:1.5;1-o;2-1-1;3-o;4-2-2;5-3-4;6-3-3;"
 }
 
-cMajSeventh = \markup {
+cMajSeventh = \markup \general-align #Y #0 {
+  \concat { C \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -33,7 +36,8 @@ cMajSeventh = \markup {
   \fret-diagram #"s:1.5;1-o;2-1-1;3-3-4;4-2-2;5-3-3;6-o;"
 }
 
-dMin = \markup {
+dMin = \markup \general-align #Y #0 {
+  d
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -44,7 +48,8 @@ dMin = \markup {
   \fret-diagram #"s:1.5;1-1-1;2-3-3;3-2-2;4-o;5-o;6-x;"
 }
 
-dMinBassf = \markup {
+dMinBassf = \markup \general-align #Y #0 {
+  \concat { d \lower #0.7 \teeny f }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -55,7 +60,8 @@ dMinBassf = \markup {
   \fret-diagram #"s:1.5;1-1-1;2-3-4;3-2-2;4-3-3;5-o;6-x;"
 }
 
-dMinBassF = \markup {
+dMinBassF = \markup \general-align #Y #0 {
+  \concat { d \lower #0.7 \teeny F }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -66,7 +72,8 @@ dMinBassF = \markup {
   \fret-diagram #"s:1.5;1-1-2;2-3-4;3-2-3;4-o;5-o;6-1-1;"
 }
 
-dMaj = \markup {
+dMaj = \markup \general-align #Y #0 {
+  D
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -77,7 +84,8 @@ dMaj = \markup {
   \fret-diagram #"s:1.5;1-2-2;2-3-3;3-2-1;4-o;5-o;6-x;"
 }
 
-dMajSeventh = \markup {
+dMajSeventh = \markup \general-align #Y #0 {
+  \concat { D \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -88,7 +96,8 @@ dMajSeventh = \markup {
   \fret-diagram #"s:1.5;1-2-3;2-1-1;3-2-2;4-o;5-o;6-x;"
 }
 
-dMajBassFis = \markup {
+dMajBassFis = \markup \general-align #Y #0 {
+  \concat { D \lower #0.7 \teeny Fis }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -99,7 +108,8 @@ dMajBassFis = \markup {
   \fret-diagram #"s:1.5;1-2-3;2-3-4;3-2-2;4-o;5-o;6-2-1;"
 }
 
-eMin = \markup {
+eMin = \markup \general-align #Y #0 {
+  e
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -110,7 +120,8 @@ eMin = \markup {
   \fret-diagram #"s:1.5;1-o;2-o;3-o;4-2-3;5-2-2;6-o;"
 }
 
-eMinSeventh = \markup {
+eMinSeventh = \markup \general-align #Y #0 {
+  \concat { e \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -121,7 +132,8 @@ eMinSeventh = \markup {
   \fret-diagram #"s:1.5;1-o;2-3-4;3-o;4-2-3;5-2-2;6-o;"
 }
 
-eMaj = \markup {
+eMaj = \markup \general-align #Y #0 {
+  E
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -132,7 +144,8 @@ eMaj = \markup {
   \fret-diagram #"s:1.5;1-o;2-o;3-1-1;4-2-3;5-2-2;6-o;"
 }
 
-eMajSeventh = \markup {
+eMajSeventh = \markup \general-align #Y #0 {
+  \concat { E \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -143,7 +156,8 @@ eMajSeventh = \markup {
   \fret-diagram #"s:1.5;1-o;2-3-4;3-1-1;4-2-3;5-2-2;6-o;"
 }
 
-gMaj = \markup {
+gMaj = \markup \general-align #Y #0 {
+  G
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -154,7 +168,8 @@ gMaj = \markup {
   \fret-diagram #"s:1.5;1-3-4;2-3-3;3-o;4-o;5-2-1;6-3-2;"
 }
 
-gMajSeventh = \markup {
+gMajSeventh = \markup \general-align #Y #0 {
+  \concat { G \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -165,7 +180,8 @@ gMajSeventh = \markup {
   \fret-diagram #"s:1.5;1-1-1;2-o;3-o;4-o;5-2-2;6-3-3;"
 }
 
-gMajBassf = \markup {
+gMajBassf = \markup \general-align #Y #0 {
+  \concat { G \lower #0.7 \teeny f }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -176,7 +192,8 @@ gMajBassf = \markup {
   \fret-diagram #"s:1.5;1-3-4;2-o;3-o;4-3-3;5-2-1;6-3-2;"
 }
 
-gMajPinky = \markup {
+gMajPinky = \markup \general-align #Y #0 {
+  G
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -187,7 +204,8 @@ gMajPinky = \markup {
   \fret-diagram #"s:1.5;1-3-4;2-o;3-o;4-o;5-2-2;6-3-3;"
 }
 
-aMin = \markup {
+aMin = \markup \general-align #Y #0 {
+  a
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -198,7 +216,8 @@ aMin = \markup {
   \fret-diagram #"s:1.5;1-o;2-1-1;3-2-3;4-2-2;5-o;6-o;"
 }
 
-aMinSeventh = \markup {
+aMinSeventh = \markup \general-align #Y #0 {
+  \concat { a \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -209,7 +228,8 @@ aMinSeventh = \markup {
   \fret-diagram #"s:1.5;1-3-4;2-1-1;3-2-3;4-2-2;5-o;6-o;"
 }
 
-aMaj = \markup {
+aMaj = \markup \general-align #Y #0 {
+  A
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -220,7 +240,8 @@ aMaj = \markup {
   \fret-diagram #"s:1.5;1-o;2-2-3;3-2-2;4-2-1;5-o;6-o;"
 }
 
-bMinSeventh = \markup {
+bMinSeventh = \markup \general-align #Y #0 {
+  \concat { h \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
@@ -231,7 +252,8 @@ bMinSeventh = \markup {
   \fret-diagram #"s:1.5;1-2-4;2-o;3-2-3;4-o;5-2-2;6-x;"
 }
 
-bMajSeventh = \markup {
+bMajSeventh = \markup \general-align #Y #0 {
+  \concat { H \raise #0.7 \teeny 7 }
   \override #'(fret-diagram-details . (
                                        (orientation . landscape)
                                        (string-thickness-factor . 0.2)
