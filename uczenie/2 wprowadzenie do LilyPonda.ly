@@ -39,7 +39,10 @@
 \markup \vspace #0.1
 \markup \large \bold "2. Pierwsze uruchomienie"
 
-\markup \justify { Włącz Frescobaldi i wpisz: }
+\markup \justify {
+  Wejdź na \typewriter \smaller \with-url
+  #"http://www.lilybin.com/" "www.lilybin.com" i wpisz:
+}
 \markup \column \override #'(font-name . "Lucida Console") {
   "\relative f' {"
   "  g e e"
@@ -53,8 +56,7 @@
   znak z klawisza obok cyfry 1).
 }
 \markup \justify {
-  Wybierz z menu \italic " LilyPond " polecenie
-  \italic " Podgląd partytury". Po jakimś czasie po prawej
+  Wciśnij Ctrl+Enter. Po jakimś czasie po prawej
   powinno pojawić się:
 }
 \relative f' { g e e }
@@ -88,7 +90,7 @@
 }
 
 \markup \typewriter "\relative { f c }"
-\relative { f c }
+\relative c' { f c }
 
 \markup \justify {
   Jeśli po \typewriter f napiszesz \typewriter a
@@ -96,7 +98,7 @@
 }
 
 \markup \typewriter "\relative { f a }"
-\relative { f a }
+\relative c' { f a }
 
 \markup \justify {
   Jeśli po nazwie dźwięku napiszesz przecinek,
@@ -108,12 +110,12 @@
 \markup \line \override #'(baseline-skip . 1) {
   \column {
     \typewriter "\relative { f a, }"
-    \score { { \relative { f a, } } \layout {} }
+    \score { { \relative c' { f a, } } \layout {} }
   }
   \hspace #10
   \column {
     \typewriter "\relative { f e' a, e' }"
-    \score { { \relative { f e' a, e' } } \layout {} }
+    \score { { \relative c' { f e' a, e' } } \layout {} }
   }
 }
 
@@ -159,49 +161,6 @@
 
 \markup \typewriter "\relative f' { \key g \minor  g bes d }"
 \relative f' { \key g \minor  g bes d }
-
-\markup "zestawienie tonacji:"
-\new Staff \with { \remove "Time_signature_engraver" } {
-  \set Staff.printKeyCancellation = ##f
-  \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \override Score.RehearsalMark #'font-size = #0
-  \override Score.RehearsalMark #'Y-offset = #6
-  \once\override Score.RehearsalMark #'X-offset = #4
-  \mark \markup \column { "Ges-dur" "es-moll" }
-  \key ges \major R1
-  \override Score.RehearsalMark #'X-offset = #0.9
-  \mark \markup \column { "Des-dur" "bes-moll" }
-  \key des \major R1
-  \mark \markup \column { "As-dur" "f-moll" }
-  \key as \major R1
-  \mark \markup \column { "Es-dur" "c-moll" }
-  \key es \major R1
-  \mark \markup \column { "Bes-dur" "g-moll" }
-  \key g \minor R1
-  \mark \markup \column { "F-dur" "d-moll" }
-  \key f \major R1
-}
-
-\new Staff \with { \remove "Time_signature_engraver" } {
-  \set Staff.printKeyCancellation = ##f
-  \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  \override Score.RehearsalMark #'font-size = #0
-  \override Score.RehearsalMark #'Y-offset = #6
-  \once\override Score.RehearsalMark #'X-offset = #3
-  \mark \markup \column { "C-dur" "a-moll" }
-  \key c \major R1
-  \override Score.RehearsalMark #'X-offset = #0.9
-  \mark \markup \column { "G-dur" "e-moll" }
-  \key g \major R1
-  \mark \markup \column { "D-dur" "b-moll" }
-  \key d \major R1
-  \mark \markup \column { "A-dur" "fis-moll" }
-  \key a \major R1
-  \mark \markup \column { "E-dur" "cis-moll" }
-  \key e \major R1
-  \mark \markup \column { "B-dur" "gis-moll" }
-  \key b \major R1
-}
 
 
 
@@ -262,44 +221,6 @@
 \markup \typewriter "{ r1 r2 r4 r8 r16 r }"
 { r1 r2 r4 r8 r16 r }
 
-\markup \justify {
-  \bold "Pauzę całotaktową" wstawia się za pomocą litery
-  \typewriter R . Trzeba podać jej rzeczywistą
-  wartość rytmiczną, wynikającą z metrum!
-  (użycie \typewriter R1 w poniższym przykładzie
-  dałoby błędne rezultaty.)
-}
-\markup \typewriter "{ \\time 2/4  R2  \\time 3/4  R2. }"
-{ \time 2/4  R2 \time 3/4  R2. }
-
-\markup \justify {
-  Wiele pauz całotaktowych zapisuje się
-  za pomocą "\"mnożenia\"":
-} \noPageBreak
-\markup \typewriter "{ R1*4 }"
-{ R1*4 }
-
-\markup \justify {
-  Podobnie zapisuje się pauzy całotaktowe
-  "o nietypowej" długości:
-} \noPageBreak
-\markup \typewriter "{ \\time 5/4  R1*5/4*3 }"
-{ \time 5/4 R1*5/4*3 }
-
-\markup \justify {
-  Triole, kwintole itp. wstawia się za pomocą
-  polecenia \typewriter "\\times":
-}
-\markup \typewriter "\\times 2/3 { e4 f g }"
-\relative f' { \times 2/3 { e4 f g } }
-
-\markup \justify {
-  Żeby otrzymać przedtakt, użyj
-  \typewriter "\partial" \italic "długość przedtaktu."
-}
-\markup \typewriter "{ \partial 8*3 g8 a b c1 }"
-{ \partial 8*3 g'8 a' b' c''1 }
-
 
 \markup \vspace #0.1
 \markup \large \bold "5. Słowa"
@@ -320,38 +241,6 @@
 \relative f' { g1 a~ a~ a f }
 \addlyrics { po -- mi -- dor }
 
-
-\markup \justify {
-  Melizmat (jedną sylabę na wielu dźwiękach)
-  można zapisać na dwa sposoby: jeśli melizmat
-  jest połączony łukiem, to wystarczy wpisać łuk
-  (patrz dalej) i już.
-  Jeśli nie jest, zapisuje się tak: \bold "po pierwszej"
-  nucie melizmatu należy napisać \typewriter "\melisma",
-  zaś po ostatniej \typewriter "\melismaEnd":
-}
-\noPageBreak
-\markup \typewriter \column {
-  \line {
-    "\relative f' { d2"
-    \bold "\melisma" f4 g
-    \bold "\melismaEnd" "e2 }"
-  }
-  { "\addlyrics { glo -- ry }" }
-}
-\noPageBreak
-\relative f' { d2\melisma f4 g\melismaEnd e2 }
-\addlyrics { glo -- ry }
-
-\markup \justify {
-  Linię przedłużającą wstawia się za pomocą dwóch podkreślników:
-}
-\markup \typewriter \column {
-  \line { "\relative f' { g4 \melisma a b c \melismaEnd }" }
-  { "\addlyrics { la __ }" }
-}
-\relative f' { g4 \melisma a b c \melismaEnd }
-\addlyrics { la __ }
 
 \markup \vspace #0.1
 \markup \large \bold "6. Różne"
@@ -377,19 +266,6 @@
 }
 
 \markup \justify {
-  Specjalne kreski taktowe wpisuje się poleceniem
-  \typewriter "\bar" \italic "rodzaj kreski."
-}
-\markup \typewriter "{ R1  \bar \"||\"  R1  \bar \"|.\"  R1 }"
-{ R1 \bar "||" R1 \bar "|." R1 }
-
-\markup \justify {
-  Oddech (cezurę) wstawia się za pomocą
-  \typewriter "\\breathe":
-}
-{ g'4 a' \breathe f'2 }
-
-\markup \justify {
   \bold Dynamikę wpisuje się za nazwami dźwięków.
   Żeby wpisać crescendo (decrescendo), należy po pierwszej nucie
   wpisać \typewriter "\< (\>)".  Po ostatniej nucie należy
@@ -398,23 +274,6 @@
 \markup \typewriter
 "\relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }"
 \relative f' { g4\f a f2\mp a1\p \< f2 g4\! f }
-
-\markup \justify {
-  Czasami (de)crescenda są zapisane słownie -
-  wtedy należy użyć innych poleceń
-  (\italic Uwaga! to nie jest to samo co opisywane
-  dalej wstawianie tekstu):
-} \noPageBreak
-\markup \typewriter \column {
-  "\relative f' {"
-  "  g8\cresc a b c b c\mf d e"
-  "  f8\decresc e d c e\dim d c b\!"
-  "}"
-}
-\relative f' {
-  g8\cresc a b c b c\mf d e
-  f8\decresc e d c e\dim d c b\!
-}
 
 \markup \justify {
   Podobnie \bold artykulacja:
@@ -431,170 +290,3 @@
 \relative f' {
   c8( d e4~ e8 f g a)
 }
-\markup \justify {
-  Łuki można zmienić na przerywane
-  \typewriter "\slurDashed" i kropkowane
-  \typewriter "\slurDotted". Żeby wrócić do
-  zwykłych łuków, użyj \typewriter "\slurSolid".
-  Te polecenia należy wstawiać przed nutą,
-  na której zaczyna się łuk.
-}
-\markup \justify {
-  Przy wstawianiu artykulacji, dynamiki itp. pomocny
-  jest panel \italic "Szybkie wstawianie", który
-  można włączyć "w menu" \italic Narzędzia.
-  Korzystając "z niego" możesz dodać artykulację
-  "do wielu" nut naraz.
-}
-
-\markup \justify {
-  \bold Tempo wstawia się poleceniem
-  \typewriter "\\tempo" \italic tekst \italic wartość :
-}
-\markup \typewriter "\\tempo \"Con moto\" 4=110"
-\relative f' {
-  \tempo "Con moto" 4=110
-  c8 d e f g a b c
-}
-
-\markup \justify {
-  Instrukcje słowne należy umieścić w cudzysłowie
-  i poprzedzić
-  podkreślnikiem _ (wtedy będą pod pięciolinią),
-  karetką ^ (wtedy będą nad pięciolinią)
-  lub myślnikiem (wtedy program sam wybierze).
-}
-\markup \typewriter "{ f'2_\"ping\" g'^\"pong\" }"
-{ f'2_"ping" g'^"pong" }
-
-\markup \vspace #0.1
-\markup \large \bold "7. Praca z programem"
-
-\markup \typewriter \column {
-  "% linijki zaczynające się od znaku procenta są ignorowane,"
-  "% można w nich umieszczać komentarze."
-}
-
-\markup \justify {
-  Kliknięcie na nutę w oknie podglądu powoduje ustawienie kursora
-  w odpowiednim miejscu kodu.
-}
-\markup \justify {
-  Każdy takt zapisuj w osobnej linijce, tak jak to było
-  pokazane w przykładzie na samym początku. Co jakiś czas
-  dodawaj komentarz opisujący w którym miejscu partytury jesteś.
-}
-\markup \justify {
-  Jeśli nuty w oknie podglądu są za małe, możesz
-  zmienić rozmiar okna podglądu, zmienić powiększenie
-  (przyciski na pasku narzędzi) albo używać lupy
-  (klikając na podglądzie lewym przyciskiem myszy
-  "z wciśniętym" klawiszem control).
-}
-\markup \justify {
-  Co jakiś czas (na początku najlepiej po każdym takcie)
-  kompiluj nuty (CTRL+M) i sprawdzaj, czy nie ma pomyłek.
-  Najczęściej zdarza się pominięty apostrof lub przecinek -
-  wtedy fragment melodii jest w złej oktawie.
-  Czasem błąd w wartościach rytmicznych sprawi, że kreski
-  taktowe będą się znajdować w dziwnych miejscach (albo
-  belkowania będą zupełnie inne niż w oryginale)
-  - trzeba wtedy zacząć sprawdzanie od pierwszej nuty,
-  która wygląda podejrzanie.
-}
-
-\markup \justify {
-  Jeśli masz problemy z polskimi literami albo innymi
-  specjalnymi znakami, upewnij się że plik jest zapisany
-  za pomocą kodowania UTF-8. Frescobaldi używa tego
-  kodowania domyślnie, więc nie powinno być żadnych
-  problemów w przypadku plików utworzonych za jego pomocą.
-}
-
-\markup \vspace #0.1
-\markup \large \bold "8. Dzielone głosy"
-
-\markup \justify {
-  Jeśli na jednej pięciolinii jest więcej niż jeden głos,
-  trzeba zastosować specjalny sposób, żeby dostać zarówno
-  pdfa jak i właściwe midi.  W folderze z pomocami jest
-  przykład.  Wygląda to tak: należy dodać do pliku
-  specjalne funkcje i zmienić strukturę tak, żeby
-  pięciolinia powstawała z połączenia dwóch zmiennych
-  (tym może się zająć Janek).
-  Wygodnie jest najpierw przepisać partię dolną,
-  a potem wykorzystać powtarzające się fragmenty,
-  kopiując je do partii górnej.  Oprócz uzupełnienia
-  tych miejsc, które się różnią, trzeba jeszcze
-  odpowiednio je oznaczyć: wewnątrz
-  \typewriter "\unisono { }" powinny znaleźć się te
-  fragmenty partii górnego głosu, które są identyczne
-  z dolnym głosem; wewnątrz \typewriter "\rownyRytm { }"
-  wstaw te fragmenty partii górnego głosu które mają
-  taki sam rytm; kiedy rytm jest różny, należy użyć
-  polecenia \typewriter "\podzial { }".
-}
-
-\markup \justify {
-  Uwaga: w każdym głosie należy zapisać wsyzstkie oznaczenia,
-  całą dynamikę itp.  Powtarzające się oznaczenia zostaną
-  odpowiednio ukryte, ale powinny być obecne m.in. żebyśmy
-  dostali właściwe MIDI.
-}
-
-
-%{ TODO (DODAĆ):
-
-   tryb absolutny i przerobić sekcję o relative
-   bazując na absolutnym
-   przypominające znaki chromatyczne
-   łuki a melizmaty
-   podstawowe markupy
-   zmiany tempa
-   akordy i polifonię:
-   żeby wstawić dwa oddzielne głosy, jeden z pałeczkami w górę,
-   a drugi w dół, trzeba użyć czegoś takiego:
-   <<
-   {
-   \voiceOne
-   % górny sopran
-   }
-   \new Voice {
-   \voiceTwo
-   % dolny sopran
-   }
-   >>
-   \oneVoice
-   Ale tutaj można zrobić prościej: oba soprany cały czas
-   mają równy rytm, więc wystarczy zapisać je jako akordy.
-   Akordy wpisuje się w nawiasach ostrych:
-   <gis d'>4 R2 <gis e'>4 <gis f'>~
-   (\relative w akordach działa tak, że pierwsza nuta akordu
-   jest "obliczana" względem pierwszej nuty poprzedniego akordu -
-   oprócz tego tak jak zwykle)
-
-%}
-
-%{ e'4 fis' g' as' }
-
-   { \key a \major e'4 fis' g' as' }
-
-   { \key es \major e'4 fis' g' as' }
-
-
-   %{ NIEWYKORZYSTANE:
-
-   \markup \typewriter "\\time 6/8"
-   { \time 6/8 f'8. g'16 a'8 g' g' g' }
-
-
-   \markup \typewriter "e4~ e16 r8. c8( d f g)"
-   \relative f' { e4~ e16 r8. c8( d f g) }
-
-   \markup "Jeśli wyłączy się automatyczne belkowanie,
-   należy użyć nawiasów kwadratowych do określenia własnego"
-   \markup \typewriter "g8[ f16 g] b4 c8[ b a g]"
-   \relative f' { g8[ f16 g] b4 c8[ b a g] }
-
-
-%}
