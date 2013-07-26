@@ -2,56 +2,35 @@
 
 \include "./guitar chords.ly"
 
-\markup "proste:" 
-
-\markup \column {
-  \line { \eMin \eMaj }
-  " " " "
-  \line { \bMinSeventh \bMajSeventh }
-  " " " "
-  \line { \cMaj \aMin }
-  " " " "
-  \line { \cMaj \cMajBassG }
-  " " " "
-  \line { \aMin \eMaj }
-  " " " "
+\paper {
+  markup-markup-spacing #'padding = #3
 }
+
+\markup "proste:"
+
+\markup { \eMin \eMaj }
+\markup { \bMinSeventh \bMajSeventh }
+\markup { \cMaj \aMin }
+\markup { \cMaj \cMajBassG }
+\markup { \aMin \eMaj }
 
 \markup "średnie:"
 
-\markup \column {
-  \line { \aMaj \eMin }
-  " " " "
-  \line { \aMaj \aMin }
-  " " " "
-  \line { \aMaj \eMaj }
-  " " " "
-  \line { \aMinSeventh \eMajSeventh }
-  " " " "
-  \line { \cMajSeventh \dMinBassf }
-  " " " "
-}
+\markup { \aMaj \eMin }
+\markup { \aMaj \aMin }
+\markup { \aMaj \eMaj }
+\markup { \aMinSeventh \eMajSeventh }
+\markup { \cMajSeventh \dMinBassf }
 
 \markup "trochę trudniejsze:"
 
-\markup \column {
-  \line { \bMajSeventh \eMin }
-  " " " "
-  \line { \eMaj \cMaj }
-  " " " "
-  \line { \aMaj \dMaj }
-  " " " "
-}
+\markup { \bMajSeventh \eMin }
+\markup { \eMaj \cMaj }
+\markup { \aMaj \dMaj }
 
 \markup "dość trudne:"
 
-\markup \column {
-  \line { \cMaj \gMajSeventh }
-  " " " "
-  \line { \bMajSeventh \gMajBassf }
-  " " " "
-  \line { \cMaj \gMajPinky }
-  " " " "
-  \line { \cMajBassG \gMaj }
-  " " " "
-}
+\markup { \cMaj \gMajSeventh }
+\markup { \bMajSeventh \gMajBassf }
+\markup { \cMaj \gMajPinky }
+\markup { \cMajBassG \gMaj }
