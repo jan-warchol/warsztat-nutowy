@@ -29,17 +29,32 @@
   SMSa z melodią piosenki), "i każesz" programowi zrobić
   "na podstawie" "tego zapisu" nuty.
 }
+
+\markup \vspace #0.1
+\markup \large \bold "Skąd wziąć LilyPonda"
 \markup \justify {
-  W tej instrukcji najpierw omawiam zagadnienie,
-  potem \typewriter "czczionką maszynową" podaję
-  przykład zapisu "i na koniec" pokazuję, "co powinien"
-  wyświetlić program po skompilowaniu tego zapisu.
+  Najszybciej jest skorzystać z edytora online:
+  \typewriter \smaller \with-url
+  #"http://www.lilybin.com/" "www.lilybin.com"
+  – do prostych zadań powinien wystarczyć.
+}
+\markup \justify {
+  Żeby zainstalować LilyPonda na komputerze, wejdź na stronę
+  \with-url #"http://lilypond.org/windows.html"
+  {\smaller \typewriter lilypond.org/windows.html },
+  ściągnij plik instalacyjny \italic "Windows: LilyPond (…)"
+  (około 25 MB) i zainstaluj.  Będzie Ci również potrzebny edytor
+  Frescobaldi – wejdź na
+  \with-url #"http://code.google.com/p/lilykde/downloads/list"
+  \smaller\typewriter"code.google.com/p/lilykde/downloads/list",
+  ściągnij najnowszą wersję instalatora (\italic
+  { Frescobaldi Setup (…).exe}, około 15 MB) i zainstaluj.
 }
 
 \markup \vspace #0.1
 \markup \large \bold "2. Pierwsze uruchomienie"
 
-\markup \justify { Włącz Frescobaldi i wpisz: }
+\markup \justify { Włącz Frescobaldi/Lilybin i wpisz: }
 \markup \column \override #'(font-name . "Lucida Console") {
   "\relative f' {"
   "  g e e"
@@ -53,9 +68,10 @@
   znak z klawisza obok cyfry 1).
 }
 \markup \justify {
-  Wybierz z menu \italic " LilyPond " polecenie
-  \italic " Podgląd partytury". Po jakimś czasie po prawej
-  powinno pojawić się:
+  Teraz każesz LilyPondowi zrobić z tego nuty.  Jeśli używasz
+  Frescobaldiego, wciśnij \typewriter "Ctrl-M", a w przypadku
+  Lilybin \typewriter "Ctrl-Enter".
+  Po jakimś czasie po prawej powinno pojawić się:
 }
 \relative f' { g e e }
 \addlyrics { wlazł ko -- tek }
@@ -476,8 +492,8 @@
 }
 
 \markup \justify {
-  Kliknięcie na nutę w oknie podglądu powoduje ustawienie kursora
-  w odpowiednim miejscu kodu.
+  Kliknięcie na nutę w oknie podglądu Frescobaldiego powoduje
+  przeniesienie kursora do odpowiadającego miejsca w kodzie.
 }
 \markup \justify {
   Każdy takt zapisuj w osobnej linijce, tak jak to było
@@ -486,14 +502,12 @@
 }
 \markup \justify {
   Jeśli nuty w oknie podglądu są za małe, możesz
-  zmienić rozmiar okna podglądu, zmienić powiększenie
-  (przyciski na pasku narzędzi) albo używać lupy
-  (klikając na podglądzie lewym przyciskiem myszy
-  "z wciśniętym" klawiszem control).
+  zmienić rozmiar okna podglądu, lub zmienić powiększenie
+  (przyciski na pasku narzędzi).
 }
 \markup \justify {
   Co jakiś czas (na początku najlepiej po każdym takcie)
-  kompiluj nuty (CTRL+M) i sprawdzaj, czy nie ma pomyłek.
+  kompiluj nuty i sprawdzaj, czy nie ma pomyłek.
   Najczęściej zdarza się pominięty apostrof lub przecinek -
   wtedy fragment melodii jest w złej oktawie.
   Czasem błąd w wartościach rytmicznych sprawi, że kreski
