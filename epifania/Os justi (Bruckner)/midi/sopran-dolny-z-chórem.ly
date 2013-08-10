@@ -9,7 +9,8 @@
 
 \score {
   <<
-    \new Staff { \klarnet \sopran }
+    \new Staff { \klarnet \soprandolny }
+    \new Staff { \pianino \soprangorny }
     \new Staff { \pianino \alt }
     \new Staff { \pianino \tenor }
     \new Staff { \pianino \bas }

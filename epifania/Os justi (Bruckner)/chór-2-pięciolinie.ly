@@ -3,8 +3,8 @@
 
 \paper {
   indent = 0 \mm
-  left-margin = 14 \mm
-  right-margin = 12 \mm
+  left-margin = 12 \mm
+  right-margin = 14 \mm
   %top-markup-spacing #'basic-distance = 5
   %markup-system-spacing #'basic-distance = 40
   %page-count =
@@ -37,49 +37,42 @@
 
 \score {
   \new ChoirStaff <<
-    \new Staff = sopran {
-      \set Staff.instrumentName = "S "
-      \set Staff.shortInstrumentName = "S "
+    \new Staff = panie {
+      \set Staff.instrumentName = \markup \column { "S " "A " }
+      \set Staff.shortInstrumentName = \markup \column { "S " "A " }
       \dynamicUp
       \tupletUp
       \clef G
-
-      \sopran
+      <<
+        \new Voice = sopran {
+          \voiceOne
+          \sopran
+        }
+        \new Voice = alt {
+          \voiceTwo
+          \alt
+        }
+      >>
     }
     \addlyrics \soprantekst
 
-    \new Staff = alt {
-      \set Staff.instrumentName = "A "
-      \set Staff.shortInstrumentName = "A "
-      \dynamicUp
-      \tupletUp
-      \clef G
-
-      \alt
-    }
-    \addlyrics \alttekst
-
-    \new Staff = tenor {
-      \set Staff.instrumentName = "T "
-      \set Staff.shortInstrumentName = "T "
-      \dynamicUp
-      \tupletUp
-      \clef "G_8"
-
-      \tenor
-    }
-    \addlyrics \tenortekst
-
-    \new Staff = bas {
-      \set Staff.instrumentName = "B "
-      \set Staff.shortInstrumentName = "B "
+    \new Staff = panowie {
+      \set Staff.instrumentName = \markup \column { "T " "B " }
+      \set Staff.shortInstrumentName = \markup \column { "T " "B " }
       \dynamicUp
       \tupletUp
       \clef F
-
-      \bas
+      <<
+        \new Voice = tenor {
+          \voiceOne
+          \tenor
+        }
+        \new Voice = bas {
+          \voiceTwo
+          \bas
+        }
+      >>
     }
-    \addlyrics \bastekst
   >>
 
   % blok \layout zawiera ogólne ustawienia stylu
@@ -89,11 +82,6 @@
 
     \override Lyrics.VerticalAxisGroup
     #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
-
-    \context {
-      \Staff
-      \consists "Ambitus_engraver"
-    }
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
 

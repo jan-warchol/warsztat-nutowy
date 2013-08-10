@@ -1,8 +1,10 @@
 \version "2.16.1"
 
-bas = { \include "../bas.ily" }
+\include "../pomocnicze/dzielenie-głosów-midi.ily"
+\include "../pomocnicze/ustawienia-midi.ily"
+\include "../bas.ily"
 
 \score {
-  \keepWithTag #'solo \bas
+  \new Staff { \klarnet \bas }
   \midi {}
 }

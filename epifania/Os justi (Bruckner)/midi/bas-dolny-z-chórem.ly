@@ -9,10 +9,11 @@
 
 \score {
   <<
-    \new Staff { \klarnet \sopran }
+    \new Staff { \pianino \sopran }
     \new Staff { \pianino \alt }
     \new Staff { \pianino \tenor }
-    \new Staff { \pianino \bas }
+    \new Staff { \klarnet \basdolny }
+    \new Staff { \pianino \basgorny }
   >>
   \midi {}
 }

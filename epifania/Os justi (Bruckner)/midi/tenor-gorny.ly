@@ -2,9 +2,9 @@
 
 \include "../pomocnicze/dzielenie-głosów-midi.ily"
 \include "../pomocnicze/ustawienia-midi.ily"
-\include "../sopran.ily"
+\include "../tenor.ily"
 
 \score {
-  \new Staff { \klarnet \sopran }
+  \new Staff { \klarnet \tenorgorny }
   \midi {}
 }
