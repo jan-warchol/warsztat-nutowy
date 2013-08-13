@@ -1,5 +1,7 @@
 \version "2.15.33"
 
+#(set-global-staff-size 19)
+
 \header {
   title = "Stabat Mater"
   subtitle = "III. Eja Mater"
