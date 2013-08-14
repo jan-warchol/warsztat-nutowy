@@ -203,10 +203,10 @@ text = \lyricmode {
   mój, na -- dzie -- ja ma.
   \set stanza = "1."
   \once \override LyricSpace #'minimum-distance = #2
-  \tweak #'X-offset #-1.5 \markup \scale #'(0.97 . 1) "Chcę Cię wywyższać, Boże"
+  \tweak #'X-offset #-1.5 "Chcę Cię wywyższać, Boże"
   \bolden \markup \underline mój i kró -- lu,
   \once \override LyricSpace #'minimum-distance = #2
-  \tweak #'X-offset #-0.5 \markup \scale #'(0.95 . 1) "i błogosławić imię Twe na zawsze"
+  \tweak #'X-offset #-0.5 "i błogosławić imię Twe na zawsze"
   \bolden \markup \underline i na wie -- ki.
 }
 secondverse = \lyricmode {
