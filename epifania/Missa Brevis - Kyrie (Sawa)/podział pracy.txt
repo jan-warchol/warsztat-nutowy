@@ -1,4 +1,6 @@
-wpisanie nut:
+﻿wpisanie nut:
+sopran - Basia zrobione (bez Glorii)
+alt - Basia
 
 dodanie nagłówków (tytuł, kompozytor, ..):
 
