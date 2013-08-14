@@ -301,7 +301,7 @@ secondverse = \lyricmode {
     }
     \hspace #10
     \column {
-      "• kosmiczne metrum w zwrotce,"
+      "• w zwrotce nie powinno być metrum,"
       "• źle ustawiony tekst recytatywu,"
       "• sylaby po recytatywie nie są wyróżnione."
     }
