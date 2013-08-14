@@ -1,5 +1,5 @@
 \version "2.17.16"
-#(set-global-staff-size 16.3)
+#(set-global-staff-size 16)
 
 \header	{
   title = \markup \larger \larger {
@@ -29,10 +29,10 @@
 }
 \markup \vspace #0.5
 
-\markup \translate #'(-5 . 0)
-\epsfile #X #127 #"tylko-w-twoim.eps"
+\markup \translate #'(-5.3 . 0)
+\epsfile #X #130 #"tylko-w-twoim.eps"
 
-\markup \vspace #3
+\markup \vspace #3.1
 \markup \larger \huge \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
@@ -238,7 +238,7 @@ secondverse = \lyricmode {
     >>
     \new Lyrics = sopranolyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.7
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.9
     }
     \lyricsto soprano \text
     \new Lyrics = sopranolyrics \with {
@@ -271,7 +271,7 @@ secondverse = \lyricmode {
 
 \markup \vspace #3.5
 
-\markup \large \fill-line {
+\markup \large \larger \fill-line {
   \null
   \override #'(line-width . 110)
   \column {
@@ -291,7 +291,7 @@ secondverse = \lyricmode {
   \null
 }
 \markup \vspace #0.2
-\markup \large \fill-line {
+\markup \large \larger \fill-line {
   \null
   \line {
     \column  {
@@ -299,7 +299,7 @@ secondverse = \lyricmode {
       "• wielki odstęp przed pierwszymi nutami,"
       "• niewłaściwie podpisane pięciolinie,"
     }
-    \hspace #10
+    \hspace #7
     \column {
       "• w zwrotce nie powinno być metrum,"
       "• źle ustawiony tekst recytatywu,"
