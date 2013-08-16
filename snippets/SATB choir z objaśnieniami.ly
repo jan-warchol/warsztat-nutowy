@@ -1,7 +1,7 @@
 % za znakiem procentu umieszcza się komentarze.
 % komentarze blokowe umieszcza się między %{ oraz %}
 % plik należy kodować w utf-8. windowsowy notatnik potrafi to robić, o czym pewnie wiesz.
-\version "2.10.33"	%numer wersji przydaje się przy upgrade'owaniu kodu do najnowszej wersji LilyPonda
+\version "2.16.2"	%numer wersji przydaje się przy upgrade'owaniu kodu do najnowszej wersji LilyPonda
 \paper
 {
   % tutaj czasem dodaje się specjalne parametry, jak na przykład system-count = #x
@@ -17,23 +17,14 @@
   poet = ""		% autor tekstu, jeżeli jest inny niż kompozytor. 
   % w manualu jest opisanych jeszcze parę innych sekcji.
 }
-tempomarker =
+commonprops = % dla wygody używam jednej zmiennej do przechowywania kilku parametrów wspólnych dla wszystkich pięciolinii
 {
-  \override Score.MetronomeMark #'extra-offset = #'( -7.0 . 2.4 )		% przesunięcie oznaczenia tempa 
-  % o 7 odstępów między liniami pięciolinii (główna jednostka miary) w lewo i 2,4 odstępu między liniami w górę - 
-  % nieprzesunięte oznaczenie często włazi na nuty
-  \override Score.MetronomeMark #'transparent = ##t	% ustawia oznaczenie tempa na niewidoczne
-  \tempo x=y		% x=wartość rytmiczna, y=liczba. np. 4 = 90, 8. = 125
-}
-commonprops = 		% dla wygody używam jednej zmiennej do przechowywania kilku parametrów wspólnych dla wszystkich pięciolinii
-{
-  \autoBeamOff	% wyłącza automatyczne belkowanie. Oczywiście gdy zachodzi potrzeba można w danym punkcie
-  % dodać belkowanie ręcznie (nawiasy [ oraz ] po pierwszej i ostatniej nucie, która ma być połączona belką).
   \set Staff.midiInstrument = "clarinet"	% przypisanie instrumentu MIDI do pięciolinii. Domyślne jest pianinio;
   % listę wszystkich instrumentów znajdziesz tu:
   % http://lilypond.org/doc/v2.10/Documentation/user/lilypond/MIDI-instruments#MIDI-instruments
   \key 	% tonacja. obowiązuje notacja amerykańska (czyli h to b, b to bes). Przykład: bes \major -> B-dur, cis \minor -> cis-moll
   \time	% metrum, np. 3/4.
+  \tempo x=y % x=wartość rytmiczna, y=liczba. np. 4 = 90, 8. = 125
 }
 %--------------------------------MELODY--------------------------------
 %każdy melodię każdego głosu zapisuję w zmiennej.
@@ -87,7 +78,6 @@ everything =
 {
   \new ChoirStaff  % pięciolinie, które znajdą się pomiędzy "<<" i ">>" następującymi po tej komendzie, bedą otoczone klamrą "chórową".
   <<
-    \tempomarker		% przywołuję określenie tempa
     \new Staff = soprano 	% nowa pięciolinia o nazwie soprano
     {
       \clef treble		% klucz wiolinowy
@@ -95,7 +85,7 @@ everything =
       \set Staff.shortInstrumentName = "S "	% nazwa pojawiająca się w następnych systemach
       \new Voice = soprano		% nowy głos o nazwie soprano
       {
-        \commonprops		% przywołuję zmienną z tonacją, kluczem itd.
+        \commonprops	% przywołuję zmienną z tonacją, kluczem itd.
         \sopranomelody 	% wklejam melodię sopranu
       }
     }
