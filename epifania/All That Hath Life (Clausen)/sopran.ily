@@ -248,7 +248,7 @@ soprantekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
 
-  All that hath life and breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia!
@@ -260,13 +260,13 @@ soprantekst = \lyricmode {
   Al -- le -- lu -- ia.
   Al -- le -- lu -- ia. __
   Praise ye the Lord,
-  All that hath life and breath
+  All that hath life and \shrink #0.9 breath
   praise ye the Lord.
   Shout to the Lord, Al -- le -- lu -- ia,
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia,
   Al -- le -- lu -- ia,
-  All that hath life and breath
+  All that hath life and \shrink #0.9 breath
   praise ye the Lord,
   sing to the Lord a new -- made song,
   praise His name,
@@ -283,14 +283,14 @@ soprantekst = \lyricmode {
   Praise to the Lord the Al -- might -- y the King of cre -- a -- tion. __
   O __
   % kanon 1 tekst
-  All that hath life and breath praise ye the Lord
+  All that hath life and \shrink #0.9 breath praise ye the Lord
   % kanon 2 tekst
   Praise the Lord with joy -- ful song!
   % kanon 3 tekst
   Al -- le -- lu -- ia!
 
   Praise ye the Lord.
-  All that hath life and breath
+  All that hath life and \shrink #0.9 breath
   praise ye the Lord,
   Shout to the Lord, al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __

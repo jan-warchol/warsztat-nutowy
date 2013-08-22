@@ -256,7 +256,7 @@ bastekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
 
-  All that hath life and breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia.
@@ -266,23 +266,23 @@ bastekst = \lyricmode {
   praise, __ _ _ praise Him!
   praise the Lord with joy -- ful song,
   Al -- le -- lu -- ia.
-  All that hath life and breath praise ye the
+  All that hath life and \shrink #0.9 breath praise ye the
 
   % kartka 3.
   Lord,
-  All that hath life and breath praise Him,
-  All that hath life and breath praise ye the Lord.
+  All that hath life and \shrink #0.9 breath praise Him,
+  All that hath life and \shrink #0.9 breath praise ye the Lord.
   Shout to the Lord, Al -- le -- lu -- ia,
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia. __
 
   % kartka 4.
-  All that hath life and breath sing to the Lord
+  All that hath life and \shrink #0.9 breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
   praise His name, Al -- le -- lu -- ia.
 
   % kartka 5.
-  All that hath life and breath praise Him, __
+  All that hath life and \shrink #0.9 breath praise Him, __
   O praise Him.
   Praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
@@ -300,9 +300,9 @@ bastekst = \lyricmode {
   Al -- le -- lu -- ia. __
 
   % kartka 7.
-  All that hath life and breath praise ye the Lord,
-  all that hath life and breath praise Him,
-  All that hath life and breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
+  all that hath life and \shrink #0.9 breath praise Him,
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
   Shout to the Lord, al -- le -- lu --ia!
   Al -- le -- lu -- ia, __ praise Him!
 

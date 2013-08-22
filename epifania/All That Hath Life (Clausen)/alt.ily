@@ -252,7 +252,7 @@ alttekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
 
-  All that hath life and breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia. __
@@ -265,12 +265,12 @@ alttekst = \lyricmode {
   Al -- le -- lu -- ia. __
 
   % kartka 3.
-  All that hath life and breath praise ye the Lord,
-  All that hath life and breath praise ye the Lord.
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath praise ye the Lord.
   Shout to the Lord, Al -- le -- lu -- ia,
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia.
-  All that hath life and breath
+  All that hath life and \shrink #0.9 breath
 
   % kartka 4.
   praise ye the Lord,
@@ -279,7 +279,7 @@ alttekst = \lyricmode {
   praise His name, Al -- le -- lu -- ia.
 
   % kartka 5.
-  All that hath life and breath praise Him.
+  All that hath life and \shrink #0.9 breath praise Him.
   Praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
@@ -294,9 +294,9 @@ alttekst = \lyricmode {
   Al -- le -- lu -- ia. __
 
   % kartka 7.
-  All that hath life and breath,
-  All that hath life and breath
-  All that hath life and breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath,
+  All that hath life and \shrink #0.9 breath
+  All that hath life and \shrink #0.9 breath praise ye the Lord,
   Shout to the Lord, al -- le -- lu --ia!
   Al -- le -- lu -- ia, __ praise Him!
 
