@@ -106,13 +106,18 @@ soprandolny = {
       \override TupletBracket #'positions = #'(4 . 4)
       \override TupletBracket #'shorten-pair = #'(-2 . -2)
       \override TupletNumber #'text = \markup \musicglyph #"one"
-      \tuplet 1/1 { g'8 g' g' d'' d'' d'' e'' d'' c'' d''4. }
+      \set melismaBusyProperties = #'()
+      \tuplet 1/1 { g'8[ g' g'] d''[ d'' d''] e''[ d'' c''] d''4. }
       \noBreak
       \override TupletNumber #'text = \markup \musicglyph #"two"
       \tuplet 2/2 { g''4 g''8 fis''4 fis''8 e''4 e''8 d''4. }
       \noBreak
       \override TupletNumber #'text = \markup \musicglyph #"three"
-      \tuplet 3/3 { r8 b' c'' d''\melisma b' g' \melismaEnd a'4. }
+      \tuplet 3/3 {
+        r8 b'[ c'']
+        \unset melismaBusyProperties
+        d''( [ \melisma b' g' ]) \melismaEnd a'4.
+      }
 
       % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
       % widełki diminuendo do piana ^ \p
