@@ -100,16 +100,19 @@ soprandolny = {
     {
       \cadenzaOn
       r4 ^\fermata
-      %kanon, tu trzeba pracy kogoś obeznanego
-      %1 kanon
-      g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
-      \bar ""
-
-      %2 kanon
-      g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
-      \bar ""
-      %3 kanon
-      r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
+      \tupletUp
+      \override TupletBracket #'thickness = #2.2
+      \override TupletBracket #'edge-height = #'(6 . 6)
+      \override TupletBracket #'positions = #'(4 . 4)
+      \override TupletBracket #'shorten-pair = #'(-2 . -2)
+      \override TupletNumber #'text = \markup \musicglyph #"one"
+      \tuplet 1/1 { g'8 g' g' d'' d'' d'' e'' d'' c'' d''4. }
+      \noBreak
+      \override TupletNumber #'text = \markup \musicglyph #"two"
+      \tuplet 2/2 { g''4 g''8 fis''4 fis''8 e''4 e''8 d''4. }
+      \noBreak
+      \override TupletNumber #'text = \markup \musicglyph #"three"
+      \tuplet 3/3 { r8 b' c'' d''\melisma b' g' \melismaEnd a'4. }
 
       % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
       % widełki diminuendo do piana ^ \p
@@ -123,6 +126,7 @@ soprandolny = {
       \override TextSpanner.bound-details.left.text = "seconds"
       \override TextSpanner.Y-extent = #'(-0.5 . 0.2)
       \override TextSpanner.style = #'line
+      \cadenzaOn
       s2.*1/2\p\< \startTextSpan
       s2.\mp\< ^"5''"
       s4
@@ -138,6 +142,7 @@ soprandolny = {
       s4.\mf\> ^"30''"
       s8\mp\> ^"35''"
       \stopTextSpan
+      \cadenzaOff
       s2.*2
       s2.\!
     }
