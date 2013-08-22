@@ -67,8 +67,8 @@ altdolny = \relative f' {
   f8 f f e4 e8
   d4 d8 e4. \breathe
   d4 d8\> c4 c8^\markup{\italic{rit.}}
-  b4 c8 b4.~
-  b1*10/4 ( \fermata\p
+  b4 c8 b4.\(
+  b1*10/4\) ( \fermata\p
   c1*9/8 \fermata
   cis2
   d2\fermata
@@ -192,10 +192,12 @@ altgorny = \relative f' {
     b1*10/4 ( \fermata\p
     c1*9/8 \fermata
     cis2
-    d2\fermata
-    c!2~
-    c1*7/4
-    d4 \mf~ d8\fermata ) r8\fermata
+  }
+  d2\fermata
+  d2~
+  d1*7/4
+  \unisono {
+  d4 \mf~ d8\fermata ) r8\fermata
 
     % kartka 5.
     R2.*2
@@ -277,6 +279,7 @@ alttekst = \lyricmode {
   sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
   \shrink #0.91 praise His name, Al -- le -- lu -- ia.
+  Mm __
 
   % kartka 5.
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise Him.

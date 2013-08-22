@@ -68,10 +68,15 @@ tenordolny = \relative f {
   e e e d4 d8
   c4 c8 d4.\breathe
   c4 c8\> b4 b8^\markup{\italic{rit.}}
-  a4 a8 b4.~
-  b2.\fermata\p
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  a4 a8 b4.\(
+
+  b1*10/4\)~ ( \fermata\p
+  b1*9/8 \fermata
+  b2
+  bes2\fermata
+  a2~
+  a1*7/4
+  b4 \mf~ b8\fermata )r8\fermata
 
   %kartka 5.
   g8\p^\markup{legato} g\< g d'\! d d
@@ -209,10 +214,14 @@ tenorgorny = \relative f {
     e e e d4 d8
     c4 c8 d4.\breathe
     c4 c8\> b4 b8^\markup{\italic{rit.}}
-    a4 a8 b4.~
-    b2.\fermata\p
-    % nie wiem, co zrobić z tą częścią, aż do
-    % końca kartki
+    a4 a8 b4.\(
+    b1*10/4\)~ ( \fermata\p
+    b1*9/8 \fermata
+    b2
+    bes2\fermata
+    a2~
+    a1*7/4
+    b4 \mf~ b8\fermata )r8\fermata
 
     %kartka 5.
     g8\p^\markup{legato} g\< g d'\! d d
@@ -303,6 +312,7 @@ tenortekst = \lyricmode {
   All that hath life and \shrink #0.9 breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
   \shrink #0.91 praise His name, Al -- le -- lu -- ia.
+  Mm __
 
   % kartka 5.
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise Him, __

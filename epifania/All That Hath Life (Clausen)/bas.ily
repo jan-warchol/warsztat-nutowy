@@ -69,10 +69,13 @@ basdolny = \relative f {
   a a a g4 g8
   f4 f8 g4.\breathe
   f4 f8\> e4 e8^\markup{\italic{rit.}}
-  d4 d8 e4.~
-  e2.\fermata\p
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  d4 d8 e4.\(
+  e1*10/4\) ( \fermata\p
+  e1*9/8 \fermata
+  e1\fermata
+  e2
+  f1*7/4
+  g4 \mf~ g8\fermata )r8\fermata
 
   %kartka 5.
   g8\p^\markup{legato} g\< g f\! f f
@@ -192,10 +195,15 @@ basgorny = \relative f {
     a a a g4 g8
     f4 f8 g4.\breathe
     f4 f8\> e4 e8^\markup{\italic{rit.}}
-    d4 d8 e4.
-    e2.\fermata\p
-    % nie wiem, co zrobić z tą częścią, aż do
-    % końca kartki
+    d4 d8 e4.\(
+    e1*10/4\) ( \fermata\p
+    e1*9/8 \fermata
+    e1\fermata
+  }
+  g2
+  \unisono {
+    f1*7/4
+    g4 \mf~ g8\fermata )r8\fermata
 
     %kartka 5.
     g8\p^\markup{legato} g\< g f\! f f
@@ -279,6 +287,7 @@ bastekst = \lyricmode {
   All that hath life and \shrink #0.9 breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
   \shrink #0.91 praise His name, Al -- le -- lu -- ia.
+  Mm __
 
   % kartka 5.
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise Him, __
