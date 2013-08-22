@@ -248,28 +248,28 @@ soprantekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
 
-  All that hath life and \shrink #0.9 breath praise ye the Lord,
+  All that hath life and \shrink #0.9 breath \shrink #0.91 praise ye the Lord,
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Sing to the Lord with thanks -- giv -- ing,
   Al -- le -- lu -- ia,
-  praise Him!
-  praise the Lord with joy -- ful song,
+  \shrink #0.91 praise Him!
+  \shrink #0.91 praise the Lord with joy -- ful song,
   Al -- le -- lu -- ia.
   Al -- le -- lu -- ia. __
-  Praise ye the Lord,
+  \shrink #0.91 Praise ye the Lord,
   All that hath life and \shrink #0.9 breath
-  praise ye the Lord.
+  \shrink #0.91 praise ye the Lord.
   Shout to the Lord, Al -- le -- lu -- ia,
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia,
   Al -- le -- lu -- ia,
   All that hath life and \shrink #0.9 breath
-  praise ye the Lord,
+  \shrink #0.91 praise ye the Lord,
   sing to the Lord a new -- made song,
-  praise His name,
+  \shrink #0.91 praise His name,
   Al -- le -- lu -- ia.
   % solo sopran
   Un -- to Thee,
@@ -279,26 +279,26 @@ soprantekst = \lyricmode {
   spir -- it. __
   % koniec solo
   Al -- le -- lu -- ia,
-  praise Him. __
-  Praise to the Lord the Al -- might -- y the King of cre -- a -- tion. __
+  \shrink #0.91 praise Him. __
+  \shrink #0.91 Praise to the Lord the Al -- might -- y the King of cre -- a -- tion. __
   O __
   % kanon 1 tekst
-  All that hath life and \shrink #0.9 breath praise ye the Lord
+  All that hath life and \shrink #0.9 breath \shrink #0.91 praise ye the Lord
   % kanon 2 tekst
-  Praise the Lord with joy -- ful song!
+  \shrink #0.91 Praise the Lord with joy -- ful song!
   % kanon 3 tekst
   Al -- le -- lu -- ia!
 
-  Praise ye the Lord.
+  \shrink #0.91 Praise ye the Lord.
   All that hath life and \shrink #0.9 breath
-  praise ye the Lord,
+  \shrink #0.91 praise ye the Lord,
   Shout to the Lord, al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __
   Al -- le -- lu -- ia,
-  praise Him!
-  Praise Him,
+  \shrink #0.91 praise Him!
+  \shrink #0.91 Praise Him,
   laud Him,
-  praise Him,
+  \shrink #0.91 praise Him,
   laud Him,
   Al -- le -- lu -- ia!
 }
