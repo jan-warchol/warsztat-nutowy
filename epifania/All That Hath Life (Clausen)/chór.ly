@@ -13,14 +13,16 @@
 }
 
 \header {
-  %title =
-  %composer =
-  %kompozytor-krotki =
-  %werset =
-  %przygotowanie-nut = \markup \column \right-align {
-  %  \bold "przygotowanie nut:"
-  %  ""
-  %}
+  title = "All That Hath Life & Breath Praise Ye the Lord"
+  composer = "Rene Clausen"
+  kompozytor-krotki = "Clausen"
+  werset = "Ps. 96 & 22"
+  przygotowanie-nut = \markup \column \right-align {
+    \bold "przygotowanie nut:"
+    "Basia Mroczek"
+    "Dominika Kochanowska"
+    "Janek Warchoł"
+  }
   %tlumaczenie = \markup \typewriter \column {
   %  \vspace #1
   %  \bold
