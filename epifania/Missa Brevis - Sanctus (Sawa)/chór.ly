@@ -5,6 +5,7 @@
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
+  ragged-last-bottom = ##f
   %top-markup-spacing #'basic-distance = 5
   %markup-system-spacing #'basic-distance = 40
   %page-count =

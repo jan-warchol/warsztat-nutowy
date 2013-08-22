@@ -1,21 +1,24 @@
 \version "2.16.1"
-#(set-global-staff-size 16)
+#(set-global-staff-size 15)
+#(ly:set-option 'relative-includes #t)
 
 \paper {
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
-  %top-markup-spacing #'basic-distance = 5
-  %markup-system-spacing #'basic-distance = 40
+  ragged-last-bottom = ##f
+  top-markup-spacing #'basic-distance = 5
+  markup-markup-spacing #'basic-distance = 12
+  markup-system-spacing #'basic-distance = 5
   %page-count =
   %system-count =
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
 \header {
-  %title =
-  %composer =
-  %kompozytor-krotki =
+  title = "Missa Brevis"
+  composer = "M. Sawa"
+  kompozytor-krotki = "Sawa"
   %werset =
   %przygotowanie-nut = \markup \column \right-align {
   %  \bold "przygotowanie nut:"
@@ -35,6 +38,7 @@
 \include "tenor.ily"
 \include "bas.ily"
 
+\markup \huge \bold "Kyrie"
 \score {
   \new ChoirStaff <<
     \new Staff = sopran {
@@ -115,3 +119,8 @@
          (ly:text-interface::print grob)))
   }
 }
+
+\markup \huge \bold "Sanctus"
+\include "../Missa Brevis - Sanctus (Sawa)/chór.ly"
+\markup \huge \bold "Agnus Dei"
+\include "../Missa Brevis - Agnus Dei (Sawa)/chór.ly"
