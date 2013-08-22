@@ -17,7 +17,7 @@
   \context {
     \Score
     \override SpacingSpanner #'common-shortest-duration =
-    #(ly:make-moment 1 20)
+    #(ly:make-moment 1 100)
   }
 }
 
