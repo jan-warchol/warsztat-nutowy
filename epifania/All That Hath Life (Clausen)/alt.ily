@@ -234,8 +234,22 @@ altgorny = \relative f' {
   \rownyRytm{
     r r a8\pp c d4^\markup{\italic{rit.}} d~ \bar "||"
     \time 6/8
-    % nie wiem, co zrobić z tą częścią, aż do
-    % końca kartki
+    \cadenzaOn
+    d2.*1/2\p\<\laissezVibrer
+    s2.\mp\<
+    s4
+    s4.\mf\<
+
+    s4.
+    s4.\f\<
+    s4.
+    s4.\ff\>
+
+    s4
+    s4.\f\>
+    s4.\mf\>
+    s8\mp
+
   }
   \unisono{
     % kartka 7.

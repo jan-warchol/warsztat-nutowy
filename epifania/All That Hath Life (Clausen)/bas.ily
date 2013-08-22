@@ -98,8 +98,21 @@ basdolny = \relative f {
   d g d8 g g4 g
   d8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  \cadenzaOn
+  g2.*1/2\p\<\laissezVibrer
+  s2.\mp\<
+  s4
+  s4.\mf\<
+
+  s4.
+  s4.\f\<
+  s4.
+  s4.\ff\>
+
+  s4
+  s4.\f\>
+  s4.\mf\>
+  s8\mp
 
   % kartka 7.
   r4.^\markup{Tempo primo} d8\mf d d
@@ -231,8 +244,22 @@ basgorny = \relative f {
   \unisono { d, g d8 g } a4 b
   d,8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  \cadenzaOn
+  g2.*1/2\p\<\laissezVibrer
+  s2.\mp\<
+  s4
+  s4.\mf\<
+
+  s4.
+  s4.\f\<
+  s4.
+  s4.\ff\>
+
+  s4
+  s4.\f\>
+  s4.\mf\>
+  s8\mp
+
 
   % kartka 7.
   r4.^\markup{Tempo primo} d8\mf d d

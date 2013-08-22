@@ -99,8 +99,22 @@ tenordolny = \relative f {
   a4 b a8 b d4 b
   r\! g8\pp a a4 a2~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  \cadenzaOn
+  a2.*1/2\p\<\laissezVibrer
+  s2.\mp\<
+  s4
+  s4.\mf\<
+
+  s4.
+  s4.\f\<
+  s4.
+  s4.\ff\>
+
+  s4
+  s4.\f\>
+  s4.\mf\>
+  s8\mp
+
 
   % kartka 7.
   R2.*2^\markup{Tempo primo}
@@ -244,8 +258,22 @@ tenorgorny = \relative f {
     a4 b a8 b d4 b
     r\! g8\pp a a4 a2~^\markup{\italic{rit.}} \bar "||"
     \time 6/8
-    % nie wiem, co zrobić z tą częścią, aż do
-    % końca kartki
+    \cadenzaOn
+    a2.*1/2\p\<\laissezVibrer
+    s2.\mp\<
+    s4
+    s4.\mf\<
+
+    s4.
+    s4.\f\<
+    s4.
+    s4.\ff\>
+
+    s4
+    s4.\f\>
+    s4.\mf\>
+    s8\mp
+
 
     % kartka 7.
     R2.*2^\markup{Tempo primo}

@@ -102,7 +102,6 @@ soprandolny = {
   % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
   % widełki diminuendo do piana ^ \p
   \cadenzaOff
-  \bar ""
 
   s1*6/8*2
   R1*6/8 ^"Tempo primo"
@@ -233,9 +232,11 @@ soprangorny = {
     % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
     % widełki diminuendo do piana ^ \p
     \cadenzaOff
-    \bar ""
+    \override Staff.BarLine #'transparent = ##t
+    \bar "|"
 
     s1*6/8*2
+    \revert Staff.BarLine #'transparent
     R1*6/8^"Tempo primo"
     g'8  g'
   }
