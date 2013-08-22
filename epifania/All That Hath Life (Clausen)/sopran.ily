@@ -86,18 +86,23 @@ soprandolny = {
   r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
   \time 6/8
   \tempo "*Ad lib."
-  r8 ^\fermata
+  \cadenzaOn
+  r4. ^\fermata
   %kanon, tu trzeba pracy kogoś obeznanego
   %1 kanon
   g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
+  \bar ""
 
   %2 kanon
   g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
+  \bar ""
   %3 kanon
   r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
 
   % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
   % widełki diminuendo do piana ^ \p
+  \cadenzaOff
+  \bar ""
 
   r1*6/8 ^"Tempo primo"
   g'8 ^\mf \< g' g' g'4.\! \breathe
@@ -210,19 +215,24 @@ soprangorny = {
 
   \time 6/8
   \tempo "*Ad lib."
-  r8 ^\fermata
-  %kanon, tu trzeba pracy kogoś obeznanego
-  %1 kanon
+  \cadenzaOn
   \unisono {
+    r4. ^\fermata
+    %kanon, tu trzeba pracy kogoś obeznanego
+    %1 kanon
     g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
+    \bar ""
 
     %2 kanon
     g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
+    \bar ""
     %3 kanon
     r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
 
     % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
     % widełki diminuendo do piana ^ \p
+    \cadenzaOff
+    \bar ""
 
     r1*6/8 ^"Tempo primo"
     g'8  g'
