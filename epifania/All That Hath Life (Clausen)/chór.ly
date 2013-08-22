@@ -59,7 +59,7 @@
       \alt
     }
     \addlyrics \alttekst
-    
+
     \new Staff {
       \set Staff.instrumentName = "T "
       \set Staff.shortInstrumentName = "T "
@@ -94,6 +94,11 @@
     \context {
       \Staff
       \consists "Ambitus_engraver"
+    }
+    \context {
+      \Score
+      \override SpacingSpanner #'common-shortest-duration =
+      #(ly:make-moment 1 100)
     }
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
