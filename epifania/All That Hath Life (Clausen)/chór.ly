@@ -38,7 +38,7 @@
 
 \score {
   \new ChoirStaff <<
-    \new Staff {
+    \new Staff = topstaff {
       \set Staff.instrumentName = "S "
       \set Staff.shortInstrumentName = "S "
       \dynamicUp

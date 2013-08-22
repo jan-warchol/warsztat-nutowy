@@ -86,25 +86,51 @@ soprandolny = {
   r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
   \time 6/8
   \tempo "*Ad lib."
-  \cadenzaOn
-  r4 ^\fermata
-  %kanon, tu trzeba pracy kogoś obeznanego
-  %1 kanon
-  g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
-  \bar ""
+  <<
+    {
+      \cadenzaOn
+      r4 ^\fermata
+      %kanon, tu trzeba pracy kogoś obeznanego
+      %1 kanon
+      g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
+      \bar ""
 
-  %2 kanon
-  g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
-  \bar ""
-  %3 kanon
-  r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
+      %2 kanon
+      g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
+      \bar ""
+      %3 kanon
+      r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
 
-  % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
-  % widełki diminuendo do piana ^ \p
-  \cadenzaOff
+      % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
+      % widełki diminuendo do piana ^ \p
+      \cadenzaOff
+      s1*6/8*2
+      R1*6/8 ^"Tempo primo"
+    }
+    \new Dynamics \with { alignAboveContext = topstaff } {
+      \override TextSpanner.bound-details.left.text = "seconds"
+      \override TextSpanner.Y-extent = #'(-0.5 . 0.2)
+      \override TextSpanner.style = #'line
+      s2.*1/2\p\< \startTextSpan
+      s2.\mp\< ^"5''"
+      s4
+      s4.\mf\< ^"10''"
 
-  s1*6/8*2
-  R1*6/8 ^"Tempo primo"
+      s4.
+      s4.\f\< ^"15''"
+      s4.
+      s4.\ff\> ^"20''"
+
+      s4
+      s4.\f\> ^"25''"
+      s4.\mf\> ^"30''"
+      s8\mp\> ^"35''"
+      \stopTextSpan
+      s2.*2
+      s2.\!
+    }
+  >>
+
   g'8 ^\mf \< g' g' g'4.\! \breathe
   g'8 ^\f g' g' b' b' b'
   c'' b' a' b'4.
