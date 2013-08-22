@@ -104,7 +104,8 @@ soprandolny = {
   \cadenzaOff
   \bar ""
 
-  r1*6/8 ^"Tempo primo"
+  s1*6/8*2
+  R1*6/8 ^"Tempo primo"
   g'8 ^\mf \< g' g' g'4.\! \breathe
   g'8 ^\f g' g' b' b' b'
   c'' b' a' b'4.
@@ -234,7 +235,8 @@ soprangorny = {
     \cadenzaOff
     \bar ""
 
-    r1*6/8 ^"Tempo primo"
+    s1*6/8*2
+    R1*6/8^"Tempo primo"
     g'8  g'
   }
   g' d''4. \breathe
