@@ -5,8 +5,11 @@
   indent = 0 \mm
   left-margin = 14 \mm
   right-margin = 12 \mm
-  %top-markup-spacing #'basic-distance = 5
-  %markup-system-spacing #'basic-distance = 40
+  top-markup-spacing #'basic-distance = 10
+  markup-system-spacing #'basic-distance = 20
+  top-system-spacing #'basic-distance = 16
+  last-bottom-spacing #'basic-distance = 16
+  systems-per-page = 3
   %page-count =
   %system-count =
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
@@ -17,12 +20,12 @@
   composer = "Rene Clausen"
   kompozytor-krotki = "Clausen"
   werset = "Ps. 96 & 22"
-  przygotowanie-nut = \markup \column \right-align {
+  %{przygotowanie-nut = \markup \column \right-align {
     \bold "przygotowanie nut:"
     "Basia Mroczek"
     "Dominika Kochanowska"
     "Janek Warchoł"
-  }
+  %}
   %tlumaczenie = \markup \typewriter \column {
   %  \vspace #1
   %  \bold
