@@ -66,12 +66,15 @@ soprandolny = {
   \tempo "Ad lib. Solo Soprano"
   % dodac expressivo, zmiana kresek taktowych
   \cadenzaOn
-  r4 ^\fermata b'8 b' e''4. d''8 e''4 b'8 c'' d''( \melisma b') \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
-  r4 ^\fermata b'8 g''4. fis''8 e'' d'' \bar ""
-  e'' e'' g' c'' d''4 d'' \fermata \bar ":"
-  r8 ^\fermata g' a' c'' \times 2/3 {d''4 \cresc  e''\! f''~\melisma} f''4^\fermata \melismaEnd
-  c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
+  \set melismaBusyProperties = #'()
+  r4 ^\fermata b'8[ b'] e''4. d''8 e''4 b'8[ c'']
+  d''[( \melisma b']) \melismaEnd g'[ a'] b'4 b' ^\fermata \bar ":"
+  r4 ^\fermata b'8 g''4. fis''8[ e'' d''] \bar ""
+  e''[ e''] g'[ c''] d''4 d'' \fermata \bar ":"
+  r8 ^\fermata g' a'[ c''] \times 2/3 {d''4 \cresc  e''\! f''~\melisma} f''4^\fermata \melismaEnd
+  c''8[ c''] \melisma a''4~ a''8[ \melismaEnd g''] e''[ f'']
   \bar "|"
+  \unset melismaBusyProperties
   g''4 g''4~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
   \cadenzaOff
   \tempo "Slower (in 6)" 8.= 86
@@ -359,9 +362,9 @@ soprantekst = \lyricmode {
   Al -- le -- lu -- ia.
   % solo sopran
   Un -- to Thee,
-  O Lord, have I made __ sup -- pli -- ca -- tion,
+  O Lord, have I made __ _ sup -- pli -- ca -- tion,
   and cried un -- to the rock of my sal -- va -- tion;
-  but Thou hast heard my voice, __ and renewed __ my we -- ary
+  but Thou hast heard my voice, __ _ and re -- newed __ _ my we -- ary
   spir -- it. __
   % koniec solo
   Al -- le -- lu -- ia,
