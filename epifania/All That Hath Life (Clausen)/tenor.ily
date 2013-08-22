@@ -118,7 +118,8 @@ tenordolny = \relative f {
 
 
   % kartka 7.
-  R2.*2^\markup{Tempo primo}
+  \tempo "Tempo primo"
+  R2.*2
   c8\mf\< c c c c c
   c4 c8 a4 a8
   g\f g g b b b

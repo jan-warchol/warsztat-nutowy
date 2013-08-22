@@ -115,7 +115,8 @@ basdolny = \relative f {
   s8\mp
 
   % kartka 7.
-  r4.^\markup{Tempo primo} d8\mf d d
+  \tempo "Tempo primo"
+  r4. d8\mf d d
   g g g g g g
   g4.\mf\<\breathe g8 g g
   g g g g4 g8

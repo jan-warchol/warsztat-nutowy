@@ -113,7 +113,8 @@ altdolny = \relative f' {
   s8\mp
 
   % kartka 7.
-  R2.*2^\markup{Tempo primo}
+  \tempo "Tempo primo"
+  R2.*2
   c8\mf\< c c d d d
   d d d d d d
   g\f g g g g g

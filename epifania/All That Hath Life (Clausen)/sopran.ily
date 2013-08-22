@@ -104,8 +104,10 @@ soprandolny = {
       % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
       % widełki diminuendo do piana ^ \p
       \cadenzaOff
+      \override Staff.BarLine #'transparent = ##t
       s1*6/8*2
-      R1*6/8 ^"Tempo primo"
+      \revert Staff.BarLine #'transparent
+      R1*6/8
     }
     \new Dynamics \with { alignAboveContext = topstaff } {
       \override TextSpanner.bound-details.left.text = "seconds"
