@@ -19,7 +19,7 @@
   title = "All That Hath Life & Breath Praise Ye the Lord"
   composer = "René Clausen"
   kompozytor-krotki = "Clausen"
-  werset = "Ps. 96 & 22"
+  werset = "Text adapted from Psalms 96 & 22"
   %{przygotowanie-nut = \markup \column \right-align {
     \bold "przygotowanie nut:"
     "Basia Mroczek"
