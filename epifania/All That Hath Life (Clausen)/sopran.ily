@@ -56,7 +56,7 @@ soprandolny = {
   \tempo "Ad lib. Solo Soprano"
   % dodac expressivo, zmiana kresek taktowych
   \cadenzaOn
-  r4 ^\fermata b'8 b' e''4. d''8 e''4 b'8 c'' d'' \melisma b' \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
+  r4 ^\fermata b'8 b' e''4. d''8 e''4 b'8 c'' d''( \melisma b') \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
   r4 ^\fermata b'8 g''4. fis''8 e'' d'' \bar ""
   e'' e'' g' c'' d''4 d'' \fermata \bar ":"
   r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma} f''4^\fermata \melismaEnd
@@ -75,11 +75,14 @@ soprandolny = {
   g'4^\mp \tempo "sempre legato (without accents)" g' d'' b' a'
   g' fis' e' d' g'
   a' b' a'2 g'4~ \melisma
-  g'2 \melismaEnd r4 g'2~ \melisma
+  g'2 \melismaEnd r4
+  \override TieColumn #'tie-configuration = #'((-2.4 . -1))
+  g'2~ \melisma
   g'1 ~ g'4~
   g'1 ~ g'4~
   g'1 ~ g'4~
   g'1 ~ g'4\melismaEnd
+  \revert TieColumn #'tie-configuration
   r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
   \time 6/8
   \tempo "*Ad lib."
@@ -199,7 +202,7 @@ soprangorny = {
     g'4 ^\< g'
     d'' b' a' ^\! g' fis'
     e' d' g' a' b'
-    a'2.  g'2~ ^\> \melisma g'4~
+    a'2.  g'2~ ^\> \melisma
     g'1 ~ g'4 ^\!\melismaEnd
   }
   r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
@@ -210,18 +213,21 @@ soprangorny = {
   r8 ^\fermata
   %kanon, tu trzeba pracy kogoś obeznanego
   %1 kanon
-  g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
+  \unisono {
+    g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
 
-  %2 kanon
-  g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
-  %3 kanon
-  r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
+    %2 kanon
+    g''4 g''8 fis''4 fis''8 e''4 e''8 d''4.
+    %3 kanon
+    r8 b' c'' d''\melisma b' g' \melismaEnd a'4.
 
-  % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
-  % widełki diminuendo do piana ^ \p
+    % cont sopr solo ad lib. ^"(continue Sop. solo ad lib.)"
+    % widełki diminuendo do piana ^ \p
 
-  r1*6/8 ^"Tempo primo"
-  g'8  g' g' d''4. \breathe
+    r1*6/8 ^"Tempo primo"
+    g'8  g'
+  }
+  g' d''4. \breathe
   g'8  g' g' d'' d'' d''
   e'' d'' c'' d''4.
   g''8.^\tenuto g''16 g''8 f'' f'' f'' %w nutach barak akcentu ale powinien byc skoro we wszystkich innych głosach jest
