@@ -225,6 +225,8 @@ basgorny = \relative f {
 
   % kartka 6.
   \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4 b
+  \unisono { d, g d8 g } a4 b
   \unisono { d, g d8 g } a4\> b
   \unisono { d, g d8 g } a4 b
   d,8\pp g g4 g2.^\markup{\italic{rit.}} \bar "||"
