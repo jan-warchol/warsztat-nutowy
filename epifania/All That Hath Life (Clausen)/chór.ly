@@ -104,6 +104,7 @@
       \Score
       \override SpacingSpanner #'common-shortest-duration =
       #(ly:make-moment 1 20)
+      \override MetronomeMark #'font-size = #2.8
     }
 
     \override Score.BarNumber #'break-visibility = #'#(#f #t #t)

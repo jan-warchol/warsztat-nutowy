@@ -28,7 +28,8 @@ soprandolny = {
 
   %partia sopranów s2, i solo
   % trzeba poprawić oznaczenia dynamiczne powinny być na górze a są na dole
-  g'8 ^\f \tempo "Lilting" 4.=78 g'  g' b' b' b'
+  \tempo "Lilting" 4.=78
+  g'8 ^\f g'  g' b' b' b'
   c'' b' a' \das b'4.( ^\<
   es''8.) \tenuto \! \nor es''16 es''8 c'' c'' c''
   b'4 ^\> b'8 \! r g' b'
@@ -174,7 +175,7 @@ soprangorny = {
 
   %partia sopranów s2, i solo
   % trzeba poprawić oznaczenia dynamiczne powinny być na górze a są na dole
-  \unisono { g'8 ^\f \tempo "Lilting" 4.=78 g'  g' } d'' d'' d''
+  \unisono { g'8 ^\f  g'  g' } d'' d'' d''
   e'' d'' c'' d''4.
   g''8. ^\tenuto  g''16 g''8 f'' f'' f''
   d''4 d''8 \! r \unisono {
