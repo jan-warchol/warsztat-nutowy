@@ -242,28 +242,32 @@ basgorny = \relative f {
   \unisono { d, g d8 g } a4 b
   \unisono { d, g d8 g } a4\> b
   \unisono { d, g d8 g } a4 b
-  d,8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
-  \time 6/8
-  \cadenzaOn
-  g2.*1/2\p\<\laissezVibrer
-  s2.\mp\<
-  s4
-  s4.\mf\<
+  \unisono {
+    d,8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
+    \time 6/8
+    \cadenzaOn
+    g2.*1/2\p\<\laissezVibrer
+    s2.\mp\<
+    s4
+    s4.\mf\<
 
-  s4.
-  s4.\f\<
-  s4.
-  s4.\ff\>
+    s4.
+    s4.\f\<
+    s4.
+    s4.\ff\>
 
-  s4
-  s4.\f\>
-  s4.\mf\>
-  s8\mp
+    s4
+    s4.\f\>
+    s4.\mf\>
+    s8\mp
+    \cadenzaOff
 
 
-  % kartka 7.
-  r4.^\markup{Tempo primo} d8\mf d d
-  g g g a a a
+    % kartka 7.
+    r4.^\markup{Tempo primo} d8\mf d d
+    g g g
+  }
+  a a a
   a4.\mf\<\breathe a8 a a
   a a a a4 a8
   \unisono{

@@ -175,7 +175,7 @@ soprangorny = {
     R1*6/8
     g'8  g' g'
   } d'' c'' d''
-  \time 9/8 g'' fis'' e'' g'' (\melisma fis'') \melismaEnd e'' d''4.
+  \time 9/8 g'' fis'' e'' \podzial { g'' (\melisma fis'') \melismaEnd e'' d''4. }
   \time 6/8 g'' d'' \breathe
   g''4 g''8 fis''4 fis''8
   e''4 e''8 d'' \unisono {
@@ -264,19 +264,21 @@ soprangorny = {
     s1*6/8*2
     \revert Staff.BarLine #'transparent
     R1*6/8^"Tempo primo"
-    g'8  g'
+    g'8  g' g'
   }
-  g' d''4. \breathe
-  g'8  g' g' d'' d'' d''
+  d''4. \breathe
+  \unisono { g'8  g' g' } d'' d'' d''
   e'' d'' c'' d''4.
   g''8.^\tenuto g''16 g''8 f'' f'' f'' %w nutach barak akcentu ale powinien byc skoro we wszystkich innych głosach jest
-  d''4 d''8 ^\tenuto  r8  g' b'
-  d'' d''16 ( \melisma c'' d''8 )\melismaEnd f'' ^\tenuto e'' c''
-  d''2.
+  d''4 d''8 ^\tenuto \unisono {
+    r8 g' b'
+    d'' d''16 ( \melisma c'' d''8 )\melismaEnd f'' ^\tenuto e'' c''
+    d''2.
+  }
   f''4.  d''4. \breathe
   r8 f'' ^\tenuto  d'' r f'' ^\tenuto d''
   r8 f'' ^\tenuto d'' r f'' ^\tenuto d''
-  r8 d'' f'' g''4.~ \melisma
+  r8 \unisono { d'' f'' } g''4.~ \melisma
   g''4. \melismaEnd g''4 r8 \bar "|."
 
 

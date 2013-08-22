@@ -249,6 +249,7 @@ altgorny = \relative f' {
     s4.\f\>
     s4.\mf\>
     s8\mp
+    \cadenzaOff
 
   }
   \unisono{
