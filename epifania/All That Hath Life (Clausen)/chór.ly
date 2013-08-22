@@ -30,6 +30,7 @@
 }
 
 \include "./pomocnicze/dzielenie-głosów.ily"
+\include "./pomocnicze/ustawienia-formatowania.ily"
 \include "sopran.ily"
 \include "alt.ily"
 \include "tenor.ily"
