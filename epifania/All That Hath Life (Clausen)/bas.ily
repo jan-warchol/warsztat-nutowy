@@ -70,11 +70,11 @@ basdolny = \relative f {
   f4 f8 g4.\breathe
   f4 f8\> e4 e8^\markup{\italic{rit.}}
   d4 d8 e4.\(
-  e1*10/4\) ( \fermata\p
-  e1*9/8 \fermata
-  e1\fermata
-  e2
-  f1*7/4
+  << { e1*10/4\) ( \fermata\p } { s4*8 s2\< }>>
+  e1*9/8 \fermata \mp
+  << e1\fermata { s2 s2\> } >>
+  e2\!
+  f1*7/4\cresc
   g4 \mf~ g8\fermata )r8\fermata
 
   %kartka 5.

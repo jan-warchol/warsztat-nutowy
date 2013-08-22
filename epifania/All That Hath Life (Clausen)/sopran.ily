@@ -11,6 +11,15 @@
 % Jeśli głos się dzieli, wpisz tutaj DOLNĄ partię
 % (łącznie z tym, co jest śpiewane unisono):
 
+das = {
+  \slurDashed
+  \set melismaBusyProperties = #'()
+}
+nor = {
+  \slurSolid
+  \unset melismaBusyProperties
+}
+
 soprandolny = {
   \key g \major
 
@@ -20,8 +29,8 @@ soprandolny = {
   %partia sopranów s2, i solo
   % trzeba poprawić oznaczenia dynamiczne powinny być na górze a są na dole
   g'8 ^\f \tempo "Lilting" 4.=78 g'  g' b' b' b'
-  c'' b' a' b'4. ^\<
-  es''8. \tenuto \! es''16 es''8 c'' c'' c''
+  c'' b' a' \das b'4.( ^\<
+  es''8.) \tenuto \! \nor es''16 es''8 c'' c'' c''
   b'4 ^\> b'8 \! r g' b'
   d'' d''16 ( \melisma c'' d''8 ) \melismaEnd  f'' e'' c''
   d''2.
@@ -29,8 +38,8 @@ soprandolny = {
   d''4 r8 r4.
   R1*6/8
   g'8 ^\mf g' g' a' g' a'
-  \time 9/8 e'' d'' c'' e'' (\melisma d'') \melismaEnd c''16 (\melisma b') \melismaEnd a'4. \<
-  \time 6/8 c'' \! ^\f b' \breathe
+  \time 9/8 e'' d'' c'' e'' (\melisma d'') \melismaEnd c''16 (\melisma b') \melismaEnd \das a'4. ( \<
+  \time 6/8 c'') \! ^\f \nor b' \breathe
   b'4 b'8 d''4 d''8
   c''4 c''8 b' b' c''
   d'' (\melisma b' g') \melismaEnd a'4.
@@ -40,8 +49,8 @@ soprandolny = {
   r1*6/8
   g'8 ^\cresc g' g' g'4. \breathe
   g'8 ^\f g' g' b' b' b'
-  c'' b' a' b'4.
-  es''8. \tenuto es''16 es''8 c'' c'' c''
+  c'' b' a' \das b'4. (
+  es''8.) \tenuto \nor es''16 es''8 c'' c'' c''
   b'4 ^\> b'8 \tenuto \! r g' b'
   d'' d''16 ( \melisma c'' d''8 ) \melismaEnd f'' ^\tenuto e'' c''
   d''2.
@@ -59,7 +68,7 @@ soprandolny = {
   r4 ^\fermata b'8 b' e''4. d''8 e''4 b'8 c'' d''( \melisma b') \melismaEnd g' a' b'4 b' ^\fermata \bar ":"
   r4 ^\fermata b'8 g''4. fis''8 e'' d'' \bar ""
   e'' e'' g' c'' d''4 d'' \fermata \bar ":"
-  r8 ^\fermata g' a' c'' \times 2/3 {d''4  e'' f''~\melisma} f''4^\fermata \melismaEnd
+  r8 ^\fermata g' a' c'' \times 2/3 {d''4 \cresc  e''\! f''~\melisma} f''4^\fermata \melismaEnd
   c''8 c'' \melisma a''4~ a''8 \melismaEnd g'' e'' f''
   \bar "|"
   g''4 g''4~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
@@ -68,11 +77,11 @@ soprandolny = {
   g''4 \melismaEnd r8 r4.
   r8 b' ^\p ^ "legato" c'' d'' (\melisma b' g') \melismaEnd
   a'2. \breathe
-  \time 5/4 \tempo "a tempo" 8=4 a'2. ^\> a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
+  \time 5/4 a'2. ^\> a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
   a'4\! \melismaEnd r4 r r2
   r1*5/4
   r1*5/4
-  g'4^\mp \tempo "sempre legato (without accents)" g' d'' b' a'
+  g'4^\mp ^"sempre legato (without accents)" g' d'' b' a'
   g' fis' e' d' g'
   a' b' a'2 g'4~ \melisma
   g'2 \melismaEnd r4
@@ -224,11 +233,11 @@ soprangorny = {
     g''4 \melismaEnd r8 r4.
     r8 b'  c'' d'' (\melisma b' g') \melismaEnd
     a'2. \breathe
-    \time 5/4 \tempo "a tempo" 8=4 a'2.  a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
+    \time 5/4 \tempo \markup { "a tempo"  \note #"8" #1 = \note #"4" #1 }  a'2.  a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
     a'4\! \melismaEnd r4 r r2
     R1*5/4
     R1*5/4
-    g'4 \tempo "sempre legato (without accents)" g' d'' b' a'
+    g'4^"sempre legato (without accents)" g' d'' b' a'
     g' fis' e' d' g'
     a' b' a'2 g'4~ \melismaEnd
     g'2
@@ -238,9 +247,6 @@ soprangorny = {
   <<
     \new Voice = topsop {
       \voiceOne
-      \override Hairpin #'stencil = ##f
-      \override DynamicText #'stencil = ##f
-      \override DynamicTextSpanner #'stencil = ##f
       \override TextScript #'stencil = ##f
       g'4 ^\< g'
       d'' b' a' ^\! g' fis'
@@ -261,6 +267,7 @@ soprangorny = {
     %uwaga trzeba porobic porzadek z tymi taktami ad lib.
 
     \time 6/8
+    \once \override Score.MetronomeMark #'extra-offset = #'(0 . 1)
     \tempo "*Ad lib."
     \cadenzaOn
     r4 ^\fermata

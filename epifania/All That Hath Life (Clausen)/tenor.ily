@@ -70,12 +70,12 @@ tenordolny = \relative f {
   c4 c8\> b4 b8^\markup{\italic{rit.}}
   a4 a8 b4.\(
 
-  b1*10/4\)~ ( \fermata\p
-  b1*9/8 \fermata
+  << { b1*10/4\)~ ( \fermata\p } { s4*8 s2\< }>>
+  b1*9/8 \fermata \mp
   b2
-  bes2\fermata
-  a2~
-  a1*7/4
+  bes2\fermata \>
+  a2~\!
+  a1*7/4\cresc
   b4 \mf~ b8\fermata )r8\fermata
 
   %kartka 5.

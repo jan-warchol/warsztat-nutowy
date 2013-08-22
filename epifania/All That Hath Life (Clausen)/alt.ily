@@ -68,12 +68,12 @@ altdolny = \relative f' {
   d4 d8 e4. \breathe
   d4 d8\> c4 c8^\markup{\italic{rit.}}
   b4 c8 b4.\(
-  b1*10/4\) ( \fermata\p
-  c1*9/8 \fermata
+  << { b1*10/4\) ( \fermata\p } { s4*8 s2\< }>>
+  c1*9/8 \fermata \mp
   cis2
-  d2\fermata
-  c!2~
-  c1*7/4
+  d2\fermata \>
+  c!2~\!
+  c1*7/4\cresc
   d4 \mf~ d8\fermata )r8\fermata
 
   % kartka 5.
