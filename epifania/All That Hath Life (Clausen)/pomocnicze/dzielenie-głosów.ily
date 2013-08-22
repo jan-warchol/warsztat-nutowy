@@ -6,9 +6,9 @@ unisono =
 #(define-music-function (parser location music)
    (ly:music?)
    #{
-     \new Devnull {
+     %\new Devnull {
        #music
-     }
+     %}
    #})
 
 rownyRytm =

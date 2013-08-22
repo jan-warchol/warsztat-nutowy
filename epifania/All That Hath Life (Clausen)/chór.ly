@@ -1,5 +1,5 @@
 \version "2.16.1"
-#(set-global-staff-size 16)
+#(set-global-staff-size 14)
 
 \paper {
   indent = 0 \mm
@@ -45,7 +45,16 @@
       \tupletUp
       \clef G
 
-      \sopran
+      \soprangorny
+    }
+    \new Staff {
+      \set Staff.instrumentName = "S "
+      \set Staff.shortInstrumentName = "S "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \soprandolny
     }
     \addlyrics \soprantekst
 
@@ -56,7 +65,16 @@
       \tupletUp
       \clef G
 
-      \alt
+      \altgorny
+    }
+    \new Staff {
+      \set Staff.instrumentName = "A "
+      \set Staff.shortInstrumentName = "A "
+      \dynamicUp
+      \tupletUp
+      \clef G
+
+      \altdolny
     }
     \addlyrics \alttekst
 
@@ -67,7 +85,16 @@
       \tupletUp
       \clef "G_8"
 
-      \tenor
+      \tenorgorny
+    }
+    \new Staff {
+      \set Staff.instrumentName = "T "
+      \set Staff.shortInstrumentName = "T "
+      \dynamicUp
+      \tupletUp
+      \clef "G_8"
+
+      \tenordolny
     }
     \addlyrics \tenortekst
 
@@ -78,7 +105,16 @@
       \tupletUp
       \clef F
 
-      \bas
+      \basgorny
+    }
+    \new Staff {
+      \set Staff.instrumentName = "B "
+      \set Staff.shortInstrumentName = "B "
+      \dynamicUp
+      \tupletUp
+      \clef F
+
+      \basdolny
     }
     \addlyrics \bastekst
   >>
