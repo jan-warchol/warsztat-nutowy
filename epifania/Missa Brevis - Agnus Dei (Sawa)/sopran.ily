@@ -79,8 +79,3 @@ sopran = <<
   \soprandolny
   \soprangorny
 >>
-
-\new Staff{
-  \sopran
-}
-\addlyrics \soprantekst
