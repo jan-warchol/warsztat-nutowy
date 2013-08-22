@@ -205,8 +205,8 @@ altgorny = \relative f' {
     b1*10/4 ( \fermata\p
     c1*9/8 \fermata
     cis2
+    d2\fermata
   }
-  d2\fermata
   d2~
   d1*7/4
   \unisono {
