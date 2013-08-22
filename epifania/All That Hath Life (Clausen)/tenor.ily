@@ -326,7 +326,7 @@ tenortekst = \lyricmode {
   shout to the Lord, Al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia!
   Al -- le -- lu -- ia.
-  \shrink #0.91 Praise __ the Lord with joy -- ful song,
+  \shrink #0.91 Praise the Lord with joy -- ful song,
 
   % kartka 2.
   \shrink #0.91 praise, __ _ _ praise Him!

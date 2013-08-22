@@ -60,17 +60,17 @@ soprandolny = {
   c'' d'' e'' d''4. \breathe
   c''8 c'' c'' b'4 b'8
   a'4 a'8 b'4. \breathe
-  a'4 a'8 ^\> g'4 g'8 \! ^"rit."
-  f'4^\> a'8 e'4. \! ^\p
+  a'4 a'8 ^\> g'4 g'8 ^"rit."
+  f'4 a'8 e'4. \! ^\p
   %solo
   \tempo "Ad lib. Solo Soprano"
   % dodac expressivo, zmiana kresek taktowych
   \cadenzaOn
   \set melismaBusyProperties = #'()
-  r4 ^\fermata b'8[ b'] e''4. d''8 e''4 b'8[ c'']
-  d''[( \melisma b']) \melismaEnd g'[ a'] b'4 b' ^\fermata \bar ":"
-  r4 ^\fermata b'8 g''4. fis''8[ e'' d''] \bar ""
-  e''[ e''] b'[ c''] d''4 d'' \fermata \bar ":"
+  r4 ^\fermata b'8[^\markup { \dynamic f \italic espressivo } b'] e''4. d''8 e''4 b'8[ c'']
+  d''[( \melisma b']) \melismaEnd g'[ a'] b'4 b' ^\fermata \bar ";"
+  r4 ^\fermata b'8 g''4. fis''8[ e'' d''] \bar "|"
+  e''[ e''] b'[ c''] d''4 d'' \fermata \bar ";"
   r8 ^\fermata g' a'[ c''] \times 2/3 {d''4 \cresc  e''\! f''~\melisma} f''4^\fermata \melismaEnd
   c''8[ c''] \melisma a''4~ a''8[ \melismaEnd g''] e''[ f''!]
   \bar "|" \noBreak
@@ -150,13 +150,14 @@ soprandolny = {
       s4.\mf\> ^"30''"
       s8\mp\> ^"35''"
       \stopTextSpan
+
       \cadenzaOff
-      s2.*2
+      s2.*2^\markup \normal-text "(continue Sop. solo ad lib.)"
       s2.\!
     }
   >>
 
-  g'8 ^\mf \< g' g' g'4.\! \breathe
+  g'8 ^\mf \< g' g' g'4. \breathe
   g'8 ^\f g' g' b' b' b'
   c'' b' a' b'4.
   es''8.\tenuto es''16 es''8 c'' c'' c''
@@ -246,7 +247,7 @@ soprangorny = {
     g''4 \melismaEnd r8 r4.
     r8 b'  c'' d'' (\melisma b' g') \melismaEnd
     a'2. \breathe
-    \time 5/4 \tempo \markup { "a tempo"  \note #"8" #1 = \note #"4" #1 }  a'2.  a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
+    \time 5/4 \tempo \markup { "a tempo"  \smaller { \note #"8" #1 = \note #"4" #1 } }  a'2.  a'2~ \melisma % jak wstawić ósemka równa cwierćnucie
     a'4\! \melismaEnd r4 r r2
     R1*5/4
     R1*5/4
