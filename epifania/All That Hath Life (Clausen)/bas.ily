@@ -229,26 +229,25 @@ basgorny = \relative f {
   g g g a a a
   a4.\mf\<\breathe a8 a a
   a a a a4 a8
-}
-\unisono{
-  g\f g g g g g
-  \slurDashed
-  \set melismaBusyProperties = #'()
-  f g a g4.(
-  es8.--) es16 es8 f f f
-  \slurSolid
-  \unset melismaBusyProperties
-  g4\> g8--\! r r4
-  R2.
-  r8 g\mf\< b d d16( c d8)
-  bes4.\f g\breathe
+  \unisono{
+    g\f g g g g g
+    \slurDashed
+    \set melismaBusyProperties = #'()
+    f g a g4.(
+    es8.--) es16 es8 f f f
+    \slurSolid
+    \unset melismaBusyProperties
+    g4\> g8--\! r r4
+    R2.
+    r8 g\mf\< b d d16( c d8)
+    bes4.\f g\breathe
 
-  % karta 8.
-  bes4--\mf\< g8 bes4-- g8
-  bes4-- g8 bes4-- g8
-  r d' bes g4.~
-  g g4\ff r8 \bar "|."
-}
+    % karta 8.
+    bes4--\mf\< g8 bes4-- g8
+    bes4-- g8 bes4-- g8
+    r d' bes g4.~
+    g g4\ff r8 \bar "|."
+  }
 }
 
 
