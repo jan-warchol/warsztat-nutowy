@@ -70,10 +70,10 @@ soprandolny = {
   r4 ^\fermata b'8[ b'] e''4. d''8 e''4 b'8[ c'']
   d''[( \melisma b']) \melismaEnd g'[ a'] b'4 b' ^\fermata \bar ":"
   r4 ^\fermata b'8 g''4. fis''8[ e'' d''] \bar ""
-  e''[ e''] g'[ c''] d''4 d'' \fermata \bar ":"
+  e''[ e''] b'[ c''] d''4 d'' \fermata \bar ":"
   r8 ^\fermata g' a'[ c''] \times 2/3 {d''4 \cresc  e''\! f''~\melisma} f''4^\fermata \melismaEnd
-  c''8[ c''] \melisma a''4~ a''8[ \melismaEnd g''] e''[ f'']
-  \bar "|"
+  c''8[ c''] \melisma a''4~ a''8[ \melismaEnd g''] e''[ f''!]
+  \bar "|" \noBreak
   \unset melismaBusyProperties
   g''4 g''4~ ^\fermata \melisma \bar "||"% sprawdzić ten takt powinny być w takcie 6/8 dwie cwierćnuty
   \cadenzaOff

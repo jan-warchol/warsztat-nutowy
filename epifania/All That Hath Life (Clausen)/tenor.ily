@@ -70,12 +70,15 @@ tenordolny = \relative f {
   c4 c8\> b4 b8^\markup{\italic{rit.}}
   a4 a8 b4.\(
 
-  << { b1*10/4\)~ ( \fermata\p } { s4*8 s2\< }>>
-  b1*9/8 \fermata \mp
+  << { b1*10/4\)~ ( \fermata\p } { s4*8 s2-\tweak #'X-offset #-4 \< }>>
+  b1*9/8 \fermata -\tweak #'X-offset #-4 \mp
   b2
   bes2\fermata \>
   a2~\!
   a1*7/4\cresc
+  \footnote #'(-0.4 . 1) \markup {
+    w oryginalnej partyturze nie ma tu żadnego znaku, więc może powinno tu być b.
+  } Accidental
   b4 \mf~ b8\fermata )r8\fermata
 
   %kartka 5.

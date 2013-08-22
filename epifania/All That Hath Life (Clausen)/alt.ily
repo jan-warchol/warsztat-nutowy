@@ -68,8 +68,8 @@ altdolny = \relative f' {
   d4 d8 e4. \breathe
   d4 d8\> c4 c8^\markup{\italic{rit.}}
   b4 c8 b4.\(
-  << { b1*10/4\) ( \fermata\p } { s4*8 s2\< }>>
-  c1*9/8 \fermata \mp
+  << { b1*10/4\) ( \fermata\p } { s4*8 s2-\tweak #'X-offset #-4 \< }>>
+  c1*9/8 \fermata -\tweak #'X-offset #-4 \mp
   cis2
   d2\fermata \>
   c!2~\!

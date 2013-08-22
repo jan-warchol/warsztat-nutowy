@@ -70,8 +70,8 @@ basdolny = \relative f {
   f4 f8 g4.\breathe
   f4 f8\> e4 e8^\markup{\italic{rit.}}
   d4 d8 e4.\(
-  << { e1*10/4\) ( \fermata\p } { s4*8 s2\< }>>
-  e1*9/8 \fermata \mp
+  << { e1*10/4\) ( \fermata\p } { s4*8 s2-\tweak #'X-offset #-4 \< }>>
+  e1*9/8 \fermata -\tweak #'X-offset #-4 \mp
   << e1\fermata { s2 s2\> } >>
   e2\!
   f1*7/4\cresc
