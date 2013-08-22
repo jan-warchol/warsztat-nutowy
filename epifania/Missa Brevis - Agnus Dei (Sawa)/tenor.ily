@@ -1,6 +1,6 @@
 \version "2.16.1"
 
-% -*- master: ./pomocnicze/bas-solo.ly;
+% -*- master: ./pomocnicze/tenor-solo.ly;
 
 % Uwaga! z przyczyn technicznych zawsze przed
 % skompilowaniem partii trzeba zapisywać plik.
@@ -9,32 +9,36 @@
 % jest śpiewane unisono, i wszystkimi oznaczeniami.
 % (Jeśli nie ma podziału, po prostu wpisz tu całą partię.)
 
-basdolny = \relative f {
-  \clef bass
+tenordolny = \relative f {
+  \clef "treble_8"
   
   % podaj tonację, na przykład \key g \minor
   \key a \minor
+  
   % podaj metrum, na przykład \time 4/4
   \time 3/4
+  
   % wpisz nuty:
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e e2
-  g4 g g
-  g8 a b2
-  e,4 e e
-  e8 fis gis2
-  a4 g! f!
-  e8 e e2
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e a,2 \bar "|."
+  a2 b4
+  c b r8 b
+  a4 a8 a b b 
+  c4 b r
+  b8 b c4 d
+  c b r
+  a2 b4
+  c b r8 b
+  a4 a8 a b b 
+  c4 b r
+  b8 b c4 d
+  c b r
+  c\melisma b\melismaEnd a
+  a b r8 b
+  c4 b8 b a a
+  g\melisma a\melismaEnd b4 r
+  c bes2
+  c4 bes2
+  a4\melisma g2\melismaEnd
+  a2. \bar "|."
   
 }
 
@@ -49,7 +53,7 @@ basdolny = \relative f {
 % głosy śpiewają różne dźwięku w równym rytmie, nie trzeba
 % używać żadnej specjalnej funkcji.
 
-basgorny = \relative f {
+tenorgorny = \relative f {
   % podaj tonację, na przykład \key g \minor
   
   % podaj metrum, na przykład \time 4/4
@@ -59,26 +63,27 @@ basgorny = \relative f {
 }
 
 
-bastekst = \lyricmode {
+tenortekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  do -- na no -- bis pa -- cem.
+  
 }
 
-bas = <<
-  \basdolny
-  \basgorny
+tenor = <<
+  \tenordolny
+  \tenorgorny
 >>
 
 %\new Staff{
-%  \bas
+%  \tenor
 %}
-%\addlyrics \bastekst
+%\addlyrics \tenortekst

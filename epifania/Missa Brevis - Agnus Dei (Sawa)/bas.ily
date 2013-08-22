@@ -11,31 +11,31 @@
 
 basdolny = \relative f {
   \clef bass
-  
   % podaj tonację, na przykład \key g \minor
   \key a \minor
   % podaj metrum, na przykład \time 4/4
   \time 3/4
   % wpisz nuty:
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e e2
-  g4 g g
-  g8 a b2
-  e,4 e e
-  e8 fis gis2
-  a4 g! f!
-  e8 e e2
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e a,2 \bar "|."
-  
+  a2 e4
+  a e r8 e
+  a,4 a8 a e' e
+  a4 e r
+  e8 e a4 a
+  a e r
+  a2 e4
+  a e r8 e
+  a,4 a8 a e' e
+  a4 e r
+  e8 e a4 a
+  a e r
+  f\melisma e\melismaEnd d
+  d e r8 e
+  f4 e8 e d d
+  c\melisma d\melismaEnd e4 r
+  c d2
+  c4 d2
+  e4\melisma d2\melismaEnd
+  a2. \bar "|."
 }
 
 
@@ -50,27 +50,49 @@ basdolny = \relative f {
 % używać żadnej specjalnej funkcji.
 
 basgorny = \relative f {
+  \clef bass
   % podaj tonację, na przykład \key g \minor
-  
+  \key a \minor
   % podaj metrum, na przykład \time 4/4
-  
+  \time 3/4
   % wpisz nuty:
-  
+  \unisono {
+  a2 e4
+  a e r8 e
+  a,4 a8 a e' e
+  a4 e r
+  e8 e a4 a
+  a e r
+  a2 e4
+  a e r8 e
+  a,4 a8 a e' e
+  a4 e r
+  e8 e a4 a
+  a e r
+  f\melisma e\melismaEnd d
+  d e r8 e
+  f4 e8 e d d
+  c\melisma d\melismaEnd e4 r
+  c d2
+  c4 d2
+  e4\melisma d2\melismaEnd}
+  e2. \bar "|."
+
 }
 
 
 bastekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  do -- na no -- bis pa -- cem.
 }
 
 bas = <<

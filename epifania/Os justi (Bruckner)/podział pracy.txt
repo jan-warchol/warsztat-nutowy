@@ -1,4 +1,6 @@
-wpisanie nut:
+﻿wpisanie nut:
+s1- zrobiony
+
 
 dodanie nagłówków (tytuł, kompozytor, ..):
 

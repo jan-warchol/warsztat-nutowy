@@ -1,6 +1,6 @@
 \version "2.16.1"
 
-% -*- master: ./pomocnicze/bas-solo.ly;
+% -*- master: ./pomocnicze/alt-solo.ly;
 
 % Uwaga! z przyczyn technicznych zawsze przed
 % skompilowaniem partii trzeba zapisywać plik.
@@ -9,32 +9,32 @@
 % jest śpiewane unisono, i wszystkimi oznaczeniami.
 % (Jeśli nie ma podziału, po prostu wpisz tu całą partię.)
 
-basdolny = \relative f {
-  \clef bass
-  
+altdolny = \relative f' {
   % podaj tonację, na przykład \key g \minor
   \key a \minor
   % podaj metrum, na przykład \time 4/4
   \time 3/4
   % wpisz nuty:
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e e2
-  g4 g g
-  g8 a b2
-  e,4 e e
-  e8 fis gis2
-  a4 g! f!
-  e8 e e2
-  e8 f e4. e8
-  e e e2
-  e8 f e4. e8
-  e e e2
-  e8 e e4 e
-  e8 e a,2 \bar "|."
+  
+  a2 g4
+  f e r8 e
+  a4 a8 a g g
+  f4 e r
+  e8 e f4 f
+  f e r
+  a2 g4
+  f e r8e
+  a4 a8 a g g
+  f4 e r
+  e8 e f4 f
+  f e r
+  d\melisma e\melismaEnd f
+  f e r8 e d4 e8 e f f
+  g\melisma f\melismaEnd e4 r
+  e f2
+  e4 f2
+  e4\melisma f2\melismaEnd
+  e2. \bar "|."
   
 }
 
@@ -49,36 +49,38 @@ basdolny = \relative f {
 % głosy śpiewają różne dźwięku w równym rytmie, nie trzeba
 % używać żadnej specjalnej funkcji.
 
-basgorny = \relative f {
+altgorny = \relative f' {
   % podaj tonację, na przykład \key g \minor
-  
+
   % podaj metrum, na przykład \time 4/4
-  
+
   % wpisz nuty:
   
 }
 
 
-bastekst = \lyricmode {
+alttekst = \lyricmode {
   % Tu wpisz libretto. Będzie ono przyczepione
   % do partii dolnego głosu (jeśli jest podział).
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Chri -- ste e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son,
-  Ky -- ri -- e e -- le -- i -- son.
+  
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  mi -- se -- re -- re no -- bis.
+  A -- gnus De -- i,
+  qui tol -- lis pec -- ca -- ta mun -- di,
+  do -- na no -- bis pa -- cem.
+  
 }
 
-bas = <<
-  \basdolny
-  \basgorny
+alt = <<
+  \altdolny
+  \altgorny
 >>
 
 %\new Staff{
-%  \bas
+%  \alt
+%  \addlyrics \alttekst 
 %}
-%\addlyrics \bastekst
