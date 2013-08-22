@@ -234,7 +234,7 @@ altgorny = \relative f' {
 
     r r a8\pp c
   }
-  d4^\markup{\italic{rit.}} d~ \bar "||"
+  d4 d~ \bar "||"
   \time 6/8
   \cadenzaOn
   d2.*1/2\p\<\laissezVibrer
