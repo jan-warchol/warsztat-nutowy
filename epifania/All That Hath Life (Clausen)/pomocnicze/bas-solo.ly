@@ -1,6 +1,7 @@
 \version "2.16.1"
 
 \include "./dzielenie-głosów.ily"
+\include "./ustawienia-formatowania.ily"
 \include "../bas.ily"
 
 \new Staff {
