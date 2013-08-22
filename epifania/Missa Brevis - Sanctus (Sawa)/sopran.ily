@@ -31,6 +31,7 @@ soprandolny = \relative f' {
   cis b4 e,
   d'2\melisma b\melismaEnd
   cis1 \bar "||"
+  \break
   
   %takt 17
   cis,2\p\melisma cis'4\melismaEnd gis
