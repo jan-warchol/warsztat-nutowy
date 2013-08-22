@@ -87,7 +87,7 @@ soprandolny = {
   \time 6/8
   \tempo "*Ad lib."
   \cadenzaOn
-  r4. ^\fermata
+  r4 ^\fermata
   %kanon, tu trzeba pracy kogoś obeznanego
   %1 kanon
   g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.
@@ -217,7 +217,7 @@ soprangorny = {
   \tempo "*Ad lib."
   \cadenzaOn
   \unisono {
-    r4. ^\fermata
+    r4 ^\fermata
     %kanon, tu trzeba pracy kogoś obeznanego
     %1 kanon
     g'8 g' g' d'' d'' d'' e'' d'' c'' d''4.

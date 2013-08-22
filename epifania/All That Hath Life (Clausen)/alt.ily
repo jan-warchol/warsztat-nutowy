@@ -94,10 +94,23 @@ altdolny = \relative f' {
   r8 d4 d8 f e c4 d
   r8 d4 d8 f e c4 d
   r8 d4 d8 f e c4 d
-  r r a8\pp c c4^\markup{\italic{rit.}} c \bar "||"
+  r r a8\pp c c4^\markup{\italic{rit.}} c~ \bar "||"
   \time 6/8
-  % nie wiem, co zrobić z tą częścią, aż do
-  % końca kartki
+  \cadenzaOn
+  c2.*1/2\p\<\laissezVibrer
+  s2.\mp\<
+  s4
+  s4.\mf\<
+
+  s4.
+  s4.\f\<
+  s4.
+  s4.\ff\>
+
+  s4
+  s4.\f\>
+  s4.\mf\>
+  s8\mp
 
   % kartka 7.
   R2.*2^\markup{Tempo primo}
@@ -197,7 +210,7 @@ altgorny = \relative f' {
   d2~
   d1*7/4
   \unisono {
-  d4 \mf~ d8\fermata ) r8\fermata
+    d4 \mf~ d8\fermata ) r8\fermata
 
     % kartka 5.
     R2.*2
@@ -219,7 +232,7 @@ altgorny = \relative f' {
     r8 d4 d8 f e c4 d
   }
   \rownyRytm{
-    r r a8\pp c d4^\markup{\italic{rit.}} d \bar "||"
+    r r a8\pp c d4^\markup{\italic{rit.}} d~ \bar "||"
     \time 6/8
     % nie wiem, co zrobić z tą częścią, aż do
     % końca kartki

@@ -96,7 +96,7 @@ basdolny = \relative f {
   d g d8 g g4 g
   d g d8 g g4\> g
   d g d8 g g4 g
-  d8\pp g g4 g2.^\markup{\italic{rit.}} \bar "||"
+  d8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki
@@ -229,7 +229,7 @@ basgorny = \relative f {
   \unisono { d, g d8 g } a4 b
   \unisono { d, g d8 g } a4\> b
   \unisono { d, g d8 g } a4 b
-  d,8\pp g g4 g2.^\markup{\italic{rit.}} \bar "||"
+  d,8\pp g g4 g2.~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki

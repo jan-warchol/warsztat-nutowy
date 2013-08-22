@@ -97,7 +97,7 @@ tenordolny = \relative f {
   a4 b a8 b d4 b
   a4 b a8 b d4\> b
   a4 b a8 b d4 b
-  r\! g8\pp a a4 a2^\markup{\italic{rit.}} \bar "||"
+  r\! g8\pp a a4 a2~^\markup{\italic{rit.}} \bar "||"
   \time 6/8
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki
@@ -242,7 +242,7 @@ tenorgorny = \relative f {
     a4 b a8 b d4 b
     a4 b a8 b d4\> b
     a4 b a8 b d4 b
-    r\! g8\pp a a4 a2^\markup{\italic{rit.}} \bar "||"
+    r\! g8\pp a a4 a2~^\markup{\italic{rit.}} \bar "||"
     \time 6/8
     % nie wiem, co zrobić z tą częścią, aż do
     % końca kartki
