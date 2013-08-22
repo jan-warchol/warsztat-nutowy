@@ -17,7 +17,7 @@
 
 \header {
   title = "All That Hath Life & Breath Praise Ye the Lord"
-  composer = "Rene Clausen"
+  composer = "René Clausen"
   kompozytor-krotki = "Clausen"
   werset = "Ps. 96 & 22"
   %{przygotowanie-nut = \markup \column \right-align {
