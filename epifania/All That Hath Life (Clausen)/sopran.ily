@@ -163,7 +163,7 @@ soprandolny = {
   b'4 ^\> b'8 \tenuto \! r8 ^\mf g' b'
   d'' d''16 ( \melisma c'' d''8 )\melismaEnd f'' \tenuto e'' c''
   d''2. ^\<
-  d''4. ^\! ^\f b'4. \breathe
+  d''4. ^\! ^\f b'?4. \breathe
   r8 d'' \tenuto ^\mf ^\< b' r d'' \tenuto b'
   r8 d'' \tenuto b' r d'' \tenuto b'
   r8 d'' f'' d''4.~ \melisma

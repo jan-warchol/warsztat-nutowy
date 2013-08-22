@@ -365,7 +365,7 @@ tenortekst = \lyricmode {
   Al -- le -- lu -- ia. __
 
   % kartka 7.
-  all that hath life and \shrink #0.9 breath \shrink #0.91 praise Him,
+  All that hath life and \shrink #0.9 breath \shrink #0.91 praise Him,
   \shrink #0.91 praise Him,
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise ye the Lord,
   Shout to the Lord, al -- le -- lu --ia!
