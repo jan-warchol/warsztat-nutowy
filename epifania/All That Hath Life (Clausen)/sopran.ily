@@ -95,7 +95,6 @@ soprandolny = {
   \oneVoice
   R1*5/4 \bar "||"  % pod koniec pauzy brak rit.
   \time 6/8
-  \tempo "*Ad lib."
   <<
     {
       \cadenzaOn
@@ -268,7 +267,15 @@ soprangorny = {
 
     \time 6/8
     \once \override Score.MetronomeMark #'extra-offset = #'(0 . 1)
-    \tempo "*Ad lib."
+    \footnote #'(1 . 1) \markup \justify \large {
+      Beginning with one soprano, then adding one by one
+      in quickening succession until all have entered.
+      Each singer repeats ad lib. any combination of the
+      three melodic themes.  Melodies should be sung exuberantly,
+      with rhythmic freedom.
+    }
+    Score.MetronomeMark
+    \tempo "Ad lib."
     \cadenzaOn
     r4 ^\fermata
     %kanon, tu trzeba pracy kogoś obeznanego
