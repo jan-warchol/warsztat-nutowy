@@ -14,6 +14,11 @@
     #(lambda (grob)
        (ly:stencil-scale (lyric-text::print grob) 1 1))
   }
+  \context {
+    \Score
+    \override SpacingSpanner #'common-shortest-duration =
+    #(ly:make-moment 1 20)
+  }
 }
 
 shrink = #(define-music-function (parser location factor) (number?)
