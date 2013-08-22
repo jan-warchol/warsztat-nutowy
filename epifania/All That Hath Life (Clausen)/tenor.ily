@@ -16,7 +16,7 @@ tenordolny = \relative f {
   \time 6/8
   % w komentarzach to, czego w danym takcie
   % nie potrafię zrealizować
-  
+
   g8\f g g b b b
   \slurDashed
   \set melismaBusyProperties = #'()
@@ -30,7 +30,7 @@ tenordolny = \relative f {
   f8-- e c d4.\breathe
   g,4 g8 a4 a8
   g( a) b a4.\breathe
-  
+
   % kartka 2.
   g2.\fp~
   \time 9/8
@@ -46,7 +46,7 @@ tenordolny = \relative f {
   d( b g a4.\>)
   g2.\p
   R2.*2
-  
+
   % kartka 3.
   c8\< c c c c c
   c4\cresc c8 a4 a8
@@ -62,7 +62,7 @@ tenordolny = \relative f {
   d2.
   f8-- e c d4.~\>
   << d{s8 s4\!}>> r4.
-  
+
   % kartka 4.
   g,8 g g d' d d
   e e e d4 d8
@@ -72,7 +72,7 @@ tenordolny = \relative f {
   b2.\fermata\p
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki
-  
+
   %kartka 5.
   g8\p^\markup{legato} g\< g d'\! d d
   d4.\> << a~({s8\! s4}>>
@@ -82,11 +82,11 @@ tenordolny = \relative f {
   R1*5/4
   a4\p\<^\markup{sempre legato (without accents)} b a8\! b d4\> b\!
   a4 b a8 b d4 b
- a4 b a8 b d4 b
- a4 b a8 b d4 b
- a4 b a8 b d4 b
- 
- % kartka 6.
+  a4 b a8 b d4 b
+  a4 b a8 b d4 b
+  a4 b a8 b d4 b
+
+  % kartka 6.
   a4 b a8 b d4 b
   a4 b a8 b d4 b
   a4 b a8 b d4 b
@@ -96,7 +96,7 @@ tenordolny = \relative f {
   \time 6/8
   % nie wiem, co zrobić z tą częścią, aż do
   % końca kartki
-  
+
   % kartka 7.
   R2.*2^\markup{Tempo primo}
   c8\mf\< c c c c c
@@ -112,7 +112,7 @@ tenordolny = \relative f {
   d d16( c d8) f-- e c
   d2.\<
   d4.\f b?\breathe
-  
+
   % kartka 8.
   d4--\mf\< b8 d4-- b8
   d4-- b8 d4-- b8
@@ -133,8 +133,10 @@ tenorgorny = \relative f {
   \key g \major
   \time 6/8
   \unisono {
-    g8\f g g }
-  \rownyRytm{ d' d d
+    g8\f g g
+  }
+  \rownyRytm{
+    d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.\<(
@@ -148,12 +150,13 @@ tenorgorny = \relative f {
     d d16( c d8) f-- e c
     d2.
     f8-- e c d4.\breathe
-    g,4 g8 
+    g,4 g8
   }
-  \rownyRytm{ d'4 d8
+  \rownyRytm{
+    d'4 d8
     c( d) e d4.\breathe
   }
-  
+
   \unisono{
     % kartka 2.
     g,2.\fp~
@@ -174,15 +177,18 @@ tenorgorny = \relative f {
     d( b g a4.\>)
     g2.\p
     R2.*2
-    
+
     % kartka 3.
     c8\< c c c c c
-    c4\cresc c8 
+    c4\cresc c8
   }
   \rownyRytm{
-    c4 c8 }
+    c4 c8
+  }
   \unisono {
-    g\f g g } \rownyRytm { d' d d
+    g\f g g
+  } \rownyRytm {
+    d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.(
@@ -197,7 +203,7 @@ tenorgorny = \relative f {
     d2.
     f8-- e c d4.~\>
     << d{s8 s4\!}>> r4.
-    
+
     % kartka 4.
     g,8 g g d' d d
     e e e d4 d8
@@ -207,7 +213,7 @@ tenorgorny = \relative f {
     b2.\fermata\p
     % nie wiem, co zrobić z tą częścią, aż do
     % końca kartki
-    
+
     %kartka 5.
     g8\p^\markup{legato} g\< g d'\! d d
     d4.\> << a~({s8\! s4}>>
@@ -217,11 +223,11 @@ tenorgorny = \relative f {
     R1*5/4
     a4\p\<^\markup{sempre legato (without accents)} b a8\! b d4\> b\!
     a4 b a8 b d4 b
-   a4 b a8 b d4 b
-   a4 b a8 b d4 b
-   a4 b a8 b d4 b
-   
-   % kartka 6.
+    a4 b a8 b d4 b
+    a4 b a8 b d4 b
+    a4 b a8 b d4 b
+
+    % kartka 6.
     a4 b a8 b d4 b
     a4 b a8 b d4 b
     a4 b a8 b d4 b
@@ -231,18 +237,20 @@ tenorgorny = \relative f {
     \time 6/8
     % nie wiem, co zrobić z tą częścią, aż do
     % końca kartki
-    
+
     % kartka 7.
     R2.*2^\markup{Tempo primo}
     c8\mf\< c c c c c
-    c4 c8 
+    c4 c8
   }
   \rownyRytm{
     c4 c8
   }
   \unisono {
-    g\f g g }
-  \rownyRytm { d' d d
+    g\f g g
+  }
+  \rownyRytm {
+    d' d d
     \slurDashed
     \set melismaBusyProperties = #'()
     c d e d4.(
@@ -257,13 +265,13 @@ tenorgorny = \relative f {
     d2.\<
   }
   \rownyRytm{
-  f4.\f d\breathe
-  
-  % kartka 8.
-  f4--\mf\< d8 f4-- d8
-  f4-- d8 f4-- d8
-  r d f d4.~
-  d d4\ff r8 \bar "|."
+    f4.\f d\breathe
+
+    % kartka 8.
+    f4--\mf\< d8 f4-- d8
+    f4-- d8 f4-- d8
+    r d f d4.~
+    d d4\ff r8 \bar "|."
   }
 }
 
@@ -277,12 +285,12 @@ tenortekst = \lyricmode {
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia!
   Al -- le -- lu -- ia.
   Praise __ the Lord with joy -- ful song,
-  
+
   % kartka 2.
   praise, __ _ _ praise Him!
   praise the Lord with joy -- ful song,
   Al -- le -- lu -- ia.
-  
+
   % kartka 3.
   All that hath life and breath praise Him,
   praise Him,
@@ -290,12 +298,12 @@ tenortekst = \lyricmode {
   Shout to the Lord, Al -- le -- lu -- ia,
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia,
   Al -- le -- lu -- ia. __
-  
+
   % kartka 4.
   All that hath life and breath sing to the Lord
   a new- made song, % nie wiem, co z myślinikiem w tekście
   praise His name, Al -- le -- lu -- ia.
-  
+
   % kartka 5.
   All that hath life and breath praise Him, __
   O praise Him.
@@ -304,7 +312,7 @@ tenortekst = \lyricmode {
   praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
-  
+
   % kartka 6.
   praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
@@ -312,7 +320,7 @@ tenortekst = \lyricmode {
   praise Him, al -- le -- lu -- ia,
   praise Him, al -- le -- lu -- ia,
   Al -- le -- lu -- ia. __
-  
+
   % kartka 7.
   all that hath life and breath praise Him,
   praise Him,
@@ -320,7 +328,7 @@ tenortekst = \lyricmode {
   Shout to the Lord, al -- le -- lu --ia!
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia,
   praise Him!
-  
+
   % kartka 8.
   Praise Him, laud Him,
   praise Him, laud Him,
