@@ -78,7 +78,7 @@ basdolny = \relative f {
   g4 \mf~ g8\fermata )r8\fermata
 
   %kartka 5.
-  g8\p^\markup{legato} g\< g f\! f f
+  g8\p^\markup{legato} g\< g f!\! f f
   es2.\>
   es4.\!~ es4 f8^\markup{\italic{ten.}}
   \time 5/4
