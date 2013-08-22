@@ -21,7 +21,7 @@ altdolny = \relative f' {
   bes8.--\!) bes16 bes8 a a a
   \slurSolid
   \unset melismaBusyProperties
-  g4\> g8\! r r4
+  g4\> g8\! r4.
   R2.
   r8 g b d d16( c d8)
   bes-- f a g4.~
