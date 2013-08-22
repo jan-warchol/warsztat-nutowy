@@ -15,6 +15,20 @@
   \include "./pomocnicze/epifanijny-styl-nagłówków.ily"
 }
 
+
+\layout {
+  \context {
+    \Lyrics
+    \override LyricText #'font-size = #0.8
+    \override LyricHyphen #'extra-offset = #'(0 . 0.1)
+    \override LyricHyphen #'minimum-distance = #0.5
+    \override LyricSpace #'minimum-distance = #0.7
+    \override LyricText #'stencil =
+    #(lambda (grob)
+       (ly:stencil-scale (lyric-text::print grob) 0.96 1))
+  }
+}
+
 \header {
   title = "Missa Brevis"
   composer = "M. Sawa"
