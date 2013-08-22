@@ -231,28 +231,28 @@ altgorny = \relative f' {
     r8 d4 d8 f e c4 d
     r8 d4 d8 f e c4 d
     r8 d4 d8 f e c4 d
+
+    r r a8\pp c
   }
-  \rownyRytm{
-    r r a8\pp c d4^\markup{\italic{rit.}} d~ \bar "||"
-    \time 6/8
-    \cadenzaOn
-    d2.*1/2\p\<\laissezVibrer
-    s2.\mp\<
-    s4
-    s4.\mf\<
+  d4^\markup{\italic{rit.}} d~ \bar "||"
+  \time 6/8
+  \cadenzaOn
+  d2.*1/2\p\<\laissezVibrer
+  s2.\mp\<
+  s4
+  s4.\mf\<
 
-    s4.
-    s4.\f\<
-    s4.
-    s4.\ff\>
+  s4.
+  s4.\f\<
+  s4.
+  s4.\ff\>
 
-    s4
-    s4.\f\>
-    s4.\mf\>
-    s8\mp
-    \cadenzaOff
+  s4
+  s4.\f\>
+  s4.\mf\>
+  s8\mp
+  \cadenzaOff
 
-  }
   \unisono{
     % kartka 7.
     R2.*2^\markup{Tempo primo}

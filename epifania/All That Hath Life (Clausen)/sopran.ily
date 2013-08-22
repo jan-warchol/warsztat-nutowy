@@ -83,7 +83,8 @@ soprandolny = {
   g'1 ~ g'4~
   g'1 ~ g'4\melismaEnd
   \revert TieColumn #'tie-configuration
-  r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
+  \oneVoice
+  R1*5/4 \bar "||"  % pod koniec pauzy brak rit.
   \time 6/8
   \tempo "*Ad lib."
   <<
@@ -231,20 +232,37 @@ soprangorny = {
     g' fis' e' d' g'
     a' b' a'2 g'4~ \melismaEnd
     g'2
-  } r4 \podzial {
-    g'4 ^\< g'
-    d'' b' a' ^\! g' fis'
-    e' d' g' a' b'
-    a'2.  g'2~ ^\> \melisma
-    g'1 ~ g'4 ^\!\melismaEnd
-  }
-  r1*5/4 \bar "||"  % pod koniec pauzy brak rit.
-  %uwaga trzeba porobic porzadek z tymi taktami ad lib.
-
-  \time 6/8
-  \tempo "*Ad lib."
-  \cadenzaOn
+  } r4
+  \hide Score.BarNumber
+  \voiceTwo
+  <<
+    \new Voice = topsop {
+      \voiceOne
+      \override Hairpin #'stencil = ##f
+      \override DynamicText #'stencil = ##f
+      \override DynamicTextSpanner #'stencil = ##f
+      \override TextScript #'stencil = ##f
+      g'4 ^\< g'
+      d'' b' a' ^\! g' fis'
+      e' d' g' a' b'
+      a'2.  g'2~ ^\> \melisma
+      g'1 ~ g'4 ^\!\melismaEnd
+    }
+    \new Lyrics \with { alignAboveContext = topstaff }
+    \lyricsto topsop \lyricmode {
+      O my soul praise Him for He
+      is thy health and sal -- va -- tion. __
+    }
+  >>
+  \oneVoice
+  \undo \hide Score.BarNumber
   \unisono {
+    R1*5/4 \bar "||"  % pod koniec pauzy brak rit.
+    %uwaga trzeba porobic porzadek z tymi taktami ad lib.
+
+    \time 6/8
+    \tempo "*Ad lib."
+    \cadenzaOn
     r4 ^\fermata
     %kanon, tu trzeba pracy kogoś obeznanego
     %1 kanon
