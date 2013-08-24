@@ -1,0 +1,10 @@
+wydzielić repozytorium
+wszystkie utwory powinny używać wspólnych szablonów i ustawień
+
+zmniejszyć grubość linii dodanych
+przesunąć kontakt do mnie do stopki
+
+przenieść \bookoutputsuffix na górę
+przenieść include z ustawieniami na górę
+poprawić położenie bloku layout
+uogólnić interlinię
