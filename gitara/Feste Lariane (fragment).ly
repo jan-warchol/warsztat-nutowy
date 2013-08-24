@@ -25,7 +25,7 @@
 \markup \vspace #0.5
 
 \markup \translate #'(0 . 0)
-\epsfile #X #102 #"feste.eps"
+\epsfile #X #102 #"/home/janek/zasoby/engraving/comparison-samples/feste.eps"
 
 \markup \vspace #2.5
 \markup \large \bold {

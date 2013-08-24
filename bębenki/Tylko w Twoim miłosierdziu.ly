@@ -30,7 +30,7 @@
 \markup \vspace #0.5
 
 \markup \translate #'(-5.3 . 0)
-\epsfile #X #130 #"tylko-w-twoim.eps"
+\epsfile #X #130 #"/home/janek/zasoby/engraving/comparison-samples/tylko-w-twoim.eps"
 
 \markup \vspace #3.1
 \markup \larger \huge \bold {

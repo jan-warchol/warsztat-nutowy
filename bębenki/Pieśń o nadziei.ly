@@ -44,7 +44,7 @@ m = #(define-music-function (parser location off) (number?)
 \markup \vspace #0.5
 
 \markup \translate #'(-1.5 . 0)
-\epsfile #X #99 #"pieśń.eps"
+\epsfile #X #99 #"/home/janek/zasoby/engraving/comparison-samples/pieśń.eps"
 
 \markup \vspace #2.5
 \markup \large \bold {

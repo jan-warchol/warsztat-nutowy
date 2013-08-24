@@ -101,7 +101,7 @@ music = \relative f {
 \markup \vspace #0
 
 \markup \translate #'(0 . 0)
-\epsfile #X #93 #"vilanella.eps"
+\epsfile #X #93 #"/home/janek/zasoby/engraving/comparison-samples/vilanella.eps"
 
 \markup \vspace #2
 \markup \bold {

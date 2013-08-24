@@ -55,7 +55,7 @@ wersjaB = \markup {
 \markup \vspace #0
 
 \markup \translate #'(-5 . 0)
-\epsfile #X #133 #"eja-1f.eps"
+\epsfile #X #133 #"/home/janek/zasoby/engraving/comparison-samples/eja-1f.eps"
 
 \markup \vspace #2.5
 \markup \large \wersjaB
