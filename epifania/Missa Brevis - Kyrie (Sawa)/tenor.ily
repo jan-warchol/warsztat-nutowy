@@ -36,7 +36,7 @@ tenordolny = \relative f {
   e,8 f e4. e8
   gis a b2
   e,8 e b'4 a
-  gis8 e b'2 \bar "|."
+  gis8 e a2 \bar "|."
   
 }
 
