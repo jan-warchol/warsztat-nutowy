@@ -329,7 +329,7 @@ alttekst = \lyricmode {
   All that hath life and \shrink #0.9 breath,
   All that hath life and \shrink #0.9 breath
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise ye the Lord,
-  Shout to the Lord, al -- le -- lu --ia!
+  Shout to the Lord, al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __ \shrink #0.91 praise Him!
 
   % kartka 8.

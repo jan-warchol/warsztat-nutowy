@@ -368,7 +368,7 @@ tenortekst = \lyricmode {
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise Him,
   \shrink #0.91 praise Him,
   All that hath life and \shrink #0.9 breath \shrink #0.91 praise ye the Lord,
-  Shout to the Lord, al -- le -- lu --ia!
+  Shout to the Lord, al -- le -- lu -- ia!
   Al -- le -- lu -- ia, __ Al -- le -- lu -- ia,
   \shrink #0.91 praise Him!
 
