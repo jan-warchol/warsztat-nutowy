@@ -90,7 +90,7 @@ music = \relative f {
 }
 
 \markup \vspace #0.5
-\markup \bold {
+\markup \large \larger \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
@@ -104,7 +104,7 @@ music = \relative f {
 \epsfile #X #93 #"/home/janek/zasoby/engraving/comparison-samples/vilanella.eps"
 
 \markup \vspace #2
-\markup \bold {
+\markup \large \larger \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {

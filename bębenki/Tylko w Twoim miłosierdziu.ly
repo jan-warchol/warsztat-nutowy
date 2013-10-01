@@ -2,7 +2,7 @@
 #(set-global-staff-size 16)
 
 \header	{
-  title = \markup \larger \larger {
+  title = \markup \larger \larger \larger {
     Która wersja nut jest bardziej czytelna?
   }
   subtitle = \markup {
@@ -19,11 +19,11 @@
 }
 
 \markup \vspace #1
-\markup \larger \huge \bold {
+\markup \huge \larger \larger \bold {
   \override #'(thickness . 2)
-  \override #'(box-padding . 0.4)
+  \override #'(box-padding . 0.3)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.7)
+    \pad-to-box #'(0 . 0) #'(0 . 3.3)
     \larger \larger "wersja A"
   }
 }
@@ -33,11 +33,11 @@
 \epsfile #X #130 #"/home/janek/zasoby/engraving/comparison-samples/tylko-w-twoim.eps"
 
 \markup \vspace #3.1
-\markup \larger \huge \bold {
+\markup \huge \larger \larger \bold {
   \override #'(thickness . 2)
-  \override #'(box-padding . 0.4)
+  \override #'(box-padding . 0.3)
   \box {
-    \pad-to-box #'(0 . 0) #'(0 . 2.7)
+    \pad-to-box #'(0 . 0) #'(0 . 3.3)
     \larger \larger "wersja B"
   }
 }

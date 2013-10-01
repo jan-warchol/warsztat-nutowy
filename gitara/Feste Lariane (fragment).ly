@@ -14,7 +14,7 @@
 }
 
 \markup \vspace #2
-\markup \large \bold {
+\markup \large \larger \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
@@ -28,7 +28,7 @@
 \epsfile #X #102 #"/home/janek/zasoby/engraving/comparison-samples/feste.eps"
 
 \markup \vspace #2.5
-\markup \large \bold {
+\markup \large \larger \bold {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
@@ -166,7 +166,7 @@ cv = \markup {
     wydawnictwa Absonic; wersja \bold B to ten sam fragment
     utworu złożony przeze mnie w programie LilyPond.
   }
-  \vspace #0.5
+  \vspace #1
   \justify {
     Podstawową różnicą w składzie jest
     ułożenie trzydziestodwójkowych belek.
@@ -175,10 +175,5 @@ cv = \markup {
     stworzeniu wrażenia ciągłego dźwięku). Grający powinien
     widzieć kierunek podążania całej frazy, a nie wizualnie
     "„wspinać się”" na każdą grupę z osobna.
-  }
-  \vspace #0.5
-  \justify {
-    Oprócz tego grubsze linie dodane w wersji \bold B
-    nie zlewają się "z pięciolinią," ułatwiając czytanie.
   }
 }

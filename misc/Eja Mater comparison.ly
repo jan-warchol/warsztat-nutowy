@@ -26,7 +26,7 @@ ml = #(define-music-function (parser location off) (number?)
   }
 }
 
-wersjaA = \markup {
+wersjaA = \markup \larger {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
@@ -38,7 +38,7 @@ wersjaA = \markup {
   }
 }
 
-wersjaB = \markup {
+wersjaB = \markup \larger {
   \override #'(thickness . 2)
   \override #'(box-padding . 0.4)
   \box {
