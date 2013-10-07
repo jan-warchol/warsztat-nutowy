@@ -10,27 +10,11 @@
   
 }
 
-sopran = \relative f' {
-  g4 fis d2 g \breathe
-  g4 fis e fis
-}
-
-alt = \relative f' {
-  
-}
-
-tenor = \relative f {
-  
-}
-
-bas = \relative f {
-  
-}
-
-tekst = \lyricmode {
-  Al -- le -- lu -- ja.
-  Chwal -- cie Pa -- na
-}
+\include "sopran.ly"
+\include "alt.ly"
+\include "tenor.ly"
+\include "bas.ly"
+\include "tekst.ly"
 
 \score {
   \new ChoirStaff <<
@@ -38,27 +22,31 @@ tekst = \lyricmode {
       \key b \minor
       \sopran
     }
-    \addlyrics \tekst
+    \addlyrics \zwrotkaI
+    \addlyrics \zwrotkaII
 
     \new Staff = alto {
       \key b \minor
       \alt
     }
-    \addlyrics \tekst
+    \addlyrics \zwrotkaI
+    \addlyrics \zwrotkaII
 
     \new Staff = tenor {
       \clef "treble_8"
       \key b \minor
       \tenor
     }
-    \addlyrics \tekst
+    \addlyrics \zwrotkaI
+    \addlyrics \zwrotkaII
 
     \new Staff = bass {
       \clef bass
       \key b \minor
       \bas
     }
-    \addlyrics \tekst
+    \addlyrics \zwrotkaI
+    \addlyrics \zwrotkaII
   >>
 
   \layout {
