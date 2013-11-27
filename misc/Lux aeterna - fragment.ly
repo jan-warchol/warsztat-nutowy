@@ -90,8 +90,8 @@
         \key d \minor
         c4 c8 c d4. \melisma \autoBeamOn c16 d
         es8 d16 es f8 es16 f g8 f es d
-        c8 d16 es f4. es8 d c
-        bes8 g'16 f es c d es \autoBeamOff \melismaEnd f4 r4
+        c8( d16 es f4. es8 d c
+        bes8) g'16 f es c d es \autoBeamOff \melismaEnd f4 r4
         r2 f
         d4 g a,2
         bes4 bes8 bes c4. \melisma \autoBeamOn bes16 c
