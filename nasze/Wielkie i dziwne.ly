@@ -1,9 +1,10 @@
+\version "2.12.3"
+
 %{TODO:
   h moll w takcie 11 dość znacznie się zmienia w trakcie taktu -
   zapisywać jako oddzielne akordy?
 %}
 
-\pointAndClickOff
 \header	{
   title = "Wielkie i dziwne są dzieła Twoje"
   composer = "muzyka: ks. H. Markwica"
@@ -14,13 +15,14 @@ commonprops = {
   \autoBeamOff
   \key g \major
   \time 2/4
-}
-scoretempomarker = {
   \tempo 4=90
   \set Score.tempoHideNote = ##t
 }
 \paper {
   system-count = #3
+  top-markup-spacing #'basic-distance = #7
+  markup-system-spacing #'basic-distance = #18
+  last-bottom-spacing #'basic-distance = #15
   ragged-last-bottom = ##f
 }
 #(set-global-staff-size 16.5)
@@ -111,7 +113,6 @@ stanzas = \markup {
 
 fourstaveschoir = {
   \new ChoirStaff <<
-    \scoretempomarker
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble
