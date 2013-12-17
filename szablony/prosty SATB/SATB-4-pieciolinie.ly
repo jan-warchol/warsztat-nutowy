@@ -7,23 +7,27 @@
 }
 %--------------------------------MELODIA
 metrumitp = {
-  \key c \major
+  \key g \major
   \time 4/4
   \tempo ""
 }
-melodiaSopranu = \relative f' {
+melodiaSopranu =
+\relative f' {
   \metrumitp
   \bar "|."
 }
-melodiaAltu = \relative f' {
+melodiaAltu =
+\relative f' {
   \metrumitp
   \bar "|."
 }
-melodiaTenorow = \relative f {
+melodiaTenorow =
+\relative f {
   \metrumitp
   \bar "|."
 }
-melodiaBasow = \relative f {
+melodiaBasow =
+\relative f' {
   \metrumitp
   \bar "|."
 }
@@ -80,9 +84,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \set chordNameLowercaseMinor = ##t
       \akordy
     }
-    \new Staff = sopran {
+    \new Staff = sopran
+    \with { \consists "Ambitus_engraver" } {
       \clef treble
-      \set Staff.instrumentName = "S "
+      \set Staff.instrumentName = "Sopran "
       \set Staff.shortInstrumentName = "S "
       \new Voice = sopran {
         \set Voice.midiInstrument = "clarinet"
@@ -93,9 +98,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     }
     \new Lyrics \lyricsto sopran \tekstSopranu
 
-    \new Staff = alt {
+    \new Staff = alt
+    \with { \consists "Ambitus_engraver" } {
       \clef treble
-      \set Staff.instrumentName = "A "
+      \set Staff.instrumentName = "Alt "
       \set Staff.shortInstrumentName = "A "
       \new Voice = alt {
         \set Voice.midiInstrument = "english horn"
@@ -106,9 +112,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     }
     \new Lyrics \lyricsto alt \tekstAltu
 
-    \new Staff = tenor {
+    \new Staff = tenor
+    \with { \consists "Ambitus_engraver" } {
       \clef "treble_8"
-      \set Staff.instrumentName = "T "
+      \set Staff.instrumentName = "Tenor "
       \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
         \set Voice.midiInstrument = "english horn"
@@ -119,9 +126,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     }
     \new Lyrics \lyricsto tenor \tekstTenorow
 
-    \new Staff = bas {
+    \new Staff = bas
+    \with { \consists "Ambitus_engraver" } {
       \clef bass
-      \set Staff.instrumentName = "B "
+      \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
       \new Voice = bas {
         \set Voice.midiInstrument = "clarinet"
