@@ -1,4 +1,5 @@
 \version "2.17.25"
+#(ly:set-option 'strokeadjust #t)
 
 \header	{
   title = ""
@@ -27,7 +28,7 @@ melodiaTenorow =
   \bar "|."
 }
 melodiaBasow =
-\relative f' {
+\relative f {
   \metrumitp
   \bar "|."
 }
@@ -55,16 +56,17 @@ zwrotkaV = \markup {
 
 %--------------------------------USTAWIENIA
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \paper {
-  indent = 2 \mm
+  indent = 12 \mm
   short-indent = 2 \mm
-  left-margin = 18 \mm
-  right-margin = 18 \mm
-  top-markup-spacing #'basic-distance = 10
+  left-margin = 15 \mm
+  right-margin = 15 \mm
+  top-markup-spacing #'basic-distance = 8
+  markup-system-spacing #'basic-distance = 18
   system-system-spacing #'basic-distance = 18
-  score-markup-spacing #'basic-distance = 18
+  score-markup-spacing #'basic-distance = 15
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
@@ -198,7 +200,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \center-column {
       \with-url
       #"http://lilypond.org/"
-      \scale #'(0.6 . 0.6)
+      \scale #'(0.75 . 0.75)
       #(format #f "LilyPond v~a"
          (lilypond-version)
          )
@@ -213,9 +215,9 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
         \on-the-fly #part-first-page {
           \override #'(baseline-skip . 2)
           \center-column {
-            \scale #'(0.9 . 0.9)
+            \scale #'(1 . 1)
             \fromproperty #'header:copyright
-            \scale #'(0.75 . 0.75)
+            \scale #'(0.85 . 0.85)
             "skład nut: Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
           }
         }
