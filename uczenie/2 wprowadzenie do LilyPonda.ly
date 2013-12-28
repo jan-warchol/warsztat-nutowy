@@ -45,8 +45,8 @@
   ściągnij plik instalacyjny \italic "Windows: LilyPond (…)"
   (około 25 MB) i zainstaluj.  Będzie Ci również potrzebny edytor
   Frescobaldi – wejdź na
-  \with-url #"http://code.google.com/p/lilykde/downloads/list"
-  \smaller\typewriter"code.google.com/p/lilykde/downloads/list",
+  \with-url #"http://github.com/wbsoft/frescobaldi/releases"
+  \smaller\typewriter"github.com/wbsoft/frescobaldi/releases",
   ściągnij najnowszą wersję instalatora (\italic
   { Frescobaldi Setup (…).exe}, około 15 MB) i zainstaluj.
 }
