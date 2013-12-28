@@ -52,8 +52,8 @@ melodiaAltu =
   c4 d4 | % 9
   d4 d8 g8 | \barNumberCheck #10
   e4 d4 | % 11
-  a4 b8 a8 | % 12
-  b4 b4 | % 13
+  d4 b8 d8 | % 12
+  g8( fis8) e4 | % 13
   e2 | % 14
   d4. d8 | % 15
   e8( d8) e4 ~ | % 16
@@ -71,15 +71,15 @@ melodiaTenorow =
   d8 | % 2
   a4 a4 | % 3
   c4 d8 e8 | % 4
-  g8( d8) e4 | % 5
+  e8( d8) e4 | % 5
   b4 b4 | % 6
   d4 d4 | % 7
   e4 e4 | % 8
   c4 d4 | % 9
   g,4 d8 g8 | \barNumberCheck #10
   a8( g8) a4 | % 11
-  d4 b8 d8 | % 12
-  g8( fis8) e4 | % 13
+  a4 b8 a8 | % 12
+  b4 b4 | % 13
   c8( b8 a8 g8) | % 14
   a4. a8 | % 15
   b8( a8) b4 ~ | % 16
@@ -96,7 +96,7 @@ melodiaBasow =
   b,4 b8 d8 | % 2
   a4 a4 | % 3
   a4 a8 e8 | % 4
-  g4 b4 | % 5
+  g8( a) b4 | % 5
   g4 g4 | % 6
   d'4 d4 | % 7
   a4 b8( c8) | % 8
