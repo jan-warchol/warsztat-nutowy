@@ -92,7 +92,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \set Staff.instrumentName = "Sopran "
       \set Staff.shortInstrumentName = "S "
       \new Voice = sopran {
-        \set Voice.midiInstrument = "clarinet"
+        \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
         \melodiaSopranu
@@ -106,7 +106,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \set Staff.instrumentName = "Alt "
       \set Staff.shortInstrumentName = "A "
       \new Voice = alt {
-        \set Voice.midiInstrument = "english horn"
+        \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
         \melodiaAltu
@@ -120,7 +120,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \set Staff.instrumentName = "Tenor "
       \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
-        \set Voice.midiInstrument = "english horn"
+        \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
         \melodiaTenorow
@@ -134,7 +134,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
       \new Voice = bas {
-        \set Voice.midiInstrument = "clarinet"
+        \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
         \melodiaBasow
