@@ -1,8 +1,7 @@
 \version "2.19.1"
 
 \header {
-  title = "Modlitwa o skruchę"
-  subtitle = "Psalm 51"
+  title = "Modlitwa o skruchę (Psalm 51)"
   subsubtitle = "Noc Miłosierdzia, AD 1997"
   poet = "słowa: por. Ps 51 (50), 3-4.12-15"
   composer = "muzyka: Jacek Sykulski"
@@ -45,7 +44,7 @@ melodiaAltu = \relative f' {
   d\breve d8 d d4 d2 |
   c\breve c8 c c4 c2 |
   c\breve c8 c c4 bes2 |
-  bes\breve bes8 bes c([ d)] cis2 |
+  bes\breve bes8 bes c-\shape #'((0 . 0.25)(0 . 0.5)(0 . 0.5)(0 . 0.25)) ([ d)] cis2 |
   \bar "|."
 }
 
@@ -109,15 +108,15 @@ tekst = \lyricmode {
   we mnie ser -- ce czy -- ste i od -- nów we mnie moc Du -- cha.
   \set stanza = "1. "
   \once \override LyricText.X-offset = #-1
-  \markup \scale #'(0.9 . 1)
   "Zmiłuj się nade mną, Boże, w łaska" -- wo -- ści Swo -- jej,
   \once \override LyricText.X-offset = #-2
-  \markup \scale #'(0.9 . 1)
   "w ogromie Swej litości zgładź mo" -- ją nie -- pra -- wość.
   \once \override LyricText.X-offset = #-0.5
   "Obmyj mnie zupełnie" z_mo -- jej wi -- ny,
   \once \override LyricText.X-offset = #-0.5
-  "i oczyść mnie z grze" -- chu mo -- je -- go.
+  "i oczyść mnie z grze" --
+  \once \override LyricText.X-offset = #-1.8
+  chu mo -- je -- go.
 }
 
 tekstSopranu = \tekst
@@ -136,34 +135,82 @@ tekstBasow = \tekst
      #{\markup \concat { #t1 \bold \underline #t2 #t3 }#}))
 
 zwrotkaII = \markup \column {
-  \line { Stwórz, o Boże, we mnie \uu "" ser ce czyste, i odnów we \u mnie moc Ducha. }
-  \line { Nie odrzucaj mnie od \uu Swe go "" oblicza, i nie odbieraj mi Świętego \uu "" Du cha Swego. }
+  \line { Uznaję bowiem \uu nie pra wość swoją, }
+  \line { A grzech mój jest \uu za wsze "" przede mną. }
+  \line { Przeciwko Tobie \uu same mu "" zgrzeszyłem }
+  \line { I uczyniłem, co złe \u jest, przed Tobą. }
 }
 zwrotkaIII = \markup \column {
-  \line { Przywróć mi radość z \uu Twoje go "" zbawienia, i wzmocnij mnie \uu du chem "" ofiarnym. }
-  \line { Będę nieprawych \uu nau czał "" dróg Twoich, i wrócą do \uu Cie bie "" grzesznicy. }
+  \line { Abyś okazał się sprawiedliwy w \u Swym wyroku }
+  \line { I prawy w \uu "" Swo im sądzie. }
+  \line { Oto urodziłem się \uu obcią żo ny winą }
+  \line { I jako grzesznika \uu poczę ła "" mnie matka. }
+}
+zwrotkaIV = \markup \column {
+  \line { A Ty masz upodobanie w \uu u kry tej prawdzie, }
+  \line { Naucz mnie \uu tajem nic "" mądrości. }
+  \line { Pokrop mnie hizopem, a \uu sta nę "" się czysty, }
+  \line { Obmyj mnie, a nad śnieg \uu "" wy bieleję. }
+}
+zwrotkaV = \markup \column {
+  \line { Spraw, abym usłyszał radość \u i wesele, }
+  \line { Niech się radują kości, \uu któ re "" skruszyłeś. }
+  \line { Odwróć Swe Oblicze od \uu "" mo ich grzechów }
+  \line { I zmaż wszystkie moje \uu "" prze winienia. }
+}
+zwrotkaVI = \markup \column {
+  \line { Stwórz, Boże, we mnie \uu "" ser ce czyste, }
+  \line { I odnów we \u mnie moc Ducha. }
+  \line { Nie odrzucaj mnie od \uu Swe go "" Oblicza, }
+  \line { I nie odbieraj mi Świętego \uu "" Du cha Swego. }
+}
+zwrotkaVII = \markup \column {
+  \line { Przywróć mi radość z \uu Twoje go "" zbawienia, }
+  \line { I wzmocnij mnie \uu du chem "" ofiarnym. }
+  \line { Będę nieprawych \uu nau czał "" dróg Twoich, }
+  \line { I wrócą do \uu Cie bie "" grzesznicy. }
+}
+zwrotkaVIII = \markup \column {
+  \line { Uwolnij mnie, Boże, od kary za krew }
+  \line { \hspace #20 przelaną, \uu Bo że, "" mój Zbawco, }
+  \line { Niech sławi mój język Twoją \uu "" spra wiedliwość. }
+  \line { Panie otwórz \uu "" war gi moje, }
+  \line {  A usta moje będą głosić \uu "" Two ją chwałę. }
+}
+zwrotkaIX = \markup \column {
+  \line { Ofiarą bowiem Ty się \u nie radujesz, }
+  \line { A całopalenia choćbym \u dał, nie przyjmiesz. }
+  \line { Boże, moją ofiarą jest \u duch skruszony, }
+  \line { Pokornym i skruszonym sercem Ty, }
+  \line { \hspace #25 \uu Bo że, "" nie gardzisz. }
+}
+zwrotkaX = \markup \column {
+  \line { Panie, okaż Syjonowi łaskę w \u Twej dobroci, }
+  \line { Odbuduj mury \uu "" Je ruzalem. }
+  \line { Wtedy przyjmiesz prawe ofiary: dary i \uu ca ło palenia, }
+  \line { Wtedy składać będą cielce na \uu Two im "" ołtarzu. }
 }
 
 %--------------------------------USTAWIENIA
 
 #(ly:set-option 'strokeadjust #t)
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 16.5)
 
 \paper {
   indent = 2 \mm
   short-indent = 2 \mm
   left-margin = 15 \mm
   right-margin = 15 \mm
-  top-markup-spacing #'basic-distance = 8
-  markup-system-spacing #'basic-distance = 22
-  system-system-spacing #'basic-distance = 17
-  score-markup-spacing #'basic-distance = 13
+  top-markup-spacing #'basic-distance = 0
+  markup-system-spacing #'basic-distance = 13
+  system-system-spacing #'basic-distance = 15
+  score-markup-spacing #'basic-distance = 12
 }
 
-#(define powiekszenie-zwrotek '(1.2 . 1.2))
-#(define interlinia '(baseline-skip . 3)) % 3 is Lily default
-odstepMiedzyZwrotkami = \markup \vspace #1
+#(define powiekszenie-zwrotek '(1.1 . 1.1))
+#(define interlinia '(baseline-skip . 2.5)) % 3 is Lily default
+odstepMiedzyZwrotkami = \markup \vspace #0.8
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \layout {
@@ -182,7 +229,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     #(lambda (grob)
        (ly:stencil-scale (lyric-text::print grob) 1 1))
     \override VerticalAxisGroup
-    #'nonstaff-relatedstaff-spacing #'padding = #1
+    #'nonstaff-relatedstaff-spacing #'padding = #0.7
   }
 }
 
@@ -272,6 +319,61 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
           "3."
           \odstepOdNumeruDoZwrotki
           \zwrotkaIII
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "4."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaIV
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "5."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaV
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "6."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaVI
+        }
+        \odstepMiedzyZwrotkami
+      }
+
+      \null
+
+      \override #interlinia
+      \column {
+        \line {
+          \bold
+          "7."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaVII
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "8."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaVIII
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "9."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaIX
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "10."
+
+          \zwrotkaX
         }
         \odstepMiedzyZwrotkami
       }
