@@ -123,37 +123,43 @@ akordy = \chordmode {
   bes2. bes
 }
 %--------------------------------LYRICS--------------------------------
+
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
+
 text =  \lyricmode {
-  Mi -- \tweak #'X-offset #-0.4 łuj --
-  \tweak #'X-offset #-0.4 cie się
-  \tweak #'X-offset #-0.6 wza -- je --
-  \tweak #'X-offset #-1.2 \markup \scale #'(0.9 . 1) mnie,
-  tak \tweak #'X-offset #-0.4 jak
-  \tweak #'X-offset #0 Ja
-  \tweak #'X-offset #-0.75 \markup \scale #'(0.95 . 1) was u --
-  \tweak #'X-offset #-0.2 mi -- ło --
-  \tweak #'X-offset #-0.2 wa --
-  \tweak #'X-offset #-0.5 łem.
+  Mi -- \m #-0.4 łuj --
+  \m #-0.4 cie się
+  \m #-0.6 wza -- je --
+  \m #-1.2 \markup \scale #'(0.9 . 1) mnie,
+  tak \m #-0.4 jak
+  \m #0 Ja
+  \m #-0.75 \markup \scale #'(0.95 . 1) was u --
+  \m #-0.2 mi -- ło --
+  \m #-0.2 wa --
+  \m #-0.5 łem.
   \set stanza = "1."
   \once \override LyricSpace #'minimum-distance = #1
-  \tweak #'X-offset #-1.5
+  \m #-1.5
   \markup \scale #'(0.95 . 1) "Gdybym mówił językami ludzi i"
   \markup \bold \underline a -- nio -- łów,
-  \tweak #'X-offset #-0.5 "a miłoś" --
+  \m #-0.5 "a miłoś" --
   \markup \bold \underline ci bym
-  \tweak #'X-offset #-0.5 nie
-  \tweak #'X-offset #-2 miał,
+  \m #-0.5 nie
+  \m #-2 miał,
 }
 
 secondverse = \lyricmode {
   \repeat unfold 16 \skip4
-  \tweak #'X-offset #-1.5 "stałbym się jak miedź"
-  \tweak #'X-offset #-3 \markup \bold \underline brzę -- czą -- ca
-  \tweak #'X-offset #-0.5 albo
-  \tweak #'X-offset #-3 \markup \bold \underline cym --
-  \tweak #'X-offset #-1.5 bał
-  \tweak #'X-offset #-1.5 \markup \scale #'(0.9 . 1) brzmią --
-  \tweak #'X-offset #-0.2 cy.
+  \m #-1.5 "stałbym się jak miedź"
+  \m #-3 \markup \bold \underline brzę -- czą -- ca
+  \m #-0.5 albo
+  \m #-3 \markup \bold \underline cym --
+  \m #-1.5 bał
+  \m #-1.5 \markup \scale #'(0.9 . 1) brzmią --
+  \m #-0.2 cy.
 }
 
 stanzas = \markup {
