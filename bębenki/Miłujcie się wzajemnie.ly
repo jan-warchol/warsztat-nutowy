@@ -1,8 +1,7 @@
 \version "2.17.3"
-#(set-global-staff-size 17)
 
 \header	{
-  title = "Miłujcie się wzajemnie"
+  title = \markup \column { "Miłujcie się wzajemnie" " " }
   poet = "słowa: 1 Kor 13, 1-13"
   composer = "muzyka: U. Rogala"
   tagline = \markup {
@@ -11,14 +10,20 @@
   }
 }
 
+#(ly:set-option 'strokeadjust #t)
+#(set-global-staff-size 18)
+
 \paper {
-  paper-width = 165 \mm
-  paper-height = 240 \mm
-  line-width = 145 \mm
-  top-margin = 10 \mm
-  system-system-spacing #'basic-distance = #14
-  markup-system-spacing #'basic-distance = #12
+  indent = 2 \mm
+  short-indent = 2 \mm
+  left-margin = 15 \mm
+  right-margin = 15 \mm
+  bottom-margin = 10 \mm
+  top-markup-spacing #'basic-distance = #9
+  markup-system-spacing #'basic-distance = 16
+  last-bottom-spacing #'basic-distance = #12
 }
+
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative c'' {
   \key f \major
@@ -170,11 +175,23 @@ stanzas = \markup {
   \new ChoirStaff <<
     \new Staff = women <<
       \clef treble
+      \set Staff.instrumentName = \markup \center-column { S A }
+      \set Staff.shortInstrumentName = \markup \center-column { S A }
       \new Voice = soprano {
+        \set Voice.midiInstrument = "clarinet"
+        \dynamicUp
+        \override Ambitus #'X-offset = #1.7
+
         \voiceOne
         \sopranomelody
       }
       \new Voice = alto {
+        \set Voice.midiInstrument = "english horn"
+        \override Hairpin #'stencil = ##f
+        \override DynamicText #'stencil = ##f
+        \override DynamicTextSpanner #'stencil = ##f
+        \override TextScript #'stencil = ##f
+
         \voiceTwo
         \altomelody
       }
@@ -192,11 +209,23 @@ stanzas = \markup {
 
     \new Staff = men <<
       \clef bass
+      \set Staff.instrumentName = \markup \center-column { T B }
+      \set Staff.shortInstrumentName = \markup \center-column { T B }
       \new Voice = tenor {
+        \set Voice.midiInstrument = "english horn"
+        \override Hairpin #'stencil = ##f
+        \override DynamicText #'stencil = ##f
+        \override DynamicTextSpanner #'stencil = ##f
+        \override TextScript #'stencil = ##f
+        \override Ambitus #'X-offset = #1.7
+
         \voiceOne
         \tenormelody
       }
       \new Voice = bass {
+        \set Voice.midiInstrument = "clarinet"
+        \dynamicDown
+
         \voiceTwo
         \bassmelody
       }
@@ -204,8 +233,21 @@ stanzas = \markup {
   >>
   \layout {
     \override NoteHead #'style = #'altdefault
-    indent = 0\cm
+
+    \context {
+      \Voice
+      \consists "Ambitus_engraver"
+    }
+    \context {
+      \Lyrics
+      \override LyricText #'stencil =
+      #(lambda (grob)
+         (ly:stencil-scale (lyric-text::print grob) 1 1))
+      \override VerticalAxisGroup
+      #'nonstaff-relatedstaff-spacing #'padding = #0.7
+    }
   }
+
 }
 
 \stanzas
