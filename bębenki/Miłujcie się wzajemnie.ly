@@ -1,13 +1,9 @@
 \version "2.17.3"
 
 \header	{
-  title = \markup \column { "Miłujcie się wzajemnie" " " }
+  title = \markup \column { "Miłujcie się wzajemnie" " " " " }
   poet = "słowa: 1 Kor 13, 1-13"
   composer = "muzyka: U. Rogala"
-  tagline = \markup {
-    skład nut: Jan Warchoł
-    (jan.warchol@gmail.com, 509 078 203)
-  }
 }
 
 #(ly:set-option 'strokeadjust #t)
@@ -19,8 +15,10 @@
   left-margin = 15 \mm
   right-margin = 15 \mm
   bottom-margin = 10 \mm
-  top-markup-spacing #'basic-distance = #9
-  markup-system-spacing #'basic-distance = 16
+  top-markup-spacing #'basic-distance = #17
+  markup-system-spacing #'basic-distance = 20
+  system-system-spacing #'basic-distance = 17
+  score-markup-spacing #'basic-distance = 17
   last-bottom-spacing #'basic-distance = #12
 }
 
@@ -247,7 +245,44 @@ stanzas = \markup {
       #'nonstaff-relatedstaff-spacing #'padding = #0.7
     }
   }
-
 }
 
 \stanzas
+
+%--------------------------------STOPKA
+
+\paper {
+  tagline = \markup {
+    \pad-to-box #'(0 . 0) #'(0 . 1.6)
+    \center-column {
+      \with-url
+      #"http://lilypond.org/"
+      \scale #'(0.75 . 0.75)
+      #(format #f "LilyPond v~a"
+         (lilypond-version)
+         )
+    }
+  }
+
+  oddFooterMarkup = \markup {
+    \override #'(baseline-skip . 1)
+    \column {
+      \fill-line {
+        %% Copyright header field only on first page in each bookpart.
+        \on-the-fly #part-first-page {
+          \override #'(baseline-skip . 2)
+          \center-column {
+            \scale #'(1 . 1)
+            \fromproperty #'header:copyright
+            \scale #'(0.85 . 0.85)
+            "skład nut: Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
+          }
+        }
+      }
+      \fill-line {
+        %% Tagline header field only on last page in the book.
+        \on-the-fly #last-page \fromproperty #'header:tagline
+      }
+    }
+  }
+}
