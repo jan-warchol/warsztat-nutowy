@@ -92,16 +92,17 @@ akordy = \chordmode {
   e4:m c d b:m7 e:m
 }
 %--------------------------------LYRICS--------------------------------
+mv = \once \override LyricText.X-offset = #-1.2
 text =  \lyricmode 	{
-  Pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
-  pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
-  za -- nurz mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia. \break
+  Pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  za -- nurz \mv mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia. \break
   A -- men, a -- men. __
 }
 tenortext =  \lyricmode {
-  Pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
-  pod -- nieś mnie Je -- zu i pro -- wadź do Oj -- ca,
-  za -- nurz mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia.
+  Pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  za -- nurz \mv mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia.
   A -- men, a -- men, a -- men.
 }
 
