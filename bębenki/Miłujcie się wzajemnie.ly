@@ -59,7 +59,7 @@ altomelody = \relative f' {
     \override Score.SpacingSpanner #'spacing-increment = #1.5
     c8
     \newSpacingSection
-    \override Score.SpacingSpanner #'spacing-increment = #0
+    \override Score.SpacingSpanner #'spacing-increment = #0.7
     e16 d
     \revert Score.SpacingSpanner #'spacing-increment
     \newSpacingSection
@@ -141,9 +141,8 @@ text =  \lyricmode {
   \m #-0.2 wa --
   \m #-0.5 łem.
   \set stanza = "1."
-  \once \override LyricSpace #'minimum-distance = #1
-  \m #-1.5
-  \markup \scale #'(0.95 . 1) "Gdybym mówił językami ludzi i"
+  \once \override LyricSpace #'minimum-distance = #5
+  \m #-1.5"Gdybym mówił językami ludzi i"
   \markup \bold \underline a -- nio -- łów,
   \m #-0.5 "a miłoś" --
   \markup \bold \underline ci bym
