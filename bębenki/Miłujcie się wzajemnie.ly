@@ -157,12 +157,58 @@ secondverse = \lyricmode {
   \m #-0.5 albo
   \m #-3 \markup \bold \underline cym --
   \m #-1.5 bał
-  \m #-1.5 \markup \scale #'(0.9 . 1) brzmią --
+  \m #-1.5 brzmią --
   \m #-0.2 cy.
 }
 
-stanzas = \markup {
+#(define-markup-command (u layout props t) (markup?)
+   "Draw a double box around text."
+   (interpret-markup layout props
+     #{\markup \bold \underline #t #}))
+
+#(define-markup-command (uu layout props t1 t2 t3)(markup? markup? markup?)
+   "Draw a double box around text."
+   (interpret-markup layout props
+     #{\markup \concat { #t1 \bold \underline #t2 #t3 }#}))
+
+zwrotkaII = \markup \column {
+  \line { Gdybym też miał dar prorokowania }
+  \line { \hspace #20 i znał wszystkie \uu ta jem nice, }
+  \line { i posiadał \uu "" wszel ką wiedzę, }
+  \line { I wiarę miał tak wielką, iżbym góry \uu "" prze nosił, }
+  \line { a miłości bym nie miał, \uu "" był bym niczym. }
 }
+zwrotkaIII = \markup \column {
+  \line { I gdybym rozdał na jałmużnę całą \uu majęt ność "" moją, }
+  \line { a ciało wystawił \u na spalenie, }
+  \line { Lecz miłości \u bym nie miał, }
+  \line { nic \u bym nie zyskał. }
+}
+zwrotkaIV = \markup \column {
+  \line { Miłość cierpliwa jest i \uu "" łas kawa, }
+  \line { Miłość nie zazdrości i nie \uu szu ka "" uznania, }
+  \line { Nie unosi \u się pychą, }
+  \line { i nie \uu "" szu ka swego. }
+}
+zwrotkaV = \markup \column {
+  \line { Miłość nie unosi \u się gniewem, }
+  \line { nie \uu pa mię ta złego, }
+  \line { Nie cieszy się z \uu niesprawie dli wości, }
+  \line { lecz \uu wese li "" się z prawdy. }
+}
+zwrotkaVI = \markup \column {
+  \line { Miłość \uu wszy stko "" znosi, }
+  \line { Miłość \uu wszy stkie mu wierzy, }
+  \line { We wszystkim pokłada \uu "" na dzieję, }
+  \line { Miłość \uu wszy stko "" przetrzyma. }
+}
+zwrotkaVII = \markup \column {
+  \line { Miłość nigdy nie \uu "" u staje, }
+  \line { nie jest jak proroctwa, \uu któ re "" się skończą, }
+  \line { Teraz więc trwają wiara, nadzieja \u i miłość }
+  \line { z nich \uu najwięk sza "" jest miłość. }
+}
+
 %--------------------------------ALL-FILE VARIABLE--------------------------------
 
 \score {
@@ -243,7 +289,74 @@ stanzas = \markup {
   }
 }
 
-\stanzas
+#(define powiekszenie-zwrotek '(1.03 . 1.1))
+#(define interlinia '(baseline-skip . 3)) % 3 is Lily default
+odstepMiedzyZwrotkami = \markup \vspace #1.5
+odstepOdNumeruDoZwrotki = \markup \hspace #1
+
+\include "notation-snippets/fill-line-evenly/definitions.ily"
+
+\markup {
+  \fill-line-evenly {
+    \scale #powiekszenie-zwrotek {
+      \null
+
+      \override #interlinia
+      \column {
+        \line {
+          \bold
+          "2."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaII
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "3."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaIII
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "4."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaIV
+        }
+        \odstepMiedzyZwrotkami
+      }
+
+      \null
+
+      \override #interlinia
+      \column {
+        \line {
+          \bold
+          "5."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaV
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "6."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaVI
+        }
+        \odstepMiedzyZwrotkami
+        \line {
+          \bold
+          "7."
+          \odstepOdNumeruDoZwrotki
+          \zwrotkaVII
+        }
+        \odstepMiedzyZwrotkami
+      }
+
+      \null
+    }
+  }
+}
 
 %--------------------------------STOPKA
 
