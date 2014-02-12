@@ -195,16 +195,16 @@ zwrotkaX = \markup \column {
 
 #(ly:set-option 'strokeadjust #t)
 
-#(set-global-staff-size 16.5)
+#(set-global-staff-size 16)
 
 \paper {
   indent = 2 \mm
   short-indent = 2 \mm
-  left-margin = 15 \mm
-  right-margin = 15 \mm
-  top-markup-spacing #'basic-distance = 0
-  markup-system-spacing #'basic-distance = 13
-  system-system-spacing #'basic-distance = 15
+  left-margin = 13 \mm
+  right-margin = 13 \mm
+  top-markup-spacing #'basic-distance = 5
+  markup-system-spacing #'basic-distance = 18
+  system-system-spacing #'basic-distance = 14
   score-markup-spacing #'basic-distance = 12
 }
 
