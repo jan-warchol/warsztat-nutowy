@@ -1,5 +1,4 @@
 \version "2.17.2"
-#(set-global-staff-size 18.5)
 
 \header	{
   title = \markup \column { "Podnieś mnie, Jezu" " " " " }
@@ -11,12 +10,19 @@
   }
 }
 
+#(ly:set-option 'strokeadjust #t)
+#(set-global-staff-size 18)
+
 \paper {
-  top-markup-spacing #'basic-distance = #7
-  left-margin = 16 \mm
+  indent = 2 \mm
+  short-indent = 2 \mm
+  left-margin = 15 \mm
   right-margin = 15 \mm
-  last-bottom-spacing #'basic-distance = #12
+  bottom-margin = 10 \mm
   ragged-last-bottom = ##f
+  top-markup-spacing #'basic-distance = #9
+  markup-system-spacing #'basic-distance = 16
+  last-bottom-spacing #'basic-distance = #12
 }
 
 commonprops = {
@@ -108,7 +114,7 @@ tenortext =  \lyricmode {
 
 %--------------------------------LAYOUT--------------------------------
 \score {
-  
+
   \new ChoirStaff <<
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
@@ -159,9 +165,13 @@ tenortext =  \lyricmode {
     }
     \new Lyrics = basslyrics \lyricsto bass \text
   >>
-  
+
   \layout {
-    indent = 0\cm
+    \override Lyrics.LyricText #'font-size = #0.7
+    \override Lyrics.LyricText #'stencil =
+    #(lambda (grob)
+       (ly:stencil-scale (lyric-text::print grob) 0.95 1))
+
     \context {
       \Staff \consists "Ambitus_engraver"
     }
