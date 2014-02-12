@@ -40,7 +40,7 @@ sopranomelody =	\relative c'' {
   \cadenzaOn
   \repeat volta 2 {
     a'\breve g8 e4 e
-    \bar "dashed"
+    \bar "|"
     f\breve e8 c d4 d
   }
   \cadenzaOff
@@ -73,7 +73,6 @@ altomelody = \relative f' {
   \cadenzaOn
   \repeat volta 2 {
     d\breve d8 c4 c
-    \bar "dashed"
     d\breve c8 c bes4 bes
   }
   \cadenzaOff
@@ -94,7 +93,6 @@ tenormelody = \relative c' {
   \cadenzaOn
   \repeat volta 2 {
     f\breve f8 g4 g
-    \bar "dashed"
     f\breve g8 g f4 f
   }
   \cadenzaOff
@@ -115,7 +113,6 @@ bassmelody = \relative f {
   \cadenzaOn
   \repeat volta 2 {
     bes\breve bes8 bes4 bes
-    \bar "dashed"
     bes\breve bes8 bes bes4 bes
   }
   \cadenzaOff
