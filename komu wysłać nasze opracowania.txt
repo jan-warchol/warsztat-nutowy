@@ -1,0 +1,2 @@
+to jest tylko przypomnienie. Lista osób jest w repozytorium z kontaktami;
+patrz kolumna "oprac.".
