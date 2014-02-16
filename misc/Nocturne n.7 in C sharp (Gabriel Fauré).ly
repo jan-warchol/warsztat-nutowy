@@ -18,15 +18,22 @@ global = {
   \override Staff.AccidentalPlacement #'right-padding = #0
 }
 
-mvdots = \once \override Dots.extra-offset = #'(-0.25 . 0)
+mvdots = \override Dots.extra-offset = #'(-0.28 . 0)
+mvnote =
+#(define-music-function (parser location offset)(number?)
+   #{ \once \override NoteColumn.force-hshift = #offset #})
+
+mvnI = \mvnote #2.13
+mvnII = \mvnote #2.0
+mvnIII = \mvnote #1.7
 
 RHone = \relative f {
   \global
   \mvdots d'4. es e f gis8( a4 bes8 b4) |
   bis2.( cis) dis8( e4 bis8 cis4) |
-  bis2.( cis) dis8( e4 bis!8 cis4)
+  bis2.( cis) \mvnIII dis8( e4 bis!8 cis4)
   |
-  b'4.->
+  \undo \mvdots b'4.->
   \times 3/2 { e,8 b~ }
   \times 3/2 { b gis }
   \times 3/2 { g f }
@@ -36,20 +43,23 @@ RHone = \relative f {
 
 RHtwo = \relative f {
   \global
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnI
   <as' c>8 <g bes>4
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnII
   <fis a>8 g4
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnI
   <bes d>8 <a c>4
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnII
   <gis b>8 a4 s2.
   |
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnI
   a'8 gis4 fisis8 gis4
-  \once \override NoteColumn.force-hshift = #2.2
+  \mvnIII
   fis8 e4 dis8 e4 a4. e |
-  a8 gis4 fisis8 gis4 fis8 e4 dis8 e4 <ais cis>4. fisis |
+  \mvnI
+  a8 gis4 fisis8 gis4
+  \mvnIII
+  fis8 e4 dis8 e4 <ais cis>4. fisis |
   s4. r d b bis gis
 }
 
@@ -78,7 +88,7 @@ LHone = \relative f {
     }
     \new Voice {
       \voiceTwo
-      
+
     }
   >>
 >>
