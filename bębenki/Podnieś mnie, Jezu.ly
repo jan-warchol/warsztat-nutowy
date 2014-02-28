@@ -57,8 +57,8 @@ altomelody = \relative f' {
   d8 d d d | b4 b |
   % amen
   b4( c | a2) | b4
-  d4( | cis8[ b] a[ c]) | b4 \melisma %nie ma pewności co do c/cis
-  c4( | a2) | b( | b) \melismaEnd
+  d4( | cis8[ b] a[ c]) | b4 %nie ma pewności co do c/cis
+  c4( | a2) | b( | b) 
   \bar "|."
 }
 tenormelody = \relative c' {
@@ -105,6 +105,13 @@ text =  \lyricmode 	{
   za -- nurz \mv mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia. \break
   A -- men, a -- men. __
 }
+atext =  \lyricmode 	{
+  Pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
+  za -- nurz \mv mnie w_wo -- dzie Je -- go mi -- ło -- sier -- dzia. \break
+  % nie ma pewności co do ostatniego amen, należałoby sprawdzić w oryginale
+  A -- men, a -- men, a -- men. __
+}
 tenortext =  \lyricmode {
   Pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
   pod -- nieś \mv mnie Je -- zu i pro -- wadź do Oj -- ca,
@@ -139,7 +146,7 @@ tenortext =  \lyricmode {
         \altomelody
       }
     }
-    \new Lyrics = altolyrics \lyricsto alto \text
+    \new Lyrics = altolyrics \lyricsto alto \atext
 
     \new Staff = tenor {
       \clef "treble_8"
