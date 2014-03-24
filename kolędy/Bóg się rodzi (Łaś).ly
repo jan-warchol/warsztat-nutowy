@@ -3,7 +3,6 @@
 %}
 
 \version "2.15.33"
-\pointAndClickOff
 \paper {
   top-markup-spacing #'basic-distance = #7
   markup-system-spacing #'basic-distance = #20
@@ -15,11 +14,17 @@
   composer = "opracowanie: ks. Józef Łaś SJ (1907-1990)"
 }
 commonprops = {
-  \autoBeamOff
   \tempo "Tempo poloneza" 4=100
   \set Score.tempoHideNote = ##t
   \key f \major
   \time 3/4
+  \set Timing.beamExceptions = #'()
+}
+\layout {
+  \set chordNameLowercaseMinor = ##t
+  \override LyricText #'stencil =
+  #(lambda (grob)
+     (ly:stencil-scale (lyric-text::print grob) 0.9 1))
 }
 #(set-global-staff-size 17)
 %--------------------------------MELODY--------------------------------
@@ -73,11 +78,11 @@ tenormelody = \relative c' {
   c8 c a a bes b |
   c4 c r |
   \repeat volta 2	{
-    c8%{\p%}[ d] c4 c8 c |
-    c8 c c[ d] c4 |
-    c8[ d] c4 c8 c |
+    c8%{\p%}([ d]) c4 c8 c |
+    c8 c c([ d]) c4 |
+    c8[( d]) c4 c8 c |
     c8 c c4 c |
-    d8%{\mf%}[ es] d4 d8 d |
+    d8%{\mf%}([ es)] d4 d8 d |
     d8 d d4 d |
     d8 es d4. d8 |
     c8 c bes4%{\>%} a^\! |
