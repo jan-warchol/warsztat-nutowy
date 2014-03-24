@@ -7,9 +7,11 @@
   top-markup-spacing #'basic-distance = #7
   markup-system-spacing #'basic-distance = #20
   ragged-last-bottom = ##f
+  left-margin = 13 \mm
+  right-margin = 13 \mm
 }
 \header	{
-  title = "Bóg się rodzi"
+  title = \markup \column { "Bóg się rodzi" " " " " }
   poet = "słowa: Franciszek Karpiński (1741-1825)"
   composer = "opracowanie: ks. Józef Łaś SJ (1907-1990)"
 }
@@ -26,7 +28,7 @@ commonprops = {
   #(lambda (grob)
      (ly:stencil-scale (lyric-text::print grob) 0.9 1))
 }
-#(set-global-staff-size 17)
+#(set-global-staff-size 16.6)
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative c'' {
   f,8%{\f%} f' f4( e8) d |
