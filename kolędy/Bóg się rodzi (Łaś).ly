@@ -4,9 +4,11 @@
 
 \version "2.15.33"
 \paper {
-  top-markup-spacing #'basic-distance = #7
+  top-markup-spacing #'basic-distance = #5
   markup-system-spacing #'basic-distance = #20
-  ragged-last-bottom = ##f
+  system-system-spacing #'basic-distance = 16
+  system-system-spacing #'padding = 1
+  score-markup-spacing #'basic-distance = 15
   left-margin = 13 \mm
   right-margin = 13 \mm
 }
@@ -257,3 +259,41 @@ fourstaveschoir = {
 }
 
 \stanzas
+
+%--------------------------------STOPKA
+
+\paper {
+  tagline = \markup {
+    \pad-to-box #'(0 . 0) #'(0 . 1.6)
+    \center-column {
+      \with-url
+      #"http://lilypond.org/"
+      \scale #'(0.75 . 0.75)
+      #(format #f "LilyPond v~a"
+         (lilypond-version)
+         )
+    }
+  }
+
+  oddFooterMarkup = \markup {
+    \override #'(baseline-skip . 1)
+    \column {
+      \fill-line {
+        %% Copyright header field only on first page in each bookpart.
+        \on-the-fly #part-first-page {
+          \override #'(baseline-skip . 2)
+          \center-column {
+            \scale #'(1 . 1)
+            \fromproperty #'header:copyright
+            \scale #'(0.85 . 0.85)
+            "skład nut: Jan Warchoł (jan.warchol@gmail.com, 509 078 203)"
+          }
+        }
+      }
+      \fill-line {
+        %% Tagline header field only on last page in the book.
+        \on-the-fly #last-page \fromproperty #'header:tagline
+      }
+    }
+  }
+}
