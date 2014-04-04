@@ -35,10 +35,10 @@ altomelody = \relative f' {
     r8 d d d | g8 g f4 | es4.
     d8 | d[( f16 es]) d8 c | c2
   }
-  d8 d bes bes d d d4 d |
+  d8 d d d d d d4 d |
   es8 es es es es4 c4 |
   d8 d d d g g es4 es |
-  es8 es c c c4 c \fermata |
+  es8 es es es c4 c \fermata |
   \bar "|."
 }
 tenormelody = \relative c' {
@@ -46,9 +46,9 @@ tenormelody = \relative c' {
     r8 d d d | c es d[( a]) | g4.
     bes8 | f4 f8 bes | a2
   }
-  a8 a g g a a   bes4 bes |
+  a8 a a a a a   bes4 bes |
   bes8 bes bes bes   g4 a4 |
-  bes8 bes bes bes bes bes   g4 g |
+  bes8 bes bes bes bes bes bes4 bes |
   g8 g g g   bes4 a \fermata |
   \bar "|."
 }
@@ -57,9 +57,9 @@ bassmelody = \relative f {
     r8 g g g | c, c d4 | es4.
     g,8 | bes4 bes8 bes | c2
   }
-  d8 d bes bes d d  g,4 g |
-  es'8 es es es c4 f,4 |
-  bes8 bes bes bes g g  es'4 d	 |
+  d8 d d d d d  g,4 g |
+  es'8 es es es c4 c4 |
+  bes8 bes bes bes bes bes  es4 es	 |
   c8 c c c f,4 f \fermata
   \bar "|."
 }
@@ -69,9 +69,9 @@ akordy = \chordmode {
     g2:m c4:m d:m es2
     bes f2
   }
-  d4:m g:m d:m g2:m
+  d2.:m g2:m
   es2 c4:m f4
-  bes2 g4:m es2
+  bes2. es2
   c2:m f2
 }
 %--------------------------------LYRICS--------------------------------
