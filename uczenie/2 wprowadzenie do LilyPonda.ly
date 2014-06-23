@@ -1,4 +1,4 @@
-\version "2.17.26"
+\version "2.19.7"
 
 % #(set-global-staff-size 19)
 
@@ -26,29 +26,30 @@
 \markup \large \bold "1. How LilyPond works"
 \markup \justify {
   You write music as text (imagine sending someone a text message
-  with a song melody using a mobile), and from that text LilyPond
+  with a song melody using a mobile), and from that text, LilyPond
   produces a score.
 }
 
 \markup \vspace #0.1
 \markup \large \bold "Where to obtain LilyPond"
 \markup \justify {
-  The fastest is to use an online editor: :
+  To use LilyPond without installing it, try an online editor, such as:
   \typewriter \smaller \with-url
   #"http://www.lilybin.com/" "www.lilybin.com"
   – it should suffice for simple tasks.
 }
 \markup \justify {
   To install LilyPond on your computer, go to
-  \with-url #"http://lilypond.org/windows.html"
-  {\smaller \typewriter lilypond.org/windows.html },
-  download setup file \italic "Windows: LilyPond (…)"
-  (approx 25 MB) and install.  You will also need an editor,
+  \with-url #"http://lilypond.org/download.html"
+  {\smaller \typewriter lilypond.org/download.html } then
+  download and install the setup file for your system.
+  You will also need an editor, to create your input files; there are
+  several editors specially adapted to LilyPond,
   e.g. Frescobaldi – go to
-  \with-url #"http://github.com/wbsoft/frescobaldi/releases"
-  \smaller\typewriter"github.com/wbsoft/frescobaldi/releases",
+  \with-url #"http://code.google.com/p/lilykde/downloads/list"
+  \smaller\typewriter"code.google.com/p/lilykde/downloads/list",
   download the latest version (\italic
-  { Frescobaldi Setup (…).exe}, około 15 MB) and install.
+  { Frescobaldi Setup (…).exe}, approximately 15 MB) and install.
 }
 
 \markup \vspace #0.1
@@ -64,47 +65,54 @@
   "}"
 }
 \markup \justify \italic {
-  Note that after letter f there's an apostrophe
-  (this is \bold not a sign from the key next to the digit 1).
+  Note that after the letter f there is an apostrophe:
+  this is \bold not a back tick, such as the sign from the key next to the digit 1.
 }
 \markup \justify {
-  Now you tell LilyPond do make a score from that. If you are
+  Now, you tell LilyPond to make a score from your input. If you are
   using Frescobaldi, press Ctrl-M, in the case of
-  Lilybin Ctrl-Enter. After some time, on the right should appear:
+  Lilybin, press Ctrl-Enter. The result should look like this:
 }
 \relative f' { c c g' g }
 \addlyrics { twin -- kle twin -- kle }
 
 \markup \justify {
-  If something's not working, chekc for typos and try again.
+  If something's not working, check for typos and try again. For example,
+  a very common mistake is leaving out one of the curly braces. Your editor
+  will have useful error messages, too.
 }
 
 
 \markup \vspace #0.1
 \markup \large \bold "3. Pitches"
 
-\markup \bold "TODO: start with super-short explanation of absolute mode"
 \markup \wordwrap {
-  Enter pitches by spelling their names.
-  The entire melody must be within curly braces:
-  \typewriter "{ c d e f g a b c }"
+  LilyPond supports a variety of languages and related pitch names. The examples
+  in this file use the default Dutch language; examples of pitch names in the other
+  supported languages are in the Notation Reference manual (NR), on the website or in your
+  locally installed documentation.
+}
+\markup \vspace #0.1
+\markup \wordwrap {
+  Pitches are identified by name in LilyPond, and the octave is specified in either absolute or relative mode.
+  \vspace #0.1
+  In absolute mode, octaves are specified with apostrophes, for higher octaves or commas for lower octaves,
+  added to the note name. The octaves start from the c in the middle of the bass clef, so that
+  \typewriter "{ c c' c''}" gives this output:
+
 }
 
-\markup \justify {
-  There are many pitches named c
-  (one in each octave):
-}
-\score { { c' c'' c''' } \addlyrics { c c c } \layout { } }
+\score { { c c' c'' } \addlyrics { c c c } \layout { } }
 
 \markup \justify {
-  Therefore, we use the \typewriter "\relative" command
-  - TODO explain nicely
-  If after f you write c, you'll get a c that is closest to that f
+  The other way to enter pitches is by using relative mode. This uses the keyword  \typewriter "relative"
+  to specify a starting pitch. Following pitches are related to the note immediately preceding, and are placed as close as possible to it,
+  within a fourth below to a fifth above. For example, if after f you write c, you'll get the c which is closest to the f
   i.e. a fourth lower:
 }
 
-\markup \typewriter "\relative { f c }"
-\relative { f c }
+\markup \typewriter "\relative c' { f c }"
+\relative c' { f c }
 
 \markup \justify {
   If after f you write a, you'll get an a that is closest to that f
@@ -112,64 +120,42 @@
 }
 
 \markup \typewriter "\relative { f a }"
-\relative { f a }
+\relative c' { f a }
 
 \markup \justify {
-  Add a comma to get a pitch an octave lower,
-  and a single quote to get one octave higher:
+  Add a comma for each octave to lower the pitch,
+  and a single quote for each octave higher octave higher:
 }
 
 
 \markup \line \override #'(baseline-skip . 1) {
   \column {
-    \typewriter "\relative { f a, }"
-    \score { { \relative { f a, } } \layout {} }
+    \typewriter "\relative c' { f a, }"
+    \score { { \relative c' { f a, } } \layout {} }
   }
   \hspace #10
   \column {
-    \typewriter "\relative { f e' a, e' }"
-    \score { { \relative { f e' a, e' } } \layout {} }
+    \typewriter "\relative c' { f e' a, e' }"
+    \score { { \relative c' { f e' a, e' } } \layout {} }
   }
 }
 
-
-\markup \justify {
-  Immediately after the "\relative" command there is a reference pitch for the first sound of melody.
-  I recommend using f (with the appropriate number of commas or quotes to start in the correct octave).
-}
-
-\markup \typewriter "\relative f'' { d g }"
-\relative f'' { d g }
-
-\markup \bold { Accidentals }
-
-\markup \justify {
-  LilyPond will automatically show appropriate accidentals,
-  just name sounds correctly.  Note! Remember to enter the actual
-  name of the sound. For example, in original score there is
-}
-{ \key f \major r2 bes'2 }
-\markup \justify {
-  there is no accidental next to this note, so you may think that
-  you should type “b” - but there is a flat in the key signatyure,
-  so this sound is “bes” and that's how it must be typed.  If you
-  type “b”, you'll get b - not what you want:
-}
-
-{ \key f \major r2 b'2 }
+\markup \bold { Key signatures }
 
 \markup \justify {
   Use
   \typewriter "\key" \italic tonic with added
   \typewriter "\minor" or \typewriter "\major"
-  to set key signatyure:
+  to set key signature:
 }
 
 \markup \typewriter "\relative f' { \key g \minor  g bes d }"
 \relative f' { \key g \minor  g bes d }
 
-\markup "key sig cheat-sheet:"
-\new Staff \with { \remove "Time_signature_engraver" } {
+% I'm not sure we really need the key sig cheat sheet
+%{
+  \markup "key sig cheat-sheet:"
+  \new Staff \with { \remove "Time_signature_engraver" } {
   \set Staff.printKeyCancellation = ##f
   \override Score.RehearsalMark #'self-alignment-X = #LEFT
   \override Score.RehearsalMark #'font-size = #0
@@ -188,9 +174,9 @@
   \key g \minor R1
   \mark \markup \column { "F-dur" "d-moll" }
   \key f \major R1
-}
+  }
 
-\new Staff \with { \remove "Time_signature_engraver" } {
+  \new Staff \with { \remove "Time_signature_engraver" } {
   \set Staff.printKeyCancellation = ##f
   \override Score.RehearsalMark #'self-alignment-X = #LEFT
   \override Score.RehearsalMark #'font-size = #0
@@ -209,9 +195,31 @@
   \key e \major R1
   \mark \markup \column { "B-dur" "gis-moll" }
   \key b \major R1
+  }
+%}
+
+\markup \bold { Accidentals }
+
+\markup \justify {
+  LilyPond will automatically \bold show appropriate accidentals, based on the key signature you specify,
+  but still needs the accidental pitches spelled correctly.
+  For example, the input could call for a B-Flat in the key of F:
+}
+\markup  {
+  \typewriter "\key f \major \relative c' { r2 bes'2 }"
+  \score { {  \key f \major \relative c' { r2 bes'2 } } \layout {} }
 }
 
-
+\markup \justify {
+  LilyPond will not show the accidental next to this note, so you may think that
+  you should type “b” - but there is a flat in the key signature,
+  so this pitch is “bes” and that's how it must be typed.  If you
+  type “b”, you'll get b - not what you want:
+}
+\markup {
+  \typewriter "\key f \major \relative c' { r2 b'2 }"
+  \score { {  \key f \major \relative c' { r2 b'2 } } \layout {} }
+}
 
 \markup \vspace #0.1
 \markup \large \bold "4. Rhythm"
@@ -226,16 +234,16 @@
 \relative f' { g1 g2 g4 g8 g16 g }
 
 \markup \justify {
-  If the duration is the same as the previous one, 
+  If the duration is the same as the previous one,
   it is not necessary to write it (so \typewriter "b8 b b b"
-  means the same as \typewriter "b8 b8 b8 b8" ):
+  means the same as \typewriter "b8 b8 b8 b8" .
 }
 
 \markup \typewriter "\relative f' { b8 a g f c'4 g }"
 \relative f' { b8 a g f c'4 g }
 
 \markup \justify {
-  Use dot to get dotted durations:
+  Use dots to get dotted durations:
 }
 \noPageBreak
 \markup \typewriter "{ b4. }"
@@ -243,15 +251,29 @@
 { b4. }
 
 \markup \justify {
-  To create ties (which connect notes so that they constitute onee sound),
-  use tilde character \huge ~ after each note that should be tied.
-   To type a tilde under Windows, you must press simultaneously
-Shift and press the tilde (next to number 1) and then a space.
-}
+  To create ties, which connect notes of the same pitch,
+  use a tilde character \huge ~ after each note that should be tied.
+  }
 \markup \typewriter "\relative f' { a1~ a2~ a8 }"
 \relative f' { a1~ a2~ a8 }
 
+\markup \justify {
+  Slurs, which connect notes of different pitches, use parentheses: a left parenthesis \huge (
+  starts the slur, and a right parenthesis \huge ) ends it. Note that the slur begins with the second note:
+}
+  \markup \typewriter "\relative f' { a1 ( b2 c8 ) }"
+\relative f' { a1 ( b2 c8 ) }
 
+\markup \justify {
+  Slurs can be made dashed
+  \typewriter "\slurDashed" and dotted
+  \typewriter "\slurDotted". To revert these, use
+  \typewriter "\slurSolid".
+  Put these commands before first note of the slur.
+}
+%{
+  TODO: an example of phrasing, dotted etc. slurs?
+%}
 \markup \justify {
   The program will insert bar lines automatically -
   just specify the meter with command \typewriter "\\time":
@@ -260,7 +282,7 @@ Shift and press the tilde (next to number 1) and then a space.
 \relative f' { \time 3/4  g4 g g f f f }
 
 \markup \justify {
-  Use letter “r” for rests:
+  Use lower-case “r” for rests of single note values:
 }
 
 \markup \typewriter "{ r1 r2 r4 r8 r16 r }"
@@ -303,7 +325,7 @@ Shift and press the tilde (next to number 1) and then a space.
 \markup \large \bold "5. Words"
 
 \markup \justify {
-  Enter lyrics divided into sullables - insert a space,
+  Enter lyrics divided into syllables - insert a space,
   two dashes and a space again between syllables.
   LilyPond understands that multiple tied notes should get
   only one syllable:
@@ -315,7 +337,6 @@ Shift and press the tilde (next to number 1) and then a space.
 }
 \relative f' { g1 a~ a~ a f }
 \addlyrics { po -- mi -- dor }
-
 
 \markup \justify {
   A melisma can be written in two ways: if there is a slur,
@@ -336,9 +357,10 @@ Shift and press the tilde (next to number 1) and then a space.
 \addlyrics { glo -- ry }
 
 \markup \justify {
-  Insert two underscores to get lyric extender:
+  Insert two underscores to get a lyric extender:
 }
 \markup \typewriter \column {
+ 
   \line { "\relative f' { g4 \melisma a b c \melismaEnd }" }
   { "\addlyrics { la __ }" }
 }
@@ -381,7 +403,7 @@ Shift and press the tilde (next to number 1) and then a space.
 { g'4 a' \breathe f'2 }
 
 \markup \justify {
-  \bold Dynamics go after respective notes.
+  \bold Dynamics go after the first note they affect.
   Use \typewriter "\<" and \typewriter "\>" to start hairpins;
   end them with \typewriter "\!" (or some specific dynamic).
 }
@@ -409,23 +431,10 @@ Shift and press the tilde (next to number 1) and then a space.
 \markup \typewriter "{ b4\accent b\\tenuto b\staccato b\fermata }"
 { b4\accent b\tenuto b\staccato b\fermata }
 
-\markup \justify {
-  Use parentheses to get slurs:
-}
-\markup \typewriter "c8( d e4~ e8 f g a)"
-\relative f' {
-  c8( d e4~ e8 f g a)
-}
-\markup \justify {
-  Slurs can be made dashed
-  \typewriter "\slurDashed" and dotted
-  \typewriter "\slurDotted". To revert these, use
-  \typewriter "\slurSolid".
-  Put these commands before first note of the slur.
-}
+
 \markup \justify {
   Frescobaldi's Quick insert panel is useful for adding dynamics
-  and artykulations to multiple notes at once.
+  and articulations to multiple notes at once.
 }
 
 \markup \justify {
@@ -433,7 +442,8 @@ Shift and press the tilde (next to number 1) and then a space.
 }
 \markup \typewriter "\\tempo \"Con moto\" 4=110"
 \relative f' {
-  \tempo "Con moto" 4=110
+  \tempo "Con moto" 4=1
+
   c8 d e f g a b c
 }
 
@@ -454,7 +464,7 @@ Shift and press the tilde (next to number 1) and then a space.
 }
 
 \markup \justify {
-  Clicking on a note in the preview window Frescobaldi 
+  Clicking on a note in the preview window Frescobaldi
   moves the cursor to the corresponding places in the code.
 }
 \markup \justify {
@@ -462,17 +472,25 @@ Shift and press the tilde (next to number 1) and then a space.
   example at the beginning.
 }
 \markup \justify {
-  If the score in the preview window is too small, you can resize 
+  If the score in the preview window is too small, you can resize
   the preview window, or change the magnification
   (Buttons on the toolbar).
 }
 \markup \justify {
-  From time to time (perhaps every measure) compile score,
+  From time to time (perhaps every measure) compile the score,
   and make sure there are no mistakes.
-  Most often it happens omitted apostrophe or comma -
-  then a fragment of melody is in the wrong octave. 
+  Quite often, an apostrophe or comma gets omitted  -
+  then a fragment of melody is in the wrong octave.
   Sometimes error in the rhythmic values ​​make bar lines appear
   in strange places (or beaming will be completely different
   than what you want) - you'll have to start checking
   from the first note that looks suspicious.
 }
+
+
+
+
+%{
+convert-ly (GNU LilyPond) 2.19.8  convert-ly: Processing `'...
+Applying conversion: 2.17.97, 2.18.0, 2.19.2, 2.19.7
+%}
