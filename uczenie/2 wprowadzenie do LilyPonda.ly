@@ -176,7 +176,7 @@
   \key f \major R1
   }
 
-  \new Staff \with { \remove "Time_signature_engraver" } {
+\new Staff \with { \remove "Time_signature_engraver" } {
   \set Staff.printKeyCancellation = ##f
   \override Score.RehearsalMark #'self-alignment-X = #LEFT
   \override Score.RehearsalMark #'font-size = #0
