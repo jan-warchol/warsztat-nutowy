@@ -9,7 +9,7 @@
   markup-system-spacing #'padding = #0.5
   score-markup-spacing #'padding = #2
   score-markup-spacing #'basic-distance = #0
-  top-markup-spacing #'padding = #3
+  top-markup-spacing #'padding = #2
   markup-markup-spacing #'padding = #2
   ragged-bottom = ##t
 }
@@ -99,20 +99,20 @@
 \markup \justify {
   Dlatego używamy polecenia \typewriter "\relative"
   - wtedy program wybiera dźwięk, który jest najbliżej
-  poprzedniego. Jeśli po \typewriter f napiszesz \typewriter c
-  to dostaniesz c najbliższe f - czyli kwartę niższe:
+  poprzedniego. Jeśli po \typewriter b napiszesz \typewriter e
+  to dostaniesz e najbliższe b - czyli kwartę wyższe:
 }
 
-\markup \typewriter "\relative { f c }"
-\relative { f c }
+\markup \typewriter "\relative { b e }"
+\relative { b e }
 
 \markup \justify {
-  Jeśli po \typewriter f napiszesz \typewriter a
-  to dostaniesz a najbliższe f - czyli tercję wyższe:
+  Jeśli po \typewriter b napiszesz \typewriter g
+  to dostaniesz g najbliższe b - czyli tercję niższe:
 }
 
-\markup \typewriter "\relative { f a }"
-\relative { f a }
+\markup \typewriter "\relative { b g }"
+\relative { b g }
 
 \markup \justify {
   Jeśli po nazwie dźwięku napiszesz przecinek,
@@ -123,20 +123,20 @@
 
 \markup \line \override #'(baseline-skip . 1) {
   \column {
-    \typewriter "\relative { f a, }"
-    \score { { \relative { f a, } } \layout {} }
+    \typewriter "\relative { b' e, }"
+    \score { { \relative { b' e, } } \layout {} }
   }
   \hspace #10
   \column {
-    \typewriter "\relative { f e' a, e' }"
-    \score { { \relative { f e' a, e' } } \layout {} }
+    \typewriter "\relative { f' e' a, e' }"
+    \score { { \relative { f' e' a, e' } } \layout {} }
   }
 }
 
 
 \markup \justify {
   Bezpośrednio po poleceniu \typewriter "\relative"
-  podaje się punkt odniesienia dla pierwszego dźwięku melodii.
+  można podać punkt odniesienia dla pierwszego dźwięku melodii.
   Polecam \typewriter f (z odpowiednią liczbą apostrofów
   lub przecinków żeby wystartować we właściwej oktawie):
 }
