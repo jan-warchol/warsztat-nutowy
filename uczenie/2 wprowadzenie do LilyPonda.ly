@@ -304,10 +304,10 @@
 
 \markup \justify {
   Triole, kwintole itp. wstawia się za pomocą
-  polecenia \typewriter "\\times":
+  polecenia \typewriter "\\tuplet":
 }
-\markup \typewriter "\\times 2/3 { e4 f g }"
-\relative f' { \times 2/3 { e4 f g } }
+\markup \typewriter "\\tuplet 3/2 { e4 f g }"
+\relative f' { \tuplet 3/2 { e4 f g } }
 
 \markup \justify {
   Żeby otrzymać przedtakt, użyj
@@ -447,6 +447,12 @@
 \relative f' {
   c8( d e4~ e8 f g a)
 }
+
+\markup \justify {
+  Na zewnątrz zwykłych łuków można też wstawić łuki frazujące:
+}
+\markup \typewriter "c'4\( d( e) f( e2) d\)"
+\relative { c'4\( d( e) f( e2) d\) }
 \markup \justify {
   Łuki można zmienić na przerywane
   \typewriter "\slurDashed" i kropkowane
@@ -473,15 +479,26 @@
   c8 d e f g a b c
 }
 
-\markup \justify {
-  Instrukcje słowne należy umieścić w cudzysłowie
-  i poprzedzić
-  podkreślnikiem _ (wtedy będą pod pięciolinią),
-  karetką ^ (wtedy będą nad pięciolinią)
-  lub myślnikiem (wtedy program sam wybierze).
+\markup { Akordy wewnątrz nawiasów ostrych: }
+\markup \typewriter "<c' e>2 <c d g>4"
+\relative { <c' e>2 <c d g>4 }
+
+\markup { Tremolo: }
+\markup \typewriter "f'4.:32 g8:16 a: b: c d "
+\relative { f'4.:32 g8:16 a: b: c d }
+
+\markup "Tryle:"
+\markup \typewriter "d'1\\startTrillSpan d1 c2\\stopTrillSpan r2 f4\\trill"
+\relative {
+  d'1\startTrillSpan d1 c2\stopTrillSpan r2 f4\trill
 }
-\markup \typewriter "{ f'2_\"ping\" g'^\"pong\" }"
-{ f'2_"ping" g'^"pong" }
+
+\markup "Przenośnik oktawowy:"
+\markup \typewriter
+"a'2 b \\ottava #1 a2 b \\ottava #-1 a2 b \\ottava #0 a2 b"
+\relative { 
+  a'2 b \ottava #1 a2 b \ottava #-1 a2 b \ottava #0 a2 b
+}
 
 \markup \vspace #0.1
 \markup \large \bold "7. Praca z programem"
@@ -523,37 +540,6 @@
   za pomocą kodowania UTF-8. Frescobaldi używa tego
   kodowania domyślnie, więc nie powinno być żadnych
   problemów w przypadku plików utworzonych za jego pomocą.
-}
-
-\markup \vspace #0.1
-\markup \large \bold "8. Dzielone głosy"
-
-\markup \justify {
-  Jeśli na jednej pięciolinii jest więcej niż jeden głos,
-  trzeba zastosować specjalny sposób, żeby dostać zarówno
-  pdfa jak i właściwe midi.  W folderze z pomocami jest
-  przykład.  Wygląda to tak: należy dodać do pliku
-  specjalne funkcje i zmienić strukturę tak, żeby
-  pięciolinia powstawała z połączenia dwóch zmiennych
-  (tym może się zająć Janek).
-  Wygodnie jest najpierw przepisać partię dolną,
-  a potem wykorzystać powtarzające się fragmenty,
-  kopiując je do partii górnej.  Oprócz uzupełnienia
-  tych miejsc, które się różnią, trzeba jeszcze
-  odpowiednio je oznaczyć: wewnątrz
-  \typewriter "\unisono { }" powinny znaleźć się te
-  fragmenty partii górnego głosu, które są identyczne
-  z dolnym głosem; wewnątrz \typewriter "\rownyRytm { }"
-  wstaw te fragmenty partii górnego głosu które mają
-  taki sam rytm; kiedy rytm jest różny, należy użyć
-  polecenia \typewriter "\podzial { }".
-}
-
-\markup \justify {
-  Uwaga: w każdym głosie należy zapisać wsyzstkie oznaczenia,
-  całą dynamikę itp.  Powtarzające się oznaczenia zostaną
-  odpowiednio ukryte, ale powinny być obecne m.in. żebyśmy
-  dostali właściwe MIDI.
 }
 
 
