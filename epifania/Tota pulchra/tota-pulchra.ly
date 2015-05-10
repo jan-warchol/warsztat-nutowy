@@ -104,6 +104,7 @@
 
   % blok \layout zawiera ogólne ustawienia stylu
   \layout {
+    \set Score.markFormatter = #format-mark-box-numbers
     \context {
       \Lyrics
       \override LyricText #'font-size = #0.5

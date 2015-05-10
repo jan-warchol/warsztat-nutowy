@@ -1,4 +1,4 @@
-\lyricmode {
+{
   To -- ta pul -- chra es Ma -- ri -- a
   to -- ta pul -- chra pul -- chra pul -- chra pul -- chra es Ma -- ri -- a
   et ma -- cu -- la non est non est in te non est non est non est in te
