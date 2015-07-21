@@ -23,6 +23,19 @@ melodiaSopranu =
   a4( g8 a16 g) f4 r8 bes
   bes8.( a16) g8 f16( g) a8.( g16) f8 d16( f)
   g4 4~ 4 r8 d'
+  \repeat volta 2 {
+    d4(c8 d16 c) bes4 8 16 16
+    c8( \tuplet 3/2 { bes16 c bes } a8 g16 a) a4 r8 d
+    d8( \tuplet 3/2 { c16 d c) } bes8 a16( bes) c8( \tuplet 3/2 { bes16 c bes) } a8 g16( a)
+  }
+  \alternative {
+    { bes8( a) g4~ 4 r8 d' }
+    { bes8( a) g4~ 2\fermata }
+  }
+  g8( bes) c\breve bes8 c bes( a) g4 r d8( f)
+  a\breve g8 a bes( a) g2 r4 g8( bes)
+  c\breve bes8 c bes( a)
+  g4 d8( f) a\breve g8 a bes4 a\fermata
   \bar "|."
 }
 melodiaAltu =
@@ -33,6 +46,15 @@ melodiaAltu =
   c2 4 4
   d4 8 8 c4 8 8
   d4 4~4 r8 8
+  \repeat volta 2 {
+  d2 4 8 16 16
+  c2 4 4
+  d4 8 8 c4 8 8
+  }
+  \alternative {
+    { d4 4~4 r8 8 }
+    { d4 4~2\fermata }
+  }
   \bar "|."
 }
 melodiaTenorow =
@@ -43,6 +65,15 @@ melodiaTenorow =
   c4( bes8 c16 bes) a4 r8 d
   d8.( c16) bes8 a16( bes) c8.( bes16) a8 g16( a)
   bes8( a) g4~ 4 r8 d'
+  \repeat volta 2 {
+    bes4(a8 bes16 a) g4 8 16 16
+    a8( \tuplet 3/2 { g16 a g } f4) f4 r8 bes
+    bes8( \tuplet 3/2 { a16 bes a) } g8 8 a8( \tuplet 3/2 { g16 a g) } f8 8
+  }
+  \alternative {
+    { g4 4~ 4 r8 bes }
+    { g4 4~ 2\fermata }
+  }
   \bar "|."
 }
 melodiaBasow =
@@ -53,6 +84,15 @@ melodiaBasow =
   <f f,>2 4 4
   <g g,>4 8 8 <f f,>4 8 8
   <g g,>4 4~4 r8 8
+  \repeat volta 2 {
+  <g g,>2 4 8 16 16
+  <f f,>2 4 4
+  <g g,>4 8 8 <f f,>4 8 8
+  }
+  \alternative {
+    { <g g,>4 4~4 r8 8 }
+    { <g g,>4 4~2\fermata }
+  }
   \bar "|."
 }
 akordy = \chordmode {
@@ -60,7 +100,12 @@ akordy = \chordmode {
 
 %--------------------------------SŁOWA
 tekst = \lyricmode {
-  \set stanza = "1. "
+  \set stanza = "Ref."
+  Niech bę -- dzie Bóg u -- wiel -- bio -- ny,
+  On ży -- cie przy -- wra -- ca u -- mar -- łym.
+  Niech bę -- dzie Bóg u -- wiel -- bio -- ny,
+  On ży -- cie przy -- wra -- ca u -- mar -- łym.
+  \set stanza = "1."
 }
 
 tekstSopranu = \tekst
@@ -90,6 +135,12 @@ zwrotkaV = \markup {
   markup-system-spacing #'basic-distance = 18
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 15
+  
+  #(define fonts
+    (make-pango-font-tree "antpolt"
+                          "Nimbus Sans"
+                          "Luxi Mono"
+                          (/ staff-height pt 20)))
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
