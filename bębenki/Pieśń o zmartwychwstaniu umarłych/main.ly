@@ -38,6 +38,7 @@ melodiaSopranu =
     { bes8( a) g4~ 4 r8 d' }
     { bes8( a) g4~ 2\fermata }
   }
+  \bar "|."
   \break
   \cadenzaOn
   g8( bes) \recytatyw c\breve bes8 c bes( a) g4 r d8( f) \bar "|"
@@ -45,7 +46,6 @@ melodiaSopranu =
   \recytatyw c\breve bes8 c bes( a) g4 \bar "|"
   d8( f) \recytatyw a\breve g8 a bes4 a\fermata \bar "|"
   \cadenzaOff
-  \bar "|."
 }
 melodiaAltu =
 \relative f' {
@@ -65,6 +65,13 @@ melodiaAltu =
     { d4 4~2\fermata }
   }
   \bar "|."
+  \break
+  \cadenzaOn
+  g8( d) \recytatyw f\breve f8 f g4 4 r d8( bes) \bar "|"
+  \recytatyw d\breve d8 d g4 2 r4 g8( d) \bar "|"
+  \recytatyw f\breve f8 f g4 4 \bar "|"
+  d8( bes) \recytatyw d\breve d8 d g4 d\fermata \bar "|"
+  \cadenzaOff
 }
 melodiaTenorow =
 \relative f {
@@ -84,6 +91,13 @@ melodiaTenorow =
     { g4 4~ 2\fermata }
   }
   \bar "|."
+  \break
+  \cadenzaOn
+  g8( bes) \recytatyw c\breve bes8 c bes( a) g4 r d8( f) \bar "|"
+  \recytatyw a\breve g8 a bes( a) g2 r4 g8( bes) \bar "|"
+  \recytatyw c\breve bes8 c bes( a) g4 \bar "|"
+  d8( f) \recytatyw a\breve g8 a bes4 a\fermata \bar "|"
+  \cadenzaOff
 }
 melodiaBasow =
 \relative f {
@@ -103,6 +117,13 @@ melodiaBasow =
     { <g g,>4 4~2\fermata }
   }
   \bar "|."
+  \break
+  \cadenzaOn
+  g8( d) \recytatyw f\breve f8 f g4 4 r d8( bes) \bar "|"
+  \recytatyw d\breve d8 d g4 2 r4 g8( d) \bar "|"
+  \recytatyw f\breve f8 f g4 4 \bar "|"
+  d8( bes) \recytatyw d\breve d8 d g4 d\fermata \bar "|"
+  \cadenzaOff
 }
 akordy = \chordmode {
 }
@@ -179,7 +200,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \akordy
     }
     \new Staff = sopran
-    \with { \consists "Ambitus_engraver" } {
+    \with { } {
       \clef treble
       \set Staff.instrumentName = "Sopran "
       \set Staff.shortInstrumentName = "S "
@@ -193,7 +214,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \new Lyrics \lyricsto sopran \tekstSopranu
 
     \new Staff = alt
-    \with { \consists "Ambitus_engraver" } {
+    \with { } {
       \clef treble
       \set Staff.instrumentName = "Alt "
       \set Staff.shortInstrumentName = "A "
@@ -207,7 +228,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \new Lyrics \lyricsto alt \tekstAltu
 
     \new Staff = tenor
-    \with { \consists "Ambitus_engraver" } {
+    \with { } {
       \clef "treble_8"
       \set Staff.instrumentName = "Tenor "
       \set Staff.shortInstrumentName = "T "
@@ -221,7 +242,7 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \new Lyrics \lyricsto tenor \tekstTenorow
 
     \new Staff = bas
-    \with { \consists "Ambitus_engraver" } {
+    \with { } {
       \clef bass
       \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
