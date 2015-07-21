@@ -20,7 +20,7 @@ recytatyw = {
   \once \override LyricSpace #'minimum-distance = #2
   \once \override LyricHyphen #'minimum-distance = #2
 }
-melodiaSopranu =
+sopRefrenI =
 \relative f' {
   \metrumitp
   \override Stem.neutral-direction = #UP
@@ -40,6 +40,9 @@ melodiaSopranu =
   }
   \bar "|."
   \break
+}
+sopZwrotki =
+\relative f' {
   \cadenzaOn
   g8( bes) \recytatyw c\breve bes8 c bes( a) g4 r d8( f) \bar "|"
   \recytatyw a\breve g8 a bes( a) g2 r4 g8( bes) \bar "|"
@@ -47,7 +50,8 @@ melodiaSopranu =
   d8( f) \recytatyw a\breve g8 a bes4 a\fermata \bar "|"
   \cadenzaOff
 }
-melodiaAltu =
+
+altRefren =
 \relative f' {
   \metrumitp
   d8
@@ -66,6 +70,9 @@ melodiaAltu =
   }
   \bar "|."
   \break
+}
+altZwrotki =
+\relative f' {
   \cadenzaOn
   g8( d) \recytatyw f\breve f8 f g4 4 r d8( bes) \bar "|"
   \recytatyw d\breve d8 d g4 2 r4 g8( d) \bar "|"
@@ -73,7 +80,8 @@ melodiaAltu =
   d8( bes) \recytatyw d\breve d8 d g4 d\fermata \bar "|"
   \cadenzaOff
 }
-melodiaTenorow =
+
+tenorRefrenI =
 \relative f {
   \metrumitp
   d'8
@@ -92,6 +100,8 @@ melodiaTenorow =
   }
   \bar "|."
   \break
+}
+tenorZwrotki = \relative f {
   \cadenzaOn
   g8( bes) \recytatyw c\breve bes8 c bes( a) g4 r d8( f) \bar "|"
   \recytatyw a\breve g8 a bes( a) g2 r4 g8( bes) \bar "|"
@@ -99,7 +109,8 @@ melodiaTenorow =
   d8( f) \recytatyw a\breve g8 a bes4 a\fermata \bar "|"
   \cadenzaOff
 }
-melodiaBasow =
+
+basRefren =
 \relative f {
   \metrumitp
   <g g,>8
@@ -118,6 +129,8 @@ melodiaBasow =
   }
   \bar "|."
   \break
+}
+basZwrotki = \relative f {
   \cadenzaOn
   g8( d) \recytatyw f\breve f8 f g4 4 r d8( bes) \bar "|"
   \recytatyw d\breve d8 d g4 2 r4 g8( d) \bar "|"
@@ -129,7 +142,7 @@ akordy = \chordmode {
 }
 
 %--------------------------------SŁOWA
-tekst = \lyricmode {
+refren = \lyricmode {
   \set stanza = "Ref."
   Niech bę -- dzie Bóg u -- wiel -- bio -- ny,
   On ży -- cie przy -- wra -- ca u -- mar -- łym.
@@ -137,17 +150,14 @@ tekst = \lyricmode {
   On ży -- cie przy -- wra -- ca u -- mar -- łym.
   Niech
   mar -- łym.
+}
+zwrotka = \lyricmode {
   \set stanza = "1."
   Jak \recytatyw "podobny jest zmarły do te" -- go, co za -- snął,
   śmierć \recytatyw "do snu, zmartwychwstanie " do po -- ran -- ku,
   Za -- \recytatyw "błyśnie w nas kiedyś prawda jak światło w" na -- szych o -- czach,
   bę -- \recytatyw "dziemy patrzeć na śmierć jak na budzący niepokój" ob -- raz sen -- ny.
 }
-
-tekstSopranu = \tekst
-tekstAltu = \tekst
-tekstTenorow = \tekst
-tekstBasow = \tekst
 
 zwrotkaII = \markup {
 }
@@ -174,6 +184,8 @@ zwrotkaV = \markup {
   markup-system-spacing #'basic-distance = 18
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 15
+  last-bottom-spacing #'basic-distance = 15
+  last-bottom-spacing #'padding = 2
 
   #(define fonts
      (make-pango-font-tree "antpolt"
@@ -188,6 +200,11 @@ odstepMiedzyZwrotkami = \markup \vspace #2
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \layout {
+  \context {
+    \Staff
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup #'remove-first = ##t
+  }
 }
 
 %--------------------------------STRUKTURA
@@ -208,10 +225,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
-        \melodiaSopranu
+        \sopRefrenI
       }
     }
-    \new Lyrics \lyricsto sopran \tekstSopranu
+    \new Lyrics \lyricsto sopran \refren
 
     \new Staff = alt
     \with { } {
@@ -222,10 +239,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
-        \melodiaAltu
+        \altRefren
       }
     }
-    \new Lyrics \lyricsto alt \tekstAltu
+    \new Lyrics \lyricsto alt \refren
 
     \new Staff = tenor
     \with { } {
@@ -236,10 +253,10 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
-        \melodiaTenorow
+        \tenorRefrenI
       }
     }
-    \new Lyrics \lyricsto tenor \tekstTenorow
+    \new Lyrics \lyricsto tenor \refren
 
     \new Staff = bas
     \with { } {
@@ -250,10 +267,59 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
         \tupletUp
-        \melodiaBasow
+        \basRefren
       }
     }
-    \new Lyrics \lyricsto bas \tekstBasow
+    \new Lyrics \lyricsto bas \refren
+
+
+    \new Staff = panie
+    \with { } <<
+      \clef treble
+      \set Staff.shortInstrumentName = \markup \center-column { "S " "A " }
+      \metrumitp
+      \new Voice = soprany {
+        \set Staff.midiInstrument = "clarinet"
+        \dynamicUp
+        \tupletUp
+        \new Devnull { \altRefren }
+        \voiceOne
+        \sopZwrotki
+      }
+      \new Voice = alty {
+        \set Staff.midiInstrument = "clarinet"
+        \dynamicUp
+        \tupletUp
+        \new Devnull { \altRefren }
+        \voiceTwo
+        \altZwrotki
+      }
+    >>
+    \new Lyrics \lyricsto soprany \zwrotka
+
+    \new Staff = panowie
+    \with { } <<
+      \clef bass
+      \set Staff.shortInstrumentName = \markup \center-column { "T " "B " }
+      \metrumitp
+      \new Voice = tenory {
+        \set Staff.midiInstrument = "clarinet"
+        \dynamicUp
+        \tupletUp
+        \new Devnull { \altRefren }
+        \voiceOne
+        \tenorZwrotki
+      }
+      \new Voice = basy {
+        \set Staff.midiInstrument = "clarinet"
+        \dynamicUp
+        \tupletUp
+        \new Devnull { \altRefren }
+        \voiceTwo
+        \basZwrotki
+      }
+    >>
+    \new Lyrics \lyricsto tenory \zwrotka
   >>
 }
 
