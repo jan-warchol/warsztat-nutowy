@@ -2,34 +2,57 @@
 #(ly:set-option 'strokeadjust #t)
 
 \header	{
-  title = ""
-  poet = ""
-  composer = ""
+  title = "Pieśń o Zmartwychwstaniu Umarłych"
+  subsubtitle = "19.03.2013"
+  poet = "słowa: św. Efrem Syryjczyk"
+  composer = "muzyka: Jakub Tomalak"
 }
 %--------------------------------MELODIA
 metrumitp = {
-  \key g \major
+  \key g \minor
   \time 4/4
-  \tempo ""
+  \tempo 4 = 60
+  \partial 8
 }
 melodiaSopranu =
 \relative f' {
   \metrumitp
+  \override Stem.neutral-direction = #UP
+  bes8
+  bes4( a8 bes16 a) g4 8 16 16
+  a4( g8 a16 g) f4 r8 bes
+  bes8.( a16) g8 f16( g) a8.( g16) f8 d16( f)
+  g4 4~ 4 r8 d'
   \bar "|."
 }
 melodiaAltu =
 \relative f' {
   \metrumitp
+  d8
+  d2 4 8 16 16
+  c2 4 4
+  d4 8 8 c4 8 8
+  d4 4~4 r8 8
   \bar "|."
 }
 melodiaTenorow =
 \relative f {
   \metrumitp
+  d'8
+  d4(c8 d16 c) bes4 8 16 16
+  c4( bes8 c16 bes) a4 r8 d
+  d8.( c16) bes8 a16( bes) c8.( bes16) a8 g16( a)
+  bes8( a) g4~ 4 r8 d'
   \bar "|."
 }
 melodiaBasow =
 \relative f {
   \metrumitp
+  <g g,>8
+  <g g,>2 4 8 16 16
+  <f f,>2 4 4
+  <g g,>4 8 8 <f f,>4 8 8
+  <g g,>4 4~4 r8 8
   \bar "|."
 }
 akordy = \chordmode {
