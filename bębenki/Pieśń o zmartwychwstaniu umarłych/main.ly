@@ -14,6 +14,12 @@ metrumitp = {
   \tempo 4 = 60
   \partial 8
 }
+recytatyw = {
+  \once \override NoteHead #'style = #'altdefault
+  \once \override LyricText #'X-offset = #-1.5
+  \once \override LyricSpace #'minimum-distance = #2
+  \once \override LyricHyphen #'minimum-distance = #2
+}
 melodiaSopranu =
 \relative f' {
   \metrumitp
@@ -32,10 +38,13 @@ melodiaSopranu =
     { bes8( a) g4~ 4 r8 d' }
     { bes8( a) g4~ 2\fermata }
   }
-  g8( bes) c\breve bes8 c bes( a) g4 r d8( f)
-  a\breve g8 a bes( a) g2 r4 g8( bes)
-  c\breve bes8 c bes( a)
-  g4 d8( f) a\breve g8 a bes4 a\fermata
+  \break
+  \cadenzaOn
+  g8( bes) \recytatyw c\breve bes8 c bes( a) g4 r d8( f) \bar "|"
+  \recytatyw a\breve g8 a bes( a) g2 r4 g8( bes) \bar "|"
+  \recytatyw c\breve bes8 c bes( a) g4 \bar "|"
+  d8( f) \recytatyw a\breve g8 a bes4 a\fermata \bar "|"
+  \cadenzaOff
   \bar "|."
 }
 melodiaAltu =
@@ -47,9 +56,9 @@ melodiaAltu =
   d4 8 8 c4 8 8
   d4 4~4 r8 8
   \repeat volta 2 {
-  d2 4 8 16 16
-  c2 4 4
-  d4 8 8 c4 8 8
+    d2 4 8 16 16
+    c2 4 4
+    d4 8 8 c4 8 8
   }
   \alternative {
     { d4 4~4 r8 8 }
@@ -85,9 +94,9 @@ melodiaBasow =
   <g g,>4 8 8 <f f,>4 8 8
   <g g,>4 4~4 r8 8
   \repeat volta 2 {
-  <g g,>2 4 8 16 16
-  <f f,>2 4 4
-  <g g,>4 8 8 <f f,>4 8 8
+    <g g,>2 4 8 16 16
+    <f f,>2 4 4
+    <g g,>4 8 8 <f f,>4 8 8
   }
   \alternative {
     { <g g,>4 4~4 r8 8 }
@@ -105,7 +114,13 @@ tekst = \lyricmode {
   On ży -- cie przy -- wra -- ca u -- mar -- łym.
   Niech bę -- dzie Bóg u -- wiel -- bio -- ny,
   On ży -- cie przy -- wra -- ca u -- mar -- łym.
+  Niech
+  mar -- łym.
   \set stanza = "1."
+  Jak \recytatyw "podobny jest zmarły do te" -- go, co za -- snął,
+  śmierć \recytatyw "do snu, zmartwychwstanie " do po -- ran -- ku,
+  Za -- \recytatyw "błyśnie w nas kiedyś prawda jak światło w" na -- szych o -- czach,
+  bę -- \recytatyw "dziemy patrzeć na śmierć jak na budzący niepokój" ob -- raz sen -- ny.
 }
 
 tekstSopranu = \tekst
@@ -124,23 +139,26 @@ zwrotkaV = \markup {
 
 %--------------------------------USTAWIENIA
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 18)
 
 \paper {
   indent = 12 \mm
   short-indent = 2 \mm
   left-margin = 15 \mm
   right-margin = 15 \mm
+
+  system-count = 7
+
   top-markup-spacing #'basic-distance = 8
   markup-system-spacing #'basic-distance = 18
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 15
-  
+
   #(define fonts
-    (make-pango-font-tree "antpolt"
-                          "Nimbus Sans"
-                          "Luxi Mono"
-                          (/ staff-height pt 20)))
+     (make-pango-font-tree "antpolt"
+       "Nimbus Sans"
+       "Luxi Mono"
+       (/ staff-height pt 20)))
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
