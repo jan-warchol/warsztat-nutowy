@@ -1,6 +1,8 @@
 \version "2.17.25"
 #(ly:set-option 'strokeadjust #t)
 
+\include "lib.ly"
+
 \header	{
   title = "Pieśń o Zmartwychwstaniu Umarłych"
   subsubtitle = "19.03.2013"
@@ -28,16 +30,36 @@ sopRefrenI =
   bes4( a8 bes16 a) g4 8 16 16
   a4( g8 a16 g) f4 r8 bes
   bes8.( a16) g8 f16( g) a8.( g16) f8 d16( f)
-  g4 4~ 4 r8 d'
-  \repeat volta 2 {
-    d4(c8 d16 c) bes4 8 16 16
-    c8( \tuplet 3/2 { bes16 c bes } a8 g16 a) a4 r8 d
-    d8( \tuplet 3/2 { c16 d c) } bes8 a16( bes) c8( \tuplet 3/2 { bes16 c bes) } a8 g16( a)
-  }
-  \alternative {
-    { bes8( a) g4~ 4 r8 d' }
-    { bes8( a) g4~ 2\fermata }
-  }
+  g4 4~ 4 r8
+  <<
+    {
+      \voiceOne
+      d'8
+      \repeat volta 2 {
+        d4(c8 d16 c) bes4 8 16 16
+        c8( \tuplet 3/2 { bes16 c bes } a8 g16 a) a4 r8 d
+        d8( \tuplet 3/2 { c16 d c) } bes8 a16( bes) c8( \tuplet 3/2 { bes16 c bes) } a8 g16( a)
+      }
+      \alternative {
+        { bes8( a) g4~ 4 r8 d' }
+        { bes8( a) g4~ 2\fermata }
+      }
+    }
+    \new Voice {
+      \voiceTwo
+      bes8
+      \repeat volta 2 {
+        bes4(a8 bes16 a) g4 8 16 16
+        a8( \tuplet 3/2 { g16 a g } f4) f4 r8 bes
+        bes8( \tuplet 3/2 { a16 bes a) } g8 8 a8( \tuplet 3/2 { g16 a g) } f8 8
+      }
+      \alternative {
+        { g4 4~ 4 r8 bes }
+        { g4 4~ 2\fermata }
+      }
+    }
+  >>
+  \joinStaffDown
   \bar "|."
   \break
 }
@@ -68,6 +90,7 @@ altRefren =
     { d4 4~4 r8 8 }
     { d4 4~2\fermata }
   }
+  \joinStaffUp
   \bar "|."
   \break
 }
@@ -88,16 +111,36 @@ tenorRefrenI =
   d4(c8 d16 c) bes4 8 16 16
   c4( bes8 c16 bes) a4 r8 d
   d8.( c16) bes8 a16( bes) c8.( bes16) a8 g16( a)
-  bes8( a) g4~ 4 r8 d'
-  \repeat volta 2 {
-    bes4(a8 bes16 a) g4 8 16 16
-    a8( \tuplet 3/2 { g16 a g } f4) f4 r8 bes
-    bes8( \tuplet 3/2 { a16 bes a) } g8 8 a8( \tuplet 3/2 { g16 a g) } f8 8
-  }
-  \alternative {
-    { g4 4~ 4 r8 bes }
-    { g4 4~ 2\fermata }
-  }
+  bes8( a) g4~ 4 r8
+  <<
+    {
+      \voiceOne
+      d'8
+      \repeat volta 2 {
+        d4(c8 d16 c) bes4 8 16 16
+        c8( \tuplet 3/2 { bes16 c bes } a8 g16 a) a4 r8 d
+        d8( \tuplet 3/2 { c16 d c) } bes8 a16( bes) c8( \tuplet 3/2 { bes16 c bes) } a8 g16( a)
+      }
+      \alternative {
+        { bes8( a) g4~ 4 r8 d' }
+        { bes8( a) g4~ 2\fermata }
+      }
+    }
+    \new Voice {
+      \voiceTwo
+      bes8
+      \repeat volta 2 {
+        bes4(a8 bes16 a) g4 8 16 16
+        a8( \tuplet 3/2 { g16 a g } f4) f4 r8 bes
+        bes8( \tuplet 3/2 { a16 bes a) } g8 8 a8( \tuplet 3/2 { g16 a g) } f8 8
+      }
+      \alternative {
+        { g4 4~ 4 r8 bes }
+        { g4 4~ 2\fermata }
+      }
+    }
+  >>
+  \joinStaffDown
   \bar "|."
   \break
 }
@@ -127,6 +170,7 @@ basRefren =
     { <g g,>4 4~4 r8 8 }
     { <g g,>4 4~2\fermata }
   }
+  \joinStaffUp
   \bar "|."
   \break
 }
@@ -153,24 +197,40 @@ refren = \lyricmode {
 }
 zwrotka = \lyricmode {
   \set stanza = "1."
-  Jak \recytatyw "podobny jest zmarły do te" -- go, co za -- snął,
-  śmierć \recytatyw "do snu, zmartwychwstanie " do po -- ran -- ku,
-  Za -- \recytatyw "błyśnie w nas kiedyś prawda jak światło w" na -- szych o -- czach,
-  bę -- \recytatyw "dziemy patrzeć na śmierć jak na budzący niepokój" ob -- raz sen -- ny.
+  Jak \recytatyw "podobny jest zmarły do te" -- \markup \bold \underline go, co za -- snął,
+  śmierć \recytatyw "do snu, zmartwychwstanie " \markup \bold \underline do po -- ran -- ku,
+  Za -- \recytatyw "błyśnie w nas kiedyś prawda jak światło w" \markup \bold \underline na -- szych o -- czach,
+  bę -- \recytatyw "dziemy patrzeć na śmierć jak na budzący niepokój" \markup \bold \underline ob -- raz sen -- ny.
 }
 
 zwrotkaII = \markup {
+  \column {
+    \line { Szalony, kto widzi i sądzi, że sen \concat { koń \bold \underline czy } się rano, }
+    \line { A śmierć uważa za sen \concat { mają \bold \underline cy } trwać wiecznie, }
+    \line { Jeśli nadzieja \concat { oży \bold \underline wia } nam oczy, }
+    \line { Ujrzymy to, co zakryte - sen śmierci \concat { skoń \bold \underline czy } się życiem. }
+  }
 }
 zwrotkaIII = \markup {
+  \column {
+    \line { Przepiękne będzie ciało, miła  \concat { świą \bold \underline ty nia } ducha, }
+    \line { Odnowione zmieni się w dom \concat { błogie \bold \underline go } pokoju, }
+    \line { Wonczas zabrzmi trąba na \concat { \bold \underline głu che } tony: }
+    \line { Zbudźcie się, głoście chwałę przed \concat { Oblu \bold \underline bień cem } w pieśniach. }
+  }
 }
 zwrotkaIV = \markup {
-}
-zwrotkaV = \markup {
+  \column {
+    \line { Zaszumi echo głosów gdy \concat { otwo \bold \underline rzą } się groby, }
+    \line { Wszyscy ujmą harfy aby \concat { \bold \underline grać } pieśń chwały, }
+    \line { Chwała Panu, gdy uniża, chwała \concat { \bold \underline Mu } gdy wskrzesza, }
+    \line { Niech i moja cytra gra Bogu w dniu \concat { \bold \underline zmart wychwstania. }  }
+  }
 }
 
 %--------------------------------USTAWIENIA
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \paper {
   indent = 12 \mm
@@ -180,7 +240,7 @@ zwrotkaV = \markup {
 
   system-count = 7
 
-  top-markup-spacing #'basic-distance = 8
+  top-markup-spacing #'basic-distance = 6
   markup-system-spacing #'basic-distance = 18
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 15
@@ -192,11 +252,13 @@ zwrotkaV = \markup {
        "Nimbus Sans"
        "Luxi Mono"
        (/ staff-height pt 20)))
+  
+  #(define fonts (set-global-fonts #:music "gutenberg1939" #:roman "antpolt" #:factor (/ staff-height pt 20) ))
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
 #(define interlinia '(baseline-skip . 3)) % 3 is Lily default
-odstepMiedzyZwrotkami = \markup \vspace #2
+odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \layout {
@@ -219,8 +281,8 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \new Staff = sopran
     \with { } {
       \clef treble
-      \set Staff.instrumentName = "Sopran "
-      \set Staff.shortInstrumentName = "S "
+      \set Staff.instrumentName = \markup \right-column { "Sopran I " "Sopran II " }
+      \set Staff.shortInstrumentName = \markup \right-column { "S I " "S II " }
       \new Voice = sopran {
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
@@ -248,7 +310,8 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
     \with { } {
       \clef "treble_8"
       \set Staff.instrumentName = "Tenor "
-      \set Staff.shortInstrumentName = "T "
+      \set Staff.instrumentName = \markup \right-column { "Tenor I " "Tenor II " }
+      \set Staff.shortInstrumentName = \markup \right-column { "T I " "T II " }
       \new Voice = tenor {
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
@@ -263,6 +326,8 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
       \clef bass
       \set Staff.instrumentName = "Bas "
       \set Staff.shortInstrumentName = "B "
+      \set Staff.instrumentName = \markup \right-column { "Baryton " "Bas " }
+      \set Staff.shortInstrumentName = \markup \right-column { "Bar " "B " }
       \new Voice = bas {
         \set Staff.midiInstrument = "clarinet"
         \dynamicUp
@@ -344,24 +409,11 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
           \zwrotkaIII
         }
         \odstepMiedzyZwrotkami
-      }
-
-      \null
-
-      \override #interlinia
-      \column {
         \line {
           \bold
           "4."
           \odstepOdNumeruDoZwrotki
           \zwrotkaIV
-        }
-        \odstepMiedzyZwrotkami
-        \line {
-          \bold
-          "5."
-          \odstepOdNumeruDoZwrotki
-          \zwrotkaV
         }
         \odstepMiedzyZwrotkami
       }
