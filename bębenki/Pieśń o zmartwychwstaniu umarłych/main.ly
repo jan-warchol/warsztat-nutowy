@@ -253,7 +253,7 @@ zwrotkaIV = \markup {
        "Luxi Mono"
        (/ staff-height pt 20)))
   
-  #(define fonts (set-global-fonts #:music "gutenberg1939" #:roman "antpolt" #:factor (/ staff-height pt 20) ))
+  #(define fonts (set-global-fonts #:music "beethoven" #:roman "antpolt" #:factor (/ staff-height pt 20) ))
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
